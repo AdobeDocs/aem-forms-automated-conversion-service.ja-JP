@@ -49,7 +49,7 @@ http://&lt;サーバー>:&lt;ポート>/aem/forms.html/content/dam/formsanddocum
 次の手順を実行して、デフォルトのメタモデルをローカルファイルシステムにダウンロードします。
 
 1. AEM Formsインスタンスにログインします。
-1. >>フォルダ **[!UICONTROL Forms]** ーに **[!UICONTROL Forms & Documents]****移動し****[!UICONTROL Meta Model]** ます。
+1. &#x200B;>>フォルダ **[!UICONTROL Forms]** ーに **[!UICONTROL Forms & Documents]****移動し****[!UICONTROL Meta Model]** ます。
 1. ファイルを選択 **[!UICONTROL global.schema.json]** し、をタップしま **[!UICONTROL Download]**&#x200B;す。 ダウンロードダイアログボックスが表示されます。 オプションを選 **[!UICONTROL Download asset(s) as binary files]** 択します。 タップ **[!UICONTROL Download]**. アーカイブがダウンロードされます。
 
    <!--
