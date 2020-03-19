@@ -5,31 +5,32 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 translation-type: tm+mt
-source-git-commit: 040b0ddb489b5bdfd640a93b22cd7bc512a39aea
+source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
 
 ---
 
 
 # フォームポータルを使用したアダプティブフォームとデータベースの統合 {#submit-forms-to-database-using-forms-portal}
 
-自動フォーム変換サービスを使用すると、非インタラクティブPDFフォーム、AcroフォームまたはXFAベースのPDFフォームをアダプティブフォームに変換できます。 変換処理を開始する際に、データ連結の有無に関わらずアダプティブフォームを生成するオプションがあります。
+Automated Forms Conversionサービスを使用すると、非インタラクティブPDFフォーム、AcroフォームまたはXFAベースのPDFフォームをアダプティブフォームに変換できます。 変換処理を開始する際に、データ連結の有無に関わらず、アダプティブフォームを生成するオプションがあります。
 
-データ連結なしでアダプティブフォームを生成する場合は、変換後のアダプティブフォームを、変換後のフォームデータモデル、XMLスキーマ、またはJSONスキーマと統合できます。 ただし、データ連結を含むアダプティブフォームを生成する場合、変換サービスはアダプティブフォームをJSONスキーマに自動的に関連付け、アダプティブフォームとJSONスキーマで使用可能なフィールド間にデータ連結を作成します。 その後、アダプティブフォームを選択したデータベースと統合し、フォームにデータを入力し、フォームポータルを使用してデータベースに送信できます。
+データ連結なしでアダプティブフォームを生成する場合は、変換後のアダプティブフォームを、変換後のフォームデータモデル、XMLスキーマまたはJSONスキーマと統合できます。 ただし、データ連結を含むアダプティブフォームを生成する場合、変換サービスはアダプティブフォームをJSONスキーマに自動的に関連付け、アダプティブフォームで使用可能なフィールドとJSONスキーマの間にデータ連結を作成します。 その後、アダプティブフォームを選択したデータベースと統合し、フォームにデータを入力し、フォームポータルを使用してデータベースに送信できます。
 
-次の図は、フォームポータルを使用して、変換されたアダプティブフォームをデータベースと統合する様々な段階を示しています。
+次の図は、Forms Portalを使用して、変換されたアダプティブフォームをデータベースと統合する様々な段階を示しています。
 
 ![データベース統合](assets/database_integration.gif)
 
-この記事では、これらすべての統合ステージを正常に実行するための手順を説明します。
+この記事では、これらすべての統合ステージを正しく実行するための手順を説明します。
 
-この記事で説明するサンプルは、フォームポータルページをデータベースと統合するための、カスタマイズされたデータサービスとメタデータサービスのリファレンス実装です。 サンプル実装で使用されるデータベースはMySQL 5.6.24です。ただし、フォームポータルページを任意のデータベースと統合できます。
+この記事で説明するサンプルは、フォームポータルページをデータベースと統合するための、カスタマイズされたデータおよびメタデータサービスのリファレンス実装です。 サンプル実装で使用されるデータベースはMySQL 5.6.24です。ただし、フォームポータルページは任意のデータベースと統合できます。
 
 ## 前提条件 {#pre-requisites}
 
-* 最新のAEM 6.5 Service packを含むAEM 6.5作成者インスタンス
+* AEM 6.4または6.5の作成者インスタンスの設定
+* AEMインスタ [ンスの最新のService](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) Packをインストールします。
 * AEM Formsアドオンパッケージの最新バージョン
-* [Automated Forms Conversionサービス](configure-service.md)
-* 統合するデータベース。 サンプル実装で使用されるデータベースはMySQL 5.6.24です。ただし、フォームポータルを任意のデータベースと統合できます。
+* 自動フォ [ーム変換サービスの設定](configure-service.md)
+* データベースを設定します。 サンプル実装で使用されるデータベースはMySQL 5.6.24です。ただし、変換されたアダプティブフォームは任意のデータベースと統合できます。
 
 ## AEMインスタンスとデータベース間の接続の設定 {#set-up-connection-aem-instance-database}
 
@@ -52,7 +53,7 @@ AEMインスタンスとMYSQLデータベース間の接続の設定は、次の
 1. Navigate to http://[server]:[port]/system/console/bundles and click **[!UICONTROL Install/Update]**.
 1. Click **[!UICONTROL Choose File]** and browse to select the mysql-connector-java-5.1.39-bin.jar file. また、とチェックボッ **[!UICONTROL Start Bundle]** クスを選 **[!UICONTROL Refresh Packages]** 択します。
 1. またはをク **[!UICONTROL Install]** リックしま **[!UICONTROL Update]**&#x200B;す。 完了したら、サーバーを再起動します。
-1. （Windowsのみ）ご使用のオペレーティングシステムのシステムファイアウォールをオフにします。
+1. （Windowsのみ）お使いのオペレーティングシステムのシステムファイアウォールをオフにします。
 
 ### データベースでのスキーマとテーブルの作成 {#create-schema-and-tables-in-database}
 
@@ -118,7 +119,7 @@ AEMインスタンスとMYSQLデータベース間の接続の設定は、次の
        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. 次のSQL文を使 **用して** 、データベーススキーマに追加のmetadatatableテーブルを作成します。
+1. 次のSQL文を使 **用して** 、データベーススキーマに追加のメタデータテーブルを作成します。
 
    ```sql
    CREATE TABLE `additionalmetadatatable` (
@@ -189,7 +190,7 @@ AEMインスタンスとMYSQLデータベース間の接続の設定は、次の
     </tbody> 
     </table>
 1. Leave other configurations as is and click **[!UICONTROL Save]**.
-1. [Web Console Configuration]で編集モー **[!UICONTROL Apache Sling Connection Pooled DataSource]** ドで開くには、を探してクリックします。 次の表の説明に従って、プロパティの値を指定します。
+1. [Web Console Configuration]で編集モ **[!UICONTROL Apache Sling Connection Pooled DataSource]** ードで開くには、をクリックします。 次の表の説明に従って、プロパティの値を指定します。
 
    <table> 
     <tbody> 
@@ -199,7 +200,7 @@ AEMインスタンスとMYSQLデータベース間の接続の設定は、次の
     </tr> 
     <tr> 
     <td><p>データソース名</p></td> 
-    <td><p>データソースプールからドライバーをフィルターするためのデータソース名にあることで画像コンポーネントに問題が生じる。サンプルの実装では、データソース名としてFormsPortalを使用しています。</p></td>
+    <td><p>データソースプールからドライバーをフィルターするためのデータソース名.サンプルの実装では、データソース名としてFormsPortalを使用します。</p></td>
     </tr>
     <tr> 
     <td><p>JDBC ドライバークラス</p></td> 
@@ -275,11 +276,11 @@ AEMインスタンスとMYSQLデータベース間の接続の設定は、次の
 
 ## フォームポータル統合用の変換済みアダプティブフォームの設定 {#configure-converted-adaptive-form-for-forms-portal-integration}
 
-フォームポータルページを使用してアダプティブフォームの送信を有効にするには、次の手順を実行します。
+次の手順を実行し、フォームポータルページを使用してアダプティブフォームの送信を有効にします。
 1. [変換を実行して](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process) 、ソースフォームをアダプティブフォームに変換します。
 1. アダプティブフォームを編集モードで開きます。
 1. 「フォームコンテナ」をタップし、「アダプティブフォームを ![設定」を選択しま](assets/configure-adaptive-form.png)す。
-1. セクション **[!UICONTROL Submission]** で、ドロップダ **[!UICONTROL Forms Portal Submit Action]** ウンリスト **[!UICONTROL Submit Action]** から選択します。
+1. セクション **[!UICONTROL Submission]** で、ドロップダ **[!UICONTROL Forms Portal Submit Action]** ウンリスト **[!UICONTROL Submit Action]** からを選択します。
 1. 「テンプレ ![ートポリシーの保存](assets/edit_template_done.png) 」をタップして設定を保存します。
 
 ## フォームポータルページの作成と設定 {#create-configure-forms-portal-page}
@@ -287,12 +288,12 @@ AEMインスタンスとMYSQLデータベース間の接続の設定は、次の
 次の手順を実行して、フォームポータルページを作成し、このページを使用してアダプティブフォームを送信できるように設定します。
 
 1. AEM作成者インスタンスにログオンし、/をタッ **[!UICONTROL Adobe Experience Manager]** プしま **[!UICONTROL Sites]**&#x200B;す。
-1. 新しいフォームポータルページを保存する場所を選択し、/をタッ **[!UICONTROL Create]** プしま **[!UICONTROL Page]**&#x200B;す。
-1. ページのテンプレートを選択し、をタップし **[!UICONTROL Next]**&#x200B;て、ページのタイトルを指定し、をタップしま **[!UICONTROL Create]**&#x200B;す。
+1. 新しいフォームポータルページを保存する場所を選択し、/をタップ **[!UICONTROL Create]** します **[!UICONTROL Page]**。
+1. ページのテンプレートを選択し、をタップ **[!UICONTROL Next]**&#x200B;し、ページのタイトルを指定してをタップしま **[!UICONTROL Create]**&#x200B;す。
 1. をタップ **[!UICONTROL Edit]** して、ページを設定します。
-1. ページヘッダーで、テンプレートの編集 ![/](assets/edit_template_sites.png) をタッ **[!UICONTROL Edit Template]** プして、ページのテンプレートを開きます。
-1. 「レイアウトコンテナ」をタップし、「テンプレート ![ポリシーの編集」をタップしま](assets/edit_template_policy.png)す。 タブで、とオプシ **[!UICONTROL Allowed Components]** ョンを有効にし、「テンプレ **[!UICONTROL Document Services]** ート **[!UICONTROL Document Services Predicates]** ポリシーを保存」 ![をタップします](assets/edit_template_done.png)。
+1. ページのヘッダーで、テンプレ ![ートの編集](assets/edit_template_sites.png) / **[!UICONTROL Edit Template]** をタップし、ページのテンプレートを開きます。
+1. 「レイアウトコンテナ」をタップし、「テンプレート ![ポリシーの編集」をタップしま](assets/edit_template_policy.png)す。 タブで、とオ **[!UICONTROL Allowed Components]** プションを有効 **[!UICONTROL Document Services]** にし、「テ **[!UICONTROL Document Services Predicates]** ンプレートポリシーを ![保存」をタップします](assets/edit_template_done.png)。
 1. ページにコ **[!UICONTROL Search & Lister]** ンポーネントを挿入します。 その結果、AEMインスタンスで使用可能な既存のアダプティブフォームがすべてページに表示されます。
-1. ページにコ **[!UICONTROL Drafts & Submissions]** ンポーネントを挿入します。 との2つのタブ **[!UICONTROL Draft Forms]** がフォ **[!UICONTROL Submitted Forms]**&#x200B;ームポータルページに表示されます。 このタブに **[!UICONTROL Draft Forms]** は、フォームポータル統合のための変換済みアダプティブフォームの設定で説明されてい [る手順を使用して生成された変換済みアダプティブフォームも表示されます](#configure-converted-adaptive-form-for-forms-portal-integration)
+1. ページにコ **[!UICONTROL Drafts & Submissions]** ンポーネントを挿入します。 との2つのタブが **[!UICONTROL Draft Forms]** フォーム **[!UICONTROL Submitted Forms]**&#x200B;ポータルページに表示されます。 このタブに **[!UICONTROL Draft Forms]** は、フォームポータル統合のための変換済みアダプティブフォームの設定で説明されている手順を使用し [て生成された変換済みアダプティブフォームも表示されます。](#configure-converted-adaptive-form-for-forms-portal-integration)
 
-1. 変換さ **[!UICONTROL Preview]**&#x200B;れたアダプティブフォームをタップし、アダプティブフォームフィールドの値を指定して送信します。 アダプティブフォームのフィールドに指定した値が統合データベースに送信されます。
+1. をタップ **[!UICONTROL Preview]**&#x200B;し、変換されたアダプティブフォームをタップし、アダプティブフォームフィールドの値を指定して送信します。 アダプティブフォームのフィールドに指定した値は、統合データベースに送信されます。
