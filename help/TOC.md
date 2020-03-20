@@ -5,17 +5,17 @@ sub-product: forms conversion service
 audience: end-user
 user-guide-title: Adobe Experience Manager Forms Automated Conversion Service
 translation-type: tm+mt
-source-git-commit: 625babc74a3aedd8f5aca453dbe1d04a40f59942
+source-git-commit: a6eed86bf4581a4c20aa8e2c3fddbf88d1ac7b97
 
 ---
 
 
 # 目次 {#using}
-
++ [リリースノート](release-notes.md)
 + [Automated Forms Conversionサービスの概要](introduction.md)
-+ [Automated Forms Conversionサービスの設定](configure-service.md)
-+ [印刷フォームをアダプティブフォームに変換する](convert-existing-forms-to-adaptive-forms.md)
-+ [変換済みフォームの確認と修正](review-correct-ui-edited.md)
++ [自動フォーム変換サービスの設定](configure-service.md)
++ [印刷フォームのアダプティブフォームへの変換](convert-existing-forms-to-adaptive-forms.md)
++ [変換されたフォームの確認と修正](review-correct-ui-edited.md)
 + [デフォルトのメタモデルの拡張](extending-the-default-meta-model.md)
 + [アダプティブフォームの推奨データソースベースの事前入力および送信ワークフロー](prefill-submit-forms.md)
 + [アダプティブフォームのレコードのドキュメント生成を有効にするための推奨ワークフロー](enable-document-of-record-generation.md)
