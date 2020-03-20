@@ -2,7 +2,7 @@
 title: 自動フォーム変換サービスの設定
 description: AEMインスタンスで自動フォーム変換サービスを使用する準備ができました
 translation-type: tm+mt
-source-git-commit: 5f27fcbf756350a03b7143af489f737e01a7f0e3
+source-git-commit: 01dfd20951314017d47713bfb1a2a5f2d563f434
 
 ---
 
@@ -79,7 +79,7 @@ AEMインスタンスには、基本的なフォーム機能が含まれてい�
 | Linux | https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/fd/AEM-Forms-6.5.4.0-WIN |
 
 >[!NOTE]
-> 既にAutomated Forms Conversionサービス環境を使用している場合は、変換サービスの最新の機能を使用するには、上記の順序で最新のサービスパック、最新のAEM Formsアドオンパッケージ、最新のコネクタパッケージをインストールします。
+> 既にAutomated Forms Conversionサービス環境を使用している場合は、コンバージョンサービスの最新の機能を使用するには、最新のサービスパック、最新のAEM Formsアドオンパッケージ、最新のコネクタパッケージを上記の順序でインストールします。
 
 
 ### カスタムテーマとテンプレートの作成 {#referencepackage}
