@@ -2,7 +2,7 @@
 title: 新機能? リリースノート — Automated Forms Conversion Service
 description: 'Automated Forms Conversion Serviceの最新の機能とバグ修正について説明します。 '
 translation-type: tm+mt
-source-git-commit: e88b9606878cb408c0369b5f20a644db93578f64
+source-git-commit: 01dfd20951314017d47713bfb1a2a5f2d563f434
 
 ---
 
@@ -40,4 +40,4 @@ source-git-commit: e88b9606878cb408c0369b5f20a644db93578f64
 
 リリースAFC-2020.03.1で提供される最新の機能と改善を使用するには、コネクタパッケージ1.1.38以降が必要です。コネクタパッケージは [AEM Package Shareからダウンロードできます](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/fd/AEM-Forms-6.5.4.0-WIN)。
 
-既にAutomated Forms Conversionサービス環境を使用している場合は、変換サービスの最新の機能を使用するには、上記の順序で最新のサービスパック、最新のAEM Formsアドオンパッケージ、最新のコネクタパッケージをインストールします。 手順について詳しくは、「Automated Forms Conversion [サービスの設定」を参照してください](configure-service.md) 。
+既にAutomated Forms Conversionサービス環境を使用している場合は、コンバージョンサービスの最新の機能を使用するには、最新のサービスパック、最新のAEM Formsアドオンパッケージ、最新のコネクタパッケージを上記の順序でインストールします。 手順について詳しくは、「Automated Forms Conversion [サービスの設定」を参照してください](configure-service.md) 。
