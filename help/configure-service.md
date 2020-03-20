@@ -2,7 +2,7 @@
 title: 自動フォーム変換サービスの設定
 description: AEMインスタンスで自動フォーム変換サービスを使用する準備ができました
 translation-type: tm+mt
-source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
+source-git-commit: 5f27fcbf756350a03b7143af489f737e01a7f0e3
 
 ---
 
@@ -43,6 +43,7 @@ Automated Forms Conversion Serviceを使用するには、次が必要です。
 1. [AEM 6.4またはAEM 6.5のダウンロードとインストール](#aemquickstart)
 1. [最新のAEM Service Packのダウンロードとインストール](#servicepack)
 1. [最新のAEM Formsアドオンパッケージのダウンロードとインストール](#downloadaemformsaddon)
+1. [最新のコネクタパッケージのダウンロードとインストール](#installConnectorPackage)
 1. [カスタムテーマとテンプレートの作成](#referencepackage)
 
 ### AEM 6.4またはAEM 6.5のダウンロードとインストール {#aemquickstart}
@@ -65,8 +66,20 @@ AEMをダウンロードした後、AEMオーサーインスタンスを設定�
 AEMインスタンスには、基本的なフォーム機能が含まれています。 変換サービスには、AEM Formsの全機能が必要です。 AEM Formsのすべての機能を利用するには、AEM Formsアドオンパッケージをダウンロードしてインストールします。 変換サービスを設定して実行するには、パッケージが必要です。 詳しい手順については、データ取得機 [能のインストールと設定を参照してください。](https://helpx.adobe.com/experience-manager/6-5/forms/using/installing-configuring-aem-forms-osgi.html)
 
 >[!NOTE]
-> Automated Forms Conversionサービスの既存のユーザーの場合は、最新のAEM Formsアドオンをインストールして、サービスの使用を継続します。 コネクタパッケージがAEM Formsアドオンパッケージに結合されます。 追加のコネクタパッケージは不要になりました。
 > アドオンパッケージのインストール後に、必ず必須のインストール後の設定を行ってください。
+
+
+### Download and install connector package  {#installConnectorPackage}
+
+リリースAFC-2020.03.1で提供される最新の機能と改善を使用するには、コネクタパッケージ1.1.38以降が必要です。コネクタパッケージはAEMパッケージ共有からダウンロードできます。
+
+| オペレーティングシステム | コネクタパッケージのダウンロードリンク |
+| ------------- | ------------- |
+| Microsoft Windows | https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/fd/AEM-Forms-6.5.4.0-WIN |
+| Linux | https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/fd/AEM-Forms-6.5.4.0-WIN |
+
+>[!NOTE]
+> 既にAutomated Forms Conversionサービス環境を使用している場合は、変換サービスの最新の機能を使用するには、上記の順序で最新のサービスパック、最新のAEM Formsアドオンパッケージ、最新のコネクタパッケージをインストールします。
 
 
 ### カスタムテーマとテンプレートの作成 {#referencepackage}
