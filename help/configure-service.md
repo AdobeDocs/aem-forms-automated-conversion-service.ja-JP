@@ -2,7 +2,7 @@
 title: 自動フォーム変換サービスの設定
 description: AEMインスタンスで自動フォーム変換サービスを使用する準備ができました
 translation-type: tm+mt
-source-git-commit: 01dfd20951314017d47713bfb1a2a5f2d563f434
+source-git-commit: e01334d9a22ab95749e9b9b459da8886ae1ccd78
 
 ---
 
@@ -71,12 +71,7 @@ AEMインスタンスには、基本的なフォーム機能が含まれてい�
 
 ### Download and install connector package  {#installConnectorPackage}
 
-リリースAFC-2020.03.1で提供される最新の機能と改善を使用するには、コネクタパッケージ1.1.38以降が必要です。コネクタパッケージはAEMパッケージ共有からダウンロードできます。
-
-| オペレーティングシステム | コネクタパッケージのダウンロードリンク |
-| ------------- | ------------- |
-| Microsoft Windows | https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/fd/AEM-Forms-6.5.4.0-WIN |
-| Linux | https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/fd/AEM-Forms-6.5.4.0-WIN |
+リリースAFC-2020.03.1で提供される最新の機能と改善を使用するには、コネクタパッケージ1.1.38以降が必要です。コネクタパッ [ケージはAEMパッケージ共有からダウンロードできます](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)。
 
 >[!NOTE]
 > 既にAutomated Forms Conversionサービス環境を使用している場合は、コンバージョンサービスの最新の機能を使用するには、最新のサービスパック、最新のAEM Formsアドオンパッケージ、最新のコネクタパッケージを上記の順序でインストールします。
