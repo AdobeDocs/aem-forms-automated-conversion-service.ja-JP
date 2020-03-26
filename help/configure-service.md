@@ -2,7 +2,7 @@
 title: 自動フォーム変換サービスの設定
 description: AEMインスタンスで自動フォーム変換サービスを使用する準備ができました
 translation-type: tm+mt
-source-git-commit: e01334d9a22ab95749e9b9b459da8886ae1ccd78
+source-git-commit: 68824c2f398d00141d67996121f7b758af16d2e4
 
 ---
 
@@ -43,7 +43,7 @@ Automated Forms Conversion Serviceを使用するには、次が必要です。
 1. [AEM 6.4またはAEM 6.5のダウンロードとインストール](#aemquickstart)
 1. [最新のAEM Service Packのダウンロードとインストール](#servicepack)
 1. [最新のAEM Formsアドオンパッケージのダウンロードとインストール](#downloadaemformsaddon)
-1. [最新のコネクタパッケージのダウンロードとインストール](#installConnectorPackage)
+1. （オプション）最新のコネ [クタパッケージのダウンロードとインストール](#installConnectorPackage)
 1. [カスタムテーマとテンプレートの作成](#referencepackage)
 
 ### AEM 6.4またはAEM 6.5のダウンロードとインストール {#aemquickstart}
@@ -69,9 +69,9 @@ AEMインスタンスには、基本的なフォーム機能が含まれてい�
 > アドオンパッケージのインストール後に、必ず必須のインストール後の設定を行ってください。
 
 
-### Download and install connector package  {#installConnectorPackage}
+### （オプション）コネクタパッケージのダウンロードとインストール {#installConnectorPackage}
 
-リリースAFC-2020.03.1で提供される最新の機能と改善を使用するには、コネクタパッケージ1.1.38以降が必要です。コネクタパッ [ケージはAEMパッケージ共有からダウンロードできます](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)。
+リリースAFC-2020.03.1で提供される自動検出論理セクション機能と改善を使用するには [](convert-existing-forms-to-adaptive-forms.md#run-the-conversion) 、コネクタパッケージ1.1.38以降をインストールします。コネクタパッ [ケージはAEMパッケージ共有からダウンロードできます](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)。
 
 >[!NOTE]
 > 既にAutomated Forms Conversionサービス環境を使用している場合は、コンバージョンサービスの最新の機能を使用するには、最新のサービスパック、最新のAEM Formsアドオンパッケージ、最新のコネクタパッケージを上記の順序でインストールします。
@@ -183,7 +183,7 @@ AEMを実稼働モード(nosamplecontent runmode [](https://helpx.adobe.com/expe
 
 自動フォーム変換サービスを使用するには、Adobe I/Oで統合を作成します。統合により、APIキー、クライアントシークレット、ペイロード(JWT)が生成されます。
 
-1. https://console.adobe.io/にログイン [します](https://console.adobe.io/)。 管理者がAdobe I/OコンソールにログインするためにプロビジョニングしたAdobe ID、開発者アカウントを使用します。
+1. https://console.adobe.io/にログイン [します](https://console.adobe.io/)。 管理者がAdobe I/OコンソールにログインしてログインするようにプロビジョニングしたAdobe ID、開発者アカウントを使用します。
 
 1. タップ **[!UICONTROL View Integrations]**. 使用可能なすべての統合が画面に表示されます。
 1. ドロップダウンリストから組織を選択しま **[!UICONTROL Integrations]**&#x200B;す。 をタッ **[!UICONTROL New Integration]**&#x200B;プし、選 **[!UICONTROL Access an API]**&#x200B;択してをタップしま **[!UICONTROL Continue]**&#x200B;す。
@@ -261,7 +261,7 @@ AEMインスタンスを変換サービスに接続するクラウドサービ�
    </table>
 
    * ソースが拡張子.XDPのXFAベースのフォームの場合、出力DORはXFAレイアウトを保持します。そうでない場合、変換サービスは標準搭載のテンプレートを使用して他のXFAベースのフォームのDORを生成します。
-   * XFAフォームが送信されると、フォームの送信データはXML要素または属性として保存されます。 For example, `<Amount currency="USD"> 10.00 </Amount>`. 通貨は属性と通貨額として保存され、10.00は要素として保存されます。 アダプティブフォームの送信データには属性がなく、要素のみが含まれます。 したがって、XFAベースのフォームがアダプティブフォームに変換されると、アダプティブフォームの送信データには、このような属性ごとに1つの要素が含まれます。 例：
+   * XFAフォームが送信されると、フォームの送信データはXML要素または属性として保存されます。 例： `<Amount currency="USD"> 10.00 </Amount>`通貨は属性と通貨額として保存され、10.00は要素として保存されます。 アダプティブフォームの送信データには属性がなく、要素のみが含まれます。 したがって、XFAベースのフォームがアダプティブフォームに変換されると、アダプティブフォームの送信データには、このような属性ごとに1つの要素が含まれます。 例：
 
    ```css
       {
