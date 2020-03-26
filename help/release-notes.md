@@ -2,7 +2,7 @@
 title: 新機能? リリースノート — Automated Forms Conversion Service
 description: 'Automated Forms Conversion Serviceの最新の機能とバグ修正について説明します。 '
 translation-type: tm+mt
-source-git-commit: dc17dfcb331df6144b8a7ce3c9c9d840b1182a95
+source-git-commit: c0ca850a0a1e82e34364766601011d6367b218ac
 
 ---
 
@@ -26,14 +26,18 @@ source-git-commit: dc17dfcb331df6144b8a7ce3c9c9d840b1182a95
 
 **フォーム内の論理セクションを自動的に検出する**
 
-AFC-2020.03.1リリースでは、この機能に早期にアクセスでき **[!UICONTROL Auto-detect logical sections]** ます。
-
-デフォルトでは、PDFフォームの各ページに対して別々のトップレベルパネルが作成されます。 このオプションを使用して、ページレ **[!UICONTROL Auto-detect logical sections]** ベルのパネル（ページ番号ベースのパネル）をドロップし、論理パネルのみを作成できるようになりました。  また、前の論理セクションを持つセクションに属さないフィールドと、隣接する2つのページにまたがる論理セクションのフィールドを1つの論理セクションにクラブします。 例えば、論理セクションの一部のフィールドがページ1の最後にあり、一部がページ2の先頭にある場合、これらのフィールドはすべて1つの論理セクションに分類されます。
-
-この機能を使用するには、コネクタパッケージ1.1.38以降が必要 **[!UICONTROL Auto-detect logical sections]** です。 You can download the connector package from [AEM Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1).
+デフォルトでは、PDFフォームの各ページに対して別々のトップレベルパネルが作成されます。 このオプションを使用して、ペー **[!UICONTROL Auto-detect logical sections]** ジレベルのパネル（ページ番号ベースのパネル）をドロップし、論理パネルのみを作成できるようになりました。 また、前の論理セクションを持つどのセクションにも属さないフィールドと、隣接する2つのページにまたがる論理セクションのフィールドを1つの論理セクションにクラブします。 例えば、論理セクションの一部のフィールドがページ1の最後にあり、一部がページ2の先頭にある場合、これらのフィールドはすべて1つの論理セクションに分類されます。
 
 ### 改善点
 
 **リスト検出の改善**
 
 このサービスは、箇条書きリストと番号付きリストの検出をより効率的に行えるようになりました。
+
+### 特別な手順
+
+**Automated Forms Conversion Service Connectorパッケージのインストール**
+
+リリースAFC-2020.03.1で提供される最新の機能と改善を使用するには、コネクタパッケージ1.1.38以降が必要です。コネクタパッケージは [AEM Package Shareからダウンロードできます](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)。
+
+既にAutomated Forms Conversionサービス環境を使用している場合は、コンバージョンサービスの最新の機能を使用するには、最新のサービスパック、最新のAEM Formsアドオンパッケージ、最新のコネクタパッケージを上記の順序でインストールします。 手順について詳しくは、「Automated Forms Conversion [サービスの設定」を参照してください](configure-service.md) 。
