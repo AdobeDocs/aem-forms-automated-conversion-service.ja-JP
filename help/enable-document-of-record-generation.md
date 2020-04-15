@@ -1,149 +1,149 @@
 ---
-title: 変換中のレコードのドキュメントの生成
-seo-title: 変換中のレコードのドキュメントの生成
-description: 変換に使用するソースフォームのタイプに基づいてDoRを生成するための推奨パス。
-seo-description: 変換に使用するソースフォームのタイプに基づいてDoRを生成するための推奨パス。
+title: 変換時に「レコードのドキュメント」が生成される
+seo-title: 変換時に「レコードのドキュメント」が生成される
+description: 変換元のソースフォームのタイプに従ってレコードのドキュメント（DoR）を生成するための推奨ワークフロー
+seo-description: 変換元のソースフォームのタイプに従ってレコードのドキュメント（DoR）を生成するための推奨ワークフロー
 page-status-flag: never-activated
 uuid: 7f0f5bf3-21be-449a-b23e-5946a9fd7ed4
 contentOwner: khsingh
 discoiquuid: 75f6e6bc-7636-4b40-919c-8b20a6ccbb1f
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 640d72d7961ef0c2393bf0ae6745d918e388a056
 
 ---
 
 
-# アダプティブフォームのレコードのドキュメント生成を有効にするための推奨ワークフロー {#recommended-workflows-dor-generation}
+# アダプティブフォームのレコードのドキュメントを生成するための推奨ワークフロー{#recommended-workflows-dor-generation}
 
-レコードのドキュメント(DoR)を使用すると、アダプティブフォームで提供および送信した情報を記録しておき、後で参照できるようにすることができます。
-DoRは、基本テンプレートを使用してレイアウトを定義します。 DoRは、デフォルトのテンプレートを使用して生成するか、アダプティブフォームに他のテンプレートを関連付けることができます。
+レコードのドキュメント（DoR）には、アダプティブフォームへの変換時に入力した情報が記録されるため、後で確認することができます。
+DoR では、ベーステンプレートを使用してレイアウトが定義されます。 デフォルトのテンプレートを使用して DoR を生成することも、別のテンプレートをアダプティブフォームに関連付けることによって DoR を生成することもできます。
 
-![レコードの生成ドキュメント](assets/document_of_record.gif)
+![生成後のレコードのドキュメント](assets/document_of_record.gif)
 
-DoRの生成について詳しくは、「アダプティブフォームのレコ [ードのドキュメントの生成」を参照してください](https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html)。
+DoR の生成方法については、「[アダプティブフォームにおけるレコードのドキュメントの生成](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html)」を参照してください。
 
-Automated Forms Conversionサー [ビスは](../help/introduction.md) 、次のソースフォームをアダプティブフォームに変換します。
+[自動フォーム変換サービス](../help/introduction.md)では、以下のソースフォームをアダプティブフォームに変換することができます。
 
-* 非インタラクティブPDFフォーム
-* Acroフォーム
-* XFAベースのPDFフォーム
+* 非対話型 PDF フォーム
+* AcroForms
+* XFA ベースの PDF フォーム
 
-変換に使用するソースフォームに基づいて、次を使用してDoRを生成できます。
+変換するソースフォームに応じて、以下の方法で DoR を生成することができます。
 
-* デフォルトのテンプレート
-* ソースフォームをテンプレートとして使用 — このオプションを選択すると、変換サービスは変換元フォームを変換後のアダプティブフォームにDoRテンプレートとして自動的に関連付けます。
-* 変換されたアダプティブフォームに他のテンプレートを関連付ける
+* デフォルトのテンプレートを使用する。
+* ソースフォームをテンプレートとして使用する。この方法の場合、変換サービスにより、ソースフォームが DoR テンプレートとして変換後のアダプティブフォームに自動的に関連付けられます。
+* 別のテンプレートを変換後のアダプティブフォームに関連付ける。
 
-次の表に、使用するDoRテンプレートが生成されたDoRのレイアウトに与える影響の例を示します。
+以下の図で、DoR テンプレートが生成後の DoR のレイアウトにどのように影響するかについて説明します。
 
 <table> 
  <tbody>
  <tr>
   <td><p><strong>ソースフォーム</strong></p></td>
-  <td><p><strong>生成されたDoR</strong></p></td> 
+  <td><p><strong>生成後の DoR</strong></p></td> 
    </tr>
   <tr>
    <td><img src="assets/source_xdp_updated.png"/></td>
-   <td><p>DoRの生成にデフォルトのテンプレートを使用する場合：</br><img src="assets/source_form_default_updated.png"/></td>
+   <td><p>デフォルトのテンプレートを使用して DoR を生成した場合：</br><img src="assets/source_form_default_updated.png"/></td>
    </tr>
    <tr>
    <td></td>
-   <td><p>DoRを生成する際にソースフォームをテンプレートとして使用する場合：</br></p><img src="assets/source_form_dor_updated.png"/></td>
+   <td><p>ソースフォームをテンプレートとして使用して DoR を生成した場合：</br></p><img src="assets/source_form_dor_updated.png"/></td>
    </tr>
   </tbody>
 </table>
 
-表に示すように、ソースフォームをテンプレートとして使用する場合、DoRはソースフォームのレイアウトを保持します。
-この記事では、3種類のソースフォームに基づいてDoRを生成するための推奨パスについて説明します。
+この図を見てわかるように、ソースフォームをテンプレートとして使用した場合、ソースフォームのレイアウトが DoR でも維持されます。
+ここでは、3 種類のソースフォームについて、DoR を生成するための推奨ワークフローを説明します。
 
 <table> 
  <tbody> 
   <tr> 
    <th><strong>ソースフォーム</strong></th> 
-   <th><strong>DoRを生成する方法</strong></th> 
+   <th><strong>DoR の生成方法</strong></th> 
   </tr> 
   <tr> 
-   <td><p>非インタラクティブPDFフォーム</p></td> 
+   <td><p>非対話型 PDF フォーム</p></td> 
    <td> 
     <ul> 
-     <li><a href="#generate-document-of-record-using-cloud-configuration">アダプティブフォーム変換前のDoR生成を有効にして、デフォルトのテンプレートを使用してDoRを生成する</a></li> 
-     <li><a href="#edit-adaptive-form-properties-generate-document-of-record">アダプティブフォームの変換後にアダプティブフォームのプロパティを編集し、デフォルトまたは他のフォームテンプレートを使用したDoRの生成を有効にします。</a></li> 
+     <li><a href="#generate-document-of-record-using-cloud-configuration">アダプティブフォームに変換する前に DoR の生成機能を有効にして、デフォルトのテンプレートを使用して DoR を生成する</a></li> 
+     <li><a href="#edit-adaptive-form-properties-generate-document-of-record">アダプティブフォームへの変換後にアダプティブフォームのプロパティを編集し、デフォルトのテンプレートまたは別のテンプレートを使用して DoR を生成する</a></li> 
     </ul> </td> 
   </tr>
   <tr> 
-   <td><p>AcroフォームまたはXFAベースのPDFフォーム</p></td> 
+   <td><p>AcroForms または XFA ベースの PDF フォーム</p></td> 
    <td> 
     <ul> 
-     <li><a href="#use-input-form-as-template-to-generate-document-of-record">アダプティブフォーム変換前のDoR生成を有効にし、ソースフォームをテンプレートとして使用してDoRを生成する</a></li> 
-     <li><a href="#edit-adaptive-form-properties-to-generate-document-of-record">アダプティブフォームの変換後にアダプティブフォームのプロパティを編集し、デフォルトのテンプレート、ソースフォームをテンプレートまたはその他のフォームテンプレートを使用したDoRの生成を有効にします</a></li> 
+     <li><a href="#use-input-form-as-template-to-generate-document-of-record">アダプティブフォームに変換する前に DoR の生成機能を有効にして、ソースフォームをテンプレートとして使用して DoR を生成する</a></li> 
+     <li><a href="#edit-adaptive-form-properties-to-generate-document-of-record">アダプティブフォームへの変換後にアダプティブフォームのプロパティを編集し、デフォルトのテンプレートまたは別のテンプレートを使用して（または、ソースフォームをテンプレートとして使用して）DoR を生成する</a></li> 
     </ul> </td> 
   </tr>    
  </tbody> 
 </table>
 
-## 非インタラクティブPDFフォームのレコードのドキュメントを生成 {#generate-document-of-record-non-interactive-pdf}
+## 非対話型 PDF フォーム用の DoR を生成する{#generate-document-of-record-non-interactive-pdf}
 
-自動フォーム変換サービスのソースフォームとして非インタラクティブPDFフォームを使用している場合は、次のことができます。
+非対話型 PDF フォームをソースフォームとして使用して自動フォーム変換サービスを実行する場合、以下に示すいずれかの方法で DoR を生成することができます。
 
-* アダプティブフォーム変換前のDoR生成を有効にして、デフォルトテンプレートを使用してDoRを生成する
-* またはアダプティブフォーム変換後にアダプティブフォームのプロパティを編集して、デフォルトまたは他のフォームテンプレートを使用したDoRの生成を有効にします。
+* アダプティブフォームに変換する前に DoR の生成機能を有効にして、デフォルトのテンプレートを使用して DoR を生成する
+* アダプティブフォームへの変換後にアダプティブフォームのプロパティを編集し、デフォルトのテンプレートまたは別のテンプレートを使用して DoR を生成する
 
-### 変換前のDoR生成を有効にして、デフォルトのテンプレートを使用してDoRを生成する {#generate-document-of-record-using-cloud-configuration}
+### アダプティブフォームに変換する前に DoR の生成機能を有効にして、デフォルトのテンプレートを使用して DoR を生成する{#generate-document-of-record-using-cloud-configuration}
 
-1. // **[!UICONTROL Tools]** /変 **[!UICONTROL Cloud Services]** 換に使 **[!UICONTROL Automated Forms Conversion Configuration]** 用するクラウド設定のプロパティ/オプションを選 **[!UICONTROL Advanced]** 択し **[!UICONTROL Generate Document of Record]** ます。
+1. **[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／**[!UICONTROL 自動フォーム変換の設定]**／変換処理で使用するクラウド設定のプロパティ／**[!UICONTROL 詳細]**／**[!UICONTROL レコードのドキュメントを生成]**&#x200B;の順に選択して、設定を行います。
 
-   ![クラウド設定を使用したレコードのドキュメントの生成](assets/generate_dor_cloud_config.gif)
+   ![クラウド設定を使用してドキュメントのレコードを生成する](assets/generate_dor_cloud_config.gif)
 
-1. Tap **[!UICONTROL Save & Close]** to save the settings.
+1. 「**[!UICONTROL 保存して閉じる]**」をタップして設定を保存します。
 
-1. [変換を実行します](../help/convert-existing-forms-to-adaptive-forms.md)。 手順1で編集したクラウド設定を使用していることを確認します。
-変換されたアダプティブフォームを送信すると、DoRはデフォルトのテンプレートを使用して自動的に生成されます。
+1. [変換処理を実行](../help/convert-existing-forms-to-adaptive-forms.md)します。 その際、必ず手順 1 で編集したクラウド設定を使用してください。
+変換後のアダプティブフォームを送信すると、デフォルトのテンプレートを使用して自動的に DoR が生成されます。
 
-### 変換後にアダプティブフォームのプロパティを編集し、DoR生成を有効にする {#edit-adaptive-form-properties-generate-document-of-record}
+### 変換後にアダプティブフォームのプロパティを編集し、DoR の生成機能を有効にする{#edit-adaptive-form-properties-generate-document-of-record}
 
-ソースフォームをアダプティブフォームに変換する前にDoR生成を有効にしない場合でも、変換後にDoR生成を有効にすることができます。
+変換処理の前に DoR の生成機能を有効にしなかった場合でも、変換後に有効にすることができます。
 
-1. [非インタラクティブ](../help/convert-existing-forms-to-adaptive-forms.md) PDFフォームで変換を実行し、アダプティブフォームを生成します。
+1. 非対話型 PDF フォームで[変換処理を実行](../help/convert-existing-forms-to-adaptive-forms.md)して、アダプティブフォームを生成します。
 
-1. フォルダー内のアダプティブフォームを選 **[!UICONTROL output]** 択し、をタップしま **[!UICONTROL Properties]**&#x200B;す。
+1. 生成されたアダプティブフォームを **[!UICONTROL output]** フォルダーで選択して「**[!UICONTROL プロパティ]**」をタップします。
 
-1. タブで、 **[!UICONTROL Form Model]** セクションを展 **[!UICONTROL Document of Record Template Configuration]** 開し、を選択しま **[!UICONTROL Generate Document of Record]**&#x200B;す。
+1. 「**[!UICONTROL フォームモデル]**」タブの「**[!UICONTROL レコードのドキュメントのテンプレート設定]**」セクションを展開して「**[!UICONTROL レコードのドキュメントを生成]**」を選択します。
 
    ![レコードのドキュメントを生成](assets/generate_dor_af_properties.png)
 
-1. Tap **[!UICONTROL Save & Close]** to save the settings.
+1. 「**[!UICONTROL 保存して閉じる]**」をタップして設定を保存します。
 
-変換されたアダプティブフォームを送信すると、DoRはデフォルトのテンプレートを使用して自動的に生成されます。 その他のDoRテンプレートを変換されたアダプティブフォームに関連付ける場合は、オプションを選択で **[!UICONTROL Associate form template as the Document of Record template]** きます。
+変換後のアダプティブフォームを送信すると、デフォルトのテンプレートを使用して自動的に DoR が生成されます。 別の DoR テンプレートを変換後のアダプティブフォームに関連付ける場合は、「**[!UICONTROL フォームテンプレートをレコードのドキュメントテンプレートとして関連付ける]**」オプションを選択します。
 
-## AcroフォームまたはXFAベースのPDFフォームのレコードのドキュメントの生成 {#generate-document-of-record-acroform-xfaform}
+## AcroForms または XFA ベース PDF フォーム用のレコードのドキュメントを生成する{#generate-document-of-record-acroform-xfaform}
 
-Acro FormまたはXFAベースのPDFフォームを自動フォーム変換サービスのソースフォームとして使用している場合、次のことができます。
+AcroForms または XFA ベース PDF フォームをソースフォームとして使用して自動フォーム変換サービスを実行する場合、以下に示すいずれかの方法で DoR を生成することができます。
 
-* アダプティブフォーム変換前のDoR生成を有効にして、ソースフォームをテンプレートとして使用してDoRを生成する
+* アダプティブフォームに変換する前に DoR の生成機能を有効にして、ソースフォームをテンプレートとして使用して DoR を生成する
 
-* アダプティブフォーム変換後にアダプティブフォームのプロパティを編集して、デフォルトのテンプレート、ソースフォームをテンプレートまたはその他のフォームテンプレートを使用したDoRの生成を有効にします。
+* アダプティブフォームへの変換後にアダプティブフォームのプロパティを編集し、デフォルトのテンプレートまたは別のテンプレートを使用して（または、ソースフォームをテンプレートとして使用して）DoR を生成する
 
-### 変換前のDoR生成を有効にして、ソースフォームテンプレートを使用してDoRを生成する {#use-input-form-as-template-to-generate-document-of-record}
+### アダプティブフォームに変換する前に DoR の生成機能を有効にして、ソースフォームをテンプレートとして使用して DoR を生成する{#use-input-form-as-template-to-generate-document-of-record}
 
-1. // **[!UICONTROL Tools]** /変 **[!UICONTROL Cloud Services]** 換に使 **[!UICONTROL Automated Forms Conversion Configuration]** 用するクラウド設定のプロパティ/オプションを選 **[!UICONTROL Advanced]** 択し **[!UICONTROL Generate Document of Record]** ます。
+1. **[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／**[!UICONTROL 自動フォーム変換の設定]**／変換処理で使用するクラウド設定のプロパティ／**[!UICONTROL 詳細]**／**[!UICONTROL レコードのドキュメントを生成]**&#x200B;の順に選択して、設定を行います。
 
-1. Tap **[!UICONTROL Save & Close]** to save the settings.
+1. 「**[!UICONTROL 保存して閉じる]**」をタップして設定を保存します。
 
-1. [変換を実行します](../help/convert-existing-forms-to-adaptive-forms.md)。 手順1で編集したクラウド設定を使用していることを確認します。
-変換サービスは、Acro formまたはXFAベースのPDFフォームを、変換済みのアダプティブフォームにDoRテンプレートとして自動的に関連付けます。
-アダプティブフォームのプロパティを開いて、タブのセクションにDoRテンプレートを表 **[!UICONTROL Document of Record Template Configuration]** 示することがで **[!UICONTROL Form Model]** きます。
+1. [変換処理を実行](../help/convert-existing-forms-to-adaptive-forms.md)します。 その際、必ず手順 1 で編集したクラウド設定を使用してください。
+変換サービスにより、AcroForms または XFA ベース PDF フォームが DoR テンプレートとして変換後のアダプティブフォームに自動的に関連付けられます。
+アダプティブフォームのプロパティを開くと、「**[!UICONTROL フォームモデル]**」タブの「**[!UICONTROL レコードのドキュメントのテンプレート設定]**」セクションに DoR テンプレートが表示されます。
 
-   ![アダプティブフォームのプロパティを編集してレコードのドキュメントを生成](assets/generate_dor_af_properties_xdp_acro.png)
+   ![アダプティブフォームのプロパティを編集してレコードのドキュメントを生成する](assets/generate_dor_af_properties_xdp_acro.png)
 
-   変換されたアダプティブフォームを送信すると、DoRはソースフォームテンプレートを使用して自動的に生成されます。
+   変換後のアダプティブフォームを送信すると、ソースフォームをテンプレートとして使用して、自動的に DoR が生成されます。
 
-### 変換後にアダプティブフォームのプロパティを編集し、DoR生成を有効にする {#edit-adaptive-form-properties-to-generate-document-of-record}
+### 変換後にアダプティブフォームのプロパティを編集し、DoR の生成機能を有効にする{#edit-adaptive-form-properties-to-generate-document-of-record}
 
-1. [非インタラクティブ](../help/convert-existing-forms-to-adaptive-forms.md) PDFフォームで変換を実行し、アダプティブフォームを生成します。
+1. 非対話型 PDF フォームで[変換処理を実行](../help/convert-existing-forms-to-adaptive-forms.md)して、アダプティブフォームを生成します。
 
-1. フォルダー内のアダプティブフォームを選 **[!UICONTROL output]** 択し、をタップしま **[!UICONTROL Properties]**&#x200B;す。
+1. 生成されたアダプティブフォームを **[!UICONTROL output]** フォルダーで選択して「**[!UICONTROL プロパティ]**」をタップします。
 
-1. タブで、セク **[!UICONTROL Form Model]** ションを展開し、デフォ **[!UICONTROL Document of Record Template Configuration]** ルトのテンプ **[!UICONTROL Generate Document of Record]** レートを使用したDoRの生成を有効にします。
-また、このオプションを選択し、テ **[!UICONTROL Associate form template as the Document of Record template]** ンプレートを選択して、ソースフォームテンプレートまたはその他のフォームテンプレートを使用したDoR生成を有効にすることもできます。
+1. 「**[!UICONTROL フォームモデル]**」タブの「**[!UICONTROL レコードのドキュメントのテンプレート設定]**」セクションを展開して「**[!UICONTROL レコードのドキュメントを生成]**」を選択し、デフォルトのテンプレートを使用して DoR の生成機能を有効にします。
+または、「**[!UICONTROL フォームテンプレートをレコードのドキュメントテンプレートとして関連付ける]**」オプションを選択し、ソースフォームをテンプレートとして使用して、または別のフォームテンプレートを使用して、DoR の生成機能を有効にすることもできます。
 
-1. Tap **[!UICONTROL Save & Close]** to save the settings.
+1. 「**[!UICONTROL 保存して閉じる]**」をタップして設定を保存します。
