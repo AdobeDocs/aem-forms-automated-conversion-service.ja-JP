@@ -1,6 +1,6 @@
 ---
-title: '[DO NOT PUBLISH]デフォルトのメタモデルを拡張します'
-seo-title: '[DO NOT PUBLISH]デフォルトのメタモデルを拡張します'
+title: '[非公開] デフォルトメタモデルの拡張'
+seo-title: '[非公開] デフォルトメタモデルの拡張'
 description: 'null'
 seo-description: 'null'
 page-status-flag: never-activated
@@ -9,10 +9,10 @@ topic-tags: forms
 discoiquuid: 9fce5d31-0a3e-4401-b9d7-bb63799121bf
 privatebeta: true
 index: false
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: afe461baa5bcfc1106c16aae2d6a9c839ea675e8
 
 ---
 
 
-# [デフォルトのメタモデルを公開しない] (Do NOT PUBLISH Extend the default meta-model){#do-not-publish-extend-the-default-meta-model}
+# [非公開] デフォルトメタモデルの拡張{#do-not-publish-extend-the-default-meta-model}
