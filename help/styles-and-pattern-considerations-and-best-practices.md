@@ -7,7 +7,7 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 translation-type: tm+mt
-source-git-commit: a5d663c2a59895eb71eb5287586bc6b3862927fc
+source-git-commit: 83e35b3cf21c1348c09dcddbae3edf77990457d0
 
 ---
 
@@ -38,8 +38,8 @@ source-git-commit: a5d663c2a59895eb71eb5287586bc6b3862927fc
 * XDPフォームを分析し、視覚的な問題を修正します。 ソース・ドキュメントが意図したコントロールと構造を使用していることを確認します。 例えば、1つの選択に対してラジオボタンの代わりにチェックボックスをソースフォームに含めることができます。 チェックボックスをラジオボタンに変更して、目的のコンポーネントを含むアダプティブフォームを作成します。
 * [変追加換を開始する前に](http://www.adobe.com/go/learn_aemforms_designer_65) 、XDPフォームに連結します。 ソースXDPフォームで連結が使用可能な場合、サービスは変換時に、対応するアダプティブフォームフィールドに連結を自動的に適用します。 連結を手動で適用する時間を節約します。
 * [XDPフ追加ァイルに対するAdobe Signタグ。](https://helpx.adobe.com/sign/using/text-tag.html) Adobe Signタグは、対応するアダプティブフォームフィールドに自動的に変換されます。 アダプティブフォームでは、限られた数のAdobe Signフィールドをサポートしています。 サポートされるフィールドの完全なリストについては、「アダプティブ [フォームのドキュメントでのAdobe Signの使用](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html) 」を参照してください。
-* XDPサブフォームを使用して、アダプティブドキュメントでパネルを作成します。 サービスは、変換時に各サブフォームをアダプティブフォームパネルに変換します。
 * 可能な場合は、XDPドキュメントの複雑なテーブルを単純なテーブルに変換します。 テーブルセル内のフォームフィールド、サイズが不均等なセル、行または列の連結セル、結合セル、部分的な境界線、または境界線が表示されないテーブルは、複雑なテーブルと見なされます。 上記の項目のいずれかを含むテーブルは、複雑なテーブルと見なされます。
+<!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->
 
 ### 変換を開始する前に
 
