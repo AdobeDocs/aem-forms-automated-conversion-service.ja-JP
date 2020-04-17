@@ -6,7 +6,7 @@ seo-description: 一般的なAFCSの問題とその解決策
 contentOwner: khsingh
 topic-tags: forms
 translation-type: tm+mt
-source-git-commit: 8d640b7d55a31bcdf425d7fd91f2465912da679b
+source-git-commit: 3a82102feffa7fc618dc37c9a745c254a46a0700
 
 ---
 
@@ -20,9 +20,9 @@ source-git-commit: 8d640b7d55a31bcdf425d7fd91f2465912da679b
 
 | エラー | 例 |
 |--- |--- |
-| **エラーメッセージ** :アクセストークン <br> ・ヘッダーは使用できません。 <br><br>**理由&#x200B;**<br>管理者が複数のIMS設定を作成したか、IMS設定がAdobe CloudのAFCSサービスに到達できない。<br><br>**解決** ：複数の設定がある場合は、すべての設定を削除し、 <br> 新しい設定を作成します [](configure-service.md#obtainpubliccertificates)。 <br> 設定が1つだけの場合は、ヘルスチェック **を使用し** 、接続を [確認します](configure-service.md#createintegrationoption)。 | ![アクセストークンヘッダーが使用できません](assets/invalid-ims-configuration.png) |
-| **エラーメッセージ**<br> ：サービスに接続できません。  <br><br>**Reason **Incorrect service URL<br>, or no service URL is montioned in Automated Forms Conversion Service cloud services.<br><br>**Automated** Forms Conversion Service <br>[](configure-service.md#configure-the-cloud-service) Cloudサービスでの解決の正しいサービスURL。 | ![サービスに接続できません。](assets/wrong-endpoint-configured.png) |
-| **エラーメッセージ**<br> ：サービスはフォームを変換できませんでした。  <br><br>**Reason **<br>Network connectivity issubes to your end, the service is down buide to scheduled maintenance, or outame on Adobe Cloud.<br><br>**解決方法**<br> ：ネットワーク接続に関する問題を解決し、計画的または予期しない停止が発生した場合は、https://status.adobe.com/でサービスのステータスを確認します。 | ![サービスに接続できません。](assets/service-failure.png) |
+| **エラーメッセージ** :アクセストークン <br> ・ヘッダーは使用できません。 <br><br> **理由**<br> 管理者が複数のIMS設定を作成したか、IMS設定がAdobe CloudのAFCSサービスに到達できない。 <br><br>**解決&#x200B;**：複数の設定がある場合は、すべての設定を削除し、<br>新しい設定を作成します[](configure-service.md#obtainpubliccertificates)。<br>設定が1つだけの場合は、ヘルスチェック**&#x200B;を使用し&#x200B;**、接続を[確認します](configure-service.md#createintegrationoption)。 | ![アクセストークンヘッダーが使用できません](assets/invalid-ims-configurations.png) |
+| **エラーメッセージ**<br> ：サービスに接続できません。  <br><br>**Reason **Incorrect service URL<br>, or no service URL is montioned in Automated Forms Conversion Service cloud services.<br><br>**Automated** Forms Conversion Service <br>[](configure-service.md#configure-the-cloud-service) Cloudサービスでの解決の正しいサービスURL。 | ![サービスに接続できません。](assets/wrong-service-url-configured.png) |
+| **エラーメッセージ**<br> ：サービスはフォームを変換できませんでした。  <br><br>**Reason **<br>Network connectivity issubes to your end, the service is down buide to scheduled maintenance, or outame on Adobe Cloud.<br><br>**解決方法**<br> ：ネットワーク接続に関する問題を解決し、計画的または予期しない停止が発生した場合は、https://status.adobe.com/でサービスのステータスを確認します。 | ![サービスに接続できません。](assets/conversion-failure.png) |
 | **エラーメッセージ**<br> ：ページ数が15を超えています。  <br><br>**理由&#x200B;**<br>ソースフォームの長さが15ページを超えています。<br><br>**解決**<br> :Adobe Acrobatを使用して、15ページを超えるフォームを分割します。 フォームのページ数を15未満にします。 | ![サービスに接続できません。](assets/number-of-pages.png) |
 | **エラーメッセージ**<br> ：ファイルの数が15を超えています。  <br><br>**Reason **：フォ<br>ルダーに15を超えるフォームが含まれています。<br><br>**解決**<br> フォルダー内のフォーム数を15以下にします。 フォルダー内の合計ページ数を50未満にします。 フォルダーのサイズを10 MB未満にします。 サブフォルダー内にフォームを保存しないでください。ソースフォームを8 ～ 15個のフォームのバッチに整理します。 | ![サービスに接続できません。](assets/number-of-pages.png) |
 | **エラーメッセージ**<br> ：ソースファイルの形式がサポートされていません。  <br><br>**理由&#x200B;**<br>：ソースフォームを含むフォルダーに、サポートされていないファイルがいくつか含まれています。<br><br>**解決**<br> ：サービスは.xdpファイルと.pdfファイルのみをサポートします。 その他の拡張子の付いたファイルをフォルダーから削除し、変換を実行します。 | ![サービスに接続できません。](assets/unsupported-file-formats.png) |
