@@ -6,7 +6,7 @@ seo-description: 一般的なAFCSの問題とその解決策
 contentOwner: khsingh
 topic-tags: forms
 translation-type: tm+mt
-source-git-commit: e905833e5b58c05aac612e3a8139eb7fb60ef4bf
+source-git-commit: 8d640b7d55a31bcdf425d7fd91f2465912da679b
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: e905833e5b58c05aac612e3a8139eb7fb60ef4bf
 
 | エラー | 例 |
 |--- |--- |
-| **エラーメッセージ** :アクセストークン <br> ・ヘッダーは使用できません。 <br><br>**理由&#x200B;**<br>管理者が複数のIMS設定を作成したか、IMS設定がAdobe CloudのAFCSサービスに到達できない。<br><br>**解決** ：複数の設定がある場合は、すべての設定を削除し、 <br> 新しい設定を作成します [](configure-service.md#obtainpubliccertificates)。 <br> 設定が1つだけの場合は、を使用して接続 **[!UICONTROL Health Check]** を確 [認します](configure-service.md#createintegrationoption)。 | ![アクセストークンヘッダーが使用できません](assets/invalid-ims-configuration.png) |
+| **エラーメッセージ** :アクセストークン <br> ・ヘッダーは使用できません。 <br><br>**理由&#x200B;**<br>管理者が複数のIMS設定を作成したか、IMS設定がAdobe CloudのAFCSサービスに到達できない。<br><br>**解決** ：複数の設定がある場合は、すべての設定を削除し、 <br> 新しい設定を作成します [](configure-service.md#obtainpubliccertificates)。 <br> 設定が1つだけの場合は、ヘルスチェック **を使用し** 、接続を [確認します](configure-service.md#createintegrationoption)。 | ![アクセストークンヘッダーが使用できません](assets/invalid-ims-configuration.png) |
 | **エラーメッセージ**<br> ：サービスに接続できません。  <br><br>**Reason **Incorrect service URL<br>, or no service URL is montioned in Automated Forms Conversion Service cloud services.<br><br>**Automated** Forms Conversion Service <br>[](configure-service.md#configure-the-cloud-service) Cloudサービスでの解決の正しいサービスURL。 | ![サービスに接続できません。](assets/wrong-endpoint-configured.png) |
 | **エラーメッセージ**<br> ：サービスはフォームを変換できませんでした。  <br><br>**Reason **<br>Network connectivity issubes to your end, the service is down buide to scheduled maintenance, or outame on Adobe Cloud.<br><br>**解決方法**<br> ：ネットワーク接続に関する問題を解決し、計画的または予期しない停止が発生した場合は、https://status.adobe.com/でサービスのステータスを確認します。 | ![サービスに接続できません。](assets/service-failure.png) |
 | **エラーメッセージ**<br> ：ページ数が15を超えています。  <br><br>**理由&#x200B;**<br>ソースフォームの長さが15ページを超えています。<br><br>**解決**<br> :Adobe Acrobatを使用して、15ページを超えるフォームを分割します。 フォームのページ数を15未満にします。 | ![サービスに接続できません。](assets/number-of-pages.png) |
