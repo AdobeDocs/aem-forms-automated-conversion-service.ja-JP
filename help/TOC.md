@@ -5,7 +5,7 @@ sub-product: フォーム変換サービス
 audience: end-user
 user-guide-title: Adobe Experience Manager Forms自動コンバージョンサービス
 translation-type: tm+mt
-source-git-commit: 4b9f3f4fe3b3901cb99c9374ff40e8f49855237f
+source-git-commit: 90f577a3bc75afdb596ad1dea27cd833e1c996ce
 
 ---
 
@@ -23,5 +23,5 @@ source-git-commit: 4b9f3f4fe3b3901cb99c9374ff40e8f49855237f
 + [よくある質問](frequently-asked-questions.md)
 + [ベストプラクティスと考慮事項](styles-and-pattern-considerations-and-best-practices.md)
 + [既知の問題](known-issues.md)
-+ [サービスのトラブルシューティング](troubleshoot-afcs.md)
++ [トラブルシューティング](troubleshoot-afcs.md)
 
