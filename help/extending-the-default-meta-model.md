@@ -6,7 +6,7 @@ seo-description: デフォルトのメタモデルを拡張することにより
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: ffab4d916cbd545078f4b72b8de5c9968f23b0da
 
 ---
@@ -49,8 +49,8 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 デフォルトのメタモデルをローカルファイルシステムにダウンロードするには、以下の手順を実行します。
 
 1. AEM Forms インスタンスにログインします。
-1. Navigate to the **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]** **>** **[!UICONTROL Meta Model]** folder.
-1. Select the **[!UICONTROL global.schema.json]** file and tap **[!UICONTROL Download]**. ダウンロード用のダイアログボックスが表示されます。オプションを選 **[!UICONTROL Download asset(s) as binary files]** 択します。 タップ **[!UICONTROL Download]**. アーカイブファイルがダウンロードされます。
+1. **[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]****／****[!UICONTROL メタモデル]**&#x200B;フォルダーに移動します。
+1. **[!UICONTROL global.schema.json]** ファイルを選択して「**[!UICONTROL ダウンロード]**」をタップします。 ダウンロード用のダイアログボックスが表示されます。「**[!UICONTROL アセットをバイナリファイルとしてダウンロード]**」オプションを選択します。 「**[!UICONTROL ダウンロード]**」をタップします。アーカイブファイルがダウンロードされます。
 
    <!--
    Comment Type: draft
@@ -191,7 +191,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
   <tr> 
    <td><p>multiLine</p></td> 
    <td> 
-    <p>multiLineプロパティは、変換後にアダプティブフォームのソースフォームフィールドを複数行フィールドに変換します。 詳しくは、「<a href="#custommetamodelexamples">カスタムメタモデルの例</a>」の「<strong>文字列フィールドを複数行フィールドに変換する</strong>」セクションを参照してください。</p> </td> 
+    <p>multiLine プロパティにより、変換処理の完了後に、ソースフォームフィールドがアダプティブフォーム内の複数行フィールドに変換されます。詳しくは、「<a href="#custommetamodelexamples">カスタムメタモデルの例</a>」の「<strong>文字列フィールドを複数行フィールドに変換する</strong>」セクションを参照してください。</p> </td> 
   </tr>
   <td><p>mandatory</p></td> 
    <td> 
@@ -228,12 +228,12 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 変換処理の実行時にカスタムメタモデルを使用するには、以下の手順を実行します。
 
-1. Create a folder in **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]** and upload the custom meta-model JSON schema file to the folder.
+1. **[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;でフォルダーを作成し、このフォルダーにカスタムメタモデルの JSON スキーマファイルをアップロードします。
 1. 以下のオプションを使用して、変換サービスを起動します。
 
-   **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]**> **&lt;選**&#x200B;択した設定のプロパティ&#x200B;**>**
+   **[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／**[!UICONTROL 自動フォーム変換の設定]**／**&lt;**&#x200B;選択した設定のプロパティ&#x200B;**>**
 
-1. タブで、 **[!UICONTROL Basic]** フィールド内のカスタムメタモデルの場所を指定し、を **[!UICONTROL Custom Meta-model]** タップしま **[!UICONTROL Save & Close]**&#x200B;す。
+1. 「**[!UICONTROL 基本]**」タブの「**[!UICONTROL カスタムメタモデル]**」フィールドでカスタムメタモデルの場所を指定し、「**[!UICONTROL 保存して閉じる]**」をタップします。
 1. [変換処理を実行](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process)し、カスタムメタモデルを変換処理に適用します。
 
 ### カスタムメタモデルの例{#custommetamodelexamples}
@@ -449,7 +449,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 **例**：変換処理の完了後に、「**Address**」文字列タイプフィールドをフォーム内の複数行フィールドに変換する
 
-このカスタムメタモデルでは、**aem:affKeyword** プロパティ内のテキストが、変換サービスの検索キーワードとして使用されます。 After retrieving the **Address** text in the form, the service converts the text field to a multi-line field using the **multiLine** property defined in the **aem:afProperties** section.
+このカスタムメタモデルでは、**aem:affKeyword** プロパティ内のテキストが、変換サービスの検索キーワードとして使用されます。 変換サービスは、フォーム内の「**Address**」テキストフィールドを取得し、**aem:afProperties** セクションで定義された **multiLine** プロパティを使用して、このテキストフィールドを複数行フィールドに変換します。
 
 ```
 {
