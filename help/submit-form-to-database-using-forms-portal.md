@@ -1,73 +1,73 @@
 ---
-title: フォームポータルを使用したアダプティブフォームのデータベースへの送信
-description: デフォルトのメタモデルを拡張して、組織に固有のパターン、検証、エンティティを追加し、自動フォームコンバージョンサービスの実行中にアダプティブフォームフィールドに設定を適用します。
+title: フォームポータルを使用してアダプティブフォームをデータベースに送信する
+description: デフォルトのメタモデルを拡張することにより、組織固有のパターン、検証設定、エンティティを追加し、自動フォーム変換サービスの実行時に、設定情報をアダプティブフォームの各フィールドに適用することができます。
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: c0ca850a0a1e82e34364766601011d6367b218ac
 
 ---
 
 
-# フォームポータルを使用したアダプティブフォームとデータベースの統合 {#submit-forms-to-database-using-forms-portal}
+# フォームポータルを使用してアダプティブフォームをデータベースに統合する{#submit-forms-to-database-using-forms-portal}
 
-Automated Forms Conversionサービスを使用すると、非インタラクティブPDFフォーム、AcroフォームまたはXFAベースのPDFフォームをアダプティブフォームに変換できます。 変換処理を開始する際に、データ連結の有無に関わらず、アダプティブフォームを生成するオプションがあります。
+自動フォーム変換サービスを使用すると、非対話型 PDF フォーム、AcroForms、XFA ベース PDF フォームをアダプティブフォームに変換することができます。 変換サービスを実行する際に、データバインディングを持つアダプティブフォームを生成するのか、データバインディングのないアダプティブフォームを生成するのかを指定することができます。
 
-データ連結なしでアダプティブフォームを生成する場合は、変換後のアダプティブフォームを、変換後のフォームデータモデル、XMLスキーマまたはJSONスキーマと統合できます。 ただし、データ連結を含むアダプティブフォームを生成する場合、変換サービスはアダプティブフォームをJSONスキーマに自動的に関連付け、アダプティブフォームで使用可能なフィールドとJSONスキーマの間にデータ連結を作成します。 その後、アダプティブフォームを選択したデータベースと統合し、フォームにデータを入力し、フォームポータルを使用してデータベースに送信できます。
+データバインディングがないアダプティブフォームを生成する場合は、変換処理の完了後に、フォームデータモデル、XML スキーマ、または JSON スキーマに、変換後のアダプティブフォームを統合することができます。 ただし、データバインディングを持つアダプティブフォームを生成すると、アダプティブフォームが自動的に JSON スキーマに関連付けられ、アダプティブフォームと JSON スキーマのフィールド間でデータバインディングが作成されます。その後、フォームポータルを使用して任意のデータベースにアダプティブフォームを統合し、フォーム内のフィールドに値を設定して、データベースにフォームを送信することができます。
 
-次の図は、Forms Portalを使用して、変換されたアダプティブフォームをデータベースと統合する様々な段階を示しています。
+以下の図は、フォームポータルを使用して変換後のアダプティブフォームをデータベースに統合する手順をステージ別に示しています。
 
-![データベース統合](assets/database_integration.gif)
+![データベースとの統合手順](assets/database_integration.gif)
 
-この記事では、これらすべての統合ステージを正しく実行するための手順を説明します。
+この記事では、これらの統合ステージを正しく実行するための手順について説明します。
 
-この記事で説明するサンプルは、フォームポータルページをデータベースと統合するための、カスタマイズされたデータおよびメタデータサービスのリファレンス実装です。 サンプル実装で使用されるデータベースはMySQL 5.6.24です。ただし、フォームポータルページは任意のデータベースと統合できます。
+この記事で使用するサンプルは、フォームポータルページをデータベースに統合するためにカスタマイズされたデータサービスとメタデータサービスの参照実装環境です。このサンプル実装環境で使用されるデータベースは MySQL 5.6.24 ですが、任意のデータベースをフォームポータルページに統合することができます。
 
 ## 前提条件 {#pre-requisites}
 
-* AEM 6.4または6.5の作成者インスタンスの設定
-* AEMインスタ [ンスの最新のService](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) Packをインストールします。
-* AEM Formsアドオンパッケージの最新バージョン
-* 自動フォ [ーム変換サービスの設定](configure-service.md)
-* データベースを設定します。 サンプル実装で使用されるデータベースはMySQL 5.6.24です。ただし、変換されたアダプティブフォームは任意のデータベースと統合できます。
+* バージョン 6.4 および 6.5 の AEM オーサーインスタンスのセットアップ
+* AEM インスタンスの[最新のサービスパック](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html)をインストールする
+* 最新バージョンの AEM Forms アドオンパッケージ
+* [自動フォーム変換サービス](configure-service.md)の設定
+* データベースを設定します。 サンプルの実装環境では MySQL 5.6.24 データベースを使用しますが、変換後のアダプティブフォームは任意のデータベースに統合することができます。
 
-## AEMインスタンスとデータベース間の接続の設定 {#set-up-connection-aem-instance-database}
+## AEM インスタンスとデータベース間の接続を設定する{#set-up-connection-aem-instance-database}
 
-AEMインスタンスとMYSQLデータベース間の接続の設定は、次の要素で構成されます。
+AEM インスタンスと MYSQL データベース間の接続を設定するには、以下の処理を行う必要があります。
 
-* [MYSQLコネクタパッケージのインストール](#install-mysql-connector-java-file)
+* [MYSQL コネクターパッケージをインストールする](#install-mysql-connector-java-file)
 
-* [データベースでのスキーマとテーブルの作成](#create-schema-and-tables-in-database)
+* [データベース内にスキーマとテーブルを作成する](#create-schema-and-tables-in-database)
 
-* [接続設定の指定](#configure-connection-between-aem-instance-and-database)
+* [接続の設定を行う](#configure-connection-between-aem-instance-and-database)
 
-* [フォームポータル統合用のサンプルパッケージの設定と設定](#set-up-and-configure-sample)
+* [フォームポータルを統合するためのサンプルパッケージを設定する](#set-up-and-configure-sample)
 
-### mysql-connector-java-5.1.39-bin.jar ファイルのインストール {#install-mysql-connector-java-file}
+### mysql-connector-java-5.1.39-bin.jar ファイルをインストールする {#install-mysql-connector-java-file}
 
 すべてのオーサーインスタンスとパブリッシュインスタンスで、次の手順を実行し、mysql-connector-java-5.1.39-bin.jar ファイルをインストールします。
 
-1. Navigate to http://[server]:[port]/system/console/depfinder and search for com.mysql.jdbc package.
+1. http://[server]:[port]/system/console/depfinder に移動して com.mysql.jdbc パッケージを検索します。
 1. 「次による書き出し」列で、パッケージがバンドルで書き出されているかどうかを確認します。パッケージがバンドルで書き出されていない場合は、先に進みます。
-1. Navigate to http://[server]:[port]/system/console/bundles and click **[!UICONTROL Install/Update]**.
-1. Click **[!UICONTROL Choose File]** and browse to select the mysql-connector-java-5.1.39-bin.jar file. また、とチェックボッ **[!UICONTROL Start Bundle]** クスを選 **[!UICONTROL Refresh Packages]** 択します。
-1. またはをク **[!UICONTROL Install]** リックしま **[!UICONTROL Update]**&#x200B;す。 完了したら、サーバーを再起動します。
-1. （Windowsのみ）お使いのオペレーティングシステムのシステムファイアウォールをオフにします。
+1. http://[server]:[port]/system/console/bundles に移動して「**[!UICONTROL Install/Update]**」をクリックします。
+1. 「**[!UICONTROL ファイルを選択]**」をクリックし、mysql-connector-java-5.1.39-bin.jar を探して選択します。また、「**[!UICONTROL Start Bundle]**」チェックボックスと「**[!UICONTROL Refresh Packages]**」チェックボックスを選択します。
+1. 「**[!UICONTROL Install]**」または「**[!UICONTROL Update]**」をクリックします。完了したら、サーバーを再起動します。
+1. （Windows のみ）オペレーティングシステムのシステムファイアウォールをオフにします。
 
-### データベースでのスキーマとテーブルの作成 {#create-schema-and-tables-in-database}
+### データベース内にスキーマとテーブルを作成する{#create-schema-and-tables-in-database}
 
-次の手順を実行して、データベースにスキーマとテーブルを作成します。
+データベース内にスキーマとテーブルを作成するには、以下の手順を実行します。
 
-1. 次のSQL文を使用して、データベースにスキーマを作成します。
+1. 以下の SQL ステートメントを使用して、データベース内にスキーマを作成します。
 
    ```sql
    CREATE SCHEMA `formsportal` ;
    ```
 
-   formsportalは **** 、スキーマの名前を指します。
+   **formsportal** は、スキーマの名前です。
 
-1. 次のSQL文を使 **用して** 、データベーススキーマにデータテーブルを作成します。
+1. 以下の SQL ステートメントを使用して、データベーススキーマ内に **data** というテーブルを作成します。
 
    ```sql
     CREATE TABLE `data` (
@@ -79,7 +79,7 @@ AEMインスタンスとMYSQLデータベース間の接続の設定は、次の
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. 次のSQL文を使 **用して** 、データベーススキーマにメタデータテーブルを作成します。
+1. 以下の SQL ステートメントを使用して、データベーススキーマ内に **metadata** というテーブルを作成します。
 
    ```sql
    CREATE TABLE `metadata` (
@@ -119,7 +119,7 @@ AEMインスタンスとMYSQLデータベース間の接続の設定は、次の
        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. 次のSQL文を使 **用して** 、データベーススキーマに追加のメタデータテーブルを作成します。
+1. 以下の SQL ステートメントを使用して、データベーススキーマ内に **additionalmetadatatable** というテーブルを作成します。
 
    ```sql
    CREATE TABLE `additionalmetadatatable` (
@@ -131,7 +131,7 @@ AEMインスタンスとMYSQLデータベース間の接続の設定は、次の
        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. 次のSQL文を使 **用して** 、データベーススキーマにコメントテーブルテーブルを作成します。
+1. 以下の SQL ステートメントを使用して、データベーススキーマ内に **commenttable** というテーブルを作成します。
 
    ```sql
    CREATE TABLE `commenttable` (
@@ -142,12 +142,12 @@ AEMインスタンスとMYSQLデータベース間の接続の設定は、次の
        `time` varchar(255) DEFAULT NULL);
    ```
 
-### AEMインスタンスとデータベース間の接続の設定 {#configure-connection-between-aem-instance-and-database}
+### AEM インスタンスとデータベース間の接続を設定する{#configure-connection-between-aem-instance-and-database}
 
-次の設定手順を実行して、AEMインスタンスとMYSQLデータベース間の接続を作成します。
+AEM インスタンスと MYSQL データベース間の接続を作成するには、以下の手順を実行します。
 
-1. Go to AEM Web Console Configuration page at *http://[host]:[port]/system/console/configMgr*.
-1. Click to open **[!UICONTROL Forms Portal Draft and Submission Configuration]** in edit mode.
+1. AEM Web コンソールの設定ページ（*http://[host]:[port]/system/console/configMgr*）に移動します。
+1. **[!UICONTROL Forms Portal Draft and Submission Configuration]** をクリックし、編集モードで開きます。
 1. 次の表の説明に従って、プロパティの値を指定します。
 
    <table> 
@@ -164,33 +164,33 @@ AEMインスタンスとMYSQLデータベース間の接続の設定は、次の
     </tr>
     <tr> 
     <td><p>フォームポータル ドラフトメタデータサービス</p></td> 
-    <td><p>ドラフトメタデータサービス の識別子</p></td>
+    <td><p>ドラフトメタデータサービスの識別子</p></td>
     <td><p>formsportal.samplemetadataservice</p></td> 
     </tr>
     <tr> 
     <td><p>フォームポータル 送信データサービス</p></td> 
-    <td><p>送信データサービス の識別子</p></td>
+    <td><p>送信データサービスの識別子</p></td>
     <td><p>formsportal.sampledataservice</p></td> 
     </tr>
     <tr> 
     <td><p>フォームポータル 送信メタデータサービス</p></td> 
-    <td><p>送信メタデータサービス の識別子</p></td>
+    <td><p>送信メタデータサービスの識別子</p></td>
     <td><p>formsportal.samplemetadataservice</p></td> 
     </tr>
     <tr> 
     <td><p>フォームポータル 保留中署名データサービス</p></td> 
-    <td><p>保留中の署名データサービスの識別子</p></td>
+    <td><p>保留中署名データサービスの識別子</p></td>
     <td><p>formsportal.sampledataservice</p></td> 
     </tr>
     <tr> 
     <td><p>フォームポータル 保留中署名メタデータサービス</p></td> 
-    <td><p>保留中の署名メタデータサービスの識別子</p></td>
+    <td><p>保留中署名メタデータサービスの識別子</p></td>
     <td><p>formsportal.samplemetadataservice</p></td> 
     </tr>
     </tbody> 
     </table>
-1. Leave other configurations as is and click **[!UICONTROL Save]**.
-1. [Web Console Configuration]で編集モ **[!UICONTROL Apache Sling Connection Pooled DataSource]** ードで開くには、をクリックします。 次の表の説明に従って、プロパティの値を指定します。
+1. 他の設定はそのままにし、「**[!UICONTROL 保存]**」をクリックします。
+1. Web コンソールの設定ページで、「**[!UICONTROL Apache Sling Connection Pooled DataSource]**」をクリックして編集モードで開きます。次の表の説明に従って、プロパティの値を指定します。
 
    <table> 
     <tbody> 
@@ -200,7 +200,7 @@ AEMインスタンスとMYSQLデータベース間の接続の設定は、次の
     </tr> 
     <tr> 
     <td><p>データソース名</p></td> 
-    <td><p>データソースプールからドライバーをフィルターするためのデータソース名.サンプルの実装では、データソース名としてFormsPortalを使用します。</p></td>
+    <td><p>データソースプールからドライバーをフィルターするためのデータソース名 このサンプル実装環境では、データソース名として「FormsPortal」を使用しています。</p></td>
     </tr>
     <tr> 
     <td><p>JDBC ドライバークラス</p></td> 
@@ -263,37 +263,37 @@ AEMインスタンスとMYSQLデータベース間の接続の設定は、次の
 
 ### サンプルのセットアップおよび設定 {#set-up-and-configure-sample}
 
-すべての作成者インスタンスと発行インスタンスで次の手順を実行し、サンプルをインストールして設定します。
+すべてのオーサーインスタンスとパブリッシュインスタンスで、次の手順を実行し、サンプルをインストールして設定します。
 
 1. パッケージ **aem-fp-db-integration-sample-pkg-6.1.2.zip** をファイルシステムにダウンロードします。
 
    [ファイルを入手](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
-1. Go to AEM package manager at *http://[host]:[port]/crx/packmgr/*.
-1. 「**[!UICONTROL Upload Package]**」をクリックします。
+1. AEM パッケージマネージャー（*http://[host]:[port]/crx/packmgr/*）に移動します。
+1. 「**[!UICONTROL パッケージをアップロード]**」をクリックします。
 1. パッケージ **aem-fp-db-integration-sample-pkg-6.1.2.zip** を参照して選択し、「**[!UICONTROL OK]**」をクリックします。
-1. Click **[!UICONTROL Install]** next to the package to install the package.
+1. パッケージの横に表示されている「**[!UICONTROL インストール]**」クリックしてパッケージをインストールします。
 
-## フォームポータル統合用の変換済みアダプティブフォームの設定 {#configure-converted-adaptive-form-for-forms-portal-integration}
+## 変換後のアダプティブフォームをフォームポータル統合用に設定する{#configure-converted-adaptive-form-for-forms-portal-integration}
 
-次の手順を実行し、フォームポータルページを使用してアダプティブフォームの送信を有効にします。
-1. [変換を実行して](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process) 、ソースフォームをアダプティブフォームに変換します。
+フォームポータルページでアダプティブフォームを送信できるようにするには、以下の手順を実行します。
+1. [変換サービスを実行](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process)して、ソースフォームをアダプティブフォームに変換します。
 1. アダプティブフォームを編集モードで開きます。
-1. 「フォームコンテナ」をタップし、「アダプティブフォームを ![設定」を選択しま](assets/configure-adaptive-form.png)す。
-1. セクション **[!UICONTROL Submission]** で、ドロップダ **[!UICONTROL Forms Portal Submit Action]** ウンリスト **[!UICONTROL Submit Action]** からを選択します。
-1. 「テンプレ ![ートポリシーの保存](assets/edit_template_done.png) 」をタップして設定を保存します。
+1. フォームコンテナをタップして「![アダプティブフォームを設定](assets/configure-adaptive-form.png)」を選択します。
+1. 「**[!UICONTROL 送信]**」セクションの「**[!UICONTROL 送信アクション]**」プルダウンリストで「**[!UICONTROL フォームポータル送信アクション]**」を選択します。
+1. 「![テンプレートポリシーを保存](assets/edit_template_done.png)」をタップして設定を保存します。
 
-## フォームポータルページの作成と設定 {#create-configure-forms-portal-page}
+## フォームポータルページの作成と設定を行う{#create-configure-forms-portal-page}
 
-次の手順を実行して、フォームポータルページを作成し、このページを使用してアダプティブフォームを送信できるように設定します。
+フォームポータルページを作成し、そのページでアダプティブフォームを送信できるように設定するには、以下の手順を実行します。
 
-1. AEM作成者インスタンスにログオンし、/をタッ **[!UICONTROL Adobe Experience Manager]** プしま **[!UICONTROL Sites]**&#x200B;す。
-1. 新しいフォームポータルページを保存する場所を選択し、/をタップ **[!UICONTROL Create]** します **[!UICONTROL Page]**。
-1. ページのテンプレートを選択し、をタップ **[!UICONTROL Next]**&#x200B;し、ページのタイトルを指定してをタップしま **[!UICONTROL Create]**&#x200B;す。
-1. をタップ **[!UICONTROL Edit]** して、ページを設定します。
-1. ページのヘッダーで、テンプレ ![ートの編集](assets/edit_template_sites.png) / **[!UICONTROL Edit Template]** をタップし、ページのテンプレートを開きます。
-1. 「レイアウトコンテナ」をタップし、「テンプレート ![ポリシーの編集」をタップしま](assets/edit_template_policy.png)す。 タブで、とオ **[!UICONTROL Allowed Components]** プションを有効 **[!UICONTROL Document Services]** にし、「テ **[!UICONTROL Document Services Predicates]** ンプレートポリシーを ![保存」をタップします](assets/edit_template_done.png)。
-1. ページにコ **[!UICONTROL Search & Lister]** ンポーネントを挿入します。 その結果、AEMインスタンスで使用可能な既存のアダプティブフォームがすべてページに表示されます。
-1. ページにコ **[!UICONTROL Drafts & Submissions]** ンポーネントを挿入します。 との2つのタブが **[!UICONTROL Draft Forms]** フォーム **[!UICONTROL Submitted Forms]**&#x200B;ポータルページに表示されます。 このタブに **[!UICONTROL Draft Forms]** は、フォームポータル統合のための変換済みアダプティブフォームの設定で説明されている手順を使用し [て生成された変換済みアダプティブフォームも表示されます。](#configure-converted-adaptive-form-for-forms-portal-integration)
+1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL サイト]**&#x200B;の順にタップします。  
+1. 新しいフォームポータルページの保存場所を選択し、**[!UICONTROL 作成]**／**[!UICONTROL ページ]**&#x200B;をタップします。
+1. ページのテンプレートを選択して「**[!UICONTROL 次へ]**」をタップし、ページのタイトルを入力して「**[!UICONTROL 作成]**」をタップします。
+1. 「**[!UICONTROL 編集]**」をタップして、ページの設定を行います。
+1. ページのヘッダーで、「![テンプレートの編集](assets/edit_template_sites.png)  ／**[!UICONTROL テンプレートを編集]**」の順にタップしてページのテンプレートを開きます。
+1. レイアウトコンテナをタップして、「![テンプレートポリシーを編集](assets/edit_template_policy.png)」をタップします。 「**[!UICONTROL 許可されているコンポーネント]**」タブで「**[!UICONTROL Document Services]**」オプションと「**[!UICONTROL Document Services の述語]**」オプションを有効にして「![テンプレートポリシーを保存](assets/edit_template_done.png)」をタップします。
+1. 「**[!UICONTROL 検索とリスター]**」コンポーネントをページ内に挿入します。 これにより、AEM インスタンス上のすべてのアダプティブフォームがページに一覧表示されます。
+1. 「**[!UICONTROL ドラフトと送信]**」コンポーネントをページ内に挿入します。 「**[!UICONTROL ドラフトフォーム]**」と「**[!UICONTROL 送信済みのフォーム]**」という 2 つのタブがフォームポータルページに表示されます。 「**[!UICONTROL ドラフトフォーム]**」タブには、「[変換後のアダプティブフォームをフォームポータル統合用に設定する](#configure-converted-adaptive-form-for-forms-portal-integration)」セクションの手順に従って生成された変換後のアダプティブフォームも表示されます。
 
-1. をタップ **[!UICONTROL Preview]**&#x200B;し、変換されたアダプティブフォームをタップし、アダプティブフォームフィールドの値を指定して送信します。 アダプティブフォームのフィールドに指定した値は、統合データベースに送信されます。
+1. 「**[!UICONTROL プレビュー]**」をタップしてから変換後のアダプティブフォームをタップして、アダプティブフォームフィールドの値を指定してフォームを送信します。 アダプティブフォームフィールドで指定した値が、統合後のデータベースに送信されます。
