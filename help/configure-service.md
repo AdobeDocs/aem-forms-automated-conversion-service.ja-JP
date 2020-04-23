@@ -1,171 +1,171 @@
 ---
 title: 自動フォーム変換サービスの設定
-description: AEMインスタンスで自動フォーム変換サービスを使用する準備ができました
-translation-type: tm+mt
+description: 自動フォーム変換サービスを使用できるように AEM インスタンスの準備を行う
+translation-type: ht
 source-git-commit: 68824c2f398d00141d67996121f7b758af16d2e4
 
 ---
 
 
-# 自動フォーム変換サービスの設定 {#about-this-help}
+# 自動フォーム変換サービスの設定{#about-this-help}
 
-このヘルプでは、AEM管理者がAutomated Forms Conversionサービスを設定して、PDFフォームからアダプティブフォームへの変換を自動化する方法を説明します。 このヘルプは、組織のIT管理者およびAEM管理者を対象としています。 このヘルプで扱う内容は、次のテクノロジーに関する十分な知識がある読者を想定しています。
+このヘルプ記事では、AEM の管理者が自動フォーム変換サービスを設定して、PDF フォームを自動的にアダプティブフォームに変換する方法について説明します。 このヘルプ記事は、組織内の IT 管理者と AEM 管理者を対象としています。 具体的には、以下の操作に関する十分な知識があるユーザーを対象としています。
 
-* Adobe Experience ManagerおよびAEMパッケージのインストール、設定、管理、
+* Adobe Experience Manager パッケージと AEM パッケージのインストール、設定、管理
 
-* LinuxおよびMicrosoft Windowsオペレーティングシステムの使用、
+* Linux オペレーティングシステムと Microsoft Windows オペレーティングシステムの使用
 
-* SMTPメールサーバーの設定
+* SMTP メールサーバーの設定
 
->[!VIDEO](https://video.tv.adobe.com/v/29267/)
+>[!VIDEO](https://video.tv.adobe.com/v/29267/?captions=jpn)
 
-**ビデオを見るか、記事を読んで、自動フォーム変換サービスを設定します。**
+**このビデオを再生して（または以下の説明を読んで）、自動フォーム変換サービスの設定方法を確認してください**
 
-## オンボーディング{#onboarding}
+## 使用開始{#onboarding}
 
-このサービスは、AEM 6.4 FormsおよびAEM 6.5 Formsのオンプレミスのお客様およびAdobe Managed Serviceのエンタープライズのお客様が無料で利用できます。 アドビの販売チームまたはアドビの担当者に連絡して、サービスへのアクセスをリクエストできます。
+AEM 6.4 Forms と AEM 6.5 Forms のオンプレミスユーザーと、Adobe Managed Service のエンタープライズユーザーは、自動フォーム変換サービスを無料で使用することができます。 変換サービスを使用する場合は、アドビのセールスチームまたはアドビの営業担当者に問い合わせてください。
 
-アドビは、組織へのアクセスを許可し、組織の管理者として指定されたユーザーに必要な権限を与えます。 管理者は、組織のAEM Forms開発者（ユーザー）に対するアクセス権を付与して、サービスに接続できます。
+お客様の組織で変換サービスを使用できるように設定し、組織の管理者に対して必要な権限を設定します。 必要な権限を設定された管理者は、変換サービスに接続するためのアクセス権限を、組織内の AEM Forms 開発ユーザーに付与することができます。
 
 ## 前提条件 {#prerequisites}
 
-Automated Forms Conversion Serviceを使用するには、次が必要です。
+自動フォーム変換サービスを使用するには、以下の条件を満たしている必要があります。
 
-* 自動フォームコンバージョンサービスが組織で有効になっている
-* 変換サービスの管理者権限を持つAdobe IDアカウント
-* 最新のAEM Service Packを含むAEM 6.4またはAEM 6.5の作成者インスタンスの起動および実行
-* forms-userグループのメンバーであるAEMユーザー（AEMインスタンス上）
+* 組織内で自動フォーム変換サービスが有効になっていること
+* 変換サービス用の管理者権限が設定された Adobe ID アカウントが作成されていること
+* 最新の AEM サービスパックが付属した AEM 6.4 オーサーインスタンスまたは AEM 6.5 オーサーインスタンスが稼働していること
+* AEM インスタンス上の AEM ユーザーが forms-user グループのメンバーになっていること
 
 ## 環境の設定 {#setuptheservice}
 
-サービスを使用する前に、AEM作成者インスタンスを準備し、Adobe Cloudで実行されているサービスに接続します。 一覧のシーケンスで次の手順を実行し、サービスのインスタンスを準備します。
+変換サービスを使用する前の準備として、Adobe Cloud 上で稼働しているサーバーに AEM オーサーインスタンスを接続する必要があります。 このインスタンスの準備を行うには、以下の手順を上から順に実行します。
 
-1. [AEM 6.4またはAEM 6.5のダウンロードとインストール](#aemquickstart)
-1. [最新のAEM Service Packのダウンロードとインストール](#servicepack)
-1. [最新のAEM Formsアドオンパッケージのダウンロードとインストール](#downloadaemformsaddon)
-1. （オプション）最新のコネ [クタパッケージのダウンロードとインストール](#installConnectorPackage)
-1. [カスタムテーマとテンプレートの作成](#referencepackage)
+1. [AEM 6.4 または AEM 6.5 をダウンロードしてインストールする](#aemquickstart)
+1. [最新の AEM サービスパックをダウンロードしてインストールする](#servicepack)
+1. [最新の AEM Forms アドオンパッケージをダウンロードしてインストールする](#downloadaemformsaddon)
+1. （オプション）[最新のコネクターパッケージをダウンロードしてインストールする](#installConnectorPackage)
+1. [カスタムのテーマとテンプレートを作成する](#referencepackage)
 
-### AEM 6.4またはAEM 6.5のダウンロードとインストール {#aemquickstart}
-
-
-自動フォームコンバージョンサービスは、AEM作成者インスタンス上で実行されます。 AEMオーサーインスタンスを設定するには、AEM 6.4またはAEM 6.5が必要です。 AEMを起動および実行していない場合は、次の場所からダウンロードします。
-
-* AEMをご利用の場合は、 [Adobe Licensing WebサイトからAEM 6.4またはAEM 6.5をダウンロードします](http://licensing.adobe.com)。
-
-* アドビパートナーの場合は、 [Adobe Partner Training Program](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) （アドビパートナートレーニングプログラム）を使用してAEM 6.4またはAEM 6.5をリクエストします。
-
-AEMをダウンロードした後、AEMオーサーインスタンスを設定する手順については、デプロイと管理 [を参照してください](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)。
-
-### Download and install AEM latest Service Pack {#servicepack}
-
-最新のAEM Service Packをダウンロードしてインストールします。 詳しい手順については、「 [AEM 6.4 Service Packリリースノート](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html) 」または「 [AEM 6.5 Service Packリリースノート」を参照してください](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html)。
-
-### Download and install AEM Forms add-on package  {#downloadaemformsaddon}
-
-AEMインスタンスには、基本的なフォーム機能が含まれています。 変換サービスには、AEM Formsの全機能が必要です。 AEM Formsのすべての機能を利用するには、AEM Formsアドオンパッケージをダウンロードしてインストールします。 変換サービスを設定して実行するには、パッケージが必要です。 詳しい手順については、データ取得機 [能のインストールと設定を参照してください。](https://helpx.adobe.com/experience-manager/6-5/forms/using/installing-configuring-aem-forms-osgi.html)
-
->[!NOTE]
-> アドオンパッケージのインストール後に、必ず必須のインストール後の設定を行ってください。
+### AEM 6.4 または AEM 6.5 をダウンロードしてインストールする{#aemquickstart}
 
 
-### （オプション）コネクタパッケージのダウンロードとインストール {#installConnectorPackage}
+自動フォーム変換サービスは、AEM オーサーインスタンス上で稼働します。 AEM オーサーインスタンスを設定するには、AEM 6.4 または AEM 6.5 が必要です。 AEM が稼働していない場合は、以下の場所から AEM をダウンロードしてください。
 
-リリースAFC-2020.03.1で提供される自動検出論理セクション機能と改善を使用するには [](convert-existing-forms-to-adaptive-forms.md#run-the-conversion) 、コネクタパッケージ1.1.38以降をインストールします。コネクタパッ [ケージはAEMパッケージ共有からダウンロードできます](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)。
+* 既に AEM を使用している場合は、[アドビライセンス Web サイト](http://licensing.adobe.com)から AEM 6.4 または AEM 6.5 をダウンロードしてください。
+
+* アドビパートナーの場合は、[アドビパートナートレーニングプログラム](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)から AEM 6.4 または AEM 6.5 を申し込んでください。
+
+AEM をダウンロードしたら、「[デプロイメントと保守](https://helpx.adobe.com/jp/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)」の説明に従い、AEM オーサーインスタンスの設定を行ってください。
+
+### 最新の AEM サービスパックをダウンロードしてインストールする{#servicepack}
+
+最新の AEM サービスパックをダウンロードしてインストールしてください。 詳しい手順については、  、「[AEM 6.4 サービスパックリリースノート](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html)」、「[AEM 6.5 サービスパックリリースノート](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes/sp-release-notes.html)」のいずれかを参照してください。
+
+### AEM Forms アドオンパッケージをダウンロードしてインストールする  {#downloadaemformsaddon}
+
+AEM インスタンスには、基本的なフォーム機能が付属しています。 変換サービスを使用するには、AEM Forms のすべての機能が必要になります。 AEM Forms のすべての機能を使用するには、AEM Forms アドオンパッケージをダウンロードしてインストールする必要があります。 変換サービスを設定して使用するには、このパッケージが必要になります。 詳しい手順については、「[データ取得機能をインストールして設定する](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/installing-configuring-aem-forms-osgi.html)」を参照してください。
 
 >[!NOTE]
-> 既にAutomated Forms Conversionサービス環境を使用している場合は、コンバージョンサービスの最新の機能を使用するには、最新のサービスパック、最新のAEM Formsアドオンパッケージ、最新のコネクタパッケージを上記の順序でインストールします。
+> アドオンパッケージをインストールしたら、設定手順を実行する必要があります。
 
 
-### カスタムテーマとテンプレートの作成 {#referencepackage}
+### （オプション）コネクターパッケージをダウンロードしてインストールする  {#installConnectorPackage}
 
-AEMを実稼働モード(nosamplecontent runmode [](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/production-ready.html) )で起動した場合、参照パッケージはインストールされません。 リファレンスパッケージには、サンプルのテーマとテンプレートが含まれています。 自動フォーム変換サービスでは、PDFフォームをアダプティブフォームに変換するために、少なくとも1つのテーマと1つのテンプレートが必要です。 独自のポイントサービス設定のカスタムテーマとカスタムテンプレートを作成し [て、サービスを使用する前に](#configure-the-cloud-service) 、カスタムテンプレートとカスタムテーマを使用するようにします。
+コネクターパッケージ 1.1.38 以降をインストールすると、リリース AFC-2020.03.1 で提供される[自動検出論理セクション](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)機能と改善を使用できます。[AEM パッケージ共有からコネクターパッケージをダウンロード](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)できます。
 
-## Configure the service {#configure-the-service}
+>[!NOTE]
+> 自動フォーム変換サービス環境が既に稼働している場合、変換サービスの最新機能を使用するには、最新のサービスパック、最新の AEM Forms アドオンパッケージ、最新のコネクターパッケージをこの順序でインストールします。
 
-サービスの設定に進み、ローカルインスタンスをAdobe Cloud上で実行しているサービスに接続する前に、サービスへの接続に必要な個人と権限について説明します。 このサービスでは、管理者と開発者の2種類の人物を使用します。
 
-* **管理者**:管理者は、組織のアドビのソフトウェアとサービスを管理する責任を負います。 管理者は、組織の開発者に、Adobe Cloudで実行されているAutomated Forms Conversionサービスに接続するためのアクセス権を付与します。 組織の管理者がプロビジョニングされると、管理者はタイトルの電子メールを受信しま **[!UICONTROL 'You now have administrator rights to manage Adobe software and services for your organization']**&#x200B;す。 管理者の場合は、メールボックスに前述のタイトルの電子メールがないか確認し、組織の開発者 [にアクセス権を付与します](#adduseranddevs)。
+### カスタムのテーマとテンプレートを作成する{#referencepackage}
 
-![管理アクセス許可電子メール](assets/admin-console-adobe-io-access-grantedx75.png)
+AEM を[実稼働モード](https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/production-ready.html)（nosamplecontent 稼働モード）で起動した場合、参照パッケージはインストールされません。 参照パッケージには、サンプルのテーマとテンプレートが含まれています。 自動フォーム変換サービスを使用して PDF フォームをアダプティブフォームに変換するには、1 つ以上のテーマとテンプレートが必要になります。 変換サービスを使用する前に、専用のカスタムテーマとカスタムテンプレートを作成し、それらのテーマとテンプレートを使用するように[変換サービスを設定](#configure-the-cloud-service)してください。
 
-* **開発者**:開発者は、ローカルのAEM Forms作成者インスタンスを、Adobe Cloud上で実行されているAutomated Forms Conversionサービスに接続します。 管理者がAutomated Forms Conversionサービスに接続する権限を開発者に付与すると、組織のAdobe API統合を管理するための開発者アクセス権を持つタイトルの電子メールが開発者に送信されます。 開発者の方は、メールボックスに前述のタイトルの電子メールがないか確認し、「ローカルAEMインスタンスを [Adobe Cloud上のAutomated Forms Conversionサービスに接続する」に進みます。](#connectafcadobeio)
+## サービスの設定{#configure-the-service}
 
-![開発者アクセス許可電子メール](assets/email-developer-accessx94.png)
+Adobe Cloud 上で稼働するサービスの設定を行い、そのサービスにローカルインスタンスを接続する前に、サービスの接続時に必要となるユーザーと権限について説明します。 サービスを接続する場合、管理者と開発者という 2 種類のユーザーが必要になります。
 
-### （管理者のみ）組織の開発者にアクセス権を付与します。 {#adduseranddevs}
+* **管理者**：管理者は、組織内で使用するアドビソフトウェアとアドビサービスの管理を担当します。 管理者は、Adobe Cloud 上で稼働する自動フォーム変換サービスを接続するための権限を、組織内の開発者に付与する必要があります。 管理者を組織に対してプロビジョニングすると、「**[!UICONTROL アドビのソフトウェアとサービスを組織内で管理するための管理者権限が付与されました]**」という内容の電子メールが管理者に送信されます。 管理者は、この電子メールを受信したら、[組織内の開発者に権限を付与する](#adduseranddevs)必要があります。
 
-アドビが組織へのアクセスを有効にし、管理者に必要な権限を与えたら、管理者は管理コンソールにログインし（以下の詳細な手順）、プロファイルを作成し、プロファイルに開発者を追加できます。 開発者は、AEM FormsのローカルインスタンスをAdobe CloudのAutomated Forms Conversionサービスに接続できます。
+![権限の付与について管理者に送信される電子メール](assets/admin-console-adobe-io-access-grantedx75.png)
 
-開発者は、コンバージョンサービスを実行するように指定された組織のメンバーです。 Adobe Automated Forms Conversionサービスプロファイルに追加された開発者のみが、Automated Forms Conversionサービスを使用する権利を持ちます。 次の手順を実行して、プロファイルを作成し、それに開発者を追加します。
+* **開発者**: 開発者は、Adobe Cloud 上で稼働する自動フォーム変換サービスに、ローカルの AEM Forms オーサーインスタンスを接続する必要があります。 管理者が開発者に対して自動フォーム変換サービスの接続権限を付与すると、「Adobe API 統合を組織内で管理するための開発者権限が付与されました」という内容の電子メールが開発者に送信されます。 開発者は、この電子メールを受信したら、[ローカルの AEM インスタンスを Adobe Cloud 上の自動フォーム変換サービスに接続する](#connectafcadobeio)必要があります。
 
-1. 管理コンソールに [ログインします](https://adminconsole.adobe.com/)。 自動フォ **ーム変換サービスを使用して** 、ログインするためにプロビジョニングされた管理者のAdobe IDを使用します。 他のIDやFederated IDを使用してログインしないでください。
-1. オプションをクリ **[!UICONTROL Automated Forms Conversion]** ックします。
-1. タブ内 **[!UICONTROL New Profile]** をクリック **[!UICONTROL Products]** します。
-1. プロフ **[!UICONTROL Name]**&#x200B;ァイル **[!UICONTROL Display Name]**&#x200B;の、、お **[!UICONTROL Description]** よびを指定します。 「**[!UICONTROL Done]**」をクリックします。プロファイルが作成されます。
+![権限の付与について開発者に送信される電子メール](assets/email-developer-accessx94.png)
 
-   ![新しいプロファイルの詳細を指定します。](assets/create-new-profile-details.png)
+### （管理者のみ）組織内の開発者に権限を付与する{#adduseranddevs}
 
-1. プロファイルに開発者を追加します。 開発者を追加するには：
-   1. 管理コンソ [ールで](https://adminconsole.adobe.com/enterprise)、「概要」タブに移動します。
-   1. 必要な製 **[!UICONTROL Assign Developers]** 品カードをクリックします。
-   1. 開発者の電子メールアドレスと、必要に応じて姓と名を入力します。
-   1. 製品プロファイルを選択します。 タップ **[!UICONTROL Save]**.
+組織と管理者に対する権限の設定が完了したら（この処理はアドビ側で行います）、管理者は、管理コンソールにログインしてプロファイルを作成し、そのプロファイルに開発者を追加する必要があります（詳しい手順については、これ以降の説明を参照してください）。 開発者は、ローカルの AEM Forms インスタンスを、Adobe Cloud 上の自動フォーム変換サービスに接続する必要があります。
 
-すべてのユーザーに対して上記の手順を繰り返します。  開発者の追加について詳しくは、開発者の管理を参 [照してください](https://helpx.adobe.com/enterprise/using/manage-developers.html)。
+開発者とは、変換サービスの実行を担当する組織内のメンバーのことです。 自動フォーム変換サービスのプロファイルに登録されている開発者だけが、自動フォーム変換サービスを使用することができます。 プロファイルを作成して開発者をそのプロファイルに登録するには、以下の手順を実行します。
 
-管理者がAdobe I/Oプロファイルに開発者を追加すると、開発者に電子メールで通知されます。 電子メールを受け取った後、開発者は、ローカルのAEM Formsイ [ンスタンスとAdobe Cloud上の自動フォーム変換サービスとの接続に進むことができます](#connectafcadobeio)。
+1. [管理コンソール](https://adminconsole.adobe.com/)にログインします。 自動フォーム変換を使用するようにプロビジョニングされた管理者用 **Adobe ID** を使用してログインしてください。 それ以外の ID や Federated ID は使用しないでください。
+1. 「**[!UICONTROL 自動フォーム変換]**」オプションをクリックします。
+1. 「**[!UICONTROL 製品]**」タブで「**[!UICONTROL 新しいプロファイル]**」をクリックします。
+1. プロファイルの&#x200B;**[!UICONTROL 名前]**、**[!UICONTROL 表示名]**、**[!UICONTROL 説明]**&#x200B;を入力します。 「**[!UICONTROL 完了]**」をクリックします。プロファイルが作成されます。
 
-### （開発者のみ）ローカルのAEM FormsインスタンスをAdobe Cloud上のAutomated Forms Conversionサービスに接続します。 {#connectafcadobeio}
+   ![新しいプロファイルの作成画面](assets/create-new-profile-details.png)
 
-管理者が開発者アクセスを提供したら、ローカルのAEM FormsインスタンスをAdobe Cloudで実行されているAutomated Forms変換サービスに接続できます。 リストに表示されたシーケンスで次の手順を実行し、AEM Formsインスタンスをサービスに接続します。
+1. プロファイルに開発者を追加します。 プロファイルに開発者を追加するには、以下の手順を実行します。
+   1. [管理コンソール](https://adminconsole.adobe.com/enterprise)で「概要」タブに移動します。
+   1. 目的の製品カードで、「**[!UICONTROL 開発者の割り当て]**」をクリックします。
+   1. 開発者の電子メールアドレスを入力し、必要に応じて姓名を入力します。
+   1. 製品プロファイルを選択します。 「**[!UICONTROL 保存]**」をタップします。
 
-* [電子メール通知の設定](configure-service.md#configureemailnotification)
-* [forms-usersグループへのユーザーの追加](#adduserstousergroup)
-* [公開証明書の取得](#obtainpubliccertificates)
-* [Adobe I/O 統合の作成](#createintegration)
-* [クラウドサービスの設定](configure-service.md#configure-the-cloud-service)
+すべての開発者について、上記の手順を繰り返します。  開発者の詳しい追加手順については、「[開発者の管理](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html)」を参照してください。
 
-#### 電子メール通知の設定 {#configureemailnotification}
+管理者が Adobe I/O プロファイルに開発者を追加すると、その管理者に電子メール通知が送信されます。 電子メール通知を受け取った開発者は、[ローカルの AEM Forms インスタンスを Adobe Cloud 上の自動フォーム変換サービスに接続する](#connectafcadobeio)必要があります。
 
-自動フォームコンバージョンサービスは、Day CQメールサービスを使用して電子メール通知を送信します。 これらの電子メール通知には、変換の成功または失敗に関する情報が含まれます。 通知を受信しない場合は、これらの手順をスキップします。 Day CQ Mailサービスを設定するには、次の手順を実行します。
+### （開発者のみ）ローカルの AEM Forms インスタンスを Adobe Cloud 上の自動フォーム変換サービスに接続する{#connectafcadobeio}
 
-1. AEM Configuration Manager( `http://localhost:4502/system/console/configMgr`
-1. Day CQ 電子メールサービスの設定を開きます。、、およびの各フィー **[!UICONTROL SMTP server host name]**&#x200B;ルドの **[!UICONTROL SMTP server port]**&#x200B;値を指定し **[!UICONTROL From address]** ます。 「**[!UICONTROL Save]**」をクリックします。
+管理者によって権限を付与された開発者は、ローカルの AEM Forms インスタンスを Adobe Cloud 上の自動フォーム変換サービスに接続する必要があります。 AEM Forms インスタンスを変換サービスに接続するには、以下の手順を上から順に実行します。
 
-   SMTPサーバーのホスト名とポートについては、電子メールサービスプロバイダーまたはIT管理者に問い合わせてください。 [差出人]フィールドには、任意の有効な電子メールアドレスを入力できます。 例えば、notification@example.comやdonotreply@example.comのように指定します。
+* [電子メール通知を設定する](configure-service.md#configureemailnotification)
+* [ユーザーを forms-users グループに追加する](#adduserstousergroup)
+* [公開証明書を取得する](#obtainpubliccertificates)
+* [Adobe I/O 統合環境を作成する](#createintegration)
+* [クラウドサービスを設定する](configure-service.md#configure-the-cloud-service)
 
-1. Open the **[!UICONTROL Day CQ Link Externalizer]** configuration. In the **[!UICONTROL Domains]** field, specify the actual host name or IP address and port number for local, author, and publish instances. 「**[!UICONTROL Save]**」をクリックします。
+#### 電子メール通知を設定する{#configureemailnotification}
 
-#### forms-usersグループへのユーザーの追加 {#adduserstousergroup}
+自動フォーム変換サービスは、Day CQ 電子メールサービスを使用して電子メール通知を送信します。 この電子メール通知には、変換処理の成否に関する情報が記載されています。 電子メール通知を受信しない場合は、以下の手順をスキップしてください。 Day CQ 電子メールサービスを設定するには、以下の手順を実行します。
 
-サービスを実行するように指定されたAEMユーザーのプロファイルに電子メールアドレスを指定します。 ユーザーが [formsユーザーグループのメンバーであることを確](https://helpx.adobe.com/experience-manager/6-4/forms/using/forms-groups-privileges-tasks.html) 認します。 電子メールは、変換を実行しているユーザーの電子メールアドレスに送信されます。 ユーザーの電子メールアドレスを指定し、ユーザーをformsユーザーグループに追加するには：
+1. AEM Configuration Manager（`http://localhost:4502/system/console/configMgr`）に移動します。
+1. Day CQ 電子メールサービスの設定を開きます。「**[!UICONTROL SMTP サーバーのホスト名]**」フィールド、「**[!UICONTROL SMTP サーバーポート]**」フィールド、「**[!UICONTROL 送信元アドレス]**」フィールドの値を指定します。「**[!UICONTROL 保存]**」をクリックします。
 
-1. AEM管理者としてAEM Forms作成者インスタンスにログインします。 ローカルのAEM資格情報を使用してログインします。 ログインにAdobe IDを使用しないでください。 Tap **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
+   SMTP サーバーのホスト名とポートが不明な場合は、電子メールサービスプロバイダーまたは IT 部門の管理者に問い合わせてください。 「送信元アドレス」フィールドには、任意の電子メールアドレスを入力することができます。 例えば、notification@example.com や donotreply@example.com などのアドレスを入力できます。
 
-1. 変換サービスを実行するユーザーを選択し、をタップしま **[!UICONTROL Properties]**&#x200B;す。 「ユーザー設定を編集」ページが開きます。
-1. フィールドに電子メールアドレスを指定し、 **[!UICONTROL Email]** をタップしま **[!UICONTROL Save]**&#x200B;す。 変換が正常に完了したか失敗した場合は、指定した電子メールアドレスに電子メールが送信されます。
-1. Tap the **Groups** tab. 「グループを選択」タブで、 **forms-usersグループを入力し** 、選択します。 Tap **Save &amp; Close**. これで、ユーザーはforms-usersグループのメンバーになります。
+1. 「**[!UICONTROL Day CQ Link Externalizer]**」の設定を開きます。「**[!UICONTROL ドメイン]**」フィールドで、ローカルインスタンス、オーサーインスタンス、パブリッシュインスタンスの実際のホスト名または IP アドレスとポートを指定します。「**[!UICONTROL 保存]**」をクリックします。
 
-#### 公開証明書の取得 {#obtainpubliccertificates}
+#### ユーザーを forms-users グループに追加する{#adduserstousergroup}
+
+変換サービスの実行を許可する AEM ユーザーのプロファイル内で電子メールアドレスを指定します。 このユーザーは、[forms user](https://helpx.adobe.com/jp/experience-manager/6-4/forms/using/forms-groups-privileges-tasks.html) グループにメンバーとして属している必要があります。 変換サービスの実行を許可されたユーザーの電子メールアドレスに電子メールが送信されます。 ユーザーの電子メールアドレスを指定し、そのユーザーを forms-user グループに追加するには、以下の手順を実行します。
+
+1. AEM 管理者として、AEM Forms のオーサーインスタンスにログインします。ローカルの AEM 資格情報を使用してログインします。 Adobe ID を使用してログインしないでください。 **[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL ユーザー]**&#x200B;の順にタップします。
+
+1. 変換サービスの実行を許可するユーザーを選択して「**[!UICONTROL プロパティ]**」をタップします。 「ユーザー設定を編集」ページが開きます。
+1. 「**[!UICONTROL 電子メール]**」フィールドで電子メールアドレスを入力して「**[!UICONTROL 保存]**」をタップします。 指定の電子メールアドレスに、変換処理の成否が記載された電子メール通知が送信されます。
+1. 「**グループ**」タブをタップします。「グループを選択」タブで「**forms-users**」と入力し、このグループを選択します。 「**保存して閉じる**」をタップします。これで、ユーザーが forms-users グループのメンバーとして登録されました。
+
+#### 公開証明書を取得する{#obtainpubliccertificates}
 
 公開証明書により、Adobe I/O でプロファイルを認証できます。
 
-1. AEM Forms作成者インスタンスにログインします。 Navigate to **[!UICONTROL Tools]**> **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**. タップ **[!UICONTROL Create]**. The **[!UICONTROL Adobe IMS Technical Account Configuration]** page appears.
+1. AEM Forms オーサーインスタンスにログインします。 **[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL Adobe IMS 設定]**&#x200B;に移動します。 「**[!UICONTROL 作成]**」をタップします。「**[!UICONTROL Adobe IMS テクニカルアカウント設定]**」ページが表示されます。
 
-   ![Adobe IMSテクニカルアカウント設定ページ](assets/adobe-ims-technical-account-configuration.png)
+   ![「Adobe IMS テクニカルアカウント設定」ページ](assets/adobe-ims-technical-account-configuration.png)
 
-1. 「Cloud Solution」 **[!UICONTROL Automated Forms Conversion Service]** でを選択します。
+1. クラウドソリューションで「**[!UICONTROL 自動フォーム変換サービス]**」を選択します。
 
-1. チェックボックス **[!UICONTROL Create new certificate]** を選択し、エイリアスを指定します。 エイリアスは、ダイアログの名前として機能します。 タップ **[!UICONTROL Create certificate]**. ダイアログが表示されます。「**[!UICONTROL OK]**」をクリックします。証明書が作成されます。
+1. 「**[!UICONTROL 新しい証明書を作成]**」チェックボックスを選択してエイリアスを入力します。 ここで入力したエイリアスが、ダイアログ名として表示されます。 「**[!UICONTROL 証明書の作成]**」をタップします。 ダイアログが表示されます。「**[!UICONTROL OK]**」をクリックします。証明書が作成されます。
 
-1. をタップ **[!UICONTROL Download Public Key]** し、 *AEM-Adobe-IMS.crt証明書ファイルをコンピューターに保存します* 。 証明書ファイルは、Adobe I/Oコ [ンソールでの統合の作成に使用されます](#createintegration)。 タップ **[!UICONTROL Next]**.
+1. 「**[!UICONTROL 公開鍵をダウンロード]**」をタップし、*AEM-Adobe-IMS.crt* 証明書ファイルをローカルマシンに保存します。 この証明書ファイルを使用して、[Adobe I/O コンソール上に統合環境が作成](#createintegration)されます。 「**[!UICONTROL 次へ]**」をタップします。
 
-1. 以下を指定します。
+1. 以下の情報を入力します。
 
-   * タイトル：タイトルを指定します。
-   * Authorization Server: [https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)
-   その他のフィールドは現時点では空白のままにします（後で指定します）。ページを開いたままにします。
+   * 「タイトル」フィールドにタイトルを入力します。
+   * 「認証サーバー」フィールドに「[https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)」を入力します。
+   その他のフィールドは現時点では空白のままにします（後で指定します）。ページは開いたままにしてください。
 
    <!--
    Comment Type: draft
@@ -179,67 +179,67 @@ AEMを実稼働モード(nosamplecontent runmode [](https://helpx.adobe.com/expe
    <li>Step text</li>
    -->
 
-#### Adobe I/O 統合の作成 {#createintegration}
+#### Adobe I/O 統合環境を作成する{#createintegration}
 
-自動フォーム変換サービスを使用するには、Adobe I/Oで統合を作成します。統合により、APIキー、クライアントシークレット、ペイロード(JWT)が生成されます。
+自動フォーム変換サービスを使用するには、Adobe I/O で統合環境を作成する必要があります。この統合環境により、API キー、クライアント秘密鍵、ペイロード（JWT）が生成されます。
 
-1. https://console.adobe.io/にログイン [します](https://console.adobe.io/)。 管理者がAdobe I/OコンソールにログインしてログインするようにプロビジョニングしたAdobe ID、開発者アカウントを使用します。
+1. [https://console.adobe.io/](https://console.adobe.io/) にログインします。 Adobe ID と、管理者がプロビジョニングした開発者アカウントを使用して、Adobe I/O コンソールにログインします。
 
-1. タップ **[!UICONTROL View Integrations]**. 使用可能なすべての統合が画面に表示されます。
-1. ドロップダウンリストから組織を選択しま **[!UICONTROL Integrations]**&#x200B;す。 をタッ **[!UICONTROL New Integration]**&#x200B;プし、選 **[!UICONTROL Access an API]**&#x200B;択してをタップしま **[!UICONTROL Continue]**&#x200B;す。
-1. /を選 **[!UICONTROL Experience Cloud]** 択し、を **[!UICONTROL Automated Forms Conversion]** タップしま **[!UICONTROL Continue]**&#x200B;す。 「自動フォーム変換」オプションが無効になっている場合は、オプションの上のドロップダウンボックスで正しい組織を選択していることを確認し **[!UICONTROL Adobe Services]** ます。 組織が不明な場合は、管理者に問い合わせてください。
+1. 「**[!UICONTROL 統合を表示]**」をタップします。 使用可能なすべての統合要素を示す画面が表示されます。
+1. 「**[!UICONTROL 統合]**」の下にあるドロップダウンで、自分が属している組織を選択します。 「**[!UICONTROL 新しい統合]**」をタップして「**[!UICONTROL API にアクセス]**」を選択し、「**[!UICONTROL 続行]**」をタップします。
+1. **[!UICONTROL Experience Cloud]**／**[!UICONTROL 自動フォーム変換]**&#x200B;の順に選択して「**[!UICONTROL 続行]**」をタップします。 「自動フォーム変換」オプションが無効になっている場合は、「**[!UICONTROL アドビのサービス]**」オプションの上にあるドロップダウンボックスで正しい組織が選択されているかどうかを確認してください。 自分がどの組織に属しているかわからない場合は、管理者に問い合わせてください。
 
-   ![自動フォームコンバージョンの選択](assets/create-new-integration.png)
+   ![新しい統合環境の作成画面](assets/create-new-integration.png)
 
-1. 統合の名前と説明を指定します。 「公開 **[!UICONTROL Select a File from your computer]** 証明書を取得」セクションでダウンロードしたAEM-Adobe-IMS [](#obtainpubliccertificates) .crtファイルをタップしてアップロードします。
-1. 組織の開発者にアクセス権を付 [与する際に作成したプロファイルを選択し](#adduseranddevs) 、をタップしま **[!UICONTROL Create Integration]**&#x200B;す。 統合が作成されます。
-1. をタップ **[!UICONTROL Continue to integration details]** して、統合情報を表示します。 このページには、APIキー、クライアントシークレット、およびローカルAEMインスタンスを自動フォームコンバージョンサービスに接続するために必要なその他の情報が含まれています。 ページ上の情報は、ローカルマシン上でIMS設定を作成するために使用されます。
+1. 新しい統合環境の名前と説明を入力します。 「**[!UICONTROL お使いのコンピューターからファイルを選択]**」をタップし、「[公開証明書を取得する](#obtainpubliccertificates)」セクションでダウンロードした AEM-Adobe-IMS.crt ファイルをアップロードします。
+1. [組織内の開発者に権限を付与](#adduseranddevs)する際に作成したプロファイルを選択して「**[!UICONTROL 統合を作成]**」をタップします。 統合環境が作成されます。
+1. 「**[!UICONTROL 統合の詳細情報に進む]**」をタップして、統合環境の詳細情報を表示します。 このページには、API キーやクライアント秘密鍵など、ローカルの AEM インスタンスを自動フォーム変換サービスに接続するために必要な情報が表示されます。 これらの情報を使用して、ローカルマシン上に IMS の設定データが作成されます。
 
-   ![統合のAPIキー、クライアントシークレット、ペイロード情報](assets/integration-details.png)
+   ![統合環境の API キー、クライアント秘密鍵、ペイロード情報の表示画面](assets/integration-details.png)
 
-1. ローカルインスタンスでIMS設定ページを開きます。 セクションの最後でページを開いたままにした(「公開証明書 [を取得」](#obtainpubliccertificates))。
+1. ローカルインスタンスで IMS の設定ページを開きます （このページは、「[公開証明書を取得する](#obtainpubliccertificates)」セクションの最後で開いたままにしておいたページです）。
 
-   ![タイトル、APIキー、クライアントシークレット、ペイロードの指定 ](assets/ims-configuration-details.png)
+   ![タイトル、API キー、クライアント秘密鍵、ペイロードを指定するための画面](assets/ims-configuration-details.png)
 
-1. Adobe IMS技術ページで、APIキーとクライアントシークレットを指定します。 統合ページで指定した値を使用します。
+1. この画面で、API キーとクライアント秘密鍵を指定します。 統合ページで入力した値を指定してください。
 
-   **ペイロードの場合は、統合ページの「JWT」タブで提供されるコードを使用します。** タップ  **[!UICONTROL Save]**. IMS設定が作成されます。 統合ページを閉じます。
+   **ペイロードについては、統合ページの「JWT」タブで入力したコードを指定してください。**「**[!UICONTROL 保存]**」をタップします。  IMS 設定が作成されます。 統合ページを終了します。
 
-   ![ペイロードフィールドにJWTフィールドの値を使用](assets/jwt.png)
+   ![ペイロードフィールドには、JWT フィールドと同じ値を入力する](assets/jwt.png)
 
    >[!CAUTION]
    >
-   >IMS設定を1つだけ作成します。 複数のIMS設定を作成しないでください。
+   >IMS 設定は 1 つだけ作成してください。 複数の IMS 設定を作成しないでください。
 
-1. IMS設定を選択し、をタップしま **[!UICONTROL Check Health]**&#x200B;す。 ダイアログボックスが表示されます。タップ **[!UICONTROL Check]**. 接続が成功すると、「 *Token retrieved successfully* 」メッセージが表示されます。
+1. 作成した IMS 設定を選択して「**[!UICONTROL ヘルスチェック]**」をタップします。 ダイアログボックスが表示されます。「**[!UICONTROL チェック]**」をタップします。 接続が成功すると、*トークンが正常に取得された*&#x200B;ことを示すメッセージが表示されます。
 
-   ![接続が成功すると、トークンが正常に取得されましたというメッセージが表示されます。 ](assets/health-check.png)
+   ![接続が成功し、トークンが正常に取得されたことを示すメッセージ](assets/health-check.png)
 
    <br/> <br/>
 
-#### Configure the cloud service {#configure-the-cloud-service}
+#### クラウドサービスを設定する{#configure-the-cloud-service}
 
-AEMインスタンスを変換サービスに接続するクラウドサービス設定を作成します。 また、変換するテンプレート、テーマ、フォームフラグメントを指定することもできます。 複数のクラウドサービスの設定をフォームのセットごとに個別に作成できます。 例えば、販売部門のフォームを個別に設定し、顧客サポートのフォームを個別に設定することができます。 次の手順を実行して、クラウドサービスの設定を作成します。
+AEM インスタンスを変換サービスに接続するには、クラウドサービス設定を作成する必要があります。 この設定を作成すると、変換用のテンプレート、テーマ、フォームフラグメントも指定できるようになります。 フォームの各セットとは独立した複数のクラウドサービス設定を作成することができます。 例えば、販売部門用のフォームや顧客サポート用のフォームとは独立した設定を作成することができます。 クラウドサービス設定を作成するには、以下の手順を実行します。
 
-1. AEM Formsインスタンスで、/// **[!UICONTROL Adobe Experience Manager]** をタ **[!UICONTROL Tools]**&#x200B;ップし **[!UICONTROL Cloud Services]** ます **[!UICONTROL Automate Forms Conversion Configuration]**。
-1. フォルダーをタ **[!UICONTROL Global]** ップし、をタップしま **[!UICONTROL Create]**&#x200B;す。 自動フォームコンバージョン設定を作成するページが表示されます。 設定がグローバルフォルダーに作成されます。 既に存在する別のフォルダーに設定を作成するか、設定用の新しいフォルダーを作成することもできます。
+1. AEM Forms インスタンスで、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／**[!UICONTROL 自動フォーム変換設定]**&#x200B;の順にタップします。
+1. **[!UICONTROL Global]** フォルダーをタップしてから「**[!UICONTROL 作成]**」をタップします。 自動フォーム変換設定の作成ページが表示されます。 Global フォルダー内に変換設定が作成されます。 別の既存のフォルダー内に設定を作成することも、新しいフォルダーを作成して設定を保存することもできます。
 
-1. ページで、 **[!UICONTROL Create Automated Forms Conversion Configuration]** 次のフィールドの値を指定し、をタップしま **[!UICONTROL Next]**&#x200B;す。
+1. 「**[!UICONTROL 自動フォーム変換設定の作成]**」ページで、以下のフィールドに値を入力して「**[!UICONTROL 次へ]**」をタップします。
 
    | フィールド | 説明 |
    |--- |--- |
-   | タイトル | 設定の一意のタイトル。 タイトルは、変換を開始する際に使用するUIに表示されます。 |
-   | 名前 | 設定の一意の名前。 設定は、指定した名前でCRX-Repositoryに保存されます。 タイトルと同じ名前を指定できます。 |
-   | サムネールの位置 | 設定のサムネールの場所。 |
-   | サービス URL | Adobe Cloud上の自動フォームコンバージョンサービスのURL。 URLを使用し `https://aemformsconversion.adobe.io/` ます。 |
-   | テンプレート | 変換されたフォームに適用されるデフォルトのテンプレート。 変換を開始する前に、いつでも別のテンプレートを指定できます。 テンプレートには、アダプティブフォームの基本構造と初期コンテンツが含まれています。 標準搭載のテンプレートからテンプレートを選択できます。 また、カスタムテンプレートを作成することもできます。 |
-   | テーマ | 変換されたフォームに適用されるデフォルトのテーマ。 変換を開始する前に、常に別のテーマを指定できます。  アイコンをクリックして、あらかじめ用意されているテーマを選択できます。 また、カスタムテーマを作成することもできます。 |
-   | 既存のフラグメント | 既存のフラグメントが存在する場合はその場所。 |
-   | カスタムメタモデル | カスタムメタモデルの.schema.jsonファイルのパス。 |
+   | タイトル | 一意の設定タイトル。 このタイトルが、変換処理を開始する UI に表示されます。 |
+   | 名前 | 一意の設定名。 この名前で、CRX-Repository ディレクトリに設定が保存されます。 設定名と設定タイトルは、同じ値にすることができます。 |
+   | サムネイルの場所 | 設定のサムネイルの場所。 |
+   | サービス URL | Adobe Cloud 上の自動フォーム変換サービスの URL。 「`https://aemformsconversion.adobe.io/`」を入力してください。 |
+   | テンプレート | 変換後のフォームに適用されるデフォルトのテンプレート。 変換処理を開始する前であれば、いつでも別のテンプレートを指定することができます。 テンプレートには、アダプティブフォーム用の基本的な構成情報と初期コンテンツが含まれています。 すぐに使用できる一連のテンプレートから、任意のテンプレートを選択することができます。 また、カスタムテンプレートを作成することもできます。 |
+   | テーマ | 変換後のフォームに適用されるデフォルトのテーマ。 変換処理を開始する前であれば、いつでも別のテーマを指定することができます。  アイコンをクリックすると、すぐに使用できるテーマを選択することができます。 また、カスタムテーマを作成することもできます。 |
+   | 既存のフラグメント | 既存のフラグメントの場所（存在する場合）。 |
+   | カスタムメタモデル | カスタムメタモデルの .schema.json ファイルのパス。 |
 
 
 
-1. ページの **[!UICONTROL Advanced]** タブで、 **[!UICONTROL Create Automated Forms Conversion Configuration]** 次のフィールドの値を指定します。
+1. 「**[!UICONTROL 自動フォーム変換設定の作成]**」ページの「**[!UICONTROL 詳細]**」タブで、以下のフィールドに値を入力します。
 
    <table>
    <thead>
@@ -251,17 +251,17 @@ AEMインスタンスを変換サービスに接続するクラウドサービ�
    <tbody>
    <tr>
    <td >レコードのドキュメントを生成</td>
-   <td>変換されたフォームのレコードのドキュメントを自動的に生成する場合は、このオプションを選択します。 このオプションは、XFAベースのフォーム（XDPおよびPDFフォーム）に対してのみ使用できます。 このオプションを有効にすると、顧客がフォームを送信した後に、フォームに入力した情報を印刷またはドキュメント形式で記録し、将来の参照用に保持することができます。 これを、レコードのドキュメントといいます。</td>
+   <td>変換後のフォームに対してレコードのドキュメントを自動的に生成するには、このオプションを選択します。 これは、XFA ベースフォーム（XDP フォームと PDF フォーム）専用のオプションです。 このオプションを有効にしてフォームを送信すると、フォームに入力した情報のレコードを、印刷形式またはドキュメント形式で、今後の参照用に保存することができます。 これを、レコードのドキュメントといいます。</td>
    </tr>
    <tr>
    <td>Analytics を有効にする</td>
-   <td>変換されたすべてのフォームでAdobe Analyticsを有効にする場合は、このオプションを選択します。 このオプションを使用する前に、AEM FormsインスタンスでAdobe Analyticsが有効になっていることを確認します。</td>
+   <td>変換後のすべてのフォームで Adobe Analytics を有効にする場合は、このオプションを選択します。 このオプションを選択する前に、AEM Forms インスタンスで Adobe Analytics が有効になっているかどうかを確認してください。</td>
    </tr>
    </tbody>
    </table>
 
-   * ソースが拡張子.XDPのXFAベースのフォームの場合、出力DORはXFAレイアウトを保持します。そうでない場合、変換サービスは標準搭載のテンプレートを使用して他のXFAベースのフォームのDORを生成します。
-   * XFAフォームが送信されると、フォームの送信データはXML要素または属性として保存されます。 例： `<Amount currency="USD"> 10.00 </Amount>`通貨は属性と通貨額として保存され、10.00は要素として保存されます。 アダプティブフォームの送信データには属性がなく、要素のみが含まれます。 したがって、XFAベースのフォームがアダプティブフォームに変換されると、アダプティブフォームの送信データには、このような属性ごとに1つの要素が含まれます。 例：
+   * 「.XDP」という拡張子が付いている XFA ベースフォームをソースとして使用する場合、XFA レイアウトが出力 DOR に保存されます。それ以外の場合、変換サービスは付属のテンプレートを使用して、その他の XFA ベースフォーム用の DOR を生成します。
+   * XFA フォームを送信すると、そのフォームの送信データが XML 要素または属性として保存されます。 例えば、`<Amount currency="USD"> 10.00 </Amount>` のようになります。この場合、「currency」は属性と金額として保存され、「10.00」は要素として保存されます。 アダプティブフォームの送信データに含まれているのは要素だけで、属性は含まれていません。 そのため、XFA ベースフォームをアダプティブフォームに変換すると、アダプティブフォームの送信データの各属性には要素が保管されます。 以下に例を示します。
 
    ```css
       {
@@ -273,4 +273,4 @@ AEMインスタンスを変換サービスに接続するクラウドサービ�
       }
    ```
 
-1. タップ **[!UICONTROL Create]**. クラウド設定が作成されます。 AEM Formsインスタンスで、既存のフォームからアダプティブフォームへの変換を開始する準備が整いました。
+1. 「**[!UICONTROL 作成]**」をタップします。クラウド設定が作成されます。 これで、AEM Forms インスタンスを使用して、従来のフォームをアダプティブフォームに変換する準備が整いました。
