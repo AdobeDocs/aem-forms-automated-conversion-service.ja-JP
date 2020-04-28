@@ -1,19 +1,19 @@
 ---
-title: 'Automated Forms Conversion Serviceのトラブルシューティング '
-seo-title: 'Automated Forms Conversion Service(AFCS)のトラブルシューティング '
-description: '一般的なAFCSの問題とその解決策 '
-seo-description: 一般的なAFCSの問題とその解決策
+title: '自動フォーム変換サービスのトラブルシューティング '
+seo-title: '自動フォーム変換サービス（AFCS）のトラブルシューティング '
+description: 'AFCS の一般的な問題とその解決方法 '
+seo-description: AFCS の一般的な問題とその解決方法
 contentOwner: khsingh
 topic-tags: forms
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: c413c5dc2da3a3e7e116b3355c63620f9dab17f8
 
 ---
 
 
-# Automated Forms Conversion Serviceのトラブルシューティング
+# 自動フォーム変換サービスのトラブルシューティング
 
-このドキュメントでは、一般的なエラーの基本的なトラブルシューティング手順を示します。
+ここでは、一般的なエラーの基本的なトラブルシューティング手順について説明します。
 
 <!--The article provides information on installation, configuration and administration issues that may arise in an Automated Forms Conversion Service production environment. -->
 
@@ -21,15 +21,15 @@ source-git-commit: c413c5dc2da3a3e7e116b3355c63620f9dab17f8
 
 | エラー | 例 |
 |--- |--- |
-| **エラーメッセージ** :アクセストークン <br> ・ヘッダーは使用できません。 <br><br> **理由**<br> 管理者が複数のIMS設定を作成したか、IMS設定がAdobe CloudのAFCSサービスに到達できない。 <br><br>**解決&#x200B;**：複数の設定がある場合は、すべての設定を削除し、<br>新しい設定を作成します[](configure-service.md#obtainpubliccertificates)。<br>設定が1つだけの場合は、ヘルスチェック**&#x200B;を使用し&#x200B;**、接続を[確認します](configure-service.md#createintegrationoption)。 | ![アクセストークンヘッダーが使用できません](assets/invalid-ims-configurations.png) |
-| **エラーメッセージ**<br> ：サービスに接続できません。  <br><br>**Reason **Incorrect service URL<br>, or no service URL is montioned in Automated Forms Conversion Service cloud services.<br><br>**Automated** Forms Conversion Service <br>[](configure-service.md#configure-the-cloud-service) Cloudサービスでの解決の正しいサービスURL。 | ![サービスに接続できません。](assets/wrong-service-url-configured.png) |
-| **エラーメッセージ**<br> ：サービスはフォームを変換できませんでした。  <br><br>**Reason **<br>Network connectivity issubes to your end, the service is down buide to scheduled maintenance, or outame on Adobe Cloud.<br><br>**解決方法**<br> ：ネットワーク接続に関する問題を解決し、計画的または予期しない停止が発生した場合は、https://status.adobe.com/でサービスのステータスを確認します。 | ![サービスに接続できません。](assets/conversion-failure.png) |
-| **エラーメッセージ**<br> ：ページ数が15を超えています。  <br><br>**理由&#x200B;**<br>ソースフォームの長さが15ページを超えています。<br><br>**解決**<br> :Adobe Acrobatを使用して、15ページを超えるフォームを分割します。 フォームのページ数を15未満にします。 | ![サービスに接続できません。](assets/number-of-pages.png) |
-| **エラーメッセージ**<br> ：ファイルの数が15を超えています。  <br><br>**Reason **：フォ<br>ルダーに15を超えるフォームが含まれています。<br><br>**解決**<br> フォルダー内のフォーム数を15以下にします。 フォルダー内の合計ページ数を50未満にします。 フォルダーのサイズを10 MB未満にします。 サブフォルダー内にフォームを保存しないでください。ソースフォームを8 ～ 15個のフォームのバッチに整理します。 | ![サービスに接続できません。](assets/number-of-pages.png) |
-| **エラーメッセージ**<br> ：ソースファイルの形式がサポートされていません。  <br><br>**理由&#x200B;**<br>：ソースフォームを含むフォルダーに、サポートされていないファイルがいくつか含まれています。<br><br>**解決**<br> ：サービスは.xdpファイルと.pdfファイルのみをサポートします。 その他の拡張子の付いたファイルをフォルダーから削除し、変換を実行します。 | ![サービスに接続できません。](assets/unsupported-file-formats.png) |
-| **Error Message** Scanned forms <br> are not supported.  <br><br>**理由&#x200B;**<br>: PDFフォームには、スキャンされたフォームの画像のみが含まれ、コンテンツ構造が含まれていません。<br><br>**解決**<br> ：サービスは、スキャンされたフォームやフォームの画像をアダプティブフォームに変換する機能をサポートしていません。 ただし、Adobe Acrobat を使用して、画像だけのフォームを PDF フォームに変換することはできます。 次に、変換サービスを使用して、この PDF フォームをアダプティブフォームに変換します。 Acrobat で変換を行う場合は、必ず品質の高い画像を使用するようにしてください。 これにより、変換後のフォームの品質が高くなります。 | ![サービスに接続できません。](assets/scanned-forms-error.png) |
-| **Error Message**<br> Encrypted PDFフォームはサポートされていません。  <br><br>**Reason **<br>：フォルダーに暗号化されたPDFフォームが含まれています。<br><br>**解決**<br> ：サービスは、暗号化されたPDFフォームからアダプティブフォームへの変換をサポートしていません。 暗号化を削除し、非暗号化フォームをアップロードし、変換を実行します。 | ![サービスに接続できません。](assets/secured-pdf-form.png) |
-| **エラーメッセージ**<br> ：メタモデルJSONスキーマを解析できません。  <br><br>**理由&#x200B;**<br>：サービスに指定されたJSONスキーマが正しい形式ではないか、無効な文字が含まれているか、無効な構文を使用してコンポーネントをマッピングしています。<br><br>**解決**<br> : JSONファイルの形式を確認します。 任意のオンラインJSONバリデーターを使用して、スキーマの形式と構造を確認できます。 メタモデルの [構文について詳しくは、](extending-the-default-meta-model.md) Extend the default meta-modelの記事を参照してください。 | ![サービスに接続できません。](assets/invalid-meta-model-schema.png) |
+| **エラーメッセージ** <br> アクセストークンヘッダーを使用できません。 <br><br> **原因** <br> 管理者が複数の IMS 設定を作成しているか、IMS 設定を使用して Adobe Cloud 上 の AFCS サービスにアクセスできません。 <br><br>**解決方法&#x200B;**<br>設定が複数存在する場合は、すべての設定を削除して、[新しい設定を作成](configure-service.md#obtainpubliccertificates)してください。<br>設定が 1 つのみの場合は、**&#x200B;ヘルスチェック&#x200B;**を使用して、[接続状態を確認](configure-service.md#createintegrationoption)してください。 | ![アクセストークンヘッダーを使用できません](assets/invalid-ims-configurations.png) |
+| **エラーメッセージ** <br> サービスに接続できません。  <br><br>**原因&#x200B;**<br>サービス URL が正しくないか、自動フォーム変換サービスのクラウドサービスでサービス URL が指定されていません。<br><br>**解決方法** <br> 自動フォーム変換サービスのクラウドサービスで[サービス URL](configure-service.md#configure-the-cloud-service) を修正してください。 | ![サービスに接続できません。](assets/wrong-service-url-configured.png) |
+| **エラーメッセージ** <br> フォームの変換が失敗しました。  <br><br>**原因&#x200B;**<br>ユーザー側にネットワーク接続の問題が発生しているか、定期メンテナンスのためサービスが停止されているか、Adobe Cloud が停止しています。<br><br>**解決方法** <br> ユーザー側でネットワーク接続の問題を解決し、https://status.adobe.com/ でサービスが（計画的または計画外に）停止されていないか確認してください。 | ![サービスに接続できません。](assets/conversion-failure.png) |
+| **エラーメッセージ** <br> ページ数が 15 ページを超えています。  <br><br>**原因&#x200B;**<br>ソースフォームのページ数が 15 ページを超えています。<br><br>**解決方法** <br> Adobe Acrobat を使用して、15 ページを超えているフォームを分割してください。 各フォームのページ数は 15 ページ未満にしてください。 | ![サービスに接続できません。](assets/number-of-pages.png) |
+| **エラーメッセージ** <br> ファイル数が 15 個を超えています。  <br><br>**原因&#x200B;**<br>フォルダーに 15 個を超えるフォームが含まれています。<br><br>**解決方法** <br> フォルダー内のフォーム数を 15 個以内にしてください。 1 つのフォルダーに保存する合計ページ数は 50 ページ未満にしてください。 フォルダーのサイズは 10 MB 未満にしてください。 サブフォルダー内にフォームを保存しないでください。ソースフォームは 8 ～ 15 個のフォームに編成してください。 | ![サービスに接続できません。](assets/number-of-pages.png) |
+| **エラーメッセージ** <br> ソースファイル形式がサポートされていません。  <br><br>**原因&#x200B;**<br>ソースフォームが含まれているフォルダーには、サポートされていないファイルがいくつか存在します。<br><br>**解決方法** <br> このサービスでは .xdp ファイルと .pdf ファイルのみがサポートされます。 その他の拡張子を持つファイルをフォルダーから削除した後、変換を実行してください。 | ![サービスに接続できません。](assets/unsupported-file-formats.png) |
+| **エラーメッセージ** <br> スキャンされたフォームはサポートされていません。  <br><br>**原因&#x200B;**<br>PDF フォームにスキャンされたフォームの画像のみが含まれており、コンテンツ構造が存在しません。<br><br>**解決方法** <br> スキャンされたフォームや画像だけのフォームを、すぐに使用できる形式のアダプティブフォームに変換することはできません。ただし、Adobe Acrobat を使用して、画像だけのフォームを PDF フォームに変換することはできます。 次に、変換サービスを使用して、この PDF フォームをアダプティブフォームに変換します。 Acrobat で変換を行う場合は、必ず品質の高い画像を使用するようにしてください。 これにより、変換後のフォームの品質が高くなります。 | ![サービスに接続できません。](assets/scanned-forms-error.png) |
+| **エラーメッセージ**<br> 暗号化された PDF フォームはサポートされていません。  <br><br>**原因&#x200B;**<br>フォルダーに暗号化された PDF フォームが含まれています。<br><br>**解決方法** <br> 暗号化された PDF フォームをアダプティブフォームに変換することはできません。 暗号を解除し、暗号化されていないフォームをアップロードして、変換を実行してください。 | ![サービスに接続できません。](assets/secured-pdf-form.png) |
+| **エラーメッセージ** <br> メタモデル JSON スキーマを解析できません。  <br><br>**原因&#x200B;**<br>サービスに使用されている JSON スキーマが正しい形式ではないか、無効な文字が含まれているか、無効な構文を使用してコンポーネントをマッピングしています。<br><br>**解決方法** <br> JSON ファイルの形式を確認してください。 任意のオンライン JSON バリデーターを使用して、スキーマの形式と構造を確認できます。 メタモデル構文の詳細については、「[デフォルトメタモデルの拡張](extending-the-default-meta-model.md)」の記事を参照してください。 | ![サービスに接続できません。](assets/invalid-meta-model-schema.png) |
 
 <!--
 
