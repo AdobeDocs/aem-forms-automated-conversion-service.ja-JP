@@ -1,13 +1,16 @@
 ---
 title: 新機能 リリースノート：自動フォーム変換サービス
 description: '自動フォーム変換サービスの最新機能と修正済みのバグについて説明します '
-translation-type: ht
-source-git-commit: c0ca850a0a1e82e34364766601011d6367b218ac
+translation-type: tm+mt
+source-git-commit: 5031050795a558795c151e9f3c26a16736566adf
+workflow-type: tm+mt
+source-wordcount: '308'
+ht-degree: 100%
 
 ---
 
 
-# 自動フォーム変換サービス：リリースノート
+# リリースノート
 
 自動フォーム変換サービスは継続的に改善されます。 最新の開発状況を確認するには、このページに定期的にアクセスしてください。 このページでは、次の情報が確認できます。
 
