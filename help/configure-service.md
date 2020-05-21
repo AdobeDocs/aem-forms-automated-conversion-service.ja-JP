@@ -1,8 +1,11 @@
 ---
 title: 自動フォーム変換サービスの設定
 description: 自動フォーム変換サービスを使用できるように AEM インスタンスの準備を行う
-translation-type: ht
-source-git-commit: 68824c2f398d00141d67996121f7b758af16d2e4
+translation-type: tm+mt
+source-git-commit: e1ef5be14fd3f1ec7e6ccf569c8d76518dfc5c6b
+workflow-type: tm+mt
+source-wordcount: '2648'
+ht-degree: 91%
 
 ---
 
@@ -17,9 +20,9 @@ source-git-commit: 68824c2f398d00141d67996121f7b758af16d2e4
 
 * SMTP メールサーバーの設定
 
->[!VIDEO](https://video.tv.adobe.com/v/29267/?captions=jpn)
+<!--- >[!VIDEO](https://video.tv.adobe.com/v/29267/) 
 
-**このビデオを再生して（または以下の説明を読んで）、自動フォーム変換サービスの設定方法を確認してください**
+**Watch the video or read the article to configure Automated Forms Conversion service** -->
 
 ## 使用開始{#onboarding}
 
@@ -71,10 +74,7 @@ AEM インスタンスには、基本的なフォーム機能が付属してい�
 
 ### （オプション）コネクターパッケージをダウンロードしてインストールする  {#installConnectorPackage}
 
-コネクターパッケージ 1.1.38 以降をインストールすると、リリース AFC-2020.03.1 で提供される[自動検出論理セクション](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)機能と改善を使用できます。[AEM パッケージ共有からコネクターパッケージをダウンロード](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)できます。
-
->[!NOTE]
-> 自動フォーム変換サービス環境が既に稼働している場合、変換サービスの最新機能を使用するには、最新のサービスパック、最新の AEM Forms アドオンパッケージ、最新のコネクターパッケージをこの順序でインストールします。
+コネクタパッケージを使用すると、AFC-2020.03.1リリースで提供される [自動検出論理セクション機能](convert-existing-forms-to-adaptive-forms.md#run-the-conversion) と改善点に早期にアクセスできます。AFC-2020.03.1で提供される機能と改善点が不要な場合は、パッケージをインストールしないでください [](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)。
 
 
 ### カスタムのテーマとテンプレートを作成する{#referencepackage}
@@ -183,27 +183,26 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 
 自動フォーム変換サービスを使用するには、Adobe I/O で統合環境を作成する必要があります。この統合環境により、API キー、クライアント秘密鍵、ペイロード（JWT）が生成されます。
 
-1. [https://console.adobe.io/](https://console.adobe.io/) にログインします。 Adobe ID と、管理者がプロビジョニングした開発者アカウントを使用して、Adobe I/O コンソールにログインします。
-
-1. 「**[!UICONTROL 統合を表示]**」をタップします。 使用可能なすべての統合要素を示す画面が表示されます。
-1. 「**[!UICONTROL 統合]**」の下にあるドロップダウンで、自分が属している組織を選択します。 「**[!UICONTROL 新しい統合]**」をタップして「**[!UICONTROL API にアクセス]**」を選択し、「**[!UICONTROL 続行]**」をタップします。
-1. **[!UICONTROL Experience Cloud]**／**[!UICONTROL 自動フォーム変換]**&#x200B;の順に選択して「**[!UICONTROL 続行]**」をタップします。 「自動フォーム変換」オプションが無効になっている場合は、「**[!UICONTROL アドビのサービス]**」オプションの上にあるドロップダウンボックスで正しい組織が選択されているかどうかを確認してください。 自分がどの組織に属しているかわからない場合は、管理者に問い合わせてください。
-
-   ![新しい統合環境の作成画面](assets/create-new-integration.png)
-
-1. 新しい統合環境の名前と説明を入力します。 「**[!UICONTROL お使いのコンピューターからファイルを選択]**」をタップし、「[公開証明書を取得する](#obtainpubliccertificates)」セクションでダウンロードした AEM-Adobe-IMS.crt ファイルをアップロードします。
-1. [組織内の開発者に権限を付与](#adduseranddevs)する際に作成したプロファイルを選択して「**[!UICONTROL 統合を作成]**」をタップします。 統合環境が作成されます。
-1. 「**[!UICONTROL 統合の詳細情報に進む]**」をタップして、統合環境の詳細情報を表示します。 このページには、API キーやクライアント秘密鍵など、ローカルの AEM インスタンスを自動フォーム変換サービスに接続するために必要な情報が表示されます。 これらの情報を使用して、ローカルマシン上に IMS の設定データが作成されます。
-
-   ![統合環境の API キー、クライアント秘密鍵、ペイロード情報の表示画面](assets/integration-details.png)
+1. https://console.adobe.io/ にログインします。 Adobe ID と、管理者がプロビジョニングした開発者アカウントを使用して、Adobe I/O コンソールにログインします。
+1. 右上隅から組織を選択します。 自分がどの組織に属しているかわからない場合は、管理者に問い合わせてください。
+1. Tap **[!UICONTROL Create new project]**. 新しいプロジェクトを開始するための画面が表示されます。 「 **[!UICONTROL API追加」をタップします]**。 アカウントで有効になっているすべてのAPIのリストを示す画面が表示されます。
+1. 「 **[!UICONTROL 自動フォームコンバージョンサービス]** 」を選択し、「 **[!UICONTROL 次へ]**」をタップします。 APIを設定する画面が表示されます。
+1. 「公開鍵を [!UICONTROL アップロード] 」オプションを選択し、「公開証明書の [取得](#obtainpubliccertificates) 」セクションでダウンロードしたAEM-Adobe-IMS.crtファイルをアップロードし、「 **[!UICONTROL 次へ]**」をタップします。 「新しいサービスアカウント(JWT)を作成」秘密鍵証明書オプションが表示されます。 「**[!UICONTROL 次へ]**」をタップします。
+1. 製品プロファイルを選択し、「設定済みAPIを **[!UICONTROL 保存]**」をタップします。 組織の開発者にアクセス権を [付与する際に作成したプロファイルを選択します](#adduseranddevs)。 選択するプロファイルがわからない場合は、管理者に問い合わせてください。
+1. 「 **** サービスアカウント(JWT)」をタップして、APIキー、クライアントシークレット、およびローカルAEMインスタンスをAutomated Forms Conversionサービスに接続するために必要なその他の表示を行います。 これらの情報を使用して、ローカルマシン上に IMS の設定データが作成されます。
 
 1. ローカルインスタンスで IMS の設定ページを開きます （このページは、「[公開証明書を取得する](#obtainpubliccertificates)」セクションの最後で開いたままにしておいたページです）。
 
    ![タイトル、API キー、クライアント秘密鍵、ペイロードを指定するための画面](assets/ims-configuration-details.png)
 
-1. この画面で、API キーとクライアント秘密鍵を指定します。 統合ページで入力した値を指定してください。
+1. この画面で、API キーとクライアント秘密鍵を指定します。 アドビデベロッパーコンソールページのサービスアカウント(JWT)で指定された値を使用します。
 
-   **ペイロードについては、統合ページの「JWT」タブで入力したコードを指定してください。**「**[!UICONTROL 保存]**」をタップします。  IMS 設定が作成されます。 統合ページを終了します。
+   >[!NOTE]
+   >
+   >
+   >ペイロードには、Adobe Developer Consoleのサービスアカウント(JWT)ページの「Generate JWT」タブに指定されたコードを使用します。
+
+1. 「**[!UICONTROL 保存]**」をタップします。IMS 設定が作成されます。 
 
    ![ペイロードフィールドには、JWT フィールドと同じ値を入力する](assets/jwt.png)
 
