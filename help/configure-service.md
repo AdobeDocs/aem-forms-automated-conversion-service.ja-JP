@@ -2,10 +2,10 @@
 title: 自動フォーム変換サービスの設定
 description: 自動フォーム変換サービスを使用できるように AEM インスタンスの準備を行う
 translation-type: tm+mt
-source-git-commit: 7e94acb29f30603d9b22fbee9dc8052fafa5704b
+source-git-commit: 117280695bfddad627e5f7bcb54ff019bbf2026a
 workflow-type: tm+mt
-source-wordcount: '2657'
-ht-degree: 89%
+source-wordcount: '2660'
+ht-degree: 88%
 
 ---
 
@@ -139,7 +139,7 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 
 #### ユーザーを forms-users グループに追加する{#adduserstousergroup}
 
-変換サービスの実行を許可する AEM ユーザーのプロファイル内で電子メールアドレスを指定します。 このユーザーは、[forms user](https://helpx.adobe.com/jp/experience-manager/6-4/forms/using/forms-groups-privileges-tasks.html) グループにメンバーとして属している必要があります。 変換サービスの実行を許可されたユーザーの電子メールアドレスに電子メールが送信されます。 ユーザーの電子メールアドレスを指定し、そのユーザーを forms-user グループに追加するには、以下の手順を実行します。
+変換サービスの実行を許可する AEM ユーザーのプロファイル内で電子メールアドレスを指定します。 このユーザーは、[forms user](https://helpx.adobe.com/jp/experience-manager/6-4/forms/using/forms-groups-privileges-tasks.html) グループにメンバーとして属している必要があります。 変換サービスの実行を許可されたユーザーの電子メールアドレスに電子メールが送信されます。 ユーザーの電子メールアドレスを指定し、「e formsユーザーグループ」にユーザーを追加するには：
 
 1. AEM 管理者として、AEM Forms のオーサーインスタンスにログインします。ローカルの AEM 資格情報を使用してログインします。 Adobe ID を使用してログインしないでください。 **[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL ユーザー]**&#x200B;の順にタップします。
 
@@ -183,7 +183,7 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 
 自動フォーム変換サービスを使用するには、プロジェクトを作成し、Adobe Developer ConsoleでプロジェクトにAutomated Forms Configuration Service APIを追加します。 統合により、APIキー、クライアントシークレット、ペイロード(JWT)が生成されます。
 
-1. https://console.adobe.io/ にログインします。 Adobe ID と、管理者がプロビジョニングした開発者アカウントを使用して、Adobe I/O コンソールにログインします。
+1. [https://console.adobe.io/](https://console.adobe.io/) にログインします。 Adobe ID と、管理者がプロビジョニングした開発者アカウントを使用して、Adobe I/O コンソールにログインします。
 1. 右上隅から組織を選択します。 自分がどの組織に属しているかわからない場合は、管理者に問い合わせてください。
 1. Tap **[!UICONTROL Create new project]**. 新しいプロジェクトを開始するための画面が表示されます。 「 **[!UICONTROL API追加」をタップします]**。 アカウントで有効になっているすべてのAPIのリストを示す画面が表示されます。
 1. 「 **[!UICONTROL 自動フォームコンバージョンサービス]** 」を選択し、「 **[!UICONTROL 次へ]**」をタップします。 APIを設定する画面が表示されます。
