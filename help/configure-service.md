@@ -2,10 +2,10 @@
 title: 自動フォーム変換サービスの設定
 description: 自動フォーム変換サービスを使用できるように AEM インスタンスの準備を行う
 translation-type: tm+mt
-source-git-commit: e1ef5be14fd3f1ec7e6ccf569c8d76518dfc5c6b
+source-git-commit: 7e94acb29f30603d9b22fbee9dc8052fafa5704b
 workflow-type: tm+mt
-source-wordcount: '2648'
-ht-degree: 91%
+source-wordcount: '2657'
+ht-degree: 89%
 
 ---
 
@@ -123,7 +123,7 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 * [電子メール通知を設定する](configure-service.md#configureemailnotification)
 * [ユーザーを forms-users グループに追加する](#adduserstousergroup)
 * [公開証明書を取得する](#obtainpubliccertificates)
-* [Adobe I/O 統合環境を作成する](#createintegration)
+* [Adobe Developer ConsoleでのサービスAPIの設定](#createintegration)
 * [クラウドサービスを設定する](configure-service.md#configure-the-cloud-service)
 
 #### 電子メール通知を設定する{#configureemailnotification}
@@ -159,12 +159,12 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 
 1. 「**[!UICONTROL 新しい証明書を作成]**」チェックボックスを選択してエイリアスを入力します。 ここで入力したエイリアスが、ダイアログ名として表示されます。 「**[!UICONTROL 証明書の作成]**」をタップします。 ダイアログが表示されます。「**[!UICONTROL OK]**」をクリックします。証明書が作成されます。
 
-1. 「**[!UICONTROL 公開鍵をダウンロード]**」をタップし、*AEM-Adobe-IMS.crt* 証明書ファイルをローカルマシンに保存します。 この証明書ファイルを使用して、[Adobe I/O コンソール上に統合環境が作成](#createintegration)されます。 「**[!UICONTROL 次へ]**」をタップします。
+1. 「**[!UICONTROL 公開鍵をダウンロード]**」をタップし、*AEM-Adobe-IMS.crt* 証明書ファイルをローカルマシンに保存します。 証明書ファイルは、Adobe Devloper ConsoleでのサービスAPIの [設定に使用します](#createintegration)。 「**[!UICONTROL 次へ]**」をタップします。
 
 1. 以下の情報を入力します。
 
    * 「タイトル」フィールドにタイトルを入力します。
-   * 「認証サーバー」フィールドに「[https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)」を入力します。
+   * 「認証サーバー」フィールドに「[https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)」を入力します。\
    その他のフィールドは現時点では空白のままにします（後で指定します）。ページは開いたままにしてください。
 
    <!--
@@ -179,9 +179,9 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
    <li>Step text</li>
    -->
 
-#### Adobe I/O 統合環境を作成する{#createintegration}
+#### Adobe Devloper ConsoleでのサービスAPIの設定 {#createintegration}
 
-自動フォーム変換サービスを使用するには、Adobe I/O で統合環境を作成する必要があります。この統合環境により、API キー、クライアント秘密鍵、ペイロード（JWT）が生成されます。
+自動フォーム変換サービスを使用するには、プロジェクトを作成し、Adobe Developer ConsoleでプロジェクトにAutomated Forms Configuration Service APIを追加します。 統合により、APIキー、クライアントシークレット、ペイロード(JWT)が生成されます。
 
 1. https://console.adobe.io/ にログインします。 Adobe ID と、管理者がプロビジョニングした開発者アカウントを使用して、Adobe I/O コンソールにログインします。
 1. 右上隅から組織を選択します。 自分がどの組織に属しているかわからない場合は、管理者に問い合わせてください。
@@ -203,8 +203,6 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
    >ペイロードには、Adobe Developer Consoleのサービスアカウント(JWT)ページの「Generate JWT」タブに指定されたコードを使用します。
 
 1. 「**[!UICONTROL 保存]**」をタップします。IMS 設定が作成されます。 
-
-   ![ペイロードフィールドには、JWT フィールドと同じ値を入力する](assets/jwt.png)
 
    >[!CAUTION]
    >
