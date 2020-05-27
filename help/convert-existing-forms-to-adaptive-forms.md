@@ -7,9 +7,9 @@ uuid: 49fcd5c0-0e72-496d-9831-00f79d582f57
 contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 5031050795a558795c151e9f3c26a16736566adf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1571'
 ht-degree: 100%
 
