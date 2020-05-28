@@ -1,11 +1,11 @@
 ---
 title: 自動フォーム変換サービスの設定
 description: 自動フォーム変換サービスを使用できるように AEM インスタンスの準備を行う
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 117280695bfddad627e5f7bcb54ff019bbf2026a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2660'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -74,7 +74,7 @@ AEM インスタンスには、基本的なフォーム機能が付属してい�
 
 ### （オプション）コネクターパッケージをダウンロードしてインストールする  {#installConnectorPackage}
 
-コネクタパッケージを使用すると、AFC-2020.03.1リリースで提供される [自動検出論理セクション機能](convert-existing-forms-to-adaptive-forms.md#run-the-conversion) と改善点に早期にアクセスできます。AFC-2020.03.1で提供される機能と改善点が不要な場合は、パッケージをインストールしないでください [](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)。
+コネクターパッケージをインストールすると、リリース AFC-2020.03.1 で提供される[自動検出論理セクション](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)機能と改善への早期アクセスが可能になります。AFC-2020.03.1  で提供される機能や改善が必要ない場合は、パッケージをインストールしないでください。[コネクターパッケージは AEM パッケージ共有からダウンロードできます](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)。
 
 
 ### カスタムのテーマとテンプレートを作成する{#referencepackage}
@@ -123,7 +123,7 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 * [電子メール通知を設定する](configure-service.md#configureemailnotification)
 * [ユーザーを forms-users グループに追加する](#adduserstousergroup)
 * [公開証明書を取得する](#obtainpubliccertificates)
-* [Adobe Developer ConsoleでのサービスAPIの設定](#createintegration)
+* [Adobe デベロッパーコンソールでサービス API を設定する](#createintegration)
 * [クラウドサービスを設定する](configure-service.md#configure-the-cloud-service)
 
 #### 電子メール通知を設定する{#configureemailnotification}
@@ -139,7 +139,7 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 
 #### ユーザーを forms-users グループに追加する{#adduserstousergroup}
 
-変換サービスの実行を許可する AEM ユーザーのプロファイル内で電子メールアドレスを指定します。 このユーザーは、[forms user](https://helpx.adobe.com/jp/experience-manager/6-4/forms/using/forms-groups-privileges-tasks.html) グループにメンバーとして属している必要があります。 変換サービスの実行を許可されたユーザーの電子メールアドレスに電子メールが送信されます。 ユーザーの電子メールアドレスを指定し、「e formsユーザーグループ」にユーザーを追加するには：
+変換サービスの実行を許可する AEM ユーザーのプロファイル内で電子メールアドレスを指定します。 このユーザーは、[forms user](https://helpx.adobe.com/jp/experience-manager/6-4/forms/using/forms-groups-privileges-tasks.html) グループにメンバーとして属している必要があります。 変換サービスの実行を許可されたユーザーの電子メールアドレスに電子メールが送信されます。 ユーザーの電子メールアドレスを指定し、そのユーザーを forms user グループに追加するには、以下の手順を実行します。
 
 1. AEM 管理者として、AEM Forms のオーサーインスタンスにログインします。ローカルの AEM 資格情報を使用してログインします。 Adobe ID を使用してログインしないでください。 **[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL ユーザー]**&#x200B;の順にタップします。
 
@@ -159,7 +159,7 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 
 1. 「**[!UICONTROL 新しい証明書を作成]**」チェックボックスを選択してエイリアスを入力します。 ここで入力したエイリアスが、ダイアログ名として表示されます。 「**[!UICONTROL 証明書の作成]**」をタップします。 ダイアログが表示されます。「**[!UICONTROL OK]**」をクリックします。証明書が作成されます。
 
-1. 「**[!UICONTROL 公開鍵をダウンロード]**」をタップし、*AEM-Adobe-IMS.crt* 証明書ファイルをローカルマシンに保存します。 証明書ファイルは、Adobe Devloper ConsoleでのサービスAPIの [設定に使用します](#createintegration)。 「**[!UICONTROL 次へ]**」をタップします。
+1. 「**[!UICONTROL 公開鍵をダウンロード]**」をタップし、*AEM-Adobe-IMS.crt* 証明書ファイルをローカルマシンに保存します。 この証明書ファイルを使用して、[Adobe デベロッパーコンソールでサービス API を設定](#createintegration)します。 「**[!UICONTROL 次へ]**」をタップします。
 
 1. 以下の情報を入力します。
 
@@ -179,30 +179,30 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
    <li>Step text</li>
    -->
 
-#### Adobe Devloper ConsoleでのサービスAPIの設定 {#createintegration}
+#### Adobe デベロッパーコンソールでサービス API を設定する{#createintegration}
 
-自動フォーム変換サービスを使用するには、プロジェクトを作成し、Adobe Developer ConsoleでプロジェクトにAutomated Forms Configuration Service APIを追加します。 統合により、APIキー、クライアントシークレット、ペイロード(JWT)が生成されます。
+自動フォーム変換サービスを使用するには、プロジェクトを作成し、自動フォーム変換設定 API を Adobe デベロッパーコンソールのプロジェクトに追加します。 この統合環境により、API キー、クライアント秘密鍵、ペイロード（JWT）が生成されます。
 
 1. [https://console.adobe.io/](https://console.adobe.io/) にログインします。 Adobe ID と、管理者がプロビジョニングした開発者アカウントを使用して、Adobe I/O コンソールにログインします。
-1. 右上隅から組織を選択します。 自分がどの組織に属しているかわからない場合は、管理者に問い合わせてください。
-1. Tap **[!UICONTROL Create new project]**. 新しいプロジェクトを開始するための画面が表示されます。 「 **[!UICONTROL API追加」をタップします]**。 アカウントで有効になっているすべてのAPIのリストを示す画面が表示されます。
-1. 「 **[!UICONTROL 自動フォームコンバージョンサービス]** 」を選択し、「 **[!UICONTROL 次へ]**」をタップします。 APIを設定する画面が表示されます。
-1. 「公開鍵を [!UICONTROL アップロード] 」オプションを選択し、「公開証明書の [取得](#obtainpubliccertificates) 」セクションでダウンロードしたAEM-Adobe-IMS.crtファイルをアップロードし、「 **[!UICONTROL 次へ]**」をタップします。 「新しいサービスアカウント(JWT)を作成」秘密鍵証明書オプションが表示されます。 「**[!UICONTROL 次へ]**」をタップします。
-1. 製品プロファイルを選択し、「設定済みAPIを **[!UICONTROL 保存]**」をタップします。 組織の開発者にアクセス権を [付与する際に作成したプロファイルを選択します](#adduseranddevs)。 選択するプロファイルがわからない場合は、管理者に問い合わせてください。
-1. 「 **** サービスアカウント(JWT)」をタップして、APIキー、クライアントシークレット、およびローカルAEMインスタンスをAutomated Forms Conversionサービスに接続するために必要なその他の表示を行います。 これらの情報を使用して、ローカルマシン上に IMS の設定データが作成されます。
+1. 右上隅で組織を選択します。 自分がどの組織に属しているかわからない場合は、管理者に問い合わせてください。
+1. 「**[!UICONTROL 新規プロジェクトを作成]**」をタップします。新規プロジェクトを作成する画面が表示されます。 「**[!UICONTROL API を追加]**」をタップします。 お使いのアカウントで有効になっているすべての API を示す画面が表示されます。
+1. 「**[!UICONTROL 自動フォーム変換サービス]**」を選択し、「**[!UICONTROL 次へ]**」をタップします。 API を設定する画面が表示されます。
+1. 「[!UICONTROL 公開鍵をアップロード]」オプションを選択し、「[公開証明書を取得する](#obtainpubliccertificates)」セクションでダウンロードした AEM-Adobe-IMS.crt ファイルをアップロードして、「**[!UICONTROL 次へ]**」をタップします。 「新しいサービスアカウント (JWT) を作成」秘密鍵証明書オプションが表示されます。 「**[!UICONTROL 次へ]**」をタップします。
+1. 製品プロファイルを選択し、「**[!UICONTROL 設定した API を保存]**」をタップします。 [組織内の開発者に権限を付与](#adduseranddevs)する際に作成したプロファイルを選択します。 選択するプロファイルがわからない場合は、管理者に問い合わせてください。
+1. 「**[!UICONTROL サービスアカウント (JWT)]**」をタップし、API キー、クライアントの秘密鍵、およびローカル AEM インスタンスを自動フォーム変換サービスに接続するために必要なその他の情報を表示します。 これらの情報を使用して、ローカルマシン上に IMS の設定データが作成されます。
 
 1. ローカルインスタンスで IMS の設定ページを開きます （このページは、「[公開証明書を取得する](#obtainpubliccertificates)」セクションの最後で開いたままにしておいたページです）。
 
    ![タイトル、API キー、クライアント秘密鍵、ペイロードを指定するための画面](assets/ims-configuration-details.png)
 
-1. この画面で、API キーとクライアント秘密鍵を指定します。 アドビデベロッパーコンソールページのサービスアカウント(JWT)で指定された値を使用します。
+1. この画面で、API キーとクライアント秘密鍵を指定します。 Adobe デベロッパーコンソールページのサービスアカウント（JWT）で指定した値を使用します。
 
    >[!NOTE]
    >
    >
-   >ペイロードには、Adobe Developer Consoleのサービスアカウント(JWT)ページの「Generate JWT」タブに指定されたコードを使用します。
+   >ペイロードには、Adobe デベロッパーコンソールのサービスアカウント（JWT）ページの「JWT を生成」タブに指定したコードを使用します。
 
-1. 「**[!UICONTROL 保存]**」をタップします。IMS 設定が作成されます。 
+1. 「**[!UICONTROL 保存]**」をタップします。IMS 設定が作成されます。
 
    >[!CAUTION]
    >
