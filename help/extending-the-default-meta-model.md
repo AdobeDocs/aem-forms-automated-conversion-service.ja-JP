@@ -6,8 +6,11 @@ seo-description: デフォルトのメタモデルを拡張することにより
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-translation-type: ht
-source-git-commit: ffab4d916cbd545078f4b72b8de5c9968f23b0da
+translation-type: tm+mt
+source-git-commit: 77bdb4e88194bd634dea125852ff2a897bc24678
+workflow-type: tm+mt
+source-wordcount: '2401'
+ht-degree: 99%
 
 ---
 
@@ -22,9 +25,7 @@ source-git-commit: ffab4d916cbd545078f4b72b8de5c9968f23b0da
 
 ## デフォルトのメタモデル{#default-meta-model}
 
-自動フォーム変換サービスには、デフォルトのメタモデルが付属しています。 このメタモデルは JSON スキーマで、自動フォーム変換サービスの他のコンポーネントとともに、Adobe Cloud 上に存在しています。 メタモデルのコピーは、ローカル AEM サーバー上の以下のフォルダーに保管されています。
-
-http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json
+自動フォーム変換サービスには、デフォルトのメタモデルが付属しています。 このメタモデルは JSON スキーマで、自動フォーム変換サービスの他のコンポーネントとともに、Adobe Cloud 上に存在しています。 メタモデルのコピーは、ローカル AEM サーバー上の以下のフォルダーに保管されています。http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.jsonデフォルトのスキーマにアクセスするには [、ここを](assets/global.schema.json) クリックします。
 
 メタモデルのスキーマは、https://schema.org/docs/schemas.html のスキーマエンティティから継承されます。 このスキーマエンティティには、https://schema.org で定義された各種エンティティ（Person、PostalAddress、LocalBusiness など）が含まれています。 メタモデルのすべてのエンティティは、JSON スキーマオブジェクトに従属します。 以下のコードは、サンプルのメタモデル構造を示しています。
 
