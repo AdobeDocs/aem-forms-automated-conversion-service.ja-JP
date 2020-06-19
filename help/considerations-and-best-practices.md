@@ -9,8 +9,11 @@ topic-tags: introduction
 discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
-translation-type: ht
-source-git-commit: afe461baa5bcfc1106c16aae2d6a9c839ea675e8
+translation-type: tm+mt
+source-git-commit: 356eb083b889a1bf151c32bc5f01a6d263b96274
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 100%
 
 ---
 
@@ -29,7 +32,7 @@ AEM Forms 自動変換サービスは、PDF フォームをアダプティブフ
 Comment Type: draft
 
 <ul>
-<li>Service does not convert filled PDF forms to adaptive form. Use empty adaptive forms.Service does not convert colored PDF forms to adaptive form. Use black and white or grayscale adaptive forms. <br /> </li>
+<li>Service does not convert filled PDF forms to adaptive form. Use empty adaptive forms.Service does not convert colored PDF forms to adaptive form. Use  and white or grayscale adaptive forms. <br /> </li>
 <li>Service does not convert filled PDF forms to adaptive form. Use empty adaptive forms.</li>
 <li>Service does not support scanned forms. Do not use scanned forms. </li>
 <li>Service can fail to recognize text and fields in a dense form. Increase the width between text and fields of a dense form before starting the conversion.</li>
