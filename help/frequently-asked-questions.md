@@ -6,8 +6,11 @@ seo-description: 自動フォーム変換サービスに関するよくある質
 uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
-translation-type: ht
-source-git-commit: 022b86b77c4a524f320cbcbcd6bad4403ddf57d8
+translation-type: tm+mt
+source-git-commit: b1df14a331dc4aef7ce6383dec0091fa6db1fd7b
+workflow-type: tm+mt
+source-wordcount: '1721'
+ht-degree: 98%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 022b86b77c4a524f320cbcbcd6bad4403ddf57d8
 
 1. **変換サービスをオンプレミス環境にインストールすることはできますか？**
    <p>アドビは、新しいデータセットを使用して、自動フォーム変換サービスの AI アルゴリズムと ML アルゴリズムを定期的に更新することにより、フォームの変換精度を高めています。 こうして更新されたアルゴリズムが、Adobe Cloud 上で稼働する変換サービスに定期的に適用されます。 この仕組みにより、変換サービスを使用するすべてのお客様に最新のアルゴリズムを提供しています。 継続的にアルゴリズムを更新し、すべてのお客様に最新の機能を提供するためには、クラウド環境で一元的に管理を行うというこの仕組みが、自動フォーム変換サービスにとっては最適な方法になります。</p> 
-    <p>変換サービスを実行すると、空白のフォームがアダプティブフォームに変換されます。 変換サービスでは、フィールドに値が設定されているフォームを変換することはできません。また、フィールドに値が設定されているフォームからデータを抽出することもできません。 こうしたフォームを変換する場合は、フィールドに設定されているデータを削除するか、ホワイトリストの専有情報をフォームから削除してから、変換サービスにフォームを送信してください。</p> <br>
+    <p>変換サービスを実行すると、空白のフォームがアダプティブフォームに変換されます。 変換サービスでは、フィールドに値が設定されているフォームを変換することはできません。また、フィールドに値が設定されているフォームからデータを抽出することもできません。 フォームをサービスに送信して変換する前に、入力済みのフォームからデータを削除し、フォームから固有の情報を削除または許可リストします</p> <br>
 
 1. **どのような形式の PDF フォームでも変換できるのですか？ すべての言語がサポートされているのですか？**
    <p>このサービスでアダプティブフォームに変換できるのは、非対話型 PDF フォーム、XFA ベースの XDP フォーム、XFA ベースの PDF フォーム、AcroForms です。 スキャンされたフォームや、フィールドに値が設定されているフォームは変換できません。 その他の制限事項については、「<a href="known-issues.md">既知の問題</a>」を参照してください。<br /> </p> 
@@ -89,24 +92,23 @@ source-git-commit: 022b86b77c4a524f320cbcbcd6bad4403ddf57d8
    メタモデルを使用して、アダプティブフォームの任意のコンポーネントにフォームオブジェクトをマップし、そのコンポーネントの検証処理、ルール、データパターン、ヘルプテキスト、アクセシビリティのプロパティを事前に設定することができます。 設定したすべてのプロパティが、フォームの変換時に適用されます。 メタモデルを使用して、共通するプロパティをフィールドに適用することができます。 これにより、フォーム全体で繰り返し行う修正作業の量を減らすことができます。<br/><br/>
 
 1. **個人情報などの機密データが含まれているフォームを変換する場合は、どのようなオプションを使用できますか？**
-変換サービスでサポートされているのは、ブランクのフォームとフィールドに値が設定されていないフォームだけです。 そのため、既に値が設定されているフォームや、個人情報が含まれているフォームはアップロードしないでください。 こうしたソースフォームをアップロードする場合は、フォーム内で既に設定されている値、フォームに含まれている個人情報、機密情報、所有権情報などを削除してください。<br/>
+変換サービスでサポートされているのは、ブランクのフォームとフィールドに値が設定されていないフォームだけです。 そのため、既に値が設定されているフォームや、個人情報が含まれているフォームはアップロードしないでください。 こうしたソースフォームをアップロードする場合は、フォーム内で既に設定されている値、フォームに含まれている個人情報、機密情報、所有権情報などを削除してください。 <br/>
 
-1. **ヘッダーとフッターはどこに配置すればよいですか？**
-   <p>ヘッダーとフッターは、アダプティブフォームのテンプレート上に配置してください。 変換元の PDF フォームにヘッダーとフッターが含まれている場合、変換サービスよってそれらのヘッダーとフッターが検出され、アダプティブフォームのテンプレートで定義されているヘッダーとフッターに置き換えられます。 アダプティブフォーム内に余分なヘッダーやフッターが含まれている場合は、「<a href="review-correct-ui-edited.md">レビューと修正</a>」エディターを使用して、それらのヘッダーやフッターを削除したり編集したりすることができます。</p> <br />
+1. <br/>**
+   </p>
 
-1. **変換サービスを使用すると、手動で処理を行う（プランの作成、テーマやテンプレートなどのアセットの作成、アダプティブフォームの作成と公開をすべて手動で行う）場合と比べて、どれくらいの時間が短縮されますか？**
-   <p>短縮される時間は、入力フォームのサイズと複雑度、変換に関するリクエストの数によって異なります。 ただし、変換サービスを実行すると、PDF フォームを手動でアダプティブフォームに変換する場合と比べて、大幅に時間が短縮されることは間違いありません。 </p> <br />
+1. 
+   </p>
 
-1. **RSA ライブラリに関して 以下のようなエラーメッセージが表示されたのですが、どうすればよいですか？** <br/>
-   `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&amp;lt;init&amp;gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
+1.    **RSA ライブラリに関して 以下のようなエラーメッセージが表示されたのですが、どうすればよいですか？** <br/> 
 このエラーは、RSA/BouncyCastle ライブラリのブート委任機能が設定されていない場合に発生します。 このエラーを解決するには、以下の手順を実行します。
-   <p> </p>
+   </p>
 
-   1. AEM インスタンスを停止して `[AEM installation directory]\crx-quickstart\conf\` フォルダーに移動し、sling.properties ファイルを編集用として開きます。`[AEM installation directory]\crx-quickstart\bin\start.bat` を使用して AEM インスタンスを起動する場合は、`[AEM_root]\crx-quickstart\` フォルダー内の sling.properties ファイルを編集用として開きます。
-   1. 以下のプロパティを sling.properties ファイルに追加します。<br/> `sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*`<br />  `sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*`<br /> `sling.bootdelegation.xerces=org.apache.xerces.*`
+   1. 
+   1. AEM インスタンスを停止して `[AEM installation directory]\crx-quickstart\conf\` フォルダーに移動し、sling.properties ファイルを編集用として開きます。`[AEM installation directory]\crx-quickstart\bin\start.bat` を使用して AEM インスタンスを起動する場合は、`[AEM_root]\crx-quickstart\` フォルダー内の sling.properties ファイルを編集用として開きます。 以下のプロパティを sling.properties ファイルに追加します。<br/>  `sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*`<br /> `sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*`<br />
+   1. `sling.bootdelegation.xerces=org.apache.xerces.*`
    1. ファイルを保存して閉じます。<br/>
-   1. AEM インスタンスを起動します。<br/>
-   <br/>
+   
 
-1. **アダプティブフォーム内のテキストの大文字と小文字を自動的に変更するにはどうすればよいですか？**
-   <p>アダプティブフォームのテーマエディターまたはスタイルエディターを使用して、アダプティブフォーム内のテキストフィールドの大文字と小文字を変更することができます。 例えば、テーマエディターを開き、フォーム内のすべてのテキストについて、大文字／小文字プロパティの値を、大文字、小文字、camelCase のいずれかに設定することができます。 また、テーマエディターの「CSS 上書き」オプションを使用して、別のタイプのスタイルを作成することもできます。</p>
+1. 
+   </p>
