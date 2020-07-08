@@ -6,11 +6,11 @@ seo-description: AEM Forms の自動フォーム変換サービスを使用す�
 uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 1c48cc1b271bfea19ac2394eaf40be21060a349e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '780'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ AEM Forms の自動フォーム変換サービスを使用する前に、この�
    * XFA ベースフォーム用の繰り返し可能パネルはサポートされていません。
    * 「レビューと修正」エディターでテーブル内のリストを変更すると、行の幅が自動的に調整されず、行内のテキストが次の行にはみ出してしまう場合があります。
    * 「レビューと修正」エディターとフォームフラグメントでは、「**[!UICONTROL 入力フォームの複数列レイアウトを自動検出]**」機能を使用できません。
-   * レビューおよび正しいエディターで作成された手書き署名が、発行済みのアダプティブフォームに読み込めません。
+   * 「レビューと修正」エディターで作成された手書き署名は、発行済みアダプティブフォームに読み込むことができません。
 
 
 * XFA ベースフォームに関する既知の問題：
