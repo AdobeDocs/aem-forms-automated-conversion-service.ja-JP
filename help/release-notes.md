@@ -2,9 +2,9 @@
 title: 新機能 リリースノート：自動フォーム変換サービス
 description: '自動フォーム変換サービスの最新機能と修正済みのバグについて説明します '
 translation-type: tm+mt
-source-git-commit: 9fe3de9decbebc66c07d99b21424e3183599c64a
+source-git-commit: caa019d1a7dd1968a52df5ec5be4755e1c6c4ee6
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '329'
 ht-degree: 94%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 94%
 
 ### 改善された点
 
-テキスト、フォーム、および選択グループのフィールドを、対応するアダプティブフォームコンポーネントに自動変換する機能が強化されました。
+テキスト、フォーム、選択グループのフィールドを、対応するアダプティブフォームコンポーネントに自動変換する際の改善点です。
 
 ## 2020 年 3 月 20 日（AFC-2020.03.1）
 
