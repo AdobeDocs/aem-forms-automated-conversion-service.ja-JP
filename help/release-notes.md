@@ -24,7 +24,7 @@ ht-degree: 92%
 * 将来の変更プラン
 
 
-## 2020年7月16日(AFC-2020.07.0)
+## 2020 年 7 月 16 日（AFC-2020.07.0）
 
 ### 改善された点
 
@@ -46,7 +46,7 @@ ht-degree: 92%
 
 ### 特別な手順
 
-**Automated Forms Conversion Serviceコネクターパッケージのインストール**
+**自動Formsコンバージョンサービスコネクタパッケージのインストール**
 
 リリース AFC-2020.03.1 で提供される機能と改善を使用するには、コネクターパッケージ 1.1.38 以降のバージョンが必要です。[AEM パッケージ共有](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)からコネクターパッケージをダウンロードできます。
 
