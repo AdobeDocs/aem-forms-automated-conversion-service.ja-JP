@@ -6,11 +6,11 @@ seo-description: 自動フォーム変換サービスに関するよくある質
 uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
-translation-type: ht
-source-git-commit: 3b3bb98352e23544d32c39f0bfb5f0d9b7ae99cf
-workflow-type: ht
-source-wordcount: '1722'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
+workflow-type: tm+mt
+source-wordcount: '1723'
+ht-degree: 99%
 
 ---
 
@@ -57,7 +57,7 @@ ht-degree: 100%
 
 1. **スキャンした紙のフォームや色付きのフォームをアダプティブフォームに変換することはできますか？**
 
-   <p>自動フォーム変換サービスは、PDF フォームをアダプティブフォームに変換するためのサービスです。 スキャンされたフォームや、フィールドに値が設定されているフォームは変換できません。 その他の制限事項については、「<a href="known-issues.md">既知の問題</a>」を参照してください。</p> <br>
+   <p>このサービスでは、カラーPDF formsをアダプティブフォームに変換できます。 スキャンされたフォームや、フィールドに値が設定されているフォームは変換できません。 その他の制限事項については、「<a href="known-issues.md">既知の問題</a>」を参照してください。</p> <br>
 
 1. **スキャンしたフォームや画像だけのフォームをアダプティブフォームに変換することはできますか？**
 
