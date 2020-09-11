@@ -9,10 +9,10 @@ topic-tags: introduction
 discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
-translation-type: ht
-source-git-commit: 356eb083b889a1bf151c32bc5f01a6d263b96274
-workflow-type: ht
-source-wordcount: '575'
+translation-type: tm+mt
+source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
+workflow-type: tm+mt
+source-wordcount: '555'
 ht-degree: 100%
 
 ---
@@ -28,30 +28,12 @@ AEM Forms 自動変換サービスは、PDF フォームをアダプティブフ
 
 ## 一般 {#general}
 
-<!--
-Comment Type: draft
-
-<ul>
-<li>Service does not convert filled PDF forms to adaptive form. Use empty adaptive forms.Service does not convert colored PDF forms to adaptive form. Use  and white or grayscale adaptive forms. <br /> </li>
-<li>Service does not convert filled PDF forms to adaptive form. Use empty adaptive forms.</li>
-<li>Service does not support scanned forms. Do not use scanned forms. </li>
-<li>Service can fail to recognize text and fields in a dense form. Increase the width between text and fields of a dense form before starting the conversion.</li>
-<li>Service does not extract images. Manually add images to converted forms.</li>
-<li>Service does not extract text present within an image. Manually add text to the adaptive form.</li>
-</ul>
--->
-
 <table border="1" cellpadding="1" cellspacing="0" style="border-collapse: separate; border-spacing: 0px;" width="100%"> 
  <tbody>
   <tr>
    <td width="30%">既知のパターンとその解決方法</td> 
    <td width="70%">例</td> 
   </tr>
-  <tr>
-   <td><p><strong>パターン</strong></p> <p>カラーの PDF フォームがアダプティブフォームに変換されない。</p> <p> </p> <p><strong>解決方法</strong></p> <p>モノクロまたはグレースケールの PDF フォームを使用してください。 </p> </td> 
-   <td style="text-align: left;"> <img src="assets/coloured-form.png" /></td> 
-  </tr>
-  <tr>
    <td><p><strong>パターン</strong></p> <p>入力済みの PDF フォームがアダプティブフォームに変換されない。</p> <p> </p> <p><strong>解決方法</strong></p> <p>空のアダプティブフォームを使用してください。</p> </td> 
    <td style="text-align: left;"><img src="assets/pre-filled-form.png" /></td> 
   </tr>
