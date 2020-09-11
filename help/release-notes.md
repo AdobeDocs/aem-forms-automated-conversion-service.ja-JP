@@ -2,7 +2,7 @@
 title: 新機能 リリースノート：自動フォーム変換サービス
 description: '自動フォーム変換サービスの最新機能と修正済みのバグについて説明します '
 translation-type: tm+mt
-source-git-commit: bf14583de678ef963b0f2084c3da4624c9304b30
+source-git-commit: 9b904622fcf421d82a183569d915926a2761d3f5
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 90%
@@ -28,7 +28,7 @@ ht-degree: 90%
 
 ### 新機能
 
-色付きのPDFフォームをアダプティブフォームに変換するサポートを追加しました。
+色付きPDF formsをアダプティブフォームに変換するサポートを追加しました。
 
 ### 改善された点
 
