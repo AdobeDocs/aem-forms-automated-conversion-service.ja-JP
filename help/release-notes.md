@@ -2,10 +2,10 @@
 title: 新機能 リリースノート：自動フォーム変換サービス
 description: '自動フォーム変換サービスの最新機能と修正済みのバグについて説明します '
 translation-type: tm+mt
-source-git-commit: 1c6bdd03d5a3ac37a11a31e5c7948c28412b67aa
+source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 92%
+source-wordcount: '346'
+ht-degree: 88%
 
 ---
 
@@ -26,9 +26,14 @@ ht-degree: 92%
 
 ## 2020 年 7 月 16 日（AFC-2020.07.0）
 
+### 新機能
+
+このサービスを使用して、色付きのPDFフォームをアダプティブフォームに変換することもできます。
+
 ### 改善された点
 
 テキスト、フォーム、選択グループのフィールドを、対応するアダプティブフォームコンポーネントに自動変換する際の改善点です。
+
 
 ## 2020 年 3 月 20 日（AFC-2020.03.1）
 
