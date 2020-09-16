@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 9b904622fcf421d82a183569d915926a2761d3f5
 workflow-type: tm+mt
 source-wordcount: '341'
-ht-degree: 90%
+ht-degree: 97%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 90%
 
 ### 改善された点
 
-テキスト、フォーム、選択グループのフィールドを、対応するアダプティブフォームコンポーネントに自動変換する際の改善点です。
+テキストフィールド、フォームフィールド、選択グループフィールドを、対応するアダプティブフォームコンポーネントに自動変換する機能が改善されました。
 
 
 ## 2020 年 3 月 20 日（AFC-2020.03.1）
@@ -51,7 +51,7 @@ ht-degree: 90%
 
 ### 特別な手順
 
-**自動Formsコンバージョンサービスコネクタパッケージのインストール**
+**自動フォーム変換サービスコネクターパッケージのインストール**
 
 リリース AFC-2020.03.1 で提供される機能と改善を使用するには、コネクターパッケージ 1.1.38 以降のバージョンが必要です。[AEM パッケージ共有](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)からコネクターパッケージをダウンロードできます。
 
