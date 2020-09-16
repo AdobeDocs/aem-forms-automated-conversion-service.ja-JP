@@ -4,9 +4,9 @@ description: デフォルトのメタモデルを拡張することにより、�
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: ead1b4ee177029c60f095dc596b1f3db5878760e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1215'
 ht-degree: 100%
 
