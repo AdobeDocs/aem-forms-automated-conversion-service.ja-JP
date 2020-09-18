@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 9b904622fcf421d82a183569d915926a2761d3f5
 workflow-type: tm+mt
 source-wordcount: '341'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 97%
 
 ### 新機能
 
-色付きPDF formsをアダプティブフォームに変換するサポートを追加しました。
+カラーの PDF フォームからアダプティブフォームへの変換がサポートされるようになりました。
 
 ### 改善された点
 
