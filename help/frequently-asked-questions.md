@@ -6,11 +6,11 @@ seo-description: 自動フォーム変換サービスに関するよくある質
 uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
-translation-type: ht
-source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
-workflow-type: ht
-source-wordcount: '1723'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 14e6d1fba9f27fde4fe24de83cb00c9847ea4e90
+workflow-type: tm+mt
+source-wordcount: '1836'
+ht-degree: 93%
 
 ---
 
@@ -131,4 +131,11 @@ ht-degree: 100%
    <br/>
 
 1. **アダプティブフォーム内のテキストの大文字と小文字を自動的に変更するにはどうすればよいですか？**
+
    <p>アダプティブフォームのテーマエディターまたはスタイルエディターを使用して、アダプティブフォーム内のテキストフィールドの大文字と小文字を変更することができます。 例えば、テーマエディターを開き、フォーム内のすべてのテキストについて、大文字／小文字プロパティの値を、大文字、小文字、camelCase のいずれかに設定することができます。 また、テーマエディターの「CSS 上書き」オプションを使用して、別のタイプのスタイルを作成することもできます。</p>
+
+1. **自動FormsコンバージョンサービスでAdobe Signのテキストタグを使用できますか。**
+
+   <p> 自動Forms変換サービスを使用してPDFフォームをアダプティブフォームに変換し、PDFフォームにAdobe Signのテキストタグが付いている場合、これらのタグは対応するアダプティブフォームのフィールドに変換され、署名者の詳細が自動的に入力されます。  この機能は、AcroFormsでのみ使用でき、アダプティブフォームはAdobe Signフィールドの数に制限があります。</p>  </br>
+
+   <p> サポートされているタグの完全なリストを確認するには、アダプティブフォームエディターでフォームを開き、Adobe Signブロックを追加します。 Adobe Signブロックを使用して、サポートされるAdobe Signフィールドをすべて検索します。 サポートされているすべてのフィールドを選択するためのドロップダウンが表示されます。</p>
