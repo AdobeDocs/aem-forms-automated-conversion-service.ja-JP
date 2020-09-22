@@ -7,11 +7,11 @@ uuid: 49fcd5c0-0e72-496d-9831-00f79d582f57
 contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
-translation-type: ht
-source-git-commit: 5fdf997fdde07cc4546accebddb85a248f36e057
-workflow-type: ht
-source-wordcount: '1586'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 14e6d1fba9f27fde4fe24de83cb00c9847ea4e90
+workflow-type: tm+mt
+source-wordcount: '1688'
+ht-degree: 94%
 
 ---
 
@@ -22,11 +22,16 @@ Adobe Sensei をベースとして開発された AEM Forms 自動フォーム�
 
 ## 前提条件 {#pre-requisites}
 
-* [**変換サービスの設定を行う&#x200B;**](configure-service.md)
+* [**変換サービスの設定を行う**](configure-service.md)
 
 * **変換後のフォームに[テンプレート](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/template-editor.html)を適用するための準備を行う**：テンプレートを使用すると、統一されたブランディングをすべてのアダプティブフォームに適用することができます。 自動フォーム変換サービスでは、変換元 PDF ドキュメントのヘッダーとフッターが抽出されて使用されることはありません。 アダプティブフォームのテンプレートを使用して、ヘッダーとフッターを指定することができます。 変換サービスを実行すると、テンプレートで指定したヘッダーとフッターがアダプティブフォームに適用されます。テンプレート用のフォルダーを作成する場合は、全員に対して「**[!UICONTROL 設定を参照]**」オプションを選択します。
 
 * **変換後のフォームに適用される[テーマ](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/themes.html)を準備する**：テーマを使用すると、統一されたスタイルを組織内のすべてのアダプティブフォームに適用することができます。
+
+* **Adobe Sign追加のソースPDFドキュメントへのテキストタグ：** ソースPDFフォームに [Adobe Signのテキストタグが含まれている場合](https://helpx.adobe.com/jp/sign/using/text-tag.html)、サービスはこれらのタグを対応するアダプティブフォームのフィールドに自動的に変換し、署名者の詳細を自動的に入力します。 この機能はAcroFormsでのみ使用でき、アダプティブフォームは限られた数のAdobe Signフィールドをサポートしています。
+
+
+   サポートされているタグの完全なリストを確認するには、アダプティブフォームエディターでフォームを開き、Adobe Signブロックを追加します。 Adobe Signブロックを使用して、サポートされるAdobe Signフィールドをすべて検索します。 サポートされているすべてのフィールドを選択するためのドロップダウンが表示されます。
 
 ## 変換処理の開始{#start-the-conversion-process}
 
