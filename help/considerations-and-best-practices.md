@@ -1,6 +1,5 @@
 ---
-title: '[非公開] ベストプラクティスと考慮事項 '
-seo-title: '[非公開] ベストプラクティスと考慮事項 '
+title: 'ベストプラクティスと考慮事項 '
 description: 'null'
 seo-description: 'null'
 page-status-flag: never-activated
@@ -9,16 +8,20 @@ topic-tags: introduction
 discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
-translation-type: ht
-source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
-workflow-type: ht
-source-wordcount: '555'
+translation-type: tm+mt
+source-git-commit: bc7a0a86a211214d6e43e7c95809f6f40fe267f8
+workflow-type: tm+mt
+source-wordcount: '542'
 ht-degree: 100%
 
 ---
 
 
-# [非公開] ベストプラクティスと考慮事項{#do-not-publish-best-practices-and-considerations}
+# ベストプラクティスと考慮事項 {#do-not-publish-best-practices-and-considerations}
+
+<!--
+[DO NOT PUBLISH]
+-->
 
 AEM Forms 自動変換サービスは、PDF フォームをアダプティブフォームに変換します。 このサービスは、人工知能と機械学習アルゴリズムを使用して、ソースフォームのレイアウトとフィールドを理解します。 すべての機械学習サービスは、ソースデータを使用して継続的に学習を行い、すべてのチャーンで改善された出力を生成します。 これらのサービスは、人間と同様に、これまでの経験を基にして学習していきます。
 
