@@ -8,10 +8,10 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: 14e6d1fba9f27fde4fe24de83cb00c9847ea4e90
+source-git-commit: fa8a27021fbccdd1c6c0721a6e5c032db486e262
 workflow-type: tm+mt
-source-wordcount: '1688'
-ht-degree: 94%
+source-wordcount: '1694'
+ht-degree: 93%
 
 ---
 
@@ -30,8 +30,8 @@ Adobe Sensei をベースとして開発された AEM Forms 自動フォーム�
 
 * **Adobe Sign追加のソースPDFドキュメントへのテキストタグ：** ソースPDFフォームに [Adobe Signのテキストタグが含まれている場合](https://helpx.adobe.com/jp/sign/using/text-tag.html)、サービスはこれらのタグを対応するアダプティブフォームのフィールドに自動的に変換し、署名者の詳細を自動的に入力します。 この機能はAcroFormsでのみ使用でき、アダプティブフォームは限られた数のAdobe Signフィールドをサポートしています。
 
-
-   サポートされているタグの完全なリストを確認するには、アダプティブフォームエディターでフォームを開き、Adobe Signブロックを追加します。 Adobe Signブロックを使用して、サポートされるAdobe Signフィールドをすべて検索します。 サポートされているすべてのフィールドを選択するためのドロップダウンが表示されます。
+   </br>
+    アダプティブフォームは、署名、テキスト、数値、日付、ドロップダウン、ラジオボタン、チェックボックス、初期、署名ブロック、電子署名、署名者のタイトル、署名者の電子メール、署名者の会社、署名日、署名者のフルネームのAdobe Signフィールドのみをサポートします。 したがって、前述のフィールドのみのテキストタグは、対応するアダプティブフォームのフィールドに変換されます。
 
 ## 変換処理の開始{#start-the-conversion-process}
 
