@@ -6,9 +6,9 @@ seo-description: 自動フォーム変換サービスによって変換された
 uuid: 5a0a6d24-dff6-4732-b607-24848b07b26d
 topic-tags: forms
 discoiquuid: f45ab2d7-5234-42d6-aeb6-b2cb1a7ce3c2
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 3c12751cad2b3c04ad66a98ac17f20f648530d0f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2587'
 ht-degree: 100%
 
