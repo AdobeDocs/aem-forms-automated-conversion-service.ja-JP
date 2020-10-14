@@ -2,24 +2,26 @@
 cloud: experience-cloud
 product: experience manager
 sub-product: フォーム変換サービス
+solution: Experience Manager
+type: Documentation
 audience: end-user
 user-guide-title: Adobe Experience Manager Forms 自動変換サービス
-user-guide-description: Speed up the conversion of print forms to adaptive forms.
-breadcrumb-title: Forms Automated Conversion Guide
+user-guide-description: PDF formsをレスポンシブでモバイル対応のHTMLFormsに変換します。
+breadcrumb-title: Forms 自動コンバージョンガイド
 breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.html
-translation-type: ht
-source-git-commit: 09f609f3a634e33270b94bd09da50f08d0ea0a6e
-workflow-type: ht
-source-wordcount: '77'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 49fff7234975daab051b5a0b887004c407be927a
+workflow-type: tm+mt
+source-wordcount: '90'
+ht-degree: 90%
 
 ---
 
 
 # Adobe Experience Manager Forms 自動変換サービス {#using}
 
-+ [リリースノート](release-notes.md)
 + [概要](introduction.md)
++ [リリースノート](release-notes.md)
 + [ベストプラクティスと考慮事項](styles-and-pattern-considerations-and-best-practices.md)
 + [サービスの設定](configure-service.md)
 + [印刷フォームをアダプティブフォームに変換する](convert-existing-forms-to-adaptive-forms.md)
