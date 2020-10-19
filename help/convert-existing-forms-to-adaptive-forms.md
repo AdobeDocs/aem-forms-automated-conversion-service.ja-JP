@@ -7,11 +7,11 @@ uuid: 49fcd5c0-0e72-496d-9831-00f79d582f57
 contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
-translation-type: ht
-source-git-commit: fa8a27021fbccdd1c6c0721a6e5c032db486e262
-workflow-type: ht
-source-wordcount: '1694'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 19c688ae925774c008683be8b92afcbfb9f2bcdb
+workflow-type: tm+mt
+source-wordcount: '1708'
+ht-degree: 93%
 
 ---
 
@@ -28,10 +28,11 @@ Adobe Sensei をベースとして開発された AEM Forms 自動フォーム�
 
 * **変換後のフォームに適用される[テーマ](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/themes.html)を準備する**：テーマを使用すると、統一されたスタイルを組織内のすべてのアダプティブフォームに適用することができます。
 
-* **Adobe Sign のテキストタグを変換元 PDF 文書に追加する：**&#x200B;変換元 PDF フォームに [Adobe Sign のテキストタグ](https://helpx.adobe.com/jp/sign/using/text-tag.html)が含まれている場合、これらのタグは対応するアダプティブフォームフィールドに自動的に変換され、署名者の詳細が自動入力されます。 この機能は AcroForms に対してのみ利用可能で、アダプティブフォームがサポートする Adobe Sign フィールドは制限されています。
+* **Adobe Sign追加のソースPDFドキュメントへのテキストタグ：** ソースPDFフォームに [Adobe Signのテキストタグが含まれている場合](https://helpx.adobe.com/jp/sign/using/text-tag.html)、変換時に署名者の関連情報がすべて保持されます。 生成されたアダプティブフォームは、署名用にアダプティブフォームをAdobe Signサービスに送信する際に、署名者のすべての詳細を入力します。 この機能はAcroFormsでのみ使用でき、アダプティブフォームのプロパティはAcroFormのプロパティと正確に一致します。
 
-   </br>
-    アダプティブフォームは、署名、テキスト、数値、日付、ドロップダウン、ラジオボタン、チェックボックス、初期、署名ブロック、デジタル署名、署名者のタイトル、署名者の電子メール、署名者の会社、署名日、署名者のフルネームの Adobe Sign フィールドのみをサポートします。 そのため、このサービスでは、これらのフィールドのみのテキストタグに対応するアダプティブフォームフィールドに変換されます。
+ソースPDFドキュメントにAdobe Signのテキストタグを追加するには、ソースPDFドキュメントのフィールド名を [テキストタグに置き換えるか](https://helpx.adobe.com/jp/sign/using/text-tag.html) 、「AcrobatDC [を使用したフォームの](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html#) 作成」の記事の説明に従って、Adobe Signフォームに変換を使用します。
+
+
 
 ## 変換処理の開始{#start-the-conversion-process}
 
