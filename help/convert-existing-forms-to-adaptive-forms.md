@@ -8,7 +8,7 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: 19c688ae925774c008683be8b92afcbfb9f2bcdb
+source-git-commit: 0bff37d64df233dc52310266e306edb734887727
 workflow-type: tm+mt
 source-wordcount: '1708'
 ht-degree: 93%
@@ -30,7 +30,7 @@ Adobe Sensei をベースとして開発された AEM Forms 自動フォーム�
 
 * **Adobe Sign追加のソースPDFドキュメントへのテキストタグ：** ソースPDFフォームに [Adobe Signのテキストタグが含まれている場合](https://helpx.adobe.com/jp/sign/using/text-tag.html)、変換時に署名者の関連情報がすべて保持されます。 生成されたアダプティブフォームは、署名用にアダプティブフォームをAdobe Signサービスに送信する際に、署名者のすべての詳細を入力します。 この機能はAcroFormsでのみ使用でき、アダプティブフォームのプロパティはAcroFormのプロパティと正確に一致します。
 
-ソースPDFドキュメントにAdobe Signのテキストタグを追加するには、ソースPDFドキュメントのフィールド名を [テキストタグに置き換えるか](https://helpx.adobe.com/jp/sign/using/text-tag.html) 、「AcrobatDC [を使用したフォームの](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html#) 作成」の記事の説明に従って、Adobe Signフォームに変換を使用します。
+   ソースPDFドキュメントにAdobe Signのテキストタグを追加するには、ソースPDFドキュメントのフィールド名を [テキストタグに置き換えるか](https://helpx.adobe.com/jp/sign/using/text-tag.html) 、「AcrobatDC [を使用したフォームの](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html#) 作成」の記事の説明に従って、Adobe Signフォームに変換を使用します。
 
 
 
