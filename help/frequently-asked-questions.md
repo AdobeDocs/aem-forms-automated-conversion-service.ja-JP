@@ -7,7 +7,7 @@ uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 translation-type: tm+mt
-source-git-commit: c4f0d07b38cdb6aa162a0b61abe12fe9d1677a8c
+source-git-commit: ac110cc2e8b29603fb7ff8b86c5d323f13bc204e
 workflow-type: tm+mt
 source-wordcount: '1880'
 ht-degree: 97%
@@ -141,4 +141,7 @@ ht-degree: 97%
    <p> サポートされているタグの完全なリストを表示するには、アダプティブフォームエディターでフォームを開き、Adobe Sign ブロックを追加します。 Adobe Sign ブロックを使用して、サポートされているすべての Adobe Sign フィールドを検索します。 サポートされているすべてのフィールドを選択できるドロップダウンが表示されます。</p>
 
 1. **Adobe Sign対応のPDFフォームの作成方法**
-Adobe Sign対応のPDFフォームを作成するには、 [Adobe Signのテキストタグ](https://helpx.adobe.com/jp/sign/using/text-tag.html) をフィールド名に追加するか、「Adobe Signフォーム [に](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html) 変換」オプションを使用します。 </br>
+
+   </p>Adobe Sign対応のPDFフォームを作成するには：</p>
+
+   追加 [Adobe Signのテキストタグ](https://helpx.adobe.com/jp/sign/using/text-tag.html) (フィールド名に変換するか、「Adobe Signフォーム [](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html) に変換」オプションを使用)。
