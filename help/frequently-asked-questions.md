@@ -6,11 +6,11 @@ seo-description: 自動フォーム変換サービスに関するよくある質
 uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
-translation-type: ht
-source-git-commit: 14e6d1fba9f27fde4fe24de83cb00c9847ea4e90
-workflow-type: ht
-source-wordcount: '1836'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: c4f0d07b38cdb6aa162a0b61abe12fe9d1677a8c
+workflow-type: tm+mt
+source-wordcount: '1880'
+ht-degree: 97%
 
 ---
 
@@ -139,3 +139,6 @@ ht-degree: 100%
    <p> 自動フォーム変換サービスを使用して PDF フォームをアダプティブフォームに変換する際に、PDF フォームに Adobe Sign のテキストタグが含まれている場合、これらのタグは対応するアダプティブフォームフィールドに変換され、署名者の詳細が自動的に入力されます。  この機能は AcroForms に対してのみ利用可能で、アダプティブフォームがサポートする Adobe Sign フィールドは制限されています。</p>  </br>
 
    <p> サポートされているタグの完全なリストを表示するには、アダプティブフォームエディターでフォームを開き、Adobe Sign ブロックを追加します。 Adobe Sign ブロックを使用して、サポートされているすべての Adobe Sign フィールドを検索します。 サポートされているすべてのフィールドを選択できるドロップダウンが表示されます。</p>
+
+1. **Adobe Sign対応のPDFフォームの作成方法**
+Adobe Sign対応のPDFフォームを作成するには、 [Adobe Signのテキストタグ](https://helpx.adobe.com/jp/sign/using/text-tag.html) をフィールド名に追加するか、「Adobe Signフォーム [に](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html) 変換」オプションを使用します。 </br>
