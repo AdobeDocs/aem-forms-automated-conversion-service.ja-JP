@@ -6,11 +6,11 @@ seo-description: AEM Forms の自動フォーム変換サービスを使用す�
 uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
-translation-type: ht
-source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
-workflow-type: ht
-source-wordcount: '774'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 589eacfd6200f4336b7a4a7708e10f3dfe08406d
+workflow-type: tm+mt
+source-wordcount: '814'
+ht-degree: 95%
 
 ---
 
@@ -77,4 +77,7 @@ AEM Forms の自動フォーム変換サービスを使用する前に、この�
 * 複雑なテーブル（境界線のないテーブル、ネストされたテーブル、プレースホルダー値が設定されているテーブルなど）はサポートされていません。こうした複雑なテーブルの追加や変更を行う場合は、変換処理の完了後にアダプティブフォームエディターを使用してください。 変換サービスでは、単純なテーブル（フィールド値が設定されておらず、ヘッダーが適切に配置され、境界線が明確なテーブル）を使用してください。
 * 変換サービスでアダプティブフォームに変換できるのは、英語で作成されたフォームだけです。 変換後のアダプティブフォームを別の言語に翻訳する場合は、[AEM 翻訳ワークフロー](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)を使用してください。
 * AEM 6.4 Forms では、入力フォームの複数列レイアウトを自動的に検出することはできません。
+* ソースPDFフォームの色を使用してエンコードされた情報は、アダプティブフォームに引き継がれません。
+* ソースPDFフォームの色は、アダプティブフォームのテーマに引き継がれます。
+* 色付きのPDF formsはグレイスケールフォームとして扱われ、それに応じてフィールドが検出されます。
 
