@@ -7,11 +7,11 @@ uuid: 49fcd5c0-0e72-496d-9831-00f79d582f57
 contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: c4f0d07b38cdb6aa162a0b61abe12fe9d1677a8c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1596'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ Adobe Sensei をベースとして開発された AEM Forms 自動フォーム�
 
 * **変換後のフォームに適用される[テーマ](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/themes.html)を準備する**：テーマを使用すると、統一されたスタイルを組織内のすべてのアダプティブフォームに適用することができます。
 
-* **（オプション）** ソースPDF formsをAdobe Signフォームに [**変換します**](frequently-asked-questions.md)
+* **（オプション）** [**変換元の PDF フォームを Adobe Signフォームに変換する**](frequently-asked-questions.md)
 
 
 ## 変換処理の開始{#start-the-conversion-process}
