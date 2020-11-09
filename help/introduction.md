@@ -1,11 +1,11 @@
 ---
 title: 概要
 description: '高速で印刷フォームをアダプティブフォームに変換する '
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: c4f0d07b38cdb6aa162a0b61abe12fe9d1677a8c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '674'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ AEM 6.4 Forms と AEM 6.5 Forms のオンプレミスユーザーと、Adobe Man
 
 このサービスで変換できるフォームは、非対話型 PDF フォーム、Adobe Acrobat で作成されたフォーム（AcroForms といいます）、AEM Forms または Adobe LiveCycle で作成された XFA ベースフォームです。
 
-このサービスは、Adobe Sign対応PDF formsもサポートしています。 ソースPDFフォームにAdobe Signのテキストタグが付いている場合、サービスは変換中にAdobe Sign関連のすべての情報を保持し、ソースPDFに存在する署名者情報を、対応するアダプティブフォームのフィールドに関連付けます。 この機能は、AcroFormsでのみ使用できます。
+このサービスは、Adobe Sign が有効になっている PDF フォームもサポートしています。 変換元の PDF フォームに Adobe Sign のテキストタグが付いている場合、サービスは変換時に Adobe Sign に関するすべての情報を保持し、変換元 PDF の署名者情報を対応するアダプティブフォームのフィールドに関連付けます。 この機能は、AcroForms でのみ使用できます。
 
 変換サービスでアダプティブフォームに変換できるのは、英語で作成されたフォームだけです。 変換後のアダプティブフォームを別の言語に翻訳する場合は、[AEM 翻訳ワークフロー](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)を使用してください。
 
