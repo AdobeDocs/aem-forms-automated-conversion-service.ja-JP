@@ -4,8 +4,11 @@ description: フォームデータモデルを作成し、AEM ワークフロー
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
+workflow-type: tm+mt
+source-wordcount: '1671'
+ht-degree: 100%
 
 ---
 
@@ -28,7 +31,7 @@ source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
 * AEM インスタンスの[最新のサービスパック](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html)をインストールする
 * 最新バージョンの AEM Forms アドオンパッケージ
 * [自動フォーム変換サービス](configure-service.md)の設定
-* データベースを設定します。 サンプルの実装環境では MySQL 5.6.24 データベースを使用しますが、任意のデータベースに変換後のアダプティブフォームを統合することができます。
+* データベースを設定します。 サンプルの実装環境では MySQL 5.6.24 データベースを使用しますが、変換後のアダプティブフォームは任意のデータベースに統合することができます。
 
 ## サンプルのアダプティブフォーム{#sample-adaptive-form}
 
