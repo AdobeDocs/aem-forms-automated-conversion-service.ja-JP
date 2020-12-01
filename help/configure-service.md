@@ -1,9 +1,9 @@
 ---
 title: 自動フォーム変換サービスの設定
 description: 自動フォーム変換サービスを使用できるように AEM インスタンスの準備を行う
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 741ff89370a5215b70d90c49eea220171efe9339
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2676'
 ht-degree: 100%
 
