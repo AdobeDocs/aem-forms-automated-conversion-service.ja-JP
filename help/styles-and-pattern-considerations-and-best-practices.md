@@ -6,9 +6,9 @@ seo-description: 自動フォーム変換サービスによる特定が困難な
 uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1259'
 ht-degree: 100%
 
