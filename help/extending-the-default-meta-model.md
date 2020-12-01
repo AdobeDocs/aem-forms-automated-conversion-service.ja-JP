@@ -6,9 +6,9 @@ seo-description: デフォルトのメタモデルを拡張することにより
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 77bdb4e88194bd634dea125852ff2a897bc24678
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2401'
 ht-degree: 100%
 
@@ -390,10 +390,10 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 このカスタムメタモデルでは、**aem:affKeyword** プロパティ内のテキストが、変換サービスの検索キーワードとして使用されます。 変換サービスは、フォーム内の「**Country**」テキストフィールドを取得し、**enum** プロパティを使用して、このテキストフィールドを以下のドロップダウンリストに変換します。
 
-* India
-* England
-* Australia
-* New Zealand
+* インド
+* 英国
+* オーストラリア
+* ニュージーランド
 
 **sling:resourceType** プロパティと **guideNodeClass** プロパティにより、フォームフィールドがアダプティブフォームのドロップダウンコンポーネントにマップされます。
 
