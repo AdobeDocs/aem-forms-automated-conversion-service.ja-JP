@@ -9,9 +9,9 @@ topic-tags: forms
 discoiquuid: 9fce5d31-0a3e-4401-b9d7-bb63799121bf
 privatebeta: true
 index: false
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: bc7a0a86a211214d6e43e7c95809f6f40fe267f8
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '14'
 ht-degree: 100%
 
