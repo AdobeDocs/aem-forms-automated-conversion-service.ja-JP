@@ -8,9 +8,9 @@ topic-tags: introduction
 discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: bc7a0a86a211214d6e43e7c95809f6f40fe267f8
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 100%
 
