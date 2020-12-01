@@ -7,8 +7,11 @@ page-status-flag: never-activated
 uuid: 7f0f5bf3-21be-449a-b23e-5946a9fd7ed4
 contentOwner: khsingh
 discoiquuid: 75f6e6bc-7636-4b40-919c-8b20a6ccbb1f
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 640d72d7961ef0c2393bf0ae6745d918e388a056
+workflow-type: tm+mt
+source-wordcount: '961'
+ht-degree: 100%
 
 ---
 
