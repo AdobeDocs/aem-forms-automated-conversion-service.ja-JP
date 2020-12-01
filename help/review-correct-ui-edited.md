@@ -6,9 +6,9 @@ seo-description: 自動フォーム変換サービスによって変換された
 uuid: 5a0a6d24-dff6-4732-b607-24848b07b26d
 topic-tags: forms
 discoiquuid: f45ab2d7-5234-42d6-aeb6-b2cb1a7ce3c2
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 3c12751cad2b3c04ad66a98ac17f20f648530d0f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2587'
 ht-degree: 100%
 
@@ -187,7 +187,7 @@ AEM Forms の自動フォーム変換サービスにより、PDF 入力ドキュ
 
 「レビューと修正」エディターで必要な変更をすべて行ったら、フォームを変換用に送信します。 フォームを変換用に送信するには、「**[!UICONTROL 保存して変換]**」をタップします。 **[!UICONTROL 変換用に送信されたことを示すラベルが]**、ソースドキュメントが保管されているフォルダーに適用され、Adobe I/O が稼働している変換サービスに更新後のソースフォームがアップロードされます。
 
-フォームが複雑な場合は、フォームの変換が終了するまで時間がかかる可能性があります。 変換が完了すると、変換後のアダプティブフォームとそれに関連するアセットがローカルマシンにダウンロードされます。 変換後のアダプティブフォームを[アダプティブフォームエディター](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/introduction-forms-authoring.html)で開き、必要に応じて最終的な修正を行います。
+フォームが複雑な場合は、フォームの変換が終了するまで時間がかかる可能性があります。 変換が完了すると、変換後のアダプティブフォームとそれに関連するアセットがローカルマシンにダウンロードされます。 変換後のアダプティブフォームを[アダプティブフォームエディター](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)で開き、必要に応じて最終的な修正を行います。
 
 アダプティブフォームエディターでフォームを修正してから変換用に再送信すると、アダプティブフォーム上で行った変更内容がすべて失われます。 そのため、必ず変換処理が正常に完了してから、「レビューと修正」エディターでフォームを開くようにしてください。
 
