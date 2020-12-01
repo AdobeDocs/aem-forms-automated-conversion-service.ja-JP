@@ -8,8 +8,11 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: cad34fff-7f9f-4a27-8b5c-d0a523903eec
 privatebeta: true
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: caccb547a5741eb0e70ddf75630a661f8fe75cb3
+workflow-type: tm+mt
+source-wordcount: '2596'
+ht-degree: 100%
 
 ---
 
@@ -76,7 +79,7 @@ source-git-commit: caccb547a5741eb0e70ddf75630a661f8fe75cb3
   <tr>
   <td><p>XSD スキーマ</p></td> 
    <td> 
-    <p>データソースとして XSD スキーマを選択します。 選択したデータソースに応じて、自動フォーム変換サービスを使用して<a href="#generate-adaptive-forms-with-no-data-binding">データバインディングがないアダプティブフォームを生成</a>し、XSD スキーマをデータソースとして設定します。 次に、アダプティブフォームの各フィールドを XSD スキーマに手動でバインドし、<a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">サポートされているいずれかのプロトコルを使用</a>して、フィールド値の事前入力を行います。 次に、必要に応じてフィールド値を変更し、crx-repository にデータを送信します。</p>
+    <p>データソースとして XSD スキーマを選択します。 選択したデータソースに応じて、自動フォーム変換サービスを使用して<a href="#generate-adaptive-forms-with-no-data-binding">データバインディングがないアダプティブフォームを生成</a>し、XSD スキーマをデータソースとして設定します。 次に、アダプティブフォームの各フィールドを XSD スキーマに手動でバインドし、<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">サポートされているいずれかのプロトコルを使用</a>して、フィールド値の事前入力を行います。 次に、必要に応じてフィールド値を変更し、crx-repository にデータを送信します。</p>
     </td> 
   </tr>
   <tr>
@@ -273,6 +276,7 @@ JSON スキーマをフォームモデルとして使用してこのユースケ
 1. 「申込者名」テキストボックスをタップして設定アイコン（![設定アイコン](assets/configure_icon.svg)）を選択します。
 
    1. 「バインド参照」フィールドで&#x200B;**申込者**／**名前**&#x200B;を選択し、![完了アイコン](assets/save_icon.svg) をタップしてプロパティを保存します。 同様に、フォームデータモデルエンティティを使用して、「**住所**」、「**電話番号**」、「**電子メール**」、「**職業**」、「**年収（ドル）**」、「**扶養家族の数**」フィールドのデータバインディングを作成します。
+
    ![バインド参照](assets/bind_references.png)
 
 1. 「**[!UICONTROL プレビュー]**」をタップして、事前入力されたアダプティブフォームフィールドの値を確認します。
@@ -305,6 +309,7 @@ JSON スキーマをフォームモデルとして使用してこのユースケ
    1. 「出力」セクションのフォームデータモデルエンティティを使用して、アダプティブフォームフィールドのデータバインディングを作成します。 例えば、アダプティブフォームの「**[!UICONTROL 申込者名]**」フィールドを「**name**」エンティティにバインドします。
 
    1. 「**[!UICONTROL 完了]**」をタップします。ルールエディターページで、もう一度「**[!UICONTROL 完了]**」をタップします。
+
    ![ルールエディターで参照をバインドする](assets/rule_editor_bind_references.png)
 
 1. 「**[!UICONTROL プレビュー]**」をタップして、事前入力されたアダプティブフォームフィールドの値を確認します。
