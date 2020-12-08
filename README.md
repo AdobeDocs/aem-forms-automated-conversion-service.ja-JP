@@ -1,16 +1,12 @@
 ---
-source-git-commit: d2af4611e68447253a818e0c83ff3ec519056373
+source-git-commit: c8489a521f35c60ee28227f499e9a0a7541960b9
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '520'
-ht-degree: 85%
+source-wordcount: '438'
+ht-degree: 100%
 
 ---
 # 記事の寄稿
-
-| EXL-PR | EXL | プレビュー | アクティベート | 公開済み | ヘルプ |
-|--- |--- |--- |--- |--- |--- |
-| [![ビルドの状態](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_pr-exl/lastBuild/) | [![ビルドの状態](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_exl/lastBuild/lastBuild) | [プレビュー URL](https://experienceleague.corp.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/activate-exl/build/) | [ライブURL](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html?lang=en) | [オーサリングガイド](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 アドビでは、コミュニティおよびドキュメントチーム以外のアドビ従業員からのコンテンツの寄稿を歓迎します。
 
