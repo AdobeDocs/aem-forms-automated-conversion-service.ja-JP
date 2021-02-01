@@ -2,10 +2,10 @@
 title: 新機能 リリースノート：自動フォーム変換サービス
 description: '自動フォーム変換サービスの最新機能と修正済みのバグについて説明します '
 translation-type: tm+mt
-source-git-commit: 8808e2d9c762617ba67e2f1ab4e103f828e11c58
+source-git-commit: 923fee97428b8063f6a973b90eb91fdb25e5dd12
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 100%
+source-wordcount: '356'
+ht-degree: 95%
 
 ---
 
@@ -23,6 +23,10 @@ ht-degree: 100%
 * 特別な手順
 * 将来の変更プラン
 
+
+## 2021年2月1日(AFC-2021.01)
+
+フォームフィールドをパネルに編成し、パネルのタイトルを生成する際のパフォーマンスが向上しました。
 
 ## 2020 年 7 月 16 日（AFC-2020.07.0）
 
