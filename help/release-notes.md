@@ -2,7 +2,7 @@
 title: 新機能 リリースノート：自動フォーム変換サービス
 description: '自動フォーム変換サービスの最新機能と修正済みのバグについて説明します '
 translation-type: tm+mt
-source-git-commit: 3fa3f484268c7cbe655408f90d53ae8d28b3a7ee
+source-git-commit: 765f7bd4126fe4b8f4dd92c4b3eb556dae4e9ff0
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 93%
@@ -23,8 +23,7 @@ ht-degree: 93%
 * 特別な手順
 * 将来の変更プラン
 
-
-## 2021年2月1日(AFC-2021.01.2)
+## 2021年2月2日(AFC-2021.01.2)
 
 ### 改善された点
 
