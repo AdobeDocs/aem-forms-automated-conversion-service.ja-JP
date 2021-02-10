@@ -8,11 +8,11 @@ topic-tags: introduction
 discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: b2d29c22a275f2dc6a82593cf5e441c8da0bba13
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '546'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ AEM Forms 自動変換サービスは、PDF フォームをアダプティブフ
    <td><img src="assets/image-in-adaptive-form.png" /></td> 
   </tr>
   <tr>
-   <td><p><strong>パターン</strong></p> <p>点線や不明瞭な境界線（または不明瞭な枠線）が含まれているテーブルが変換されない。</p> <p><strong>解決方法</strong></p> <p>境界線や枠線が明確に設定されているテーブルを使用してください。  </p> </td> 
+   <td><p><strong>パターン</strong></p> <p>点線や不明瞭な境界線（または不明瞭な枠線）が含まれているテーブルが変換されない。</p> <p><strong>解決方法</strong></p> <p>境界線や枠線が明確に設定されているテーブルを使用してください。 </p> </td> 
    <td><img src="assets/border-less-tables.png" /></td> 
   </tr>
  </tbody>
