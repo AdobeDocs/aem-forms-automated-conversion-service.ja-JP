@@ -1,24 +1,21 @@
 ---
 cloud: experience-cloud
-solution-title: 自動フォームコンバージョンサービス
-solution-hub-url: https://helpx.adobe.com/jp/support/experience-manager/6-5.html
-solution-icon: assets/experience-cloud-logo-24.png
-getting-started-title: 概要
-getting-started-url: https://helpx.adobe.com/jp/experience-manager/tutorials.html
-tutorials-title: チュートリアル
-tutorials-url: https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-5-videos.html
 mini-toc-levels: 2
-git-repo: https://github.com/AdobeDocs/aem-forms-automated-conversion-service.en
+git-repo: https://git.corp.adobe.com/AdobeDocs/aem-forms-automated-conversion-service.ja-JP
 index: y
+feature-set: Experience Manager Forms
 translation-type: tm+mt
-source-git-commit: cf97c1b8dabb36793ca05ddbc328a1a0ddba93eb
+source-git-commit: 9e931f3eeb3138345cfe0076652bdd3c300dbb35
+workflow-type: tm+mt
+source-wordcount: '130'
+ht-degree: 96%
 
 ---
 
 
 # 内部使用メタデータ
 
-metadata.md ファイルには、リポジトリ内にあるユーザーガイドの TOC.md ファイルにパススルーされるリポジトリレベルのメタデータが含まれています。任意のユーザーガイドの metadata.md コンテンツを変更するには、任意の TOC.md ファイル内でそのように処理してください。
+metadata.md ファイルには、リポジトリー内にあるユーザーガイドの TOC.md ファイルにパススルーされるリポジトリーレベルのメタデータが含まれています。任意のユーザーガイドの metadata.md コンテンツを変更するには、任意の TOC.md ファイル内でそのように処理してください。
 
 | メタデータ | 動作 |
 |--- |--- |
@@ -28,9 +25,9 @@ metadata.md ファイルには、リポジトリ内にあるユーザーガイ�
 | getting-started-url | helpx の「はじめに」のページへのリンク |
 | tutorials-url | ビデオチュートリアル（helpx チュートリアルまたは KT チュートリアル）へのリンク |
 | mini-toc-levels | 右側のレールに表示される見出しレベルの数を決定します。デフォルトは 2 です。 |
-| git-repo | 内部使用のマスターリポジトリの場所を指定します。 |
+| git-repo | 内部使用のマスターリポジトリーの場所を指定します。 |
 
-TOC.mdファイル内
+TOC.md ファイル内
 
 | メタデータ | 動作 |
 |--- |--- |
