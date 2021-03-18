@@ -9,11 +9,13 @@ user-guide-title: Adobe Experience Manager Forms 自動変換サービス
 user-guide-description: PDF Forms をレスポンシブなモバイル対応の HTML Forms に変換します。
 breadcrumb-title: Forms 自動コンバージョンガイド
 breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.html
+feature: アダプティブフォーム
+role: 開業医
 translation-type: tm+mt
-source-git-commit: ab178dd8d1786c6c341d4a1a3da0aecebead31dd
+source-git-commit: b3946630c5180a600fe7acc25f1084601dec04ef
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '95'
+ht-degree: 97%
 
 ---
 
