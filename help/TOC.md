@@ -10,12 +10,12 @@ user-guide-description: PDF Forms をレスポンシブなモバイル対応の 
 breadcrumb-title: Forms 自動コンバージョンガイド
 breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.html
 feature: アダプティブフォーム
-role: 開業医
-translation-type: tm+mt
+role: 業務担当者
+translation-type: ht
 source-git-commit: b3946630c5180a600fe7acc25f1084601dec04ef
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '95'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
