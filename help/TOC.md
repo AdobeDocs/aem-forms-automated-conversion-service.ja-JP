@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: experience manager
 sub-product: フォーム変換サービス
 solution: Experience Manager, Experience Manager Forms
@@ -11,9 +11,9 @@ breadcrumb-title: Forms 自動コンバージョンガイド
 breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.html
 feature: アダプティブフォーム
 role: 業務担当者
-translation-type: ht
-source-git-commit: b3946630c5180a600fe7acc25f1084601dec04ef
-workflow-type: ht
+translation-type: tm+mt
+source-git-commit: 8c4cf4ff72e9ca7e8daa76f495abd75a865cd2f7
+workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 100%
 
