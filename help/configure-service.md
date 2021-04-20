@@ -1,7 +1,7 @@
 ---
 title: 自動フォーム変換サービスの設定
 description: 自動フォーム変換サービスを使用できるように AEM インスタンスの準備を行う
-role: 業務担当者、管理者
+role: Business Practitioner, Administrator
 translation-type: ht
 source-git-commit: a9bab62fbe5ecc4b233e9bc55b9e461a5967b471
 workflow-type: ht
