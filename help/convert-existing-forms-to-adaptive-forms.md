@@ -7,14 +7,13 @@ uuid: 49fcd5c0-0e72-496d-9831-00f79d582f57
 contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
-translation-type: tm+mt
-source-git-commit: c4f0d07b38cdb6aa162a0b61abe12fe9d1677a8c
+exl-id: 415e05b5-5a90-490c-bf7c-d3365ce95e24
+source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
 workflow-type: tm+mt
 source-wordcount: '1596'
 ht-degree: 100%
 
 ---
-
 
 # PDF フォームをアダプティブフォームに変換する{#convert-print-forms-to-adaptive-forms}
 
@@ -48,7 +47,7 @@ AEM インスタンスを AEM Forms 変換サービスに接続すると、PDF �
 * 各フォームのページ数は 15 ページ未満にしてください。
 * 保護されたフォームをアップロードしないでください。 この変換サービスでは、パスワードで保護されたフォームを変換することはできません。
 * ファイル名にスペースが含まれているソースフォームをアップロードしないでください。 こうしたファイルをアップロードする場合は、ファイル名に含まれているスペースを削除してからアップロードしてください。
-* [PDF ポートフォリオ](https://helpx.adobe.com/jp/acrobat/using/overview-pdf-portfolios.html)をアップロードしないでください。 この変換サービスでは、PDF ポートフォリオをアダプティブフォームに変換することはできません。
+* [PDF ポートフォリオ](https://helpx.adobe.com/jp/acrobat/using/overview-pdf-portfolios.html)をアップロードしないでください。この変換サービスでは、PDF ポートフォリオをアダプティブフォームに変換することはできません。
 * 推奨されるフォームの修正方法について、「[既知の問題](known-issues.md)」セクションと「[ベストプラクティスと考慮事項](styles-and-pattern-considerations-and-best-practices.md)」セクションを確認してください。
 
 変換するフォームを AEM Forms インスタンス上のフォルダーにアップロードするには、以下の手順を実行します。
