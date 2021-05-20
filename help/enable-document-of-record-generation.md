@@ -7,14 +7,13 @@ page-status-flag: never-activated
 uuid: 7f0f5bf3-21be-449a-b23e-5946a9fd7ed4
 contentOwner: khsingh
 discoiquuid: 75f6e6bc-7636-4b40-919c-8b20a6ccbb1f
-translation-type: tm+mt
-source-git-commit: 640d72d7961ef0c2393bf0ae6745d918e388a056
+exl-id: c24313cd-2b9b-4209-9505-a8e14d8dc530
+source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 100%
 
 ---
-
 
 # アダプティブフォームのレコードのドキュメントを生成するための推奨ワークフロー{#recommended-workflows-dor-generation}
 
