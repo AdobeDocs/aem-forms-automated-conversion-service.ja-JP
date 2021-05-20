@@ -4,7 +4,6 @@ description: デフォルトのメタモデルを拡張することにより、�
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-translation-type: tm+mt
 source-git-commit: ead1b4ee177029c60f095dc596b1f3db5878760e
 workflow-type: tm+mt
 source-wordcount: '1215'
@@ -270,7 +269,7 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
 
 1. パッケージ **aem-fp-db-integration-sample-pkg-6.1.2.zip** をファイルシステムにダウンロードします。
 
-   [ファイルを入手](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
+[ファイルを入手](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
 1. AEM パッケージマネージャー（*http://[host]:[port]/crx/packmgr/*）に移動します。
 1. 「**[!UICONTROL パッケージをアップロード]**」をクリックします。
