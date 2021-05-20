@@ -6,14 +6,13 @@ seo-description: デフォルトのメタモデルを拡張することにより
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-translation-type: tm+mt
-source-git-commit: 77bdb4e88194bd634dea125852ff2a897bc24678
+exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
+source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
 workflow-type: tm+mt
 source-wordcount: '2401'
 ht-degree: 100%
 
 ---
-
 
 # デフォルトメタモデルの拡張{#extend-the-default-meta-model}
 
@@ -118,7 +117,7 @@ ht-degree: 100%
 
 上記のサンプルコードでは、変換サービスを使用して、ソースフォーム内のキーワード（phone、telephone、mobile phone、work phone、home phone、telephone number、telephone no、phone number）を検索しています。 変換サービスは、これらのキーワードが含まれているフィールドに基づき、変換処理の完了後に、各種プロパティ（type、pattern、aem:afProperties）をアダプティブフォームのフィールドに適用します。
 
-### 生成後のアダプティブフォームフィールドに対する JSON スキーマプロパティ{#jsonschemaproperties}
+### 生成後のアダプティブフォームフィールドに対する JSON スキーマプロパティ {#jsonschemaproperties}
 
 メタモデルでは、自動フォーム変換サービスによって生成されたアダプティブフォームフィールドに対して、以下の JSON スキーマ共通プロパティを使用することができます。
 
@@ -162,7 +161,7 @@ ht-degree: 100%
  </tbody> 
 </table>
 
-### 生成後のアダプティブフォームフィールドにプロパティを適用するためのキーワードベース検索{#keywordsearch}
+### 生成後のアダプティブフォームフィールドにプロパティを適用するためのキーワードベース検索 {#keywordsearch}
 
 自動フォーム変換サービスは、変換処理の実行時に、ソースフォームに対してキーワード検索を実行します。 変換サービスは、検索条件に一致するフィールドをフィルタリングしてから、メタモデル内のそれらのフィールドに対して定義されているプロパティを、生成後のアダプティブフォームフィールドに適用します。
 
@@ -179,7 +178,7 @@ ht-degree: 100%
 
 この例では、**aem:affKeyword** プロパティ内のテキストが、変換サービスの検索キーワードとして使用されます。 検索サービスは、フォーム内の「**Bank account number**」テキストフィールドを取得し、**type** プロパティを使用して、このテキストフィールドを&#x200B;**数値**&#x200B;タイプに変換します。
 
-### 生成後のアダプティブフォームフィールドに対する追加のプロパティ{#additionalproperties}
+### 生成後のアダプティブフォームフィールドに対する追加のプロパティ {#additionalproperties}
 
 メタモデル内の **aem:afProperties** プロパティを使用して、自動フォーム変換サービスによって生成されたアダプティブフォームフィールドに対して、以下の追加のプロパティを定義することができます。
 
@@ -237,7 +236,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 1. 「**[!UICONTROL 基本]**」タブの「**[!UICONTROL カスタムメタモデル]**」フィールドでカスタムメタモデルの場所を指定し、「**[!UICONTROL 保存して閉じる]**」をタップします。
 1. [変換処理を実行](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process)し、カスタムメタモデルを変換処理に適用します。
 
-### カスタムメタモデルの例{#custommetamodelexamples}
+### カスタムメタモデルの例 {#custommetamodelexamples}
 
 ここでは、カスタムメタモデルを使用してアダプティブフォームフィールドを変更する場合の一般的な例について説明します。以下のようなケースが考えられます。
 
