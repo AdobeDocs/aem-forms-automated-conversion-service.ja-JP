@@ -4,14 +4,13 @@ description: フォームデータモデルを作成し、AEM ワークフロー
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-translation-type: tm+mt
-source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
+exl-id: 5447b66f-9fac-476f-ab8a-9290bb1f9c0d
+source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
 workflow-type: tm+mt
 source-wordcount: '1671'
 ht-degree: 100%
 
 ---
-
 
 # AEM ワークフローを使用してアダプティブフォームをデータベースに統合する{#submit-forms-to-database-using-forms-portal}
 
