@@ -6,14 +6,13 @@ seo-description: 自動フォーム変換サービスに関するよくある質
 uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
-translation-type: tm+mt
-source-git-commit: 92cd241915ef5818fb004a8982674b4f6753c171
+exl-id: 3a29f8d4-8ea0-49eb-bfe0-0eab5f0c52c7
+source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
 workflow-type: tm+mt
 source-wordcount: '1839'
 ht-degree: 100%
 
 ---
-
 
 # よくある質問{#frequently-asked-questions}
 
