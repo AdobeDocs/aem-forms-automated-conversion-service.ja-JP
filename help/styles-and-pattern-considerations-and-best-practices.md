@@ -6,14 +6,13 @@ seo-description: 自動フォーム変換サービスによる特定が困難な
 uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
-translation-type: tm+mt
-source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
+exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
+source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
 workflow-type: tm+mt
 source-wordcount: '1259'
 ht-degree: 100%
 
 ---
-
 
 # ベストプラクティスおよび既知の複雑なパターン{#Best-practices-and-considerations2}
 
@@ -63,7 +62,7 @@ AEM [!DNL Forms Automated Conversion service]は人工知能と機械学習ア�
 
 変換サービスは、ソースデータを使用して継続的に学習していくため、ある程度学習が進むと、正しいフィールドやパネルを特定して割り当て、これらのパターンに対応できるようになります。 変換サービスがある程度の学習レベルに到達するまでは、「[レビューと修正](review-correct-ui-edited.md)」エディターを使用して、これらのパターンに対応してください。 以下の説明を読む前に、[アダプティブフォームのコンポーネント](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/introduction-forms-authoring.html)について理解してください。
 
-### 一般的なパターン{#general}
+### 一般的なパターン {#general}
 
 | パターン | 例 |
 |--- |--- |
