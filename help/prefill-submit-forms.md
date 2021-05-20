@@ -8,14 +8,13 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: cad34fff-7f9f-4a27-8b5c-d0a523903eec
 privatebeta: true
-translation-type: tm+mt
-source-git-commit: caccb547a5741eb0e70ddf75630a661f8fe75cb3
+exl-id: 5deef8f5-5098-47c1-b696-b2db59e92931
+source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
 workflow-type: tm+mt
 source-wordcount: '2596'
 ht-degree: 100%
 
 ---
-
 
 # アダプティブフォームで推奨されるデータソースベースの事前入力ワークフローと送信ワークフロー{#recommended-data-source-btased-prefill-and-submit-workflows-for-adaptive-forms}
 
@@ -322,14 +321,14 @@ JSON スキーマをフォームモデルとして使用してこのユースケ
 
    `http://host name:port/crx/de/index.jsp#/content/forms/fp/admin/submit/data/latest file available in the folder`
 
-### JSON スキーマをデータソースとして使用する{#jsondatasource}
+### JSON スキーマをデータソースとして使用する {#jsondatasource}
 
 **ユースケース**：自動フォーム変換サービスを使用して、データバインディングがないアダプティブフォームを生成し、JSON スキーマをデータソースとして設定します。 次に、アダプティブフォームの各フィールドを JSON スキーマに手動でバインドし、「**データを使用してプレビュー**」オプションを使用して、フィールド値の事前入力を行います。 次に、必要に応じてフィールド値を変更し、crx-repository にデータを送信します。
 
 このユースケースを実行する前に、以下を確認する必要があります。
 
-* [正しい JSON スキーマが JSON スキーマ構造に対応](#prepare-data-for-form-model)していること
-* [データバインディングがないアダプティブフォーム](#generate-adaptive-forms-with-no-data-binding)が生成されていること
+* [正しい JSON スキーマが JSON スキーマ構造に対応していること](#prepare-data-for-form-model)
+* [データバインディングがないアダプティブフォームが生成されていること](#generate-adaptive-forms-with-no-data-binding)
 
 以下の手順を実行します。
 
@@ -350,14 +349,14 @@ JSON スキーマをフォームモデルとして使用してこのユースケ
 
    `http://host name:port/crx/de/index.jsp#/content/forms/fp/admin/submit/data/latest file available in the folder`
 
-### XSD スキーマをデータソースとして使用する{#xsddatasource}
+### XSD スキーマをデータソースとして使用する {#xsddatasource}
 
 **ユースケース**：自動フォーム変換サービスを使用して、データバインディングがないアダプティブフォームを生成し、XSD スキーマをデータソースとして設定します。 次に、アダプティブフォームの各フィールドを XSD スキーマに手動でバインドし、「**データを使用してプレビュー**」オプションを使用して、フィールド値の事前入力を行います。 次に、必要に応じてフィールド値を変更し、crx-repository にデータを送信します。
 
 このユースケースを実行する前に、以下を確認する必要があります。
 
-* [正しい XSD スキーマが XML スキーマ構造に対応](#prepare-data-for-form-model)していること
-* [データバインディングがないアダプティブフォーム](#generate-adaptive-forms-with-no-data-binding)が生成されていること
+* [正しい XSD スキーマが XML スキーマ構造に対応していること](#prepare-data-for-form-model)
+* [データバインディングがないアダプティブフォームが生成されていること](#generate-adaptive-forms-with-no-data-binding)
 
 以下の手順を実行します。
 
@@ -384,7 +383,7 @@ JSON スキーマをフォームモデルとして使用してこのユースケ
 
 ![JSON バインディングを持つアダプティブフォーム](assets/generate_af_with_data_bindings.png)
 
-### JSON スキーマをデータソースとして使用する{#jsonwithdatabinding}
+### JSON スキーマをデータソースとして使用する {#jsonwithdatabinding}
 
 **ユースケース**：自動フォーム変換サービスを使用して、JSON データバインディングを持つアダプティブフォームを生成します。 事前入力サービスとフォーム送信機能がシームレスに連携します。 設定手順を実行する必要はありません。
 
