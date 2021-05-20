@@ -6,14 +6,13 @@ seo-description: 自動フォーム変換サービスによって変換された
 uuid: 5a0a6d24-dff6-4732-b607-24848b07b26d
 topic-tags: forms
 discoiquuid: f45ab2d7-5234-42d6-aeb6-b2cb1a7ce3c2
-translation-type: tm+mt
-source-git-commit: 3c12751cad2b3c04ad66a98ac17f20f648530d0f
+exl-id: 64330fa2-aa9d-4ba4-96df-b75deed3e693
+source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
 workflow-type: tm+mt
 source-wordcount: '2587'
 ht-degree: 100%
 
 ---
-
 
 # 変換後のフォームのレビューと修正{#review-and-correct-converted-forms}
 
@@ -130,7 +129,7 @@ AEM Forms の自動フォーム変換サービスにより、PDF 入力ドキュ
 
 編集内容を保存する場合は「**[!UICONTROL 保存]**」ボタンをタップし、PDF フォームの再変換を行う場合は「**[!UICONTROL 保存して変換]**」ボタンをタップします。
 
-### テーブルの追加や編集を行う{#addedittable}
+### テーブルの追加や編集を行う {#addedittable}
 
 変換時に、テーブルのセル、セルの内容、境界線が識別されない場合があります。 例えば、テーブル内の行が識別されないことがあります。 こうした項目を変換サービスに識別させるには、「レビューと修正」エディターを使用します。 テーブルに対して、以下の操作を実行することができます。
 
