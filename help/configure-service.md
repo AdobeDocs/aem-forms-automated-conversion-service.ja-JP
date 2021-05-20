@@ -2,16 +2,15 @@
 title: 自動フォーム変換サービスの設定
 description: 自動フォーム変換サービスを使用できるように AEM インスタンスの準備を行う
 role: Business Practitioner, Administrator
-translation-type: ht
-source-git-commit: a9bab62fbe5ecc4b233e9bc55b9e461a5967b471
-workflow-type: ht
-source-wordcount: '2802'
+exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
+source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+workflow-type: tm+mt
+source-wordcount: '2799'
 ht-degree: 100%
 
 ---
 
-
-# 自動フォーム変換サービスの設定 {#about-this-help}
+# 自動フォーム変換サービスの設定{#about-this-help}
 
 このヘルプ記事では、AEM の管理者が自動フォーム変換サービスを設定して、PDF フォームを自動的にアダプティブフォームに変換する方法について説明します。このヘルプ記事は、組織内の IT 管理者と AEM 管理者を対象としています。具体的には、以下の操作に関する十分な知識があるユーザーを対象としています。
 
@@ -25,7 +24,7 @@ ht-degree: 100%
 
 **Watch the video or read the article to configure Automated Forms Conversion service** -->
 
-## オンボーディング {#onboarding}
+## オンボーディング{#onboarding}
 
 AEM 6.4 Forms と AEM 6.5 Forms のオンプレミスユーザーと、Adobe Managed Service のエンタープライズユーザーは、自動フォーム変換サービスを無料で使用することができます。変換サービスを使用する場合は、アドビのセールスチームまたはアドビの営業担当者に問い合わせてください。また、AEM Forms as a Cloud Service のお客様は無料でご利用いただけ、事前に有効化されています。
 
@@ -40,7 +39,7 @@ AEM 6.4 Forms と AEM 6.5 Forms のオンプレミスユーザーと、Adobe Man
 * 最新の AEM Service Pack または最新のアップデートを含む AEM 6.4、AEM 6.5、または AEM Forms as a Cloud Service オーサーインスタンスがインストールおよび導入されていること。
 * AEM インスタンス上の AEM ユーザーが forms-user グループのメンバーになっていること
 
-## 環境の設定 {#setuptheservice}
+## 環境を設定する {#setuptheservice}
 
 変換サービスを使用する前の準備として、Adobe Cloud 上で稼働しているサーバーに AEM オーサーインスタンスを接続する必要があります。このインスタンスの準備を行うには、以下の手順を上から順に実行します。
 
@@ -63,11 +62,11 @@ AEM 6.4 Forms と AEM 6.5 Forms のオンプレミスユーザーと、Adobe Man
 
 * AEM Forms as a Cloud Service をお使いの場合は、[AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-forms-cloud-service.html?lang=ja#setup-environment) へのオンボーディングを参照し、[ローカル開発環境](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?lang=ja#setup-environment)を設定します。
 
-### （AEM 6.4 および AEM 6.5 のみ）AEM の最新のサービスパックをダウンロードしてインストールする {#servicepack}
+### （AEM 6.4 および AEM 6.5 のみ）AEM の最新のサービスパックをダウンロードしてインストールする  {#servicepack}
 
 最新の AEM サービスパックをダウンロードしてインストールしてください。詳しい手順については、「[AEM 6.4 サービスパックリリースノート](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html)」、「[AEM 6.5 サービスパックリリースノート](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes/sp-release-notes.html)」のいずれかを参照してください。
 
-### （AEM 6.4 および AEM 6.5 のみ）AEM Forms アドオンパッケージをダウンロードしてインストールする {#downloadaemformsaddon}
+### （AEM 6.4 および AEM 6.5 のみ）AEM Forms アドオンパッケージをダウンロードしてインストールする   {#downloadaemformsaddon}
 
 AEM インスタンスには、基本的なフォーム機能が付属しています。変換サービスを使用するには、AEM Forms のすべての機能が必要になります。AEM Forms のすべての機能を使用するには、AEM Forms アドオンパッケージをダウンロードしてインストールする必要があります。変換サービスを設定して使用するには、このパッケージが必要になります。詳しい手順については、「[データ取得機能をインストールして設定する](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/installing-configuring-aem-forms-osgi.html)」を参照してください。
 
@@ -98,7 +97,7 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 
 ![権限の付与について開発者に送信される電子メール](assets/email-developer-accessx94.png)
 
-### （AEM 6.4 および AEM 6.5 の管理者のみ）組織の開発者にアクセス権を付与する {#adduseranddevs}
+### （AEM 6.4 および AEM 6.5 の管理者のみ）組織の開発者にアクセス権を付与する  {#adduseranddevs}
 
 組織と管理者に対する権限の設定が完了したら（この処理はアドビ側で行います）、管理者は、Admin Console にログインしてプロファイルを作成し、そのプロファイルに開発者を追加する必要があります（詳しい手順については、これ以降の説明を参照してください）。開発者は、ローカルの AEM Forms インスタンスを、Adobe Cloud 上の自動フォーム変換サービスに接続する必要があります。
 
@@ -121,7 +120,7 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 
 管理者が Adobe I/O プロファイルに開発者を追加すると、その管理者に電子メール通知が送信されます。電子メール通知を受け取った開発者は、[ローカルの AEM Forms インスタンスを Adobe Cloud 上の自動フォーム変換サービスに接続する](#connectafcadobeio)必要があります。
 
-### （開発者のみ）ローカルの AEM Forms インスタンスを Adobe Cloud 上の自動フォーム変換サービスに接続する {#connectafcadobeio}
+### （開発者のみ）ローカルの AEM Forms インスタンスを Adobe Cloud 上の自動フォーム変換サービスに接続する  {#connectafcadobeio}
 
 管理者によって権限を付与された開発者は、ローカルの AEM Forms インスタンスを Adobe Cloud 上の自動フォーム変換サービスに接続する必要があります。AEM Forms インスタンスを変換サービスに接続するには、以下の手順を上から順に実行します。
 
@@ -156,7 +155,7 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 1. 「**[!UICONTROL 電子メール]**」フィールドで電子メールアドレスを入力して「**[!UICONTROL 保存]**」をタップします。指定の電子メールアドレスに、変換処理の成否が記載された電子メール通知が送信されます。
 1. 「**グループ**」タブをタップします。「グループを選択」タブで「**forms-users**」と入力し、このグループを選択します。「**保存して閉じる**」をタップします。これで、ユーザーが forms-users グループのメンバーとして登録されました。
 
-#### （AEM 6.4 および AEM 6.5 のみ）公開証明書を取得する {#obtainpubliccertificates}
+#### （AEM 6.4 および AEM 6.5 のみ）公開証明書を取得する  {#obtainpubliccertificates}
 
 公開証明書により、Adobe I/O でプロファイルを認証できます。
 
@@ -189,7 +188,7 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
    <li>Step text</li>
    -->
 
-#### （AEM 6.4 および AEM 6.5 のみ）Adobe デベロッパーコンソールでサービス API を設定 {#createintegration}
+#### （AEM 6.4 および AEM 6.5 のみ）Adobe デベロッパーコンソールでサービス API を設定  {#createintegration}
 
 自動フォーム変換サービスを使用するには、プロジェクトを作成し、自動フォーム変換設定 API を Adobe デベロッパーコンソールのプロジェクトに追加します。この統合環境により、API キー、クライアント秘密鍵、ペイロード（JWT）が生成されます。
 
