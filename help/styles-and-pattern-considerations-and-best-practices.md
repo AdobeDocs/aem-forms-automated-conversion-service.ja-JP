@@ -7,14 +7,14 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: 17d1c447d8aa68341214270932fb076b512422af
 workflow-type: tm+mt
 source-wordcount: '1259'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
-# ベストプラクティスおよび既知の複雑なパターン{#Best-practices-and-considerations2}
+# ベストプラクティスおよび既知の複雑なパターン {#Best-practices-and-considerations2}
 
 ここでは、フォーム管理者、フォーム作成者、開発者たちが[!DNL Automated Forms Conversion service]を扱う際に知っておくべきガイドラインや推奨事項を紹介します。ソースフォームの準備から、自動変換に追加手順を要する複雑なパターンの修正に至るまで、ベストプラクティスを包括的に説明します。 これらのベストプラクティスを実行することで、[!DNL Automated Forms Conversion service]の全体的なパフォーマンスを向上し、より良い結果を得ることができます。
 
@@ -39,7 +39,7 @@ XDP フォームを変換に使用する場合は、ソース XPD フォーム�
 
 * XDP フォームを分析し、視覚的な問題を修正します。 ソースドキュメントで意図されたコントロールと構造が使用されていることを確認します。例えば、ソースフォームでは、1 つを選ぶ場合に、ラジオボタンではなくチェックボックスが使用されている場合があります。 チェックボックスをラジオボタンに変更して、意図されたコンポーネントを含むアダプティブフォームを作成します。
 * 変換を開始する前に [XDP フォームにバインディングを追加](http://www.adobe.com/go/learn_aemforms_designer_65_jp)します。 ソース XDP フォームでバインディングが使用可能な場合、変換サービスは変換中に対応するアダプティブフォームフィールドにバインディングを自動的に適用します。 バインディングを手動で適用するのに必要な時間を節約できます。
-* XDP ファイルに [Adobe Sign タグを追加](https://helpx.adobe.com/jp/sign/using/text-tag.html)します。 このサービスは、Adobe Sign タグを、対応するアダプティブフォームフィールドに自動的に変換します。 アダプティブフォームは、限られた数の Adobe Sign フィールドをサポートしています。 サポートされているフィールドの一覧については、「[アダプティブフォームで Adobe Sign を使用する](https://docs.adobe.com/content/help/jp/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html)」を参照してください。
+* XDP ファイルに [Adobe Sign タグを追加](https://helpx.adobe.com/jp/sign/using/text-tag.html)します。 このサービスは、Adobe Sign タグを、対応するアダプティブフォームフィールドに自動的に変換します。 アダプティブフォームは、限られた数の Adobe Sign フィールドをサポートしています。 サポートされているフィールドの一覧については、「[アダプティブフォームで Adobe Sign を使用する](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=en)」を参照してください。
 * 可能であれば、XDP ドキュメントにある複雑なテーブルを簡単なテーブルに変換します。フォームフィールドを持つセル、サイズが不均等なセル、行または列が連結されているセル、結合されているセル、または部分的な境界線や非表示の境界線が含まれているテーブルは、 複雑なテーブルと見なされます。
 <!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->
 
