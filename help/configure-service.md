@@ -3,14 +3,14 @@ title: 自動フォーム変換サービスの設定
 description: 自動フォーム変換サービスを使用できるように AEM インスタンスの準備を行う
 role: Business Practitioner, Administrator
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: 17d1c447d8aa68341214270932fb076b512422af
 workflow-type: tm+mt
 source-wordcount: '2799'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
-# 自動フォーム変換サービスの設定{#about-this-help}
+# 自動フォーム変換サービスの設定 {#about-this-help}
 
 このヘルプ記事では、AEM の管理者が自動フォーム変換サービスを設定して、PDF フォームを自動的にアダプティブフォームに変換する方法について説明します。このヘルプ記事は、組織内の IT 管理者と AEM 管理者を対象としています。具体的には、以下の操作に関する十分な知識があるユーザーを対象としています。
 
@@ -147,7 +147,7 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 
 #### ユーザーを forms-users グループに追加する {#adduserstousergroup}
 
-変換サービスの実行を許可する AEM ユーザーのプロファイル内で電子メールアドレスを指定します。このユーザーは、[forms user](https://helpx.adobe.com/jp/experience-manager/6-4/forms/using/forms-groups-privileges-tasks.html) グループにメンバーとして属している必要があります。変換サービスの実行を許可されたユーザーの電子メールアドレスに電子メールが送信されます。ユーザーの電子メールアドレスを指定し、そのユーザーを forms user グループに追加するには、以下の手順を実行します。
+変換サービスの実行を許可する AEM ユーザーのプロファイル内で電子メールアドレスを指定します。このユーザーは、[forms user](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/forms-groups-privileges-tasks.html) グループにメンバーとして属している必要があります。変換サービスの実行を許可されたユーザーの電子メールアドレスに電子メールが送信されます。 ユーザーの電子メールアドレスを指定し、そのユーザーを forms-user グループに追加するには、以下の手順を実行します。
 
 1. AEM 管理者として、AEM Forms のオーサーインスタンスにログインします。ローカルの AEM 資格情報を使用してログインします。Adobe ID を使用してログインしないでください。**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL ユーザー]**&#x200B;の順にタップします。
 
