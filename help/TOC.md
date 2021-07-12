@@ -10,8 +10,8 @@ user-guide-description: PDF Forms をレスポンシブなモバイル対応の 
 breadcrumb-title: Forms 自動コンバージョンガイド
 breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.html
 feature: アダプティブフォーム
-role: Business Practitioner
-source-git-commit: 8c4cf4ff72e9ca7e8daa76f495abd75a865cd2f7
+role: User
+source-git-commit: 6aae2035969e99abca0d310d8b023e2c22a9e938
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 100%
