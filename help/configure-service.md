@@ -6,7 +6,7 @@ exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
 source-git-commit: 6aae2035969e99abca0d310d8b023e2c22a9e938
 workflow-type: tm+mt
 source-wordcount: '2799'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -66,7 +66,7 @@ AEM 6.4 Forms と AEM 6.5 Forms のオンプレミスユーザーと、Adobe Man
 
 最新の AEM サービスパックをダウンロードしてインストールしてください。詳しい手順については、「[AEM 6.4 サービスパックリリースノート](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html)」、「[AEM 6.5 サービスパックリリースノート](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes/sp-release-notes.html)」のいずれかを参照してください。
 
-### （AEM 6.4 および AEM 6.5 のみ）AEM Forms アドオンパッケージをダウンロードしてインストールする   {#downloadaemformsaddon}
+### （AEM 6.4 および AEM 6.5 のみ）AEM Forms アドオンパッケージをダウンロードしてインストールする  {#downloadaemformsaddon}
 
 AEM インスタンスには、基本的なフォーム機能が付属しています。変換サービスを使用するには、AEM Forms のすべての機能が必要になります。AEM Forms のすべての機能を使用するには、AEM Forms アドオンパッケージをダウンロードしてインストールする必要があります。変換サービスを設定して使用するには、このパッケージが必要になります。詳しい手順については、「[データ取得機能をインストールして設定する](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/installing-configuring-aem-forms-osgi.html)」を参照してください。
 
@@ -147,7 +147,7 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 
 #### ユーザーを forms-users グループに追加する {#adduserstousergroup}
 
-変換サービスの実行を許可する AEM ユーザーのプロファイル内で電子メールアドレスを指定します。このユーザーは、[forms user](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/forms-groups-privileges-tasks.html) グループにメンバーとして属している必要があります。変換サービスの実行を許可されたユーザーの電子メールアドレスに電子メールが送信されます。 ユーザーの電子メールアドレスを指定し、そのユーザーを forms-user グループに追加するには、以下の手順を実行します。
+変換サービスの実行を許可する AEM ユーザーのプロファイル内で電子メールアドレスを指定します。このユーザーは、[forms user](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/forms-groups-privileges-tasks.html?lang=ja) グループにメンバーとして属している必要があります。変換サービスの実行を許可されたユーザーの電子メールアドレスに電子メールが送信されます。ユーザーの電子メールアドレスを指定し、そのユーザーを forms-user グループに追加するには、以下の手順を実行します。
 
 1. AEM 管理者として、AEM Forms のオーサーインスタンスにログインします。ローカルの AEM 資格情報を使用してログインします。Adobe ID を使用してログインしないでください。**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL ユーザー]**&#x200B;の順にタップします。
 
@@ -227,7 +227,7 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 
 AEM インスタンスを変換サービスに接続するには、クラウドサービス設定を作成する必要があります。この設定を作成すると、変換用のテンプレート、テーマ、フォームフラグメントも指定できるようになります。フォームの各セットとは独立した複数のクラウドサービス設定を作成することができます。例えば、販売部門用のフォームや顧客サポート用のフォームとは独立した設定を作成することができます。クラウドサービス設定を作成するには、以下の手順を実行します。
 
-1. AEM Forms インスタンスで、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／**[!UICONTROL 自動フォーム変換設定]**&#x200B;の順にタップします。
+1. AEM Forms インスタンスで、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL ツール]**／**[!UICONTROL Cloud Services]**／**[!UICONTROL 自動フォーム変換設定]**&#x200B;の順にタップします。
 1. **[!UICONTROL Global]** フォルダーをタップしてから「**[!UICONTROL 作成]**」をタップします。自動フォーム変換設定の作成ページが表示されます。Global フォルダー内に変換設定が作成されます。別のフォルダー内に設定を作成することも、フォルダーを作成して設定を保存することもできます。
 
 1. 「**[!UICONTROL 自動フォーム変換設定の作成]**」ページで、以下のフィールドに値を入力して「**[!UICONTROL 次へ]**」をタップします。
