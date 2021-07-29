@@ -2,10 +2,10 @@
 title: 新機能リリースノート：自動フォーム変換サービス
 description: 自動フォーム変換サービスの最新機能と修正済みのバグについて説明します
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: fd568dca4ac552a1d9695d13ece1d03b2c1457b1
-workflow-type: ht
-source-wordcount: '412'
-ht-degree: 100%
+source-git-commit: 3f91fc0541f8fe8dbc997ae0b401c8a0a49347dd
+workflow-type: tm+mt
+source-wordcount: '429'
+ht-degree: 96%
 
 ---
 
@@ -21,6 +21,10 @@ ht-degree: 100%
 * 非推奨の機能
 * 特別な手順
 * 将来の変更プラン
+
+## 2021年7月29日(AFC-2021.07.2) {#july-2021}
+
+* フランス語、ドイツ語、スペイン語のPDF formsをアダプティブフォームに変換する機能が追加されました。
 
 ## 2021 年 6 月 24 日（PT）（AFC-2021.06.2） {#june-2021}
 
