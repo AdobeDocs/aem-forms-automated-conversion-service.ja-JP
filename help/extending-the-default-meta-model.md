@@ -7,14 +7,14 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: 3f91fc0541f8fe8dbc997ae0b401c8a0a49347dd
 workflow-type: tm+mt
-source-wordcount: '2401'
-ht-degree: 100%
+source-wordcount: '2598'
+ht-degree: 92%
 
 ---
 
-# デフォルトメタモデルの拡張{#extend-the-default-meta-model}
+# デフォルトメタモデルの拡張 {#extend-the-default-meta-model}
 
 自動フォーム変換サービスにより、ソースフォーム内でフォームオブジェクトを特定して抽出することができます。 自動フォーム変換サービスでセマンティックマッパーを使用すると、抽出したオブジェクトがアダプティブフォーム内でどのように表示されるのかを確認することができます。 例えば、ソースフォームには、表示形式の異なる様々な日付オブジェクトが含まれている場合があります。 こうした場合にセマンティックマッパーを使用すると、ソースフォーム内の日付オブジェクトのすべての表示形式を、アダプティブフォームの日付コンポーネントにマップすることができます。 また、変換処理の実行中にセマンティックマッパーを使用して、検証設定、ルール、データパターン、ヘルプテキスト、アクセシビリティのプロパティをアダプティブフォームコンポーネントに対して事前に設定して適用することもできます。
 
@@ -22,9 +22,9 @@ ht-degree: 100%
 
 メタモデルとは、JSON スキーマのことです。 メタモデルを使用するには、JSON について理解する必要があります。 具体的には、JSON 形式で保存されたデータの作成、編集、読み取りに関する知識と経験が必要になります。
 
-## デフォルトのメタモデル{#default-meta-model}
+## デフォルトのメタモデル {#default-meta-model}
 
-自動フォーム変換サービスには、デフォルトのメタモデルが付属しています。 このメタモデルは JSON スキーマで、自動フォーム変換サービスの他のコンポーネントとともに、Adobe Cloud 上に存在しています。 メタモデルのコピーは、ローカル AEM サーバー上の以下のフォルダーに保管されています。 http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json. デフォルトのスキーマにアクセスする、またはダウンロードするには、[ここ](assets/global.schema.json)をクリックします。
+自動フォーム変換サービスには、デフォルトのメタモデルが付属しています。 このメタモデルは JSON スキーマで、自動フォーム変換サービスの他のコンポーネントとともに、Adobe Cloud 上に存在しています。 メタモデルのコピーは、ローカル AEM サーバー上の以下のフォルダーに保管されています。 http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`. また、[ここ](assets/en.globalschema.json)をクリックして、英語の言語スキーマにアクセスしたり、ダウンロードしたりすることもできます。 [フランス語](assets/fr.globalschema.json)、[ドイツ語](assets/de.globalschema.json)、[スペイン語](assets/es.globalschema.json)言語のメタモデルもダウンロードできます。
 
 メタモデルのスキーマは、https://schema.org/docs/schemas.html のスキーマエンティティから継承されます。 このスキーマエンティティには、https://schema.org で定義された各種エンティティ（Person、PostalAddress、LocalBusiness など）が含まれています。 メタモデルのすべてのエンティティは、JSON スキーマオブジェクトに従属します。 以下のコードは、サンプルのメタモデル構造を示しています。
 
@@ -44,7 +44,7 @@ ht-degree: 100%
     }
 ```
 
-## デフォルトメタモデルのダウンロード{#download-the-default-meta-model}
+## デフォルトメタモデルのダウンロード {#download-the-default-meta-model}
 
 デフォルトのメタモデルをローカルファイルシステムにダウンロードするには、以下の手順を実行します。
 
@@ -64,7 +64,7 @@ ht-degree: 100%
    <li>Step text</li>
    -->
 
-## メタモデルについて{#understanding-the-meta-model}
+## メタモデルについて {#understanding-the-meta-model}
 
 メタモデルとは、各種エンティティが保管された JSON スキーマファイルのことです。 JSON スキーマファイル内のすべてのエンティティに、名前と ID が設定されています。 各エンティティに複数のプロパティを設定することができます。 エンティティとそのプロパティは、ドメインによって異なる場合があります。 キーワードとフィールド設定を使用してスキーマファイルを拡張することにより、スキーマのプロパティをアダプティブフォームのコンポーネントにマップすることができます。
 
@@ -214,7 +214,46 @@ ht-degree: 100%
  </tbody> 
 </table>
 
-## カスタムメタモデルを使用してアダプティブフォームフィールドを変更する{#modify-adaptive-form-fields-using-custom-meta-model}
+## 独自の言語でのカスタムメタモデルの作成{#language-specific-meta-model}
+
+言語固有のメタモデルを作成できます。 このようなメタモデルを使用すると、選択した言語でマッピングルールを作成できます。 automated forms conversionサービスを使用すると、次の言語のメタモデルを作成できます。
+
+* 英語 (en)
+* フランス語（fr）
+* ドイツ語（de）
+* スペイン語()
+
+メタモデルの上部に&#x200B;*aem:Language*&#x200B;メタタグを追加して、その言語を指定します。 例：
+
+```JSON
+"metaTags": {
+        "aem:Language": "de"
+    }
+```
+
+メタモデルのデフォルト言語は英語です。
+
+### 言語固有のメタモデルを作成する際の考慮事項
+
+* すべてのキーの名前が英語であることを確認します。 例えば、emailAddress と指定します。
+* すべての&#x200B;*id*&#x200B;キーのエンティティ参照と事前定義値が英語であることを確認します。 例：「id」:&quot;ContactPoint&quot; / &quot;$ref&quot;:&quot;エンティティ&quot;。
+* 次のキーのメタモデルに含まれる説明またはメッセージが、メタモデルの言語に対応していることを確認します。
+   * aem:affKeyword
+   * title
+   * 説明
+   * enumNames
+   * shortDescription
+   * validatePictureClauseMessage
+
+   例えば、メタモデルの言語がフランス語(「aem:Language」)の場合、次のようになります。&quot;fr&quot;)を使用して、すべての説明とメッセージがフランス語で記述されていることを確認します。
+
+* すべての[JSONスキーマのプロパティ](#jsonschemaproperties)で、サポートされている値のみを使用するようにします。
+
+次の画像は、英語のメタモデルと、対応するフランス語のメタモデルの例を示しています。
+
+![](assets/language-specific-meta-model-comparison.png)
+
+## カスタムメタモデルを使用してアダプティブフォームフィールドを変更する {#modify-adaptive-form-fields-using-custom-meta-model}
 
 デフォルトのメタモデルで登録されているパターンと検証機能のほかに、組織内でパターンと検証機能を設定することができます。 デフォルトのメタモデルを拡張することにより組織固有のパターン、検証機能、エンティティを追加することができます。 自動フォーム変換サービスにより、変換処理の実行時に、カスタムメタモデルがフォームフィールドに適用されます。 組織固有の新しいパターン、検証機能、エンティティが検出されるたびに、メタモデルを継続的に更新することができます。
 
@@ -224,7 +263,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 ただし、カスタムメタモデルを特定のフォルダーに保存して変換サービスのプロパティを変更することにより、変換処理の実行時にカスタムメタモデルを使用することができます。
 
-### 変換処理の実行時にカスタムメタモデルを使用する{#use-custom-meta-model-during-conversion}
+### 変換処理の実行時にカスタムメタモデルを使用する {#use-custom-meta-model-during-conversion}
 
 変換処理の実行時にカスタムメタモデルを使用するには、以下の手順を実行します。
 
@@ -250,7 +289,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 * ドロップダウンリストにその他のオプションを追加する
 * 文字列フィールドを複数行フィールドに変換する
 
-#### フォームフィールドのラベルを変更する{#modify-the-label-of-a-form-field}
+#### フォームフィールドのラベルを変更する {#modify-the-label-of-a-form-field}
 
 **例：**&#x200B;変換処理の完了後に、アダプティブフォーム内の「Bank account number」というラベルを「Customer account number」に変更する
 
@@ -268,7 +307,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### フォームフィールドのタイプを変更する{#modify-the-type-of-a-form-field}
+#### フォームフィールドのタイプを変更する {#modify-the-type-of-a-form-field}
 
 **例**：変換処理の完了後に、アダプティブフォーム内の「**Bank account number**」というテキストタイプフィールドを変更してから数値タイプフィールドに変換する
 
@@ -283,7 +322,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### フォームフィールドにヘルプテキストを追加する{#add-help-text-to-a-form-field}
+#### フォームフィールドにヘルプテキストを追加する {#add-help-text-to-a-form-field}
 
 **例**：アダプティブフォーム内の「**Bank account number**」フィールドにヘルプテキストを追加する
 
@@ -299,7 +338,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### フォームフィールドをアダプティブフォーム内の複数選択チェックボックスに変換する{#convert-a-form-field-to-multiple-choice-check-boxes-in-the-adaptive-form}
+#### フォームフィールドをアダプティブフォーム内の複数選択チェックボックスに変換する {#convert-a-form-field-to-multiple-choice-check-boxes-in-the-adaptive-form}
 
 **例**：変換処理の完了後に、アダプティブフォーム内の「**Country**」文字列タイプフィールドをチェックボックスに変換する
 
@@ -333,7 +372,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### フォームフィールドの形式を変更する{#modify-the-format-of-a-form-field}
+#### フォームフィールドの形式を変更する {#modify-the-format-of-a-form-field}
 
 **例**：「**Email Address**」フィールドの形式を電子メール形式に変換する
 
@@ -349,7 +388,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### アダプティブフォームフィールドに検証機能を追加する{#add-validations-to-adaptive-form-fields}
+#### アダプティブフォームフィールドに検証機能を追加する {#add-validations-to-adaptive-form-fields}
 
 **例 1**：アダプティブフォームの「**Postal Code**」フィールドに検証機能を追加する
 
@@ -383,7 +422,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### テキストフィールドをアダプティブフォーム内のドロップダウンリストに変換する{#convert-a-text-field-to-drop-down-list-in-the-adaptive-form}
+#### テキストフィールドをアダプティブフォーム内のドロップダウンリストに変換する {#convert-a-text-field-to-drop-down-list-in-the-adaptive-form}
 
 **例**：変換処理の完了後に、アダプティブフォーム内の「**Country**」文字列タイプフィールドをドロップダウンオプションに変換する
 
@@ -417,7 +456,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### ドロップダウンリストにその他のオプションを追加する{#add-additional-options-to-the-drop-down-list}
+#### ドロップダウンリストにその他のオプションを追加する {#add-additional-options-to-the-drop-down-list}
 
 **例**：カスタムメタモデルを使用して、追加のオプションとして「**Sri Lanka**」を既存のドロップダウンリストに追加する
 
@@ -445,7 +484,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### 文字列フィールドを複数行フィールドに変換する{#convert-a-string-field-to-a-multi-line-field}
+#### 文字列フィールドを複数行フィールドに変換する {#convert-a-string-field-to-a-multi-line-field}
 
 **例**：変換処理の完了後に、「**Address**」文字列タイプフィールドをフォーム内の複数行フィールドに変換する
 
