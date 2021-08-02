@@ -12,7 +12,7 @@ breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.
 feature: アダプティブフォーム
 role: User
 source-git-commit: 6aae2035969e99abca0d310d8b023e2c22a9e938
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '92'
 ht-degree: 100%
 
