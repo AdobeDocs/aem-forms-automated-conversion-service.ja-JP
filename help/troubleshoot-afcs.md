@@ -6,10 +6,10 @@ seo-description: AFCS の一般的な問題とその解決方法
 contentOwner: khsingh
 topic-tags: forms
 exl-id: e8406ed9-37f5-4f26-be97-ad042f9ca57c
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: 5353a071f8633b36fc73c34c5d7629228659e2ba
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 100%
+source-wordcount: '663'
+ht-degree: 89%
 
 ---
 
@@ -32,6 +32,7 @@ ht-degree: 100%
 | **エラーメッセージ** <br> スキャンされたフォームはサポートされていません。  <br><br>**原因** <br> PDF フォームにスキャンされたフォームの画像のみが含まれており、コンテンツ構造が存在しません。 <br><br>**解決方法** <br> スキャンされたフォームや画像だけのフォームを、すぐに使用できる形式のアダプティブフォームに変換することはできません。ただし、Adobe Acrobat を使用して、画像だけのフォームを PDF フォームに変換することはできます。 次に、変換サービスを使用して、この PDF フォームをアダプティブフォームに変換します。 Acrobat で変換を行う場合は、必ず品質の高い画像を使用するようにしてください。 これにより、変換後のフォームの品質が高くなります。 | ![サービスに接続できません。](assets/scanned-forms-error.png) |
 | **エラーメッセージ**<br> 暗号化された PDF フォームはサポートされていません。  <br><br>**原因**<br> フォルダーに暗号化された PDF フォームが含まれています。 <br><br>**解決方法** <br> 暗号化された PDF フォームをアダプティブフォームに変換することはできません。 暗号を解除し、暗号化されていないフォームをアップロードして、変換を実行してください。 | ![サービスに接続できません。](assets/secured-pdf-form.png) |
 | **エラーメッセージ** <br> メタモデル JSON スキーマを解析できません。  <br><br>**原因** <br> サービスに使用されている JSON スキーマが正しい形式ではないか、無効な文字が含まれているか、無効な構文を使用してコンポーネントをマッピングしています。  <br><br>**解決方法** <br> JSON ファイルの形式を確認してください。 任意のオンライン JSON バリデーターを使用して、スキーマの形式と構造を確認できます。 メタモデル構文の詳細については、「[デフォルトメタモデルの拡張](extending-the-default-meta-model.md)」の記事を参照してください。 | ![サービスに接続できません。](assets/invalid-meta-model-schema.png) |
+| **エラー（オンプレミス環境のみ）** <br> 「ソー **[!UICONTROL ス言語」オ]** プションにアダプティブフォームの正しい言語がリストされない。<br><br>**** <br> 原因アダプティブフォームのjcr:languageプロパティが正しく設定されていません。<br><br>**** <br> 解決方法CRX-DE liteを開き、に移動し `/content/forms/af/`てノードを開 `jcr:content` き、ノードの値を正しい言語に設定します。サポートされる言語の一覧については、[サポートされていないロケールのローカライゼーションサポートの追加](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html#add-localization-support-for-non-supported-locales)を参照してください。 | ![サービスに接続できません。](assets/aem-forms-translation-project-language-unavailable.png) |
 
 <!--
 
