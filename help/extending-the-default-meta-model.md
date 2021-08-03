@@ -7,10 +7,10 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: 3f91fc0541f8fe8dbc997ae0b401c8a0a49347dd
+source-git-commit: 28e07a0264edaaeef22d211f411f7908ca0abaed
 workflow-type: tm+mt
-source-wordcount: '2598'
-ht-degree: 92%
+source-wordcount: '2620'
+ht-degree: 91%
 
 ---
 
@@ -221,23 +221,23 @@ ht-degree: 92%
 * 英語 (en)
 * フランス語（fr）
 * ドイツ語（de）
-* スペイン語()
+* スペイン語（es）
 
 メタモデルの上部に&#x200B;*aem:Language*&#x200B;メタタグを追加して、その言語を指定します。 例：
 
 ```JSON
 "metaTags": {
-        "aem:Language": "de"
+        "aem:Language": "fr"
     }
 ```
 
-メタモデルのデフォルト言語は英語です。
+言語が指定されていない場合、メタモデルが英語と見なされます。
 
 ### 言語固有のメタモデルを作成する際の考慮事項
 
 * すべてのキーの名前が英語であることを確認します。 例えば、emailAddress と指定します。
-* すべての&#x200B;*id*&#x200B;キーのエンティティ参照と事前定義値が英語であることを確認します。 例：「id」:&quot;ContactPoint&quot; / &quot;$ref&quot;:&quot;エンティティ&quot;。
-* 次のキーのメタモデルに含まれる説明またはメッセージが、メタモデルの言語に対応していることを確認します。
+* すべてのIDキーのエンティティ参照と事前定義値が、ASCII文字のみで構成されていることを確認します。 例：「id」:&quot;ContactPoint&quot; / &quot;$ref&quot;:&quot;#ContactPoint&quot;.
+* 次のキーに対応する値がすべて、指定したメタモデル言語になっていることを確認します。
    * aem:affKeyword
    * title
    * 説明
@@ -245,9 +245,9 @@ ht-degree: 92%
    * shortDescription
    * validatePictureClauseMessage
 
-   例えば、メタモデルの言語がフランス語(「aem:Language」)の場合、次のようになります。&quot;fr&quot;)を使用して、すべての説明とメッセージがフランス語で記述されていることを確認します。
+   例えば、メタモデルの言語がフランス語(「aem:Language」)の場合、次のようになります。&quot;fr&quot;)を使用する場合は、すべての説明とメッセージがフランス語であることを確認します。
 
-* すべての[JSONスキーマのプロパティ](#jsonschemaproperties)で、サポートされている値のみを使用するようにします。
+* すべての[JSONスキーマのプロパティ](#jsonschemaproperties)で、サポートされている値のみを使用するようにします。 例えば、typeプロパティは、String、Number、IntegerおよびBooleanの選択された値にのみ適用されます。
 
 次の画像は、英語のメタモデルと、対応するフランス語のメタモデルの例を示しています。
 
