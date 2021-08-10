@@ -5,7 +5,7 @@ exl-id: fccafbc9-28c1-4736-922c-24d675b25213
 source-git-commit: 3bf065a754d8e8f97a660eb2ae39f37341bb4668
 workflow-type: tm+mt
 source-wordcount: '431'
-ht-degree: 95%
+ht-degree: 96%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 95%
 * 特別な手順
 * 将来の変更プラン
 
-## 2021年7月29日(AFC-2021.07.2) {#july-2021}
+## 2021 年 7 月 29 日（PT）（AFC-2021.07.2） {#july-2021}
 
 * フランス語、ドイツ語、スペイン語のPDFフォームをアダプティブフォームに変換する機能が追加されました。
 
