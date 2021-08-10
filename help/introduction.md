@@ -2,10 +2,10 @@
 title: 概要
 description: 高速で印刷フォームをアダプティブフォームに変換する
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-source-git-commit: fed54ea64e19c77868e8e58e29e909cf4447f696
+source-git-commit: af05922f9eb76b7b0a30601824c6006fe555ea80
 workflow-type: tm+mt
-source-wordcount: '690'
-ht-degree: 95%
+source-wordcount: '699'
+ht-degree: 93%
 
 ---
 
@@ -50,7 +50,7 @@ AEM 6.4 Forms と AEM 6.5 Forms のオンプレミスユーザーと、Adobe Man
 AEM Forms の環境を設定したら、[PDF フォームを AEM インスタンスにアップロード](convert-existing-forms-to-adaptive-forms.md)して[変換処理を開始](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)します。フォームをアップロードする場合は、以下の点に注意してください。
 
 * 保護されたフォームをアップロードしないでください。この変換サービスでは、パスワードで保護されたフォームや暗号化されたフォームを変換することはできません。
-* スキャンされたフォーム、色付きのフォーム、英語以外の言語で作成されたフォーム、フィールドに値が設定されているフォームをアップロードしないでください。こうしたフォームを変換することはできません。
+* スキャンされたフォーム、色付きのフォーム、入力済みのフォーム、フォームを、英語、フランス語、ドイツ語、スペイン語以外の言語でアップロードしないでください。 こうしたフォームを変換することはできません。
 * ファイル名にスペースが含まれている PDF フォームをアップロードしないでください。
 * [PDF ポートフォリオ](https://helpx.adobe.com/jp/acrobat/using/overview-pdf-portfolios.html)をアップロードしないでください。この変換サービスでは、PDF ポートフォリオをアダプティブフォームに変換することはできません。
 * PDF フォームで推奨される変更内容については、「[ベストプラクティスと考慮事項](styles-and-pattern-considerations-and-best-practices.md)」を参照してください。
