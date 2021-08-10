@@ -4,9 +4,9 @@ description: 自動フォーム変換サービスを使用できるように AEM
 role: User, Admin
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
 source-git-commit: 264208305996e98ff2dbccf0e63027b4c757754c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2811'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 99%
 
 **Watch the video or read the article to configure Automated Forms Conversion service** -->
 
-## オンボーディング{#onboarding}
+## オンボーディング {#onboarding}
 
 AEM 6.4 Forms と AEM 6.5 Forms のオンプレミスユーザーと、Adobe Managed Service のエンタープライズユーザーは、自動フォーム変換サービスを無料で使用することができます。変換サービスを使用する場合は、アドビのセールスチームまたはアドビの営業担当者に問い合わせてください。また、AEM Forms as a Cloud Service のお客様は無料でご利用いただけ、事前に有効化されています。
 
@@ -265,7 +265,7 @@ AEM インスタンスを変換サービスに接続するには、クラウド�
    </table>
 
    * 「.XDP」という拡張子が付いている XFA ベースフォームをソースとして使用する場合、XFA レイアウトが出力 DOR に保存されます。それ以外の場合、変換サービスは付属のテンプレートを使用して、その他の XFA ベースフォーム用の DOR を生成します。
-   * XFA フォームを送信すると、そのフォームの送信データが XML 要素または属性として保存されます。例えば、`<Amount currency="USD"> 10.00 </Amount>` のようになります。この場合、「currency」は属性と金額として保存され、「10.00」は要素として保存されます。アダプティブフォームの送信データに含まれているのは要素だけで、属性は含まれていません。そのため、XFA ベースフォームをアダプティブフォームに変換すると、アダプティブフォームの送信データの各属性には要素が保管されます。以下に例を示します。
+   * XFA フォームを送信すると、そのフォームの送信データが XML 要素または属性として保存されます。例えば、`<Amount currency="USD"> 10.00 </Amount>` のようになります。この場合、「currency」は属性と金額として保存され、「10.00」は要素として保存されます。アダプティブフォームの送信データに含まれているのは要素だけで、属性は含まれていません。そのため、XFA ベースフォームをアダプティブフォームに変換すると、アダプティブフォームの送信データの各属性には要素が保管されます。例：
 
    ```css
       {
