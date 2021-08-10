@@ -7,10 +7,10 @@ uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 exl-id: 3a29f8d4-8ea0-49eb-bfe0-0eab5f0c52c7
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: af05922f9eb76b7b0a30601824c6006fe555ea80
 workflow-type: tm+mt
-source-wordcount: '1839'
-ht-degree: 100%
+source-wordcount: '1844'
+ht-degree: 99%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 100%
    <p>このサービスでアダプティブフォームに変換できるのは、非対話型 PDF フォーム、XFA ベースの XDP フォーム、XFA ベースの PDF フォーム、AcroForms です。 スキャンされたフォームや、フィールドに値が設定されているフォームは変換できません。 その他の制限事項については、「<a href="known-issues.md">既知の問題</a>」を参照してください。<br /> </p> 
     <p>アドビでは、上記以外のフォームについても、定期的にサポートを追加しています。 「<a href="introduction.md">サポート対象の PDF フォームと言語</a>」セクションを定期的に参照して、新しく追加された機能や機能改善について確認してください。</p>
 
-   変換サービスでアダプティブフォームに変換できるのは、英語で作成されたフォームだけです。 変換後のアダプティブフォームを別の言語に翻訳する場合は、[AEM 翻訳ワークフロー](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)を使用してください。</br> </br>
+   変換サービスでアダプティブフォームに変換できるのは、英語、フランス語、ドイツ語、スペイン語の各言語フォームのみです。 変換後のアダプティブフォームを別の言語に翻訳する場合は、[AEM 翻訳ワークフロー](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)を使用してください。</br> </br>
 
 1. **アダプティブフォームではなく XDP を生成することはできますか？**
 
