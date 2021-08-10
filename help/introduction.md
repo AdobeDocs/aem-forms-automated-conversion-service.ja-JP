@@ -1,11 +1,11 @@
 ---
-title: 概要
+title: はじめに
 description: 高速で印刷フォームをアダプティブフォームに変換する
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
 source-git-commit: af05922f9eb76b7b0a30601824c6006fe555ea80
 workflow-type: tm+mt
 source-wordcount: '699'
-ht-degree: 93%
+ht-degree: 97%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 93%
 
 ![操作は非常に簡単です。変換するソースフォームを準備して、自動フォーム変換サービスを実行します。美しいアダプティブフォームが生成されます。出力はいつでも満足いくまで修正できます。](assets/pdf-to-adaptive-form-gitx50.gif)
 
-## オンボーディング {#onboarding}
+## オンボーディング  {#onboarding}
 
 AEM 6.4 Forms と AEM 6.5 Forms のオンプレミスユーザーと、Adobe Managed Service のエンタープライズユーザーは、自動フォーム変換サービスを無料で使用することができます。変換サービスを使用する場合は、アドビのセールスチームまたはアドビの営業担当者に問い合わせてください。また、AEM Forms as a Cloud Service のお客様は無料でご利用いただけ、事前に有効化されています。
 
@@ -33,9 +33,9 @@ AEM 6.4 Forms と AEM 6.5 Forms のオンプレミスユーザーと、Adobe Man
 
 このサービスは、Adobe Sign が有効になっている PDF フォームもサポートしています。変換元の PDF フォームに Adobe Sign のテキストタグが付いている場合、サービスは変換時に Adobe Sign に関するすべての情報を保持し、変換元 PDF の署名者情報を対応するアダプティブフォームのフィールドに関連付けます。この機能は、AcroForms でのみ使用できます。
 
-変換サービスを実行すると、英語、フランス語、ドイツ語、スペイン語の各言語フォームをアダプティブフォームに変換することができます。 また、[AEM翻訳ワークフロー](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)を使用して、生成後のアダプティブフォームを別の言語に翻訳することもできます。
+サービスを実行すると、英語、フランス語、ドイツ語、スペイン語の各言語フォームをアダプティブフォームに変換することができます。また、[AEM 翻訳ワークフロー](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)を使用して変換後のアダプティブフォームを別の言語に翻訳することもできます。
 
-## 変換ワークフロー   {#conversion-workflow}
+## 変換ワークフロー  {#conversion-workflow}
 
 自動フォーム変換サービスは、Adobe Cloud 上で稼働します。AEM インスタンスを変換サービスに接続し、変換するフォームを AEM インスタンスにアップロードして、変換処理を開始してください。変換プロセスの詳細なフローは、以下のようになります。
 
