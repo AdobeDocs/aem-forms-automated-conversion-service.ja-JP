@@ -8,9 +8,9 @@ topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
 source-git-commit: 28e07a0264edaaeef22d211f411f7908ca0abaed
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2620'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -231,23 +231,23 @@ ht-degree: 96%
     }
 ```
 
-言語が指定されていない場合、メタモデルが英語と見なされます。
+言語が指定されていない場合、サービスはメタモデルを英語と見なします。
 
 ### 言語固有のメタモデルを作成する際の考慮事項
 
 * すべてのキーの名前が英語であることを確認します。例えば、emailAddress と指定します。
-* すべてのIDキーのエンティティ参照と事前定義値が、ASCII文字のみで構成されていることを確認します。 例：「id」:&quot;ContactPoint&quot; / &quot;$ref&quot;:&quot;#ContactPoint&quot;.
-* 次のキーに対応する値がすべて、指定したメタモデル言語になっていることを確認します。
+* すべての id キーのエンティティ参照と事前定義値が ASCII 文字のみで構成されていることを確認します。例：&quot;id&quot;: &quot;ContactPoint&quot; / &quot;$ref&quot;: &quot;#ContactPoint&quot;。
+* 次のキーに対応するすべての値が、指定したメタモデル言語になっていることを確認します。
    * aem:affKeyword
    * title
-   * 説明
+   * description
    * enumNames
    * shortDescription
    * validatePictureClauseMessage
 
-   例えば、メタモデルの言語がフランス語(「aem:Language」)の場合、次のようになります。&quot;fr&quot;)を使用する場合は、すべての説明とメッセージがフランス語であることを確認します。
+   例えば、メタモデルの言語がフランス語（&quot;aem:Language&quot;: &quot;fr&quot;）の場合、すべての説明とメッセージがフランス語で記述されていることを確認します。
 
-* すべての[JSON スキーマのプロパティ](#jsonschemaproperties)で、サポートされている値のみを使用するようにします。例えば、typeプロパティは、String、Number、IntegerおよびBooleanの選択された値にのみ適用されます。
+* すべての[JSON スキーマのプロパティ](#jsonschemaproperties)で、サポートされている値のみを使用するようにします。例えば、type プロパティは、文字列、数値、整数およびブール値の選択された値にのみ適用されます。
 
 次の画像は、英語のメタモデルと、対応するフランス語のメタモデルの例を示しています。
 
@@ -282,7 +282,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 * フォームフィールドのラベルを変更する
 * フォームフィールドのタイプを変更する
 * フォームフィールドにヘルプテキストを追加する
-* フォームフィールドをアダプティブフォーム内の複数選択チェックボックスに変換する
+* フォームフィールドをアダプティブフォーム内の複数選択ラジオボタンに変換する
 * フォームフィールドの形式を変更する
 * アダプティブフォームフィールドに検証機能を追加する
 * フォームフィールドをアダプティブフォーム内のドロップダウンリストオプションに変換する
@@ -428,10 +428,10 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 このカスタムメタモデルでは、**aem:affKeyword** プロパティ内のテキストが、変換サービスの検索キーワードとして使用されます。変換サービスは、フォーム内の「**Country**」テキストフィールドを取得し、**enum** プロパティを使用して、このテキストフィールドを以下のドロップダウンリストに変換します。
 
-* インド
-* 英国
-* オーストラリア
-* ニュージーランド
+* India
+* England
+* Australia
+* New Zealand
 
 **sling:resourceType** プロパティと **guideNodeClass** プロパティにより、フォームフィールドがアダプティブフォームのドロップダウンコンポーネントにマップされます。
 
