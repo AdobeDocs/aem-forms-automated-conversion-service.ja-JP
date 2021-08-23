@@ -7,9 +7,9 @@ contentOwner: khsingh
 topic-tags: forms
 exl-id: e8406ed9-37f5-4f26-be97-ad042f9ca57c
 source-git-commit: 5353a071f8633b36fc73c34c5d7629228659e2ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '663'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -23,16 +23,16 @@ ht-degree: 89%
 
 | エラー | 例 |
 |--- |--- |
-| **エラーメッセージ** <br> アクセストークンヘッダーを使用できません。 <br><br> **原因** <br> 管理者が複数の IMS 設定を作成しているか、IMS 設定を使用して Adobe Cloud 上 の AFCS サービスにアクセスできません。 <br><br>**解決方法** <br> 設定が複数存在する場合は、すべての設定を削除して、[新しい設定を作成](configure-service.md#obtainpubliccertificates)してください。 <br> 設定が 1 つのみの場合は、 **ヘルスチェック** を使用して、[接続状態を確認](configure-service.md#createintegrationoption)してください。 | ![アクセストークンヘッダーを使用できません](assets/invalid-ims-configurations.png) |
-| **エラーメッセージ** <br> サービスに接続できません。  <br><br>**原因** <br> サービス URL が正しくないか、自動フォーム変換サービスのクラウドサービスでサービス URL が指定されていません。 <br><br>**解決方法** <br> 自動フォーム変換サービスのクラウドサービスで[サービス URL](configure-service.md#configure-the-cloud-service) を修正してください。 | ![サービスに接続できません。](assets/wrong-service-url-configured.png) |
-| **エラーメッセージ** <br> フォームの変換が失敗しました。  <br><br>**原因** <br> ユーザー側にネットワーク接続の問題が発生しているか、定期メンテナンスのためサービスが停止されているか、Adobe Cloud が停止しています。 <br><br>**解決方法** <br> ユーザー側でネットワーク接続の問題を解決し、https://status.adobe.com/ でサービスが（計画的または計画外に）停止されていないか確認してください。 | ![サービスに接続できません。](assets/conversion-failure.png) |
-| **エラーメッセージ** <br> ページ数が 15 ページを超えています。  <br><br>**原因** <br> ソースフォームのページ数が 15 ページを超えています。  <br><br>**解決方法** <br> Adobe Acrobat を使用して、15 ページを超えているフォームを分割してください。 各フォームのページ数は 15 ページ未満にしてください。 | ![サービスに接続できません。](assets/number-of-pages.png) |
-| **エラーメッセージ** <br> ファイル数が 15 個を超えています。  <br><br>**原因** <br>  フォルダーに 15 個を超えるフォームが含まれています。 <br><br>**解決方法** <br> フォルダー内のフォーム数を 15 個以内にしてください。 1 つのフォルダーに保存する合計ページ数は 50 ページ未満にしてください。 フォルダーのサイズは 10 MB 未満にしてください。 サブフォルダー内にフォームを保存しないでください。ソースフォームは 8 ～ 15 個のフォームに編成してください。 | ![サービスに接続できません。](assets/number-of-pages.png) |
-| **エラーメッセージ** <br> ソースファイル形式がサポートされていません。  <br><br>**原因** <br> ソースフォームが含まれているフォルダーには、サポートされていないファイルがいくつか存在します。 <br><br>**解決方法** <br> このサービスでは .xdp ファイルと .pdf ファイルのみがサポートされます。 その他の拡張子を持つファイルをフォルダーから削除した後、変換を実行してください。 | ![サービスに接続できません。](assets/unsupported-file-formats.png) |
-| **エラーメッセージ** <br> スキャンされたフォームはサポートされていません。  <br><br>**原因** <br> PDF フォームにスキャンされたフォームの画像のみが含まれており、コンテンツ構造が存在しません。 <br><br>**解決方法** <br> スキャンされたフォームや画像だけのフォームを、すぐに使用できる形式のアダプティブフォームに変換することはできません。ただし、Adobe Acrobat を使用して、画像だけのフォームを PDF フォームに変換することはできます。 次に、変換サービスを使用して、この PDF フォームをアダプティブフォームに変換します。 Acrobat で変換を行う場合は、必ず品質の高い画像を使用するようにしてください。 これにより、変換後のフォームの品質が高くなります。 | ![サービスに接続できません。](assets/scanned-forms-error.png) |
-| **エラーメッセージ**<br> 暗号化された PDF フォームはサポートされていません。  <br><br>**原因**<br> フォルダーに暗号化された PDF フォームが含まれています。 <br><br>**解決方法** <br> 暗号化された PDF フォームをアダプティブフォームに変換することはできません。 暗号を解除し、暗号化されていないフォームをアップロードして、変換を実行してください。 | ![サービスに接続できません。](assets/secured-pdf-form.png) |
-| **エラーメッセージ** <br> メタモデル JSON スキーマを解析できません。  <br><br>**原因** <br> サービスに使用されている JSON スキーマが正しい形式ではないか、無効な文字が含まれているか、無効な構文を使用してコンポーネントをマッピングしています。  <br><br>**解決方法** <br> JSON ファイルの形式を確認してください。 任意のオンライン JSON バリデーターを使用して、スキーマの形式と構造を確認できます。 メタモデル構文の詳細については、「[デフォルトメタモデルの拡張](extending-the-default-meta-model.md)」の記事を参照してください。 | ![サービスに接続できません。](assets/invalid-meta-model-schema.png) |
-| **エラー（オンプレミス環境のみ）** <br> 「ソー **[!UICONTROL ス言語」オ]** プションにアダプティブフォームの正しい言語がリストされない。<br><br>**** <br> 原因アダプティブフォームのjcr:languageプロパティが正しく設定されていません。<br><br>**** <br> 解決方法CRX-DE liteを開き、に移動し `/content/forms/af/`てノードを開 `jcr:content` き、ノードの値を正しい言語に設定します。サポートされる言語の一覧については、[サポートされていないロケールのローカライゼーションサポートの追加](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html#add-localization-support-for-non-supported-locales)を参照してください。 | ![サービスに接続できません。](assets/aem-forms-translation-project-language-unavailable.png) |
+| **エラーメッセージ** <br> アクセストークンヘッダーを使用できません。 <br><br> **原因** <br> 管理者が複数の IMS 設定を作成しているか、IMS 設定を使用して Adobe Cloud 上 の AFCS サービスにアクセスできません。<br><br>**解決方法** <br> 設定が複数存在する場合は、すべての設定を削除して、[新しい設定を作成](configure-service.md#obtainpubliccertificates)してください。<br> 設定が 1 つのみの場合は、 **ヘルスチェック** を使用して、[接続状態を確認](configure-service.md#createintegrationoption)してください。 | ![アクセストークンヘッダーを使用できません](assets/invalid-ims-configurations.png) |
+| **エラーメッセージ** <br> サービスに接続できません。  <br><br>**原因** <br> サービス URL が正しくないか、自動フォーム変換サービスのクラウドサービスでサービス URL が指定されていません。<br><br>**解決方法** <br> 自動フォーム変換サービスのクラウドサービスで[サービス URL](configure-service.md#configure-the-cloud-service) を修正してください。 | ![サービスに接続できません。](assets/wrong-service-url-configured.png) |
+| **エラーメッセージ** <br> フォームの変換が失敗しました。  <br><br>**原因** <br> ユーザー側にネットワーク接続の問題が発生しているか、定期メンテナンスのためサービスが停止されているか、Adobe Cloud が停止しています。<br><br>**解決方法** <br> ユーザー側でネットワーク接続の問題を解決し、https://status.adobe.com/ でサービスが（計画的または計画外に）停止されていないか確認してください。 | ![サービスに接続できません。](assets/conversion-failure.png) |
+| **エラーメッセージ** <br> ページ数が 15 ページを超えています。  <br><br>**原因** <br> ソースフォームのページ数が 15 ページを超えています。  <br><br>**解決方法** <br> Adobe Acrobat を使用して、15 ページを超えているフォームを分割してください。各フォームのページ数は 15 ページ未満にしてください。 | ![サービスに接続できません。](assets/number-of-pages.png) |
+| **エラーメッセージ** <br> ファイル数が 15 個を超えています。  <br><br>**原因** <br>  フォルダーに 15 個を超えるフォームが含まれています。<br><br>**解決方法** <br> フォルダー内のフォーム数を 15 個以内にしてください。1 つのフォルダーに保存する合計ページ数は 50 ページ未満にしてください。フォルダーのサイズは 10 MB 未満にしてください。サブフォルダー内にフォームを保存しないでください。ソースフォームは 8 ～ 15 個のフォームに編成してください。 | ![サービスに接続できません。](assets/number-of-pages.png) |
+| **エラーメッセージ** <br> ソースファイル形式がサポートされていません。  <br><br>**原因** <br> ソースフォームが含まれているフォルダーには、サポートされていないファイルがいくつか存在します。<br><br>**解決方法** <br> このサービスでは .xdp ファイルと .pdf ファイルのみがサポートされます。その他の拡張子を持つファイルをフォルダーから削除した後、変換を実行してください。 | ![サービスに接続できません。](assets/unsupported-file-formats.png) |
+| **エラーメッセージ** <br> スキャンされたフォームはサポートされていません。  <br><br>**原因** <br> PDF フォームにスキャンされたフォームの画像のみが含まれており、コンテンツ構造が存在しません。<br><br>**解決方法** <br> スキャンされたフォームや画像だけのフォームを、すぐに使用できる形式のアダプティブフォームに変換することはできません。ただし、Adobe Acrobat を使用して、画像だけのフォームを PDF フォームに変換することはできます。次に、変換サービスを使用して、この PDF フォームをアダプティブフォームに変換します。Acrobat で変換を行う場合は、必ず品質の高い画像を使用するようにしてください。これにより、変換後のフォームの品質が高くなります。 | ![サービスに接続できません。](assets/scanned-forms-error.png) |
+| **エラーメッセージ** <br> 暗号化された PDF フォームはサポートされていません。  <br><br>**原因** <br> フォルダーに暗号化された PDF フォームが含まれています。<br><br>**解決方法** <br> 暗号化された PDF フォームをアダプティブフォームに変換することはできません。暗号を解除し、暗号化されていないフォームをアップロードして、変換を実行してください。 | ![サービスに接続できません。](assets/secured-pdf-form.png) |
+| **エラーメッセージ** <br> メタモデル JSON スキーマを解析できません。  <br><br>**原因** <br> サービスに使用されている JSON スキーマが正しい形式ではないか、無効な文字が含まれているか、無効な構文を使用してコンポーネントをマッピングしています。  <br><br>**解決方法** <br> JSON ファイルの形式を確認してください。任意のオンライン JSON バリデーターを使用して、スキーマの形式と構造を確認できます。メタモデル構文の詳細については、「[デフォルトメタモデルの拡張](extending-the-default-meta-model.md)」の記事を参照してください。 | ![サービスに接続できません。](assets/invalid-meta-model-schema.png) |
+| **エラー（オンプレミス環境のみ）** <br>「**[!UICONTROL ソース言語]**」オプションにアダプティブフォームの正しい言語がリストされない。<br><br>**原因** <br>アダプティブフォームの jcr:language プロパティが正しく設定されていません。<br><br>**解決方法** <br>CRX-DE lite　を開き、`/content/forms/af/` に移動して `jcr:content` ノードを開き、ノードの値を正しい言語に設定します。サポートされる言語の一覧については、[サポートされていないロケールのローカライゼーションサポートの追加](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html?lang=ja#add-localization-support-for-non-supported-locales)を参照してください。 | ![サービスに接続できません。](assets/aem-forms-translation-project-language-unavailable.png) |
 
 <!--
 
