@@ -2,10 +2,10 @@
 title: 新機能リリースノート：自動フォーム変換サービス
 description: 自動フォーム変換サービスの最新機能と修正済みのバグについて説明します
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: 3bf065a754d8e8f97a660eb2ae39f37341bb4668
-workflow-type: ht
-source-wordcount: '431'
-ht-degree: 100%
+source-git-commit: 19412c37f354fd47b661de114f286147c93c5b9e
+workflow-type: tm+mt
+source-wordcount: '407'
+ht-degree: 95%
 
 ---
 
@@ -73,6 +73,6 @@ ht-degree: 100%
 
 **自動フォーム変換サービスコネクターパッケージのインストール**
 
-リリース AFC-2020.03.1 で提供される機能と改善を使用するには、コネクターパッケージ 1.1.38 以降のバージョンが必要です。[AEM パッケージ共有](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)からコネクターパッケージをダウンロードできます。
+リリースAFC-2020.03.1で提供される最新の機能と改善を使用するには、コネクタパッケージ1.1.38以降が必要です。
 
 自動フォーム変換サービス環境が既に稼働している場合、変換サービスの最新機能を使用するには、最新のサービスパック、最新の AEM Forms アドオンパッケージ、最新のコネクターパッケージをこの順序でインストールします。詳しい手順については、「[自動フォーム変換サービスの設定](configure-service.md)」を参照してください。
