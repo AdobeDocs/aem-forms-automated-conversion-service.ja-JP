@@ -2,10 +2,10 @@
 title: はじめに
 description: 高速で印刷フォームをアダプティブフォームに変換する
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-source-git-commit: af05922f9eb76b7b0a30601824c6006fe555ea80
-workflow-type: ht
-source-wordcount: '699'
-ht-degree: 100%
+source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
+workflow-type: tm+mt
+source-wordcount: '703'
+ht-degree: 94%
 
 ---
 
@@ -33,7 +33,7 @@ AEM 6.4 Forms と AEM 6.5 Forms のオンプレミスユーザーと、Adobe Man
 
 このサービスは、Adobe Sign が有効になっている PDF フォームもサポートしています。変換元の PDF フォームに Adobe Sign のテキストタグが付いている場合、サービスは変換時に Adobe Sign に関するすべての情報を保持し、変換元 PDF の署名者情報を対応するアダプティブフォームのフィールドに関連付けます。この機能は、AcroForms でのみ使用できます。
 
-サービスを実行すると、英語、フランス語、ドイツ語、スペイン語の各言語フォームをアダプティブフォームに変換することができます。また、[AEM 翻訳ワークフロー](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)を使用して変換後のアダプティブフォームを別の言語に翻訳することもできます。
+変換サービスを使用して、英語、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語の各言語フォームをアダプティブフォームに変換することができます。 また、[AEM 翻訳ワークフロー](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)を使用して変換後のアダプティブフォームを別の言語に翻訳することもできます。
 
 ## 変換ワークフロー  {#conversion-workflow}
 
@@ -50,7 +50,7 @@ AEM 6.4 Forms と AEM 6.5 Forms のオンプレミスユーザーと、Adobe Man
 AEM Forms の環境を設定したら、[PDF フォームを AEM インスタンスにアップロード](convert-existing-forms-to-adaptive-forms.md)して[変換処理を開始](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)します。フォームをアップロードする場合は、以下の点に注意してください。
 
 * 保護されたフォームをアップロードしないでください。この変換サービスでは、パスワードで保護されたフォームや暗号化されたフォームを変換することはできません。
-* スキャンされたフォーム、色付きのフォーム、入力済みのフォーム、英語、フランス語、ドイツ語、スペイン語以外の言語のフォームをアップロードしないでください。こうしたフォームを変換することはできません。
+* スキャンされたフォーム、色付きのフォーム、フォームを、英語、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語以外の言語でアップロードしないでください。 こうしたフォームを変換することはできません。
 * ファイル名にスペースが含まれている PDF フォームをアップロードしないでください。
 * [PDF ポートフォリオ](https://helpx.adobe.com/jp/acrobat/using/overview-pdf-portfolios.html)をアップロードしないでください。この変換サービスでは、PDF ポートフォリオをアダプティブフォームに変換することはできません。
 * PDF フォームで推奨される変更内容については、「[ベストプラクティスと考慮事項](styles-and-pattern-considerations-and-best-practices.md)」を参照してください。

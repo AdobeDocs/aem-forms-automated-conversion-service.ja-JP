@@ -1,16 +1,16 @@
 ---
 title: デフォルトメタモデルの拡張
-seo-title: デフォルトメタモデルの拡張
+seo-title: Extend the default meta-model
 description: デフォルトのメタモデルを拡張することにより、組織固有のパターン、検証設定、エンティティを追加し、自動フォーム変換サービスの実行時に、設定情報をアダプティブフォームの各フィールドに適用することができます。
-seo-description: デフォルトのメタモデルを拡張することにより、組織固有のパターン、検証設定、エンティティを追加し、自動フォーム変換サービスの実行時に、設定情報をアダプティブフォームの各フィールドに適用することができます。
+seo-description: Extend the default meta-model to add pattern, validations, and entities specific to your organization and apply configurations to adaptive form fields while running the Automated Forms Conversion service.
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: 28e07a0264edaaeef22d211f411f7908ca0abaed
-workflow-type: ht
-source-wordcount: '2620'
-ht-degree: 100%
+source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
+workflow-type: tm+mt
+source-wordcount: '2594'
+ht-degree: 99%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 100%
 
 ## デフォルトのメタモデル {#default-meta-model}
 
-自動フォーム変換サービスには、デフォルトのメタモデルが付属しています。このメタモデルは JSON スキーマで、自動フォーム変換サービスの他のコンポーネントとともに、Adobe Cloud 上に存在しています。メタモデルのコピーは、ローカル AEM サーバー上の以下のフォルダーに保管されています。http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`英語のスキーマにアクセスする、またはダウンロードするには、[ここ](assets/en.globalschema.json)をクリックします。[フランス語](assets/fr.globalschema.json)、[ドイツ語](assets/de.globalschema.json)、[スペイン語](assets/es.globalschema.json)言語のメタモデルもダウンロードできます。
+自動フォーム変換サービスには、デフォルトのメタモデルが付属しています。このメタモデルは JSON スキーマで、自動フォーム変換サービスの他のコンポーネントとともに、Adobe Cloud 上に存在しています。メタモデルのコピーは、ローカル AEM サーバー上の以下のフォルダーに保管されています。http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`英語のスキーマにアクセスする、またはダウンロードするには、[ここ](assets/en.globalschema.json)をクリックします。[フランス語](assets/fr.globalschema.json)、[ドイツ語](assets/de.globalschema.json) [スペイン語](assets/es.globalschema.json)、[イタリア語](assets/it.globalschema.json)、[ポルトガル語](assets/pt_br.globalschema.json)言語のメタモデルもダウンロードできます。
 
 メタモデルのスキーマは、https://schema.org/docs/schemas.html のスキーマエンティティから継承されます。このスキーマエンティティには、https://schema.org で定義された各種エンティティ（Person、PostalAddress、LocalBusiness など）が含まれています。メタモデルのすべてのエンティティは、JSON スキーマオブジェクトに従属します。以下のコードは、サンプルのメタモデル構造を示しています。
 
@@ -222,6 +222,8 @@ ht-degree: 100%
 * フランス語（fr）
 * ドイツ語（de）
 * スペイン語（es）
+* イタリア語（it）
+* ポルトガル語(pt-br)
 
 メタモデルの上部に *aem:Language* メタタグを追加して、その言語を指定します。例：
 
@@ -240,7 +242,7 @@ ht-degree: 100%
 * 次のキーに対応するすべての値が、指定したメタモデル言語になっていることを確認します。
    * aem:affKeyword
    * title
-   * description
+   * 説明
    * enumNames
    * shortDescription
    * validatePictureClauseMessage
@@ -428,10 +430,10 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 このカスタムメタモデルでは、**aem:affKeyword** プロパティ内のテキストが、変換サービスの検索キーワードとして使用されます。変換サービスは、フォーム内の「**Country**」テキストフィールドを取得し、**enum** プロパティを使用して、このテキストフィールドを以下のドロップダウンリストに変換します。
 
-* India
-* England
-* Australia
-* New Zealand
+* インド
+* 英国
+* オーストラリア
+* ニュージーランド
 
 **sling:resourceType** プロパティと **guideNodeClass** プロパティにより、フォームフィールドがアダプティブフォームのドロップダウンコンポーネントにマップされます。
 

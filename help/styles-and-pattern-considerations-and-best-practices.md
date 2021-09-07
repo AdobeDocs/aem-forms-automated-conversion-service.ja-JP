@@ -1,15 +1,15 @@
 ---
 title: 'ベストプラクティスと考慮事項 '
-seo-title: 'ベストプラクティスと考慮事項 '
+seo-title: Best practices and considerations
 description: 自動フォーム変換サービスのベストプラクティスと考慮事項
-seo-description: 自動フォーム変換サービスによる特定が困難な変換元の PDF フォームのスタイルとパターンのリスト
+seo-description: List of styles and patterns in source PDF forms which Automated Forms Conversion service finds difficult to identify
 uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: 9d107d2dfc64fd84d4f734ded5898612ce9a3295
+source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1247'
 ht-degree: 98%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 98%
 * 保護されたフォームをアップロードしないでください。この変換サービスでは、パスワードで保護されたフォームを変換することはできません。
 * [PDF ポートフォリオ](https://helpx.adobe.com/jp/acrobat/using/overview-pdf-portfolios.html)をアップロードしないでください。この変換サービスでは、PDF ポートフォリオをアダプティブフォームに変換することはできません。
 * ファイル名にスペースが含まれているソースファイルをアップロードしないでください。こうしたファイルをアップロードする場合は、ファイル名に含まれているスペースを削除してからアップロードしてください。
-* スキャン、記入済みのフォーム、フォームを、英語、フランス語、ドイツ語、スペイン語以外の言語でアップロードしないでください。 こうしたフォームを変換することはできません。
+* スキャン、入力済みのフォームやフォームを、英語、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語以外の言語でアップロードしないでください。 こうしたフォームを変換することはできません。
 
 XDP フォームを変換に使用する場合は、ソース XDP フォームをアップロードする前に次の手順を実行します。
 
