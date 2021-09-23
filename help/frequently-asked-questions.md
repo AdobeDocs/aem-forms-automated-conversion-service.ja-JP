@@ -8,9 +8,9 @@ topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 exl-id: 3a29f8d4-8ea0-49eb-bfe0-0eab5f0c52c7
 source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1835'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -29,9 +29,9 @@ ht-degree: 99%
 1. **どのような形式の PDF フォームでも変換できるのですか？すべての言語がサポートされているのですか？**
 
    <p>このサービスでアダプティブフォームに変換できるのは、非対話型 PDF フォーム、XFA ベースの XDP フォーム、XFA ベースの PDF フォーム、AcroForms です。スキャンされたフォームや、フィールドに値が設定されているフォームは変換できません。その他の制限事項については、「<a href="known-issues.md">既知の問題</a>」を参照してください。<br /> </p> 
-    <p>アドビでは、上記以外のフォームについても、定期的にサポートを追加しています。「<a href="introduction.md">サポート対象の PDF フォームと言語</a>」セクションを定期的に参照して、新しく追加された機能や機能改善について確認してください。</p>
+    <p>アドビでは、上記以外のフォームについても、定期的にサポートを追加しています。「<a href="introduction.md">サポート対象の PDF フォーム</a>」セクションを定期的に参照して、新しく追加された機能や機能改善について確認してください。</p>
 
-   変換サービスでアダプティブフォームに変換できるのは、英語、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語の各言語フォームのみです。 生成後のアダプティブフォームを別の言語に翻訳する場合は、[AEM 翻訳ワークフロー](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)を使用してください。</br> </br>
+   サービスを実行すると、英語、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語の各言語フォームのみをアダプティブフォームに変換することができます。生成後のアダプティブフォームを別の言語に翻訳する場合は、[AEM 翻訳ワークフロー](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)を使用してください。</br> </br>
 
 1. **アダプティブフォームではなく XDP を生成することはできますか？**
 
@@ -117,7 +117,8 @@ ht-degree: 99%
 
    <p>短縮される時間は、入力フォームのサイズと複雑度、変換に関するリクエストの数によって異なります。ただし、変換サービスを実行すると、PDF フォームを手動でアダプティブフォームに変換する場合と比べて、大幅に時間が短縮されることは間違いありません。 </p> <br />
 
-1. **RSA ライブラリに関して以下のようなエラーメッセージが表示されたのですが、どうすればよいですか？** <br/> 
+1. **RSA ライブラリに関して以下のようなエラーメッセージが表示されたのですが、どうすればよいですか？** <br/>
+
 このエラーは、RSA/BouncyCastle ライブラリのブート委任機能が設定されていない場合に発生します。このエラーを解決するには、以下の手順を実行します。   `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&amp;lt;init&amp;gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
 このエラーは、RSA/BouncyCastle ライブラリのブート委任機能が設定されていない場合に発生します。このエラーを解決するには、以下の手順を実行します。
    <p> </p>
