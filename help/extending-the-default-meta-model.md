@@ -8,9 +8,9 @@ topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
 source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2594'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 99%
 
 ## デフォルトのメタモデル {#default-meta-model}
 
-自動フォーム変換サービスには、デフォルトのメタモデルが付属しています。このメタモデルは JSON スキーマで、自動フォーム変換サービスの他のコンポーネントとともに、Adobe Cloud 上に存在しています。メタモデルのコピーは、ローカル AEM サーバー上の以下のフォルダーに保管されています。http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`英語のスキーマにアクセスする、またはダウンロードするには、[ここ](assets/en.globalschema.json)をクリックします。[フランス語](assets/fr.globalschema.json)、[ドイツ語](assets/de.globalschema.json) [スペイン語](assets/es.globalschema.json)、[イタリア語](assets/it.globalschema.json)、[ポルトガル語](assets/pt_br.globalschema.json)言語のメタモデルもダウンロードできます。
+自動フォーム変換サービスには、デフォルトのメタモデルが付属しています。このメタモデルは JSON スキーマで、自動フォーム変換サービスの他のコンポーネントとともに、Adobe Cloud 上に存在しています。メタモデルのコピーは、ローカル AEM サーバー上の以下のフォルダーに保管されています。http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`英語のスキーマにアクセスする、またはダウンロードするには、[ここ](assets/en.globalschema.json)をクリックします。[フランス語](assets/fr.globalschema.json)、[ドイツ語](assets/de.globalschema.json)、[スペイン語](assets/es.globalschema.json)、[イタリア語](assets/it.globalschema.json)、[ポルトガル語](assets/pt_br.globalschema.json)のメタモデルもダウンロードできます。
 
 メタモデルのスキーマは、https://schema.org/docs/schemas.html のスキーマエンティティから継承されます。このスキーマエンティティには、https://schema.org で定義された各種エンティティ（Person、PostalAddress、LocalBusiness など）が含まれています。メタモデルのすべてのエンティティは、JSON スキーマオブジェクトに従属します。以下のコードは、サンプルのメタモデル構造を示しています。
 
@@ -223,7 +223,7 @@ ht-degree: 99%
 * ドイツ語（de）
 * スペイン語（es）
 * イタリア語（it）
-* ポルトガル語(pt-br)
+* ポルトガル語（pt-br）
 
 メタモデルの上部に *aem:Language* メタタグを追加して、その言語を指定します。例：
 
@@ -242,7 +242,7 @@ ht-degree: 99%
 * 次のキーに対応するすべての値が、指定したメタモデル言語になっていることを確認します。
    * aem:affKeyword
    * title
-   * 説明
+   * description
    * enumNames
    * shortDescription
    * validatePictureClauseMessage
@@ -430,10 +430,10 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 このカスタムメタモデルでは、**aem:affKeyword** プロパティ内のテキストが、変換サービスの検索キーワードとして使用されます。変換サービスは、フォーム内の「**Country**」テキストフィールドを取得し、**enum** プロパティを使用して、このテキストフィールドを以下のドロップダウンリストに変換します。
 
-* インド
-* 英国
-* オーストラリア
-* ニュージーランド
+* India
+* England
+* Australia
+* New Zealand
 
 **sling:resourceType** プロパティと **guideNodeClass** プロパティにより、フォームフィールドがアダプティブフォームのドロップダウンコンポーネントにマップされます。
 
