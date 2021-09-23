@@ -8,9 +8,9 @@ topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
 exl-id: 35f59e02-e38e-473a-94c8-123e0a85ac8e
 source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '800'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -75,7 +75,7 @@ AEM Forms の自動フォーム変換サービスを使用する前に、この�
 * 15 ページを超える PDF フォームはサポートされていません。
 * 暗号化されたドキュメントやパスワードで保護されたドキュメントはサポートされていません。変換処理を実行する前に、暗号やパスワードを削除してください。
 * 複雑なテーブル（境界線のないテーブル、ネストされたテーブル、プレースホルダー値が設定されているテーブルなど）はサポートされていません。こうした複雑なテーブルの追加や変更を行う場合は、変換処理の完了後にアダプティブフォームエディターを使用してください。変換サービスでは、単純なテーブル（フィールド値が設定されておらず、ヘッダーが適切に配置され、境界線が明確なテーブル）を使用してください。
-* 変換サービスを実行すると、アダプティブフォームに変換できる言語は、英語、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語のみになります。 変換後のアダプティブフォームを別の言語に翻訳する場合は、[AEM 翻訳ワークフロー](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)を使用してください。
+* サービスを実行すると、英語、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語の各言語フォームのみをアダプティブフォームに変換することができます。変換後のアダプティブフォームを別の言語に翻訳する場合は、[AEM 翻訳ワークフロー](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)を使用してください。
 * AEM 6.4 Forms では、入力フォームの複数列レイアウトを自動的に検出することはできません。
 * 変換元の PDF フォームに含まれるカラーを使用してエンコードされた情報は、アダプティブフォームに引き継がれません。
 * 変換元の PDF フォームのカラーは、アダプティブフォームのテーマに引き継がれません。
