@@ -1,20 +1,19 @@
 ---
 cloud: Experience Cloud
 product: experience manager
-sub-product: フォーム変換サービス
+sub-product: forms conversion service
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 audience: end-user
 user-guide-title: Adobe Experience Manager Forms 自動変換サービス
 user-guide-description: PDF Forms をレスポンシブなモバイル対応の HTML Forms に変換します。
 breadcrumb-title: Forms 自動コンバージョンガイド
-breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.html
-feature: アダプティブフォーム
+feature: Adaptive Forms
 role: User
-source-git-commit: 6aae2035969e99abca0d310d8b023e2c22a9e938
-workflow-type: ht
-source-wordcount: '92'
-ht-degree: 100%
+source-git-commit: 5e1b1c1aa0ac51e23d009e7a85b0e071ff842b04
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
