@@ -11,9 +11,9 @@ breadcrumb-title: Forms 自動コンバージョンガイド
 feature: Adaptive Forms
 role: User
 source-git-commit: 5e1b1c1aa0ac51e23d009e7a85b0e071ff842b04
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '87'
+ht-degree: 100%
 
 ---
 
