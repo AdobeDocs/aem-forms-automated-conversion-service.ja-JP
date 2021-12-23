@@ -1,13 +1,13 @@
 ---
-source-git-commit: 2f85c45eda63751a60997d670804c34e21634359
+source-git-commit: 1cef5bea746a63d0c8f8819f919c75f5d6aa96e9
 workflow-type: tm+mt
 source-wordcount: '534'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
-# Adobe Experience Manager Cloud Service ドキュメントへの貢献
+# AEM Forms Automated Conversion Service ドキュメントへの投稿
 
-Adobe Experience Manager Cloud Service ドキュメントへの貢献にご協力いただきありがとうございます。アドビの読者コミュニティ全体およびアドビの従業員からのコンテンツ貢献を歓迎します。
+AEM Forms Automated Conversion Service ドキュメントへの投稿にご協力いただきありがとうございます。 アドビの読者コミュニティ全体およびアドビ従業員によるコンテンツ投稿を歓迎します。
 
 このファイルでは、投稿方法と、投稿時のガイドラインを説明します。
 
