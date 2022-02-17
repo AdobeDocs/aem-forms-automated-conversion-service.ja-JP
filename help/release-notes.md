@@ -2,10 +2,10 @@
 title: 新機能リリースノート：自動フォーム変換サービス
 description: 自動フォーム変換サービスの最新機能と修正済みのバグについて説明します
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: 833cada8efcc3f0a0e5788c1ab99a95d814e0153
-workflow-type: ht
-source-wordcount: '424'
-ht-degree: 100%
+source-git-commit: eab71506513605728d8f925ab6e7e9bead7ca6fc
+workflow-type: tm+mt
+source-wordcount: '454'
+ht-degree: 92%
 
 ---
 
@@ -22,7 +22,11 @@ ht-degree: 100%
 * 特別な手順
 * 将来の変更プラン
 
-## 2021 年 7 月 29 日（PT）（AFC-2021.08.0） {#aug-2021}
+## 2022 年 2 月 24 日 (AFC-2022.02.0) {#feb-2022}
+
+* に追加された機能 [セクションをフラグメントに自動変換](convert-existing-forms-to-adaptive-forms.md) 変換後のフォームのレンダリング速度を向上させ、アダプティブフォームエディターで大きなフォームを簡単に読み込めるようにするため。
+
+## 2021 年 8 月 29 日 (AFC-2021.08.0) {#aug-2021}
 
 * イタリア語とポルトガル語の　PDF フォームをアダプティブフォームに変換する機能が追加されました。
 
@@ -57,7 +61,6 @@ ht-degree: 100%
 ### 改善された点 {#jul-2020-improvements}
 
 テキストフィールド、フォームフィールド、選択グループフィールドを、対応するアダプティブフォームコンポーネントに自動変換する機能が改善されました。
-
 
 ## 2020 年 3 月 20 日（PT）（AFC-2020.03.1） {#mar-2020}
 
