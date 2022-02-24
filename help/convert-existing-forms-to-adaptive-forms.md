@@ -9,9 +9,9 @@ topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 exl-id: 415e05b5-5a90-490c-bf7c-d3365ce95e24
 source-git-commit: 5f07f5df6369007a491cf0873839f84a61827cb5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1740'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -29,15 +29,15 @@ Adobe Sensei をベースとして開発された AEM Forms 自動フォーム�
 
 * **（オプション）** [**変換元の PDF フォームを Adobe Signフォームに変換する**](frequently-asked-questions.md)
 
-## 変換処理の開始 {#start-the-conversion-process}
+## 変換処理を開始 {#start-the-conversion-process}
 
 AEM インスタンスを AEM Forms 変換サービスに接続すると、PDF フォームをアダプティブフォームに変換できるようになります。 フォームを変換するには、以下の手順を上から順に実行します。
 
-* [PDF フォームを AEM Forms サーバーにアップロードする](convert-existing-forms-to-adaptive-forms.md#upload-pdf-forms-to-your-aem-forms-server)
-* [変換処理を実行する](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)
-* [変換後のフォームを確認して修正する](review-correct-ui-edited.md)
+* [PDF フォームを AEM Forms サーバーにアップロード](convert-existing-forms-to-adaptive-forms.md#upload-pdf-forms-to-your-aem-forms-server)
+* [変換処理を実行](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)
+* [変換後のフォームを確認して修正](review-correct-ui-edited.md)
 
-### PDF フォームを AEM Forms サーバーにアップロードする {#upload-pdf-forms-to-your-aem-forms-server}
+### PDF フォームを AEM Forms サーバーにアップロード {#upload-pdf-forms-to-your-aem-forms-server}
 
 変換サービスを実行すると、AEM Forms インスタンス上の PDF フォームがアダプティブフォームに変換されます。 必要に応じて、すべての PDF フォームを一度にアップロードすることも、段階的にアップロードすることもできます。 フォームをアップロードする場合は、以下の点に注意してください。
 
@@ -53,16 +53,16 @@ AEM インスタンスを AEM Forms 変換サービスに接続すると、PDF �
 
 1. AEM Forms インスタンスにログインします。
 
-1. **[!UICONTROL Adobe Experience Manager]** ![](assets/adobeexperiencemanager.png)／**[!UICONTROL ナビゲーション]** ![](assets/compass.png)／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;の順にタップします。
+1. **[!UICONTROL Adobe Experience Manager]** ![](assets/adobeexperiencemanager.png) ／**[!UICONTROL ナビゲーション]** ![](assets/compass.png) ／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;の順にタップします。
 1. **[!UICONTROL 作成]**／**[!UICONTROL フォルダー]**&#x200B;の順にタップします。フォルダーの&#x200B;**タイトル**&#x200B;と&#x200B;**名前**&#x200B;を指定します。 「**[!UICONTROL 作成]**」をタップします。フォルダーが作成されます。
 1. 作成されたフォルダーをタップして開きます。
 1. **[!UICONTROL 作成]**／**[!UICONTROL ファイルのアップロード]**&#x200B;の順にタップします。アップロードするフォームを選択して「**[!UICONTROL 開く]**」をクリックし、次に「**[!UICONTROL アップロード]**」をクリックします。 フォームがアップロードされます。
 
-### 変換処理を実行する {#run-the-conversion}
+### 変換処理を実行 {#run-the-conversion}
 
 フォームのアップロードと変換サービスの設定が完了したら、以下の手順で変換処理を実行します。
 
-1. AEM Forms インスタンスで、**[!UICONTROL Adobe Experience Manager]** ![変換設定ダイアログ](assets/adobeexperiencemanager.png)／**[!UICONTROL ナビゲーション]** ![](assets/compass.png)／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;の順にタップします。
+1. AEM Forms インスタンスで、**[!UICONTROL Adobe Experience Manager]** ![変換設定ダイアログ](assets/adobeexperiencemanager.png)／**[!UICONTROL ナビゲーション]** ![](assets/compass.png) ／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;の順にタップします。
 1. フォームを選択するか、変換する PDF フォームが保管されているフォルダーを選択して「**[!UICONTROL 自動変換を開始]**」をタップします。 **[!UICONTROL 変換設定]**&#x200B;ダイアログが表示されます。
 
    ![変換設定ダイアログ](assets/conversion-settings-dialog.png)
@@ -104,16 +104,16 @@ AEM インスタンスを AEM Forms 変換サービスに接続すると、PDF �
       >   **[!UICONTROL 自動検出論理セクション]**&#x200B;機能を使用するには、コネクターパッケージ 1.1.38 以降が必要です。
 
 
-* (AEM Formsas a Cloud Serviceのみ ) [セクションをフラグメントに自動変換] オプションは、15 ページを超えるPDF formsに適用されます。 検出された最上位セクションがフラグメントに変換されます。 また、作成されたすべてのフラグメントに対して遅延読み込みを有効にします。 これにより、変換後のフォームのレンダリング速度が向上し、アダプティブフォームエディターで大きなフォームを簡単に読み込むことができます。
+* （AEM Forms as a Cloud Service のみ）[セクションをフラグメントに自動変換]オプションは、15 ページを超える PDF forms に適用されます。 検出された最上位セクションがフラグメントに変換されます。 また、作成されたすべてのフラグメントに対して遅延読み込みを有効にします。 これにより、変換後のフォームのレンダリング速度が向上し、アダプティブフォームエディターで大きなフォームを簡単に読み込むことができるようになります。
 
    >[!NOTE]
    > 「セクションをフラグメントに自動変換」オプションを使用する際は、レスポンシブレイアウトテンプレートを使用しないでください。
-   > 小さいパネルを大きいパネルにマージするには、「レビューと修正」エディターを使用します。 これにより、変換後のアダプティブフォーム内のフラグメントの数を減らすことができます。
-   > 「呼び出しが多すぎます」という例外が発生した場合は、
+   > レビューと正しいエディターを使用して、小さなパネルを大きなパネルにマージします。これにより、変換後のアダプティブフォーム内のフラグメントの数を減らすことができます。
+   > 「呼び出し数が多すぎる」例外が発生した場合、
    >
-   > * フォームを再構築してシンプルな階層を作成する
-   > * [sling.max.calls パラメーターの値を増やします。]例外が消えるまで十分な数に
-   > * [キャッシュのサイズを増やす](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/configure-aem-forms/configure-adaptive-forms-cache.html). このエラーは、フォームが複雑すぎて、多数のテーブルが含まれ、複数レベルの階層構造を持つ場合に発生します。
+   > * フォームを再構築してシンプルな階層を作成
+   > * 例外がなくなるまで、[sling.max.calls パラメーターの値]を、十分な数に増やします。
+   > * [キャッシュのサイズを増やす](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/configure-aem-forms/configure-adaptive-forms-cache.html?lang=ja)このエラーは、フォームが複雑すぎて、多数のテーブルが含まれ、複数レベルの階層構造を持つ場合に発生します。
 
 
 1. 「**[!UICONTROL 変換を開始]**」をタップします。 変換処理が開始されます。 変換処理の進行状況は、該当するフォルダーまたはフォームに表示されます。 変換処理が完了すると、結果を示すメッセージ（「変換されました」、「部分的に変換されました」、「変換が失敗しました」）が表示されます。 また、結果が記載された電子メールも、指定の電子メールアドレスに送信されます。
@@ -151,6 +151,6 @@ AEM インスタンスを AEM Forms 変換サービスに接続すると、PDF �
    >
    >変換処理の時間が 60 分を超えても PDF フォームがアダプティブフォームに変換されない場合は、AEM Forms インスタンス上にフォルダーを作成し、そのフォルダーに PDF フォームをアップロードしてから、変換処理を再開してください。
 
-## 変換後のフォームを確認して修正する {#review-and-correct-the-converted-forms}
+## 変換後のフォームを確認して修正 {#review-and-correct-the-converted-forms}
 
 実際にフォームを作成する場合は、複雑なデータをキャプチャしなければならないことがあります。 自動変換処理が完了したら、変換後のフォームの内容を確認し、必要な変更を行います。 AEM Forms には、こうした変更を行うための[「レビューと修正」エディター](review-correct-ui-edited.md)が用意されています このエディターを使用すると、自動的に識別されたフォームフィールドを修正したり、フィールドタイプを変更したりすることができます。 例えば、レイアウトが 2 列になっているフォームを特定したり、ラジオボタンとして自動的に識別されたフィールドを複数選択フィールドに変更したりすることができます。
