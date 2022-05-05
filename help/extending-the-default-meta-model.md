@@ -7,8 +7,8 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
-workflow-type: ht
+source-git-commit: e3ba3807668084495acb77f57ea2da6d5a53e626
+workflow-type: tm+mt
 source-wordcount: '2594'
 ht-degree: 100%
 
@@ -241,8 +241,8 @@ ht-degree: 100%
 * すべての id キーのエンティティ参照と事前定義値が ASCII 文字のみで構成されていることを確認します。例：&quot;id&quot;: &quot;ContactPoint&quot; / &quot;$ref&quot;: &quot;#ContactPoint&quot;。
 * 次のキーに対応するすべての値が、指定したメタモデル言語になっていることを確認します。
    * aem:affKeyword
-   * title
-   * description
+   * タイトル
+   * 説明
    * enumNames
    * shortDescription
    * validatePictureClauseMessage
@@ -272,7 +272,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 1. **[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;でフォルダーを作成し、このフォルダーにカスタムメタモデルの JSON スキーマファイルをアップロードします。
 1. 以下のオプションを使用して、変換サービスを起動します。
 
-   **[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／**[!UICONTROL 自動フォーム変換の設定]**／**&lt;**&#x200B;選択した設定のプロパティ&#x200B;**>**
+   **[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／**[!UICONTROL 自動フォーム変換の設定]**／**&lt;選択した設定のプロパティ>**
 
 1. 「**[!UICONTROL 基本]**」タブの「**[!UICONTROL カスタムメタモデル]**」フィールドでカスタムメタモデルの場所を指定し、「**[!UICONTROL 保存して閉じる]**」をタップします。
 1. [変換処理を実行](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process)し、カスタムメタモデルを変換処理に適用します。
@@ -430,10 +430,10 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 このカスタムメタモデルでは、**aem:affKeyword** プロパティ内のテキストが、変換サービスの検索キーワードとして使用されます。変換サービスは、フォーム内の「**Country**」テキストフィールドを取得し、**enum** プロパティを使用して、このテキストフィールドを以下のドロップダウンリストに変換します。
 
-* India
-* England
-* Australia
-* New Zealand
+* インド
+* 英国
+* オーストラリア
+* ニュージーランド
 
 **sling:resourceType** プロパティと **guideNodeClass** プロパティにより、フォームフィールドがアダプティブフォームのドロップダウンコンポーネントにマップされます。
 
