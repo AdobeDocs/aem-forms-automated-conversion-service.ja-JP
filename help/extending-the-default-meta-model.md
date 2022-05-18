@@ -8,7 +8,7 @@ topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
 source-git-commit: e3ba3807668084495acb77f57ea2da6d5a53e626
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2594'
 ht-degree: 100%
 
@@ -241,8 +241,8 @@ ht-degree: 100%
 * すべての id キーのエンティティ参照と事前定義値が ASCII 文字のみで構成されていることを確認します。例：&quot;id&quot;: &quot;ContactPoint&quot; / &quot;$ref&quot;: &quot;#ContactPoint&quot;。
 * 次のキーに対応するすべての値が、指定したメタモデル言語になっていることを確認します。
    * aem:affKeyword
-   * タイトル
-   * 説明
+   * title
+   * description
    * enumNames
    * shortDescription
    * validatePictureClauseMessage
@@ -430,10 +430,10 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 このカスタムメタモデルでは、**aem:affKeyword** プロパティ内のテキストが、変換サービスの検索キーワードとして使用されます。変換サービスは、フォーム内の「**Country**」テキストフィールドを取得し、**enum** プロパティを使用して、このテキストフィールドを以下のドロップダウンリストに変換します。
 
-* インド
-* 英国
-* オーストラリア
-* ニュージーランド
+* India
+* England
+* Australia
+* New Zealand
 
 **sling:resourceType** プロパティと **guideNodeClass** プロパティにより、フォームフィールドがアダプティブフォームのドロップダウンコンポーネントにマップされます。
 
