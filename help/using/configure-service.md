@@ -4,7 +4,7 @@ description: 自動フォーム変換サービスを使用できるように AEM
 role: User, Admin
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
 source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2813'
 ht-degree: 100%
 
