@@ -6,13 +6,13 @@ topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 exl-id: 5447b66f-9fac-476f-ab8a-9290bb1f9c0d
 source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1670'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
-# AEM ワークフローを使用してアダプティブフォームをデータベースに統合する {#submit-forms-to-database-using-forms-portal}
+# AEM ワークフローを使用してアダプティブフォームをデータベースに統合 {#submit-forms-to-database-using-forms-portal}
 
 自動フォーム変換サービスを使用すると、非対話型 PDF フォーム、AcroForms、XFA ベース PDF フォームをアダプティブフォームに変換することができます。 変換サービスを実行する際に、データバインディングを持つアダプティブフォームを生成するのか、データバインディングのないアダプティブフォームを生成するのかを指定することができます。
 
@@ -44,7 +44,7 @@ AEM ワークフローを使用してこのユースケースを実行し、変�
 
 ![サンプルの連絡先フォーム](assets/sample_contact_us_form.png)
 
-## mysql-connector-java-5.1.39-bin.jar ファイルをインストールする {#install-mysql-connector-java-file}
+## mysql-connector-java-5.1.39-bin.jar ファイルをインストール {#install-mysql-connector-java-file}
 
 すべてのオーサーインスタンスとパブリッシュインスタンスで、次の手順を実行し、mysql-connector-java-5.1.39-bin.jar ファイルをインストールします。
 
@@ -55,7 +55,7 @@ AEM ワークフローを使用してこのユースケースを実行し、変�
 1. 「**[!UICONTROL Install]**」または「**[!UICONTROL Update]**」をクリックします。完了したら、サーバーを再起動します。
 1. （Windows のみ）オペレーティングシステムのシステムファイアウォールをオフにします。
 
-## フォームモデルのデータを準備する {#prepare-data-for-form-model}
+## フォームモデルのデータを準備 {#prepare-data-for-form-model}
 
 AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。変換サービスを使用してアダプティブフォームを生成したら、使用するデータモデル（XSD スキーマまたは JSON スキーマ）に応じてフォームモデルを定義します。 データベース、Microsoft Dynamics、またはその他のサードパーティ製サービスを使用して、フォームデータモデルを作成することができます。
 
@@ -75,7 +75,7 @@ CREATE TABLE `contactus` (
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ```
 
-## AEM インスタンスとデータベース間の接続を設定する {#configure-connection-between-aem-instance-and-database}
+## AEM インスタンスとデータベース間の接続を設定 {#configure-connection-between-aem-instance-and-database}
 
 AEM インスタンスと MYSQL データベース間の接続を作成するには、以下の手順を実行します。
 
@@ -90,10 +90,10 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
     </tr> 
     <tr> 
     <td><p>データソース名</p></td> 
-    <td><p>データソースプールからドライバーをフィルタリングするためのデータソース名。</p></td>
+    <td><p>データソースプールからドライバーをフィルターするためのデータソース名。</p></td>
     </tr>
     <tr> 
-    <td><p>JDBC driver class</p></td> 
+    <td><p>JDBC ドライバークラス</p></td> 
     <td><p>com.mysql.jdbc.Driver</p></td>
     </tr>
     <tr> 
@@ -102,11 +102,11 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
     </tr>
     <tr> 
     <td><p>ユーザー名</p></td> 
-    <td><p>データベーステーブルでアクションを認証および実行するためのユーザー名</p></td>
+    <td><p>データベース表でのアクションを認証・実行するためのユーザー名</p></td>
     </tr>
     <tr> 
     <td><p>パスワード</p></td> 
-    <td><p>ユーザー名に関連付けられたパスワード</p></td>
+    <td><p>ユーザー名に関連するパスワード</p></td>
     </tr>
     <tr> 
     <td><p>トランザクションの分離</p></td> 
@@ -121,7 +121,7 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
     <td><p>100</p></td>
     </tr>
     <tr> 
-    <td><p>最小アイドル接続</p></td> 
+    <td><p>最小アイドル接続数</p></td> 
     <td><p>10</p></td>
     </tr>
     <tr> 
@@ -133,25 +133,25 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
     <td><p>100000</p></td>
     </tr>
      <tr> 
-    <td><p>借りてテスト</p></td> 
+    <td><p>Test on Borrow</p></td> 
     <td><p>チェック</p></td>
     </tr>
      <tr> 
-    <td><p>待機中にテスト</p></td> 
+    <td><p>Test while Idle</p></td> 
     <td><p>チェック</p></td>
     </tr>
      <tr> 
     <td><p>検証クエリ</p></td> 
-    <td><p>値の例は SELECT 1(mysql)、select 1 from dual(oracle)、SELECT 1(MS Sql Server) (validationQuery) です。</p></td>
+    <td><p>値の例：SELECT 1（mySQL）、select 1 from dual（Oracle）、SELECT 1（MS SQL Server）（validationQuery）</p></td>
     </tr>
      <tr> 
-    <td><p>検証クエリのタイムアウト</p></td> 
+    <td><p>検証クエリタイムアウト</p></td> 
     <td><p>10000</p></td>
     </tr>
     </tbody> 
     </table>
 
-## フォームデータモデルの作成 {#create-form-data-model}
+## フォームデータモデルを作成 {#create-form-data-model}
 
 MYSQL をデータソースとして設定したら、以下の手順を実行してフォームデータモデルを作成します。
 
@@ -179,7 +179,7 @@ MYSQL をデータソースとして設定したら、以下の手順を実行�
 
 [ファイルを入手](assets/DownloadedFormsPackage_1497728018502500.zip)
 
-## JSON バインディングを持つアダプティブフォームを生成する {#generate-adaptive-forms-with-json-binding}
+## JSON バインディングを持つアダプティブフォームを生成 {#generate-adaptive-forms-with-json-binding}
 
 [自動フォーム変換サービス](convert-existing-forms-to-adaptive-forms.md)を使用して、[「Contact Us」フォーム](#sample-adaptive-form)を、データバインディングを持つアダプティブフォームに変換します。 アダプティブフォームを生成する際に、「**[!UICONTROL データバインディングがないアダプティブフォームを生成]**」チェックボックスが無効になっていることを確認してください。
 
@@ -216,7 +216,7 @@ MYSQL をデータソースとして設定したら、以下の手順を実行�
 
 このデータを処理するためのワークフローモデルを作成し、このワークフローモデルを、前のセクションで作成したフォームデータモデルを使用して MYSQL データベースに送信する必要があります。
 
-## JSON データを処理するためのワークフローモデルを作成する {#create-workflow-model}
+## JSON データを処理するためのワークフローモデルを作成 {#create-workflow-model}
 
 アダプティブフォームデータをデータベースに送信するためのワークフローモデルを作成するには、以下の手順を実行します。
 
@@ -240,7 +240,7 @@ MYSQL をデータソースとして設定したら、以下の手順を実行�
 
    「contactus.name」などのフォームデータモデルフィールドは、**afData.afBoundData.data.name1** 変数にマップされます。この変数は、送信されたアダプティブフォームの JSON スキーマバインディングを参照します。
 
-## アダプティブフォームの送信設定 {#configure-adaptive-form-submission}
+## アダプティブフォームの送信を設定 {#configure-adaptive-form-submission}
 
 前のセクションで作成したワークフローモデルにアダプティブフォームを送信するには、以下の手順を実行します。
 
