@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームで推奨されるデータソースベースの事前入力ワークフローと送信ワークフロー
 seo-title: Prefill and submit options for adaptive forms
-description: 自動フォーム変換サービスを使用して生成されたアダプティブフォームのデータソースベースの事前入力ワークフローと送信ワークフロー。
+description: 自動フォーム変換サービスを使用して生成された、アダプティブフォームに対するデータソースベースの事前入力ワークフローと送信ワークフロー。
 seo-description: Data-source based prefill and submit workflows for adaptive forms generated using Automated Forms Conversion Service.
 uuid: 91409a82-141c-4233-82b1-1539a0b250f8
 contentOwner: khsingh
@@ -10,13 +10,13 @@ discoiquuid: cad34fff-7f9f-4a27-8b5c-d0a523903eec
 privatebeta: true
 exl-id: 5deef8f5-5098-47c1-b696-b2db59e92931
 source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2574'
 ht-degree: 100%
 
 ---
 
-# アダプティブフォームで推奨されるデータソースベースの事前入力ワークフローと送信ワークフロー {#recommended-data-source-btased-prefill-and-submit-workflows-for-adaptive-forms}
+# アダプティブフォームで推奨される、データソースベースの事前入力ワークフローと送信ワークフロー {#recommended-data-source-btased-prefill-and-submit-workflows-for-adaptive-forms}
 
 自動フォーム変換サービスを使用して変換されたアダプティブフォームでは、以下に示すいずれかのデータソースを使用することができます。
 
