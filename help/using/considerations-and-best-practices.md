@@ -9,7 +9,7 @@ discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
 source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '543'
 ht-degree: 100%
 
