@@ -5,9 +5,9 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1214'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 90%
 * [自動フォーム変換サービス](configure-service.md)の設定
 * データベースを設定します。 サンプルの実装環境では MySQL 5.6.24 データベースを使用しますが、変換後のアダプティブフォームは任意のデータベースに統合することができます。
 
-## AEM インスタンスとデータベース間の接続を設定する {#set-up-connection-aem-instance-database}
+## AEM インスタンスとデータベース間の接続を設定 {#set-up-connection-aem-instance-database}
 
 AEM インスタンスと MYSQL データベース間の接続を設定するには、以下の処理を行う必要があります。
 
@@ -46,7 +46,7 @@ AEM インスタンスと MYSQL データベース間の接続を設定するに
 
 * [フォームポータルを統合するためのサンプルパッケージを設定する](#set-up-and-configure-sample)
 
-### mysql-connector-java-5.1.39-bin.jar ファイルをインストールする {#install-mysql-connector-java-file}
+### mysql-connector-java-5.1.39-bin.jar ファイルをインストール {#install-mysql-connector-java-file}
 
 すべてのオーサーインスタンスとパブリッシュインスタンスで、次の手順を実行し、mysql-connector-java-5.1.39-bin.jar ファイルをインストールします。
 
@@ -57,7 +57,7 @@ AEM インスタンスと MYSQL データベース間の接続を設定するに
 1. 「**[!UICONTROL Install]**」または「**[!UICONTROL Update]**」をクリックします。完了したら、サーバーを再起動します。
 1. （Windows のみ）オペレーティングシステムのシステムファイアウォールをオフにします。
 
-### データベース内にスキーマとテーブルを作成する {#create-schema-and-tables-in-database}
+### データベース内にスキーマとテーブルを作成 {#create-schema-and-tables-in-database}
 
 データベース内にスキーマとテーブルを作成するには、以下の手順を実行します。
 
@@ -144,7 +144,7 @@ AEM インスタンスと MYSQL データベース間の接続を設定するに
        `time` varchar(255) DEFAULT NULL);
    ```
 
-### AEM インスタンスとデータベース間の接続を設定する {#configure-connection-between-aem-instance-and-database}
+### AEM インスタンスとデータベース間の接続を設定 {#configure-connection-between-aem-instance-and-database}
 
 AEM インスタンスと MYSQL データベース間の接続を作成するには、以下の手順を実行します。
 
@@ -160,32 +160,32 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
     <th><strong>値</strong></th> 
     </tr> 
     <tr> 
-    <td><p>Forms Portal Draft Data Service</p></td> 
+    <td><p>フォームポータル ドラフトデータサービス</p></td> 
     <td><p>ドラフトデータサービスの識別子</p></td>
     <td><p>formsportal.sampledataservice</p></td> 
     </tr>
     <tr> 
-    <td><p>Forms Portal Draft Metadata Service</p></td> 
+    <td><p>フォームポータルドラフトメタデータサービス</p></td> 
     <td><p>ドラフトメタデータサービスの識別子</p></td>
     <td><p>formsportal.samplemetadataservice</p></td> 
     </tr>
     <tr> 
-    <td><p>Forms Portal データ送信サービス</p></td> 
+    <td><p>フォームポータル送信データサービス</p></td> 
     <td><p>送信データサービスの識別子</p></td>
     <td><p>formsportal.sampledataservice</p></td> 
     </tr>
     <tr> 
-    <td><p>Forms Portal 送信メタデータサービス</p></td> 
+    <td><p>フォームポータル送信メタデータサービス</p></td> 
     <td><p>送信メタデータサービスの識別子</p></td>
     <td><p>formsportal.samplemetadataservice</p></td> 
     </tr>
     <tr> 
-    <td><p>Forms Portal 保留中の署名データサービス</p></td> 
+    <td><p>フォームポータル保留中署名データサービス</p></td> 
     <td><p>保留中署名データサービスの識別子</p></td>
     <td><p>formsportal.sampledataservice</p></td> 
     </tr>
     <tr> 
-    <td><p>Forms Portal 保留中の署名メタデータサービス</p></td> 
+    <td><p>フォームポータル保留中署名メタデータサービス</p></td> 
     <td><p>保留中署名メタデータサービスの識別子</p></td>
     <td><p>formsportal.samplemetadataservice</p></td> 
     </tr>
@@ -202,10 +202,10 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
     </tr> 
     <tr> 
     <td><p>データソース名</p></td> 
-    <td><p>データソースプールからドライバーをフィルタリングするためのデータソース名。 このサンプル実装環境では、データソース名として「FormsPortal」を使用しています。</p></td>
+    <td><p>データソースプールからドライバーをフィルターするためのデータソース名。このサンプル実装環境では、データソース名として「FormsPortal」を使用しています。</p></td>
     </tr>
     <tr> 
-    <td><p>JDBC driver class</p></td> 
+    <td><p>JDBC ドライバークラス</p></td> 
     <td><p>com.mysql.jdbc.Driver</p></td>
     </tr>
     <tr> 
@@ -214,11 +214,11 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
     </tr>
     <tr> 
     <td><p>ユーザー名</p></td> 
-    <td><p>データベーステーブルでアクションを認証および実行するためのユーザー名</p></td>
+    <td><p>データベース表でのアクションを認証・実行するためのユーザー名</p></td>
     </tr>
     <tr> 
     <td><p>パスワード</p></td> 
-    <td><p>ユーザー名に関連付けられたパスワード</p></td>
+    <td><p>ユーザー名に関連するパスワード</p></td>
     </tr>
     <tr> 
     <td><p>トランザクションの分離</p></td> 
@@ -233,7 +233,7 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
     <td><p>100</p></td>
     </tr>
     <tr> 
-    <td><p>最小アイドル接続</p></td> 
+    <td><p>最小アイドル接続数</p></td> 
     <td><p>10</p></td>
     </tr>
     <tr> 
@@ -245,25 +245,25 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
     <td><p>100000</p></td>
     </tr>
      <tr> 
-    <td><p>借りてテスト</p></td> 
+    <td><p>Test on Borrow</p></td> 
     <td><p>チェック</p></td>
     </tr>
      <tr> 
-    <td><p>待機中にテスト</p></td> 
+    <td><p>Test while Idle</p></td> 
     <td><p>チェック</p></td>
     </tr>
      <tr> 
     <td><p>検証クエリ</p></td> 
-    <td><p>値の例は SELECT 1(mysql)、select 1 from dual(oracle)、SELECT 1(MS Sql Server) (validationQuery) です。</p></td>
+    <td><p>値の例：SELECT 1（mySQL）、select 1 from dual（Oracle）、SELECT 1（MS SQL Server）（validationQuery）</p></td>
     </tr>
      <tr> 
-    <td><p>検証クエリのタイムアウト</p></td> 
+    <td><p>検証クエリタイムアウト</p></td> 
     <td><p>10000</p></td>
     </tr>
     </tbody> 
     </table>
 
-### サンプルのセットアップおよび設定 {#set-up-and-configure-sample}
+### サンプルをセットアップおよび設定 {#set-up-and-configure-sample}
 
 すべてのオーサーインスタンスとパブリッシュインスタンスで、次の手順を実行し、サンプルをインストールして設定します。
 
@@ -276,7 +276,7 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
 1. パッケージ **aem-fp-db-integration-sample-pkg-6.1.2.zip** を参照して選択し、「**[!UICONTROL OK]**」をクリックします。
 1. パッケージの横に表示されている「**[!UICONTROL インストール]**」クリックしてパッケージをインストールします。
 
-## 変換後のアダプティブフォームをフォームポータル統合用に設定する {#configure-converted-adaptive-form-for-forms-portal-integration}
+## 変換後のアダプティブフォームをフォームポータル統合用に設定 {#configure-converted-adaptive-form-for-forms-portal-integration}
 
 フォームポータルページでアダプティブフォームを送信できるようにするには、以下の手順を実行します。
 1. [変換サービスを実行](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process)して、ソースフォームをアダプティブフォームに変換します。
@@ -285,7 +285,7 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
 1. 「**[!UICONTROL 送信]**」セクションの「**[!UICONTROL 送信アクション]**」プルダウンリストで「**[!UICONTROL フォームポータル送信アクション]**」を選択します。
 1. 「![テンプレートポリシーを保存](assets/edit_template_done.png)」をタップして設定を保存します。
 
-## フォームポータルページの作成と設定を行う {#create-configure-forms-portal-page}
+## フォームポータルページを作成および設定 {#create-configure-forms-portal-page}
 
 フォームポータルページを作成し、そのページでアダプティブフォームを送信できるように設定するには、以下の手順を実行します。
 
