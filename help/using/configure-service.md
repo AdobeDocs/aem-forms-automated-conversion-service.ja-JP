@@ -1,10 +1,15 @@
 ---
 title: 自動フォーム変換サービスの設定
 description: 自動フォーム変換サービスを使用できるように AEM インスタンスの準備を行う
-role: User, Admin
+solution: Experience Manager Forms
+feature: Adaptive Forms
+topic: Administration
+topic-tags: forms
+role: Admin, Developer, User
+level: Beginner, Intermediate
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
-workflow-type: tm+mt
+source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+workflow-type: ht
 source-wordcount: '2813'
 ht-degree: 100%
 
