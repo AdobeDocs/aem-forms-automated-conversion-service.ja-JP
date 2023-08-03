@@ -1,6 +1,6 @@
 ---
-title: はじめに automated forms conversion
-description: 高速で印刷フォームをアダプティブフォームに変換する
+title: はじめに自動フォーム変換サービス
+description: 印刷フォームからアダプティブフォームへの変換を加速する
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -9,9 +9,9 @@ role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
 source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '708'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
