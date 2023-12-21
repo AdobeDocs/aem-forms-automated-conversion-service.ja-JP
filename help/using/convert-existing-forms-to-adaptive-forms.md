@@ -7,7 +7,7 @@ contentOwner: khsingh
 topic-tags: forms
 feature: Adaptive Forms, Foundation Components
 source-git-commit: 444cc37ec6fa2af2d8d2952efd18368a5725e881
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1721'
 ht-degree: 100%
 
