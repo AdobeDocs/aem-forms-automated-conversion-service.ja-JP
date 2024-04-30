@@ -1,5 +1,5 @@
 ---
-title: 自動フォーム変換サービスのトラブルシューティング
+title: 自動フォーム変換サービス（AFCS）のトラブルシューティング
 description: AFCS の一般的な問題とその解決方法
 solution: Experience Manager Forms
 feature: Adaptive Forms
@@ -9,14 +9,14 @@ role: Admin, Developer
 level: Beginner, Intermediate
 contentOwner: khsingh
 exl-id: e8406ed9-37f5-4f26-be97-ad042f9ca57c
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 100%
+source-wordcount: '657'
+ht-degree: 95%
 
 ---
 
-# 自動フォーム変換サービスのトラブルシューティング
+# 自動フォーム変換サービス（AFCS）のトラブルシューティング
 
 ここでは、一般的なエラーの基本的なトラブルシューティング手順について説明します。
 
@@ -27,7 +27,7 @@ ht-degree: 100%
 | エラー | 例 |
 |--- |--- |
 | **エラーメッセージ** <br> アクセストークンヘッダーを使用できません。 <br><br> **原因** <br> 管理者が複数の IMS 設定を作成しているか、IMS 設定を使用して Adobe Cloud 上 の AFCS サービスにアクセスできません。<br><br>**解決方法** <br> 設定が複数存在する場合は、すべての設定を削除して、[新しい設定を作成](configure-service.md#obtainpubliccertificates)してください。<br> 設定が 1 つのみの場合は、 **ヘルスチェック** を使用して、[接続状態を確認](configure-service.md#createintegrationoption)してください。 | ![アクセストークンヘッダーを使用できません](assets/invalid-ims-configurations.png) |
-| **エラーメッセージ** <br> サービスに接続できません。  <br><br>**原因** <br> サービス URL が正しくないか、自動フォーム変換サービスのクラウドサービスでサービス URL が指定されていません。<br><br>**解決方法** <br> 自動フォーム変換サービスのクラウドサービスで[サービス URL](configure-service.md#configure-the-cloud-service) を修正してください。 | ![サービスに接続できません。](assets/wrong-service-url-configured.png) |
+| **エラーメッセージ** <br> サービスに接続できません。  <br><br>**理由** <br> サービス URL が正しくないか、Automated forms conversionサービス （AFCS） クラウドサービスでサービス URL が指定されていません。 <br><br>**解決策** <br> Correct [サービス URL](configure-service.md#configure-the-cloud-service) （Automated forms conversionサービス（AFCS）クラウドサービス内） | ![サービスに接続できません。](assets/wrong-service-url-configured.png) |
 | **エラーメッセージ** <br> フォームの変換が失敗しました。  <br><br>**原因** <br> ユーザー側にネットワーク接続の問題が発生しているか、定期メンテナンスのためサービスが停止されているか、Adobe Cloud が停止しています。<br><br>**解決方法** <br> ユーザー側でネットワーク接続の問題を解決し、https://status.adobe.com/ でサービスが（計画的または計画外に）停止されていないか確認してください。 | ![サービスに接続できません。](assets/conversion-failure.png) |
 | **エラーメッセージ** <br> ページ数が 15 ページを超えています。  <br><br>**原因** <br> ソースフォームのページ数が 15 ページを超えています。  <br><br>**解決方法** <br> Adobe Acrobat を使用して、15 ページを超えているフォームを分割してください。各フォームのページ数は 15 ページ未満にしてください。 | ![サービスに接続できません。](assets/number-of-pages.png) |
 | **エラーメッセージ** <br> ファイル数が 15 個を超えています。  <br><br>**原因** <br>  フォルダーに 15 個を超えるフォームが含まれています。<br><br>**解決方法** <br> フォルダー内のフォーム数を 15 個以内にしてください。1 つのフォルダーに保存する合計ページ数は 50 ページ未満にしてください。フォルダーのサイズは 10 MB 未満にしてください。サブフォルダー内にフォームを保存しないでください。ソースフォームは 8 ～ 15 個のフォームに編成してください。 | ![サービスに接続できません。](assets/number-of-pages.png) |
@@ -52,7 +52,7 @@ ht-degree: 100%
 <td><img alt="The access token header is not available" src="assets/invalid-ims-configuration.png" /></td>
 </tr>
 <tr>
-<td><strong>Error Message</strong> <br> Unable to connect to the service.  <br><br><strong>Reason</strong> <br> Incorrect service URL or no service URL is mentioned in Automated Forms Conversion Service cloud services. <br><br><strong>Resolution</strong> <br> Correct <a href="configure-service.md#configure-the-cloud-service">Service URL</a> in Automated Forms Conversion Service Cloud services.</td>
+<td><strong>Error Message</strong> <br> Unable to connect to the service.  <br><br><strong>Reason</strong> <br> Incorrect service URL or no service URL is mentioned in Automated Forms Conversion Service (AFCS) cloud services. <br><br><strong>Resolution</strong> <br> Correct <a href="configure-service.md#configure-the-cloud-service">Service URL</a> in Automated Forms Conversion Service (AFCS) Cloud services.</td>
 <td><img alt="Unable to connect to the service." src="assets/wrong-endpoint-configured.png" /></td>
 </tr>
 <tr>

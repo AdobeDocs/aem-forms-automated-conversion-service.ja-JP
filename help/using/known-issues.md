@@ -1,6 +1,6 @@
 ---
 title: 既知の問題
-description: 自動フォーム変換サービスに関する既知の問題と制限事項
+description: automated forms conversionサービス（AFCS）の既知の問題と制限事項
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -8,16 +8,16 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 35f59e02-e38e-473a-94c8-123e0a85ac8e
-source-git-commit: 43616abd46a17a8eeda30a116f09b88780ce9a77
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '800'
-ht-degree: 100%
+source-wordcount: '795'
+ht-degree: 96%
 
 ---
 
 # 既知の問題と制限事項 {#known-issues-limitations}
 
-AEM Forms の自動フォーム変換サービスを使用する前に、このサービスに関する既知の問題と制限事項について確認しておく必要があります。
+AEM Forms Automated forms conversionサービス（AFCS）の使用を開始する前に、次の既知の問題と制限事項を確認してください。
 
 ## 既知の問題 {#known-issues}
 

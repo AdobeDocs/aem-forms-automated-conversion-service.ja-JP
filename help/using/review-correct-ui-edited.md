@@ -1,6 +1,6 @@
 ---
 title: 変換後のフォームのレビューと修正
-description: 自動フォーム変換サービスによって変換されたアダプティブフォームのレビュー方法と修正方法
+description: 変換サービス（AFCS）でAutomated forms conversionされたアダプティブフォームを確認して修正します。
 solution: Experience Manager Forms
 feature: Adaptive Forms, Foundation Components
 topic: Administration
@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 64330fa2-aa9d-4ba4-96df-b75deed3e693
-source-git-commit: 919886cda2ec50ddb9b403cbb0e92fec2821c10e
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '2561'
-ht-degree: 100%
+source-wordcount: '2563'
+ht-degree: 98%
 
 ---
 
 # 変換後のフォームをレビューおよび修正{#review-and-correct-converted-forms}
 
-AEM Forms の自動フォーム変換サービスにより、PDF 入力ドキュメントのフィールド、コンテンツ、レイアウトを識別し、その PDF ドキュメントをアダプティブフォームに変換することができます。 変換後のアダプティブフォームには、いくつかのフィールドが欠落していたり、正しく変換されていないフィールドが含まれていたりする場合があります。 「レビューと修正」エディターを使用してこれらのフィールドを修正し、品質の高いアダプティブフォームを再生成することができます。 最初の変換処理が完了したら、「レビューと修正」エディターで PDF 入力ドキュメントを開き、以下の操作を実行します。
+AEM Forms Automated forms conversionサービス（AFCS）は、入力されたPDFドキュメントのフィールド、コンテンツ、レイアウトを特定して、PDFドキュメントをアダプティブフォームに変換します。 変換後のアダプティブフォームには、いくつかのフィールドが欠落していたり、正しく変換されていないフィールドが含まれていたりする場合があります。 「レビューと修正」エディターを使用してこれらのフィールドを修正し、品質の高いアダプティブフォームを再生成することができます。 最初の変換処理が完了したら、「レビューと修正」エディターで PDF 入力ドキュメントを開き、以下の操作を実行します。
 
 * 変換処理で識別されたすべてのフィールドとコンテンツを確認する
 * 変換処理でスキップされたフィールドとコンテンツを特定する

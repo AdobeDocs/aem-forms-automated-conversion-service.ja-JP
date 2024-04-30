@@ -1,5 +1,5 @@
 ---
-title: 自動フォーム変換サービスの概要
+title: automated forms conversionサービス（AFCS）の概要
 description: 印刷フォームからアダプティブフォームへの変換を加速する
 solution: Experience Manager Forms
 feature: Adaptive Forms, Foundation Components
@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-source-git-commit: 919886cda2ec50ddb9b403cbb0e92fec2821c10e
-workflow-type: ht
-source-wordcount: '703'
-ht-degree: 100%
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+workflow-type: tm+mt
+source-wordcount: '711'
+ht-degree: 92%
 
 ---
 
-# はじめに {#introduction-to-automated-forms-conversion-service}
+# Automated forms conversionサービス（AFCS） {#introduction-to-automated-forms-conversion-service}
 
-自動フォーム変換サービスを使用して PDF フォームを自動的にアダプティブフォームに変換することにより、デジタル化された高速なデータキャプチャエクスペリエンスが実現します。Adobe Sensei をベースとして開発されたこの変換サービスにより、使用しているデバイスに合わせて、PDF フォームが自動的に HTML5 ベースのアダプティブフォームに変換されます。この変換サービスは PDF フォームと XFA の既存の技術を活用します。また、アダプティブフォームに合った検証機能、スタイル設定機能、レイアウト機能を適用して変換処理を実行します。この変換サービスの特長を以下に示します。
+Automated forms conversionサービス（AFCS）は、PDF formsをアダプティブフォームへ自動変換することで、データキャプチャエクスペリエンスのデジタル化と最新化を促進します。 Adobe Sensei をベースとして開発されたこの変換サービスにより、使用しているデバイスに合わせて、PDF フォームが自動的に HTML5 ベースのアダプティブフォームに変換されます。この変換サービスは PDF フォームと XFA の既存の技術を活用します。また、アダプティブフォームに合った検証機能、スタイル設定機能、レイアウト機能を適用して変換処理を実行します。この変換サービスの特長を以下に示します。
 
 * 印刷フォームをアダプティブフォームに変換する際の手動作業が大幅に減る
 * 変換時に各種のパターンが適用され、適切な検証処理が実行される
@@ -43,13 +43,13 @@ AEM 6.4 Forms と AEM 6.5 Forms のオンプレミスユーザーと、Adobe Man
 
 ## 変換ワークフロー  {#conversion-workflow}
 
-自動フォーム変換サービスは、Adobe Cloud 上で稼働します。AEM インスタンスを変換サービスに接続し、変換するフォームを AEM インスタンスにアップロードして、変換処理を開始してください。変換プロセスの詳細なフローは、以下のようになります。
+Automated forms conversionサービス（AFCS）はAdobeクラウドで実行されます。 AEM インスタンスを変換サービスに接続し、変換するフォームを AEM インスタンスにアップロードして、変換処理を開始してください。変換プロセスの詳細なフローは、以下のようになります。
 
 ![ワークフロー](assets/conversion-workflow.png)
 
 ### 1. 環境を設定する {#set-up-the-environment}
 
-自動フォーム変換サービスは、Adobe Cloud 上で稼働します。[組織の Adobe I/O アカウントを設定し、ローカルの AEM インスタンスを Adobe Cloud 上の変換サービスに接続](configure-service.md)します。
+Automated forms conversionサービス（AFCS）はAdobeクラウドで実行されます。 [組織の Adobe I/O アカウントを設定し、ローカルの AEM インスタンスを Adobe Cloud 上の変換サービスに接続](configure-service.md)します。
 
 ### 2. PDF フォームをアダプティブフォームに変換する {#use-the-conversion-service}
 

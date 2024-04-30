@@ -1,6 +1,6 @@
 ---
 title: アダプティブフォームで推奨されるデータソースベースの事前入力ワークフローと送信ワークフロー
-description: 自動フォーム変換サービスを使用して生成された、アダプティブフォームに対するデータソースベースの事前入力ワークフローと送信ワークフロー。
+description: automated forms conversionサービス（AFCS）を使用して生成された、アダプティブフォームに対するデータソースベースの事前入力ワークフローと送信ワークフロー。
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -9,16 +9,16 @@ role: Admin, Developer
 level: Beginner, Intermediate
 contentOwner: khsingh
 exl-id: 5deef8f5-5098-47c1-b696-b2db59e92931
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '2574'
-ht-degree: 100%
+source-wordcount: '2534'
+ht-degree: 85%
 
 ---
 
 # アダプティブフォームで推奨される、データソースベースの事前入力ワークフローと送信ワークフロー {#recommended-data-source-btased-prefill-and-submit-workflows-for-adaptive-forms}
 
-自動フォーム変換サービスを使用して変換されたアダプティブフォームでは、以下に示すいずれかのデータソースを使用することができます。
+automated forms conversionサービス（AFCS）を使用して変換されたアダプティブフォームでは、次のデータソースのいずれかを使用できます。
 
 * フォームデータモデル、OData、その他のサードパーティ製サービス
 * JSON スキーマ
@@ -37,12 +37,12 @@ ht-degree: 100%
   <tr> 
    <td><p>フォームデータモデル、OData、その他のサードパーティ製サービス</p></td> 
    <td> 
-    <p><strong>方法 1</strong>：データソースとして、フォームデータモデル、OData、またはその他のサードパーティ製サービスを選択します。 次に、自動フォーム変換サービスを使用して、<a href="#generate-adaptive-forms-with-no-data-binding">データバインディングがないアダプティブフォームを生成</a>します。 次に、アダプティブフォームの各フィールドをデータモデルの各エンティティに手動でバインドし、「フォームデータモデルの事前入力サービス」オプションを使用して、フィールド値の事前入力を行います。 次に、「フォームデータモデルを使用して送信」オプションを使用して、アダプティブフォームを送信します。</p></td> 
+    <p><strong>方法 1</strong>：データソースとして、フォームデータモデル、OData、またはその他のサードパーティ製サービスを選択します。 あなた <a href="#generate-adaptive-forms-with-no-data-binding">データバインディングがないアダプティブフォームを生成する</a> automated forms conversionサービス（AFCS）を使用する。 次に、アダプティブフォームの各フィールドをデータモデルの各エンティティに手動でバインドし、「フォームデータモデルの事前入力サービス」オプションを使用して、フィールド値の事前入力を行います。 次に、「フォームデータモデルを使用して送信」オプションを使用して、アダプティブフォームを送信します。</p></td> 
   </tr>
   <tr> 
    <td></td> 
    <td> 
-   <p><strong>方法 2</strong>：データソースとして、フォームデータモデル、OData、またはその他のサードパーティ製サービスを選択します。 次に、自動フォーム変換サービスを使用して、<a href="#generate-adaptive-forms-with-no-data-binding">データバインディングがないアダプティブフォームを生成</a>します。 次に、ルールエディターを使用してアダプティブフォームフィールドをバインドし、フィールド値の事前入力を行います。 次に、必要に応じてフィールド値を変更し、crx-repository にデータを送信します。</p>
+   <p><strong>方法 2</strong>：データソースとして、フォームデータモデル、OData、またはその他のサードパーティ製サービスを選択します。 あなた <a href="#generate-adaptive-forms-with-no-data-binding">データバインディングがないアダプティブフォームを生成する</a> automated forms conversionサービス（AFCS）を使用する。 次に、ルールエディターを使用してアダプティブフォームフィールドをバインドし、フィールド値の事前入力を行います。 次に、必要に応じてフィールド値を変更し、crx-repository にデータを送信します。</p>
     </td> 
   </tr>
   <tr> 
@@ -58,7 +58,7 @@ ht-degree: 100%
   <tr>
   <td></td> 
    <td> 
-    <p><strong>方法 1</strong>：自動フォーム変換サービスを使用して、<a href="#generate-adaptive-forms-with-no-data-binding">データバインディングがないアダプティブフォームを生成</a>し、JSON スキーマをデータソースとして設定します。 次に、アダプティブフォームの各フィールドを JSON スキーマに手動でバインドし、<a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">サポートされているいずれかのプロトコルを使用</a>して、フィールド値の事前入力を行います。 次に、必要に応じてフィールド値を変更し、crx-repository にデータを送信します。</p></td> 
+    <p><strong>オプション 1</strong>：あなた <a href="#generate-adaptive-forms-with-no-data-binding">データバインディングがないアダプティブフォームを生成する</a> automated forms conversionサービス（AFCS）を使用し、JSON スキーマをデータソースとして設定します。 次に、アダプティブフォームの各フィールドを JSON スキーマに手動でバインドし、<a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">サポートされているいずれかのプロトコルを使用</a>して、フィールド値の事前入力を行います。 次に、必要に応じてフィールド値を変更し、crx-repository にデータを送信します。</p></td> 
   </tr>
   <tr>
   <td></td> 
@@ -68,7 +68,7 @@ ht-degree: 100%
   <tr>
   <td></td> 
    <td> 
-    <p><strong>方法 2</strong>：自動フォーム変換サービスを使用して、<a href="#generate-adaptive-forms-with-json-binding">JSON データバインディングを持つアダプティブフォームを生成</a>します。 事前入力サービスとフォーム送信機能がシームレスに連携します。 設定手順を実行する必要はありません。</p> </td> 
+    <p><strong>オプション 2</strong>：あなた <a href="#generate-adaptive-forms-with-json-binding">json データバインディングを持つアダプティブフォームを生成する</a> automated forms conversionサービス（AFCS）を使用する。 事前入力サービスとフォーム送信機能がシームレスに連携します。 設定手順を実行する必要はありません。</p> </td> 
   </tr>
    <tr>
   <td></td> 
@@ -78,7 +78,7 @@ ht-degree: 100%
   <tr>
   <td><p>XSD スキーマ</p></td> 
    <td> 
-    <p>データソースとして XSD スキーマを選択します。 選択したデータソースに応じて、自動フォーム変換サービスを使用して<a href="#generate-adaptive-forms-with-no-data-binding">データバインディングがないアダプティブフォームを生成</a>し、XSD スキーマをデータソースとして設定します。 次に、アダプティブフォームの各フィールドを XSD スキーマに手動でバインドし、<a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">サポートされているいずれかのプロトコルを使用</a>して、フィールド値の事前入力を行います。 次に、必要に応じてフィールド値を変更し、crx-repository にデータを送信します。</p>
+    <p>データソースとして XSD スキーマを選択します。 選択したデータソースに基づいて、 <a href="#generate-adaptive-forms-with-no-data-binding">データバインディングがないアダプティブフォームを生成する</a> automated forms conversionサービス（AFCS）を使用し、XSD スキーマをデータソースとして設定します。 次に、アダプティブフォームの各フィールドを XSD スキーマに手動でバインドし、<a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">サポートされているいずれかのプロトコルを使用</a>して、フィールド値の事前入力を行います。 次に、必要に応じてフィールド値を変更し、crx-repository にデータを送信します。</p>
     </td> 
   </tr>
   <tr>
@@ -91,7 +91,7 @@ ht-degree: 100%
 </table>
 
 
-自動フォーム変換サービスについて詳しくは、以下の記事を参照してください。
+automated forms conversionサービス（AFCS）の詳細については、次の記事を参照してください。
 
 * [自動フォーム変換サービスの概要](introduction.md)
 * [自動フォーム変換サービスの設定](configure-service.md)
@@ -103,7 +103,7 @@ ht-degree: 100%
 ## 前提条件 {#pre-requisites}
 
 * [AEM オーサーインスタンス](https://helpx.adobe.com/ja/experience-manager/6-5/sites/deploying/using/deploy.html)を設定する
-* [AEM オーサーインスタンス上で自動フォーム変換サービスを設定](configure-service.md)する
+* 設定 [AEM オーサーインスタンスのAutomated forms conversionサービス（AFCS）](configure-service.md)
 
 ## サンプルのアダプティブフォーム {#sample-adaptive-form}
 
@@ -113,7 +113,7 @@ ht-degree: 100%
 
 [ファイルを入手](assets/sample_loan_application_form.pdf)
 
-この PDF ファイルは、自動フォーム変換サービスの入力データとして機能します。 自動フォーム変換サービスを実行すると、このファイルがアダプティブフォームに変換されます。 以下の画像は、PDF 形式のサンプルのローン申し込みフォームです。
+PDFファイルは、Automated forms conversionサービス（AFCS）への入力として機能します。 自動フォーム変換サービスを実行すると、このファイルがアダプティブフォームに変換されます。 以下の画像は、PDF 形式のサンプルのローン申し込みフォームです。
 
 ![サンプルのローン申し込みフォーム](assets/sample_form_new.png)
 
@@ -236,12 +236,12 @@ JSON スキーマをフォームモデルとして使用してこのユースケ
 * [XSD スキーマ](#xsddatasource)
 
 >[!NOTE]
-> 自動フォーム変換サービスを使用して生成されたアダプティブフォームに、同じ名前のフィールドが複数含まれている場合は、フォームの送信時にデータが失われる可能性があるため、必ずこれらのフィールドをデータソースエンティティにバインドしてください。
+> automated forms conversionサービス（AFCS）を使用して変換するアダプティブフォームに、同じ名前のフィールドが複数含まれている場合は、送信時にデータが失われる可能性があるため、必ずこれらのフィールドをデータソースエンティティにバインドしてください。
 >
 
 ### データベース、OData、またはその他のサードパーティ製サービスをデータソースとして使用する {#sqldatasource}
 
-ユースケース：自動フォーム変換サービスを使用して、データバインディングがないアダプティブフォームを生成し、MYSQL データベースをデータソースとして設定します。 次に、アダプティブフォームの各フィールドをデータモデルの各エンティティに手動でバインドし、「**[!UICONTROL フォームデータモデルの事前入力サービス]**」オプションを使用して、フィールド値の事前入力を行います。 次に、「**[!UICONTROL フォームデータモデルを使用して送信]**」オプションを使用して、アダプティブフォームを送信します。
+ユースケース：Automated forms conversionサービス（AFCS）を使用して、データバインディングのないアダプティブフォームを生成し、MYSQL データベースをデータソースとして設定する。 次に、アダプティブフォームの各フィールドをデータモデルの各エンティティに手動でバインドし、「**[!UICONTROL フォームデータモデルの事前入力サービス]**」オプションを使用して、フィールド値の事前入力を行います。 次に、「**[!UICONTROL フォームデータモデルを使用して送信]**」オプションを使用して、アダプティブフォームを送信します。
 
 このユースケースを実行する前に、以下の処理を行う必要があります。
 
@@ -281,7 +281,7 @@ JSON スキーマをフォームモデルとして使用してこのユースケ
 1. 「**[!UICONTROL プレビュー]**」をタップして、事前入力されたアダプティブフォームフィールドの値を確認します。
 1. 必要に応じてフィールド値を変更し、アダプティブフォームを送信します。 フィールド値が MySQL データベースに送信されます。 データベースで **applicant** テーブルを更新すると、このテーブル内の更新後の値が表示されます。
 
-**ユースケース**：自動フォーム変換サービスを使用して、データバインディングがないアダプティブフォームを生成し、MYSQL データベースをデータソースとして設定します。 次に、ルールエディターを使用してアダプティブフォームフィールドをバインドし、フィールド値の事前入力を行います。 次に、必要に応じてフィールド値を変更し、crx-repository にデータを送信します。
+**ユースケース：** データバインディングがないアダプティブフォームを生成するには、Automated forms conversionサービス（AFCS）を使用して、MYSQL データベースをデータソースとして設定します。 次に、ルールエディターを使用してアダプティブフォームフィールドをバインドし、フィールド値の事前入力を行います。 次に、必要に応じてフィールド値を変更し、crx-repository にデータを送信します。
 
 [ルールエディター](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/rule-editor.html)を使用してフォームデータモデルサービスを呼び出し、アダプティブフォーム内のフィールドのバインドと値の事前入力を行うには、以下の手順を実行します。
 
@@ -323,7 +323,7 @@ JSON スキーマをフォームモデルとして使用してこのユースケ
 
 ### JSON スキーマをデータソースとして使用する {#jsondatasource}
 
-**ユースケース**：自動フォーム変換サービスを使用して、データバインディングがないアダプティブフォームを生成し、JSON スキーマをデータソースとして設定します。 次に、アダプティブフォームの各フィールドを JSON スキーマに手動でバインドし、「**データを使用してプレビュー**」オプションを使用して、フィールド値の事前入力を行います。 次に、必要に応じてフィールド値を変更し、crx-repository にデータを送信します。
+**ユースケース：** データバインディングがないアダプティブフォームを生成するには、Automated forms conversionサービス（AFCS）を使用して、JSON スキーマをデータソースとして設定します。 次に、アダプティブフォームの各フィールドを JSON スキーマに手動でバインドし、「**データを使用してプレビュー**」オプションを使用して、フィールド値の事前入力を行います。 次に、必要に応じてフィールド値を変更し、crx-repository にデータを送信します。
 
 このユースケースを実行する前に、以下を確認する必要があります。
 
@@ -351,7 +351,7 @@ JSON スキーマをフォームモデルとして使用してこのユースケ
 
 ### XSD スキーマをデータソースとして使用する {#xsddatasource}
 
-**ユースケース**：自動フォーム変換サービスを使用して、データバインディングがないアダプティブフォームを生成し、XSD スキーマをデータソースとして設定します。 次に、アダプティブフォームの各フィールドを XSD スキーマに手動でバインドし、「**データを使用してプレビュー**」オプションを使用して、フィールド値の事前入力を行います。 次に、必要に応じてフィールド値を変更し、crx-repository にデータを送信します。
+**ユースケース：** データバインディングがないアダプティブフォームを生成するには、Automated forms conversionサービス（AFCS）を使用して、XSD スキーマをデータソースとして設定します。 次に、アダプティブフォームの各フィールドを XSD スキーマに手動でバインドし、「**データを使用してプレビュー**」オプションを使用して、フィールド値の事前入力を行います。 次に、必要に応じてフィールド値を変更し、crx-repository にデータを送信します。
 
 このユースケースを実行する前に、以下を確認する必要があります。
 
@@ -379,13 +379,13 @@ JSON スキーマをフォームモデルとして使用してこのユースケ
 
 ## JSON バインディングを持つアダプティブフォームを生成する {#generate-adaptive-forms-with-json-binding}
 
-[自動フォーム変換サービス](convert-existing-forms-to-adaptive-forms.md)を使用して、[サンプルのローン申し込みフォーム](#sample-adaptive-form)を、データバインディングを持つアダプティブフォームに変換します。 アダプティブフォームを生成する際に、「**[!UICONTROL データバインディングがないアダプティブフォームを生成]**」チェックボックスが無効になっていることを確認してください。
+の使用 [変換するAutomated forms conversionサービス（AFCS）](convert-existing-forms-to-adaptive-forms.md) この [ローン申し込みフォームサンプル](#sample-adaptive-form) からデータ連結を使用するアダプティブフォームへ。 アダプティブフォームを生成する際に、「**[!UICONTROL データバインディングがないアダプティブフォームを生成]**」チェックボックスが無効になっていることを確認してください。
 
 ![JSON バインディングを持つアダプティブフォーム](assets/generate_af_with_data_bindings.png)
 
 ### JSON スキーマをデータソースとして使用する {#jsonwithdatabinding}
 
-**ユースケース**：自動フォーム変換サービスを使用して、JSON データバインディングを持つアダプティブフォームを生成します。 事前入力サービスとフォーム送信機能がシームレスに連携します。 設定手順を実行する必要はありません。
+**ユースケース：** automated forms conversionサービス（AFCS）を使用して、JSON データバインディングを持つアダプティブフォームを生成します。 事前入力サービスとフォーム送信機能がシームレスに連携します。 設定手順を実行する必要はありません。
 
 以下の手順を実行する前に、[データバインディングを持つアダプティブフォーム](#generate-adaptive-forms-with-json-binding)が生成されていることを確認してください。
 

@@ -1,27 +1,28 @@
 ---
 title: PDF フォームをアダプティブフォームに変換する
 seo-title: Convert PDF forms to adaptive forms
-description: 自動フォーム変換サービスを実行して PDF フォームをアダプティブフォームに変換する
-seo-description: Run the Automated Forms Conversion service to convert PDF forms to adaptive forms
+description: automated forms conversionサービス（AFCS）を実行して、PDF formsをアダプティブフォームに変換します
+seo-description: Run the Automated Forms Conversion service (AFCS) to convert PDF forms to adaptive forms
 contentOwner: khsingh
 topic-tags: forms
 feature: Adaptive Forms, Foundation Components
-source-git-commit: 444cc37ec6fa2af2d8d2952efd18368a5725e881
+exl-id: 415e05b5-5a90-490c-bf7c-d3365ce95e24
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '1721'
-ht-degree: 100%
+source-wordcount: '1725'
+ht-degree: 95%
 
 ---
 
 # PDF フォームをアダプティブフォームに変換する {#convert-print-forms-to-adaptive-forms}
 
-Adobe Sensei をベースとして開発された AEM Forms 自動フォーム変換サービスを実行すると、使用しているデバイスに合わせて、PDF フォームが自動的にアダプティブフォームに変換されます。 自動フォーム変換サービスを使用すると、非インタラクティブ PDF フォーム、AcroForms、XFA ベースの PDF フォームなど、各種フォームを簡単にアダプティブフォームに変換することができます。 この変換サービスの機能、変換ワークフロー、概要情報については、[自動フォーム変換サービスのトピック](introduction.md)を参照してください。
+Adobe Senseiを活用したAEM Forms Automated forms conversionサービス（AFCS）は、PDF formsを、デバイスに対応したレスポンシブなアダプティブフォームに自動的に変換します。 非インタラクティブPDF formsを使用している場合でも、Acro Formsを使用している場合でも、XFA ベースのPDF formsを使用している場合でも、Automated forms conversionサービス（AFCS）を使用して、これらのフォームをアダプティブフォームに簡単に変換できます。 この変換サービスの機能、変換ワークフロー、概要情報については、[自動フォーム変換サービスのトピック](introduction.md)を参照してください。
 
 ## 前提条件 {#pre-requisites}
 
 * [**変換サービスの設定を行う**](configure-service.md)
 
-* **変換後のフォームに[テンプレート](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/template-editor.html)を適用するための準備を行う**：テンプレートを使用すると、統一されたブランディングをすべてのアダプティブフォームに適用することができます。 自動フォーム変換サービスでは、変換元 PDF ドキュメントのヘッダーとフッターが抽出されて使用されることはありません。 アダプティブフォームのテンプレートを使用して、ヘッダーとフッターを指定することができます。 変換サービスを実行すると、テンプレートで指定したヘッダーとフッターがアダプティブフォームに適用されます。テンプレート用のフォルダーを作成する場合は、全員に対して「**[!UICONTROL 設定を参照]**」オプションを選択します。
+* **変換後のフォームに[テンプレート](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/template-editor.html)を適用するための準備を行う**：テンプレートを使用すると、統一されたブランディングをすべてのアダプティブフォームに適用することができます。 さらに、Automated forms conversionサービス（AFCS）では、ソースPDFドキュメントのヘッダーとフッターの抽出および使用は行われません。 アダプティブフォームのテンプレートを使用して、ヘッダーとフッターを指定することができます。 変換サービスを実行すると、テンプレートで指定したヘッダーとフッターがアダプティブフォームに適用されます。テンプレート用のフォルダーを作成する場合は、全員に対して「**[!UICONTROL 設定を参照]**」オプションを選択します。
 
 * **変換後のフォームに適用される[テーマ](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/themes.html)を準備する**：テーマを使用すると、統一されたスタイルを組織内のすべてのアダプティブフォームに適用することができます。
 
