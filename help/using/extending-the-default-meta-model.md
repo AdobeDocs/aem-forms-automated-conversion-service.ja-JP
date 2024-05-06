@@ -1,6 +1,6 @@
 ---
-title: デフォルトメタモデルの拡張
-description: automated forms conversionサービス（AFCS）の実行中にデフォルトのメタモデルを拡張して組織固有のパターン、検証機能、エンティティを追加し、アダプティブフォームフィールドに設定を適用することができます。
+title: デフォルトのメタモデルの拡張
+description: デフォルトのメタモデルを拡張して、組織に固有のパターン、検証、エンティティを追加し、自動フォーム変換サービス（AFCS）の実行中にアダプティブフォームフィールドに設定を適用します。
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -9,15 +9,15 @@ role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
 source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2598'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
-# デフォルトメタモデルの拡張 {#extend-the-default-meta-model}
+# デフォルトのメタモデルの拡張 {#extend-the-default-meta-model}
 
-Automated forms conversionサービス（AFCS）は、ソースフォーム内でフォームオブジェクトを特定して抽出します。 自動フォーム変換サービスでセマンティックマッパーを使用すると、抽出したオブジェクトがアダプティブフォーム内でどのように表示されるのかを確認することができます。例えば、ソースフォームには、表示形式の異なる様々な日付オブジェクトが含まれている場合があります。こうした場合にセマンティックマッパーを使用すると、ソースフォーム内の日付オブジェクトのすべての表示形式を、アダプティブフォームの日付コンポーネントにマップすることができます。また、変換処理の実行中にセマンティックマッパーを使用して、検証設定、ルール、データパターン、ヘルプテキスト、アクセシビリティのプロパティをアダプティブフォームコンポーネントに対して事前に設定して適用することもできます。
+自動フォーム変換サービス（AFCS）では、ソースフォームからフォームオブジェクトを識別して抽出します。自動フォーム変換サービスでセマンティックマッパーを使用すると、抽出したオブジェクトがアダプティブフォーム内でどのように表示されるのかを確認することができます。例えば、ソースフォームには、表示形式の異なる様々な日付オブジェクトが含まれている場合があります。こうした場合にセマンティックマッパーを使用すると、ソースフォーム内の日付オブジェクトのすべての表示形式を、アダプティブフォームの日付コンポーネントにマップすることができます。また、変換処理の実行中にセマンティックマッパーを使用して、検証設定、ルール、データパターン、ヘルプテキスト、アクセシビリティのプロパティをアダプティブフォームコンポーネントに対して事前に設定して適用することもできます。
 
 ![](assets/meta-model.gif)
 
@@ -25,7 +25,7 @@ Automated forms conversionサービス（AFCS）は、ソースフォーム内�
 
 ## デフォルトのメタモデル {#default-meta-model}
 
-Automated forms conversionサービス（AFCS）には、デフォルトのメタモデルがあります。 これは JSON スキーマで、Automated forms conversionサービス（AFCS）の他のコンポーネントと共にAdobeクラウド上に存在します。 メタモデルのコピーは、ローカル AEM サーバー上のhttp://で参照できます。&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`. 英語のスキーマにアクセスする、またはダウンロードするには、[ここ](assets/en.globalschema.json)をクリックします。[フランス語](assets/fr.globalschema.json)、[ドイツ語](assets/de.globalschema.json)、[スペイン語](assets/es.globalschema.json)、[イタリア語](assets/it.globalschema.json)、[ポルトガル語](assets/pt_br.globalschema.json)のメタモデルもダウンロードできます。
+自動フォーム変換サービス（AFCS）には、デフォルトのメタモデルがあります。これは JSON スキーマで、自動フォーム変換サービス（AFCS）の他のコンポーネントと共に Adobe Cloud 上に存在します。メタモデルのコピーは、ローカル AEM サーバーの http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json` で確認できます。英語のスキーマにアクセスする、またはダウンロードするには、[ここをクリック](assets/en.globalschema.json)します。[フランス語](assets/fr.globalschema.json)、[ドイツ語](assets/de.globalschema.json)、[スペイン語](assets/es.globalschema.json)、[イタリア語](assets/it.globalschema.json)、[ポルトガル語](assets/pt_br.globalschema.json)のメタモデルもダウンロードできます。
 
 メタモデルのスキーマは、https://schema.org/docs/schemas.html のスキーマエンティティから継承されます。このスキーマエンティティには、https://schema.org で定義された各種エンティティ（Person、PostalAddress、LocalBusiness など）が含まれています。メタモデルのすべてのエンティティは、JSON スキーマオブジェクトに従属します。以下のコードは、サンプルのメタモデル構造を示しています。
 
@@ -120,7 +120,7 @@ Automated forms conversionサービス（AFCS）には、デフォルトのメ�
 
 ### 生成後のアダプティブフォームフィールドに対する JSON スキーマプロパティ {#jsonschemaproperties}
 
-メタモデルは、Automated forms conversionサービス（AFCS）を使用して生成されたアダプティブフォームフィールドに対して、次の JSON スキーマ共通プロパティをサポートしています。
+メタモデルでは、自動フォーム変換サービス（AFCS）を使用して生成されたアダプティブフォームフィールドの次の JSON スキーマ共通プロパティをサポートします。
 
 <table> 
  <tbody> 
@@ -164,7 +164,7 @@ Automated forms conversionサービス（AFCS）には、デフォルトのメ�
 
 ### 生成後のアダプティブフォームフィールドにプロパティを適用するためのキーワードベース検索 {#keywordsearch}
 
-Automated forms conversionサービス（AFCS）は、変換処理の実行時に、ソースフォームに対してキーワード検索を実行します。 変換サービスは、検索条件に一致するフィールドをフィルタリングしてから、メタモデル内のそれらのフィールドに対して定義されているプロパティを、生成後のアダプティブフォームフィールドに適用します。
+自動フォーム変換サービス（AFCS）では、変換中にソースフォームでキーワード検索を実行します。変換サービスは、検索条件に一致するフィールドをフィルタリングしてから、メタモデル内のそれらのフィールドに対して定義されているプロパティを、生成後のアダプティブフォームフィールドに適用します。
 
 キーワードは、**aem:affKeyword** プロパティを使用して参照されます。
 
@@ -181,7 +181,7 @@ Automated forms conversionサービス（AFCS）は、変換処理の実行時�
 
 ### 生成後のアダプティブフォームフィールドに対する追加のプロパティ {#additionalproperties}
 
-を使用できます **aem:afProperties** automated forms conversionサービス（AFCS）を使用して生成されたアダプティブフォームフィールドに対して、次の追加プロパティを定義するメタモデル内のプロパティ：
+メタモデルの **aem:afProperties** プロパティを使用して、自動フォーム変換サービス（AFCS）を使用して生成されたアダプティブフォームフィールドの次の追加プロパティを定義できます。
 
 <table> 
  <tbody> 
@@ -217,7 +217,7 @@ Automated forms conversionサービス（AFCS）は、変換処理の実行時�
 
 ## 自身の言語でのカスタムメタモデルの作成 {#language-specific-meta-model}
 
-言語固有のメタモデルを作成できます。このようなメタモデルを使用すると、選択した言語でマッピングルールを作成するのに役立ちます。Automated forms conversionサービス（AFCS）を使用すると、次の言語のメタモデルを作成できます。
+言語固有のメタモデルを作成できます。このようなメタモデルを使用すると、選択した言語でマッピングルールを作成するのに役立ちます。自動フォーム変換サービス（AFCS）を使用すると、以下の言語でメタモデルを作成できます。
 
 * 英語 (en)
 * フランス語（fr）
@@ -258,9 +258,9 @@ Automated forms conversionサービス（AFCS）は、変換処理の実行時�
 
 ## カスタムメタモデルを使用してアダプティブフォームフィールドを変更する {#modify-adaptive-form-fields-using-custom-meta-model}
 
-デフォルトのメタモデルで登録されているパターンと検証機能のほかに、組織内でパターンと検証機能を設定することができます。デフォルトのメタモデルを拡張することにより組織固有のパターン、検証機能、エンティティを追加することができます。Automated forms conversionサービス（AFCS）は、変換処理の実行時に、カスタムメタモデルをフォームフィールドに適用します。 組織固有の新しいパターン、検証機能、エンティティが検出されるたびに、メタモデルを継続的に更新することができます。
+デフォルトのメタモデルで登録されているパターンと検証機能のほかに、組織内でパターンと検証機能を設定することができます。デフォルトのメタモデルを拡張することにより組織固有のパターン、検証機能、エンティティを追加することができます。自動フォーム変換サービス（AFCS）では、変換中にカスタムメタモデルをフォームフィールドに適用します。組織固有の新しいパターン、検証機能、エンティティが検出されるたびに、メタモデルを継続的に更新することができます。
 
-Automated forms conversionサービス（AFCS）では、次の場所に保存されたデフォルトのメタモデルを使用して、変換中にソースフォームフィールドをアダプティブフォームフィールドにマッピングします。
+自動フォーム変換サービス（AFCS）では、次の場所に保存されているデフォルトのメタモデルを使用して、変換中にソースフォームフィールドをアダプティブフォームフィールドにマッピングします。
 
 http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json
 

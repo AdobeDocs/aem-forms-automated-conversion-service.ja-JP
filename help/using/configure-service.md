@@ -1,6 +1,6 @@
 ---
-title: automated forms conversionサービス（AFCS）の設定
-description: automated forms conversionサービス（AFCS）を使用するためのAEM インスタンスの準備
+title: 自動フォーム変換サービス（AFCS）の設定
+description: 自動フォーム変換サービス（AFCS）を使用できるように AEM インスタンスの準備を整えます
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -9,15 +9,15 @@ role: Admin, Developer, User
 level: Beginner, Intermediate
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
 source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2784'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
-# automated forms conversionサービス（AFCS）の設定 {#about-this-help}
+# 自動フォーム変換サービス（AFCS）の設定 {#about-this-help}
 
-このヘルプでは、AEM管理者がAutomated forms conversionサービス（AFCS）を設定して、アダプティブフォームへのPDF formsの変換を自動化する方法について説明します。 このヘルプ記事は、組織内の IT 管理者と AEM 管理者を対象としています。具体的には、以下の操作に関する十分な知識があるユーザーを対象としています。
+このヘルプ記事では、AEM の管理者が自動フォーム変換サービス（AFCS）を設定して、PDF フォームからアダプティブフォームへの変換を自動化する方法について説明します。このヘルプ記事は、組織内の IT 管理者と AEM 管理者を対象としています。具体的には、以下の操作に関する十分な知識があるユーザーを対象としています。
 
 * Adobe Experience Manager パッケージと AEM パッケージのインストール、設定、管理
 
@@ -37,9 +37,9 @@ AEM 6.4 Forms と AEM 6.5 Forms のオンプレミスユーザーと、Adobe Man
 
 ## 前提条件 {#prerequisites}
 
-automated forms conversionサービス（AFCS）を使用するには、以下が必要です。
+自動フォーム変換サービス（AFCS）を使用するには、以下の条件を満たしている必要があります。
 
-* Automated forms conversionサービス （AFCS）が有効になっています
+* 組織で自動フォーム変換サービス（AFCS）が有効になっていること
 * 変換サービス用の管理者権限が設定された Adobe ID アカウントが作成されていること
 * 最新の AEM Service Pack または最新のアップデートを含む AEM 6.4、AEM 6.5、または AEM Forms as a Cloud Service オーサーインスタンスがインストールおよび導入されていること。
 * AEM インスタンス上の AEM ユーザーが forms-user グループのメンバーになっていること
@@ -57,7 +57,7 @@ automated forms conversionサービス（AFCS）を使用するには、以下�
 ### AEM 6.4 および AEM 6.5 をダウンロードしてインストールするか、AEM Forms as a Cloud Service をにオンボーディングする {#aemquickstart}
 
 
-Automated forms conversionサービス（AFCS）は、AEM オーサーインスタンスで実行されます。 AEM オーサーインスタンスを設定するには、AEM 6.4、AEM 6.5、または AEM Forms as a Cloud Service が必要です。
+自動フォーム変換サービス（AFCS）は、AEM オーサーインスタンス上で稼働します。AEM オーサーインスタンスを設定するには、AEM 6.4、AEM 6.5、または AEM Forms as a Cloud Service が必要です。
 
 * AEM 6.4 または AEM 6.5 以降が稼働していない場合は、以下の場所からダウンロードしてください。AEM をダウンロードしたら、[デプロイとメンテナンス](https://helpx.adobe.com/jp/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)の説明に従い、AEM オーサーインスタンスの設定を行ってください。
 
@@ -86,7 +86,7 @@ The connector package provides early access to the [Auto-detect logical sections
 
 ### カスタムのテーマとテンプレートを作成する {#referencepackage}
 
-AEM 6.4 または AEM 6.5 を[実稼動モード](https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/production-ready.html)（nosamplecontent 実行モード）で起動した場合、参照パッケージはインストールされません。参照パッケージには、サンプルのテーマとテンプレートが含まれています。Automated forms conversionサービス（AFCS）では、PDFフォームをアダプティブフォームに変換するために、少なくとも 1 つのテーマと 1 つのテンプレートが必要です。 変換サービスを使用する前に、専用のカスタムテーマとカスタムテンプレートを作成し、それらのテーマとテンプレートを使用するように[変換サービスを設定](#configure-the-cloud-service)してください。
+AEM 6.4 または AEM 6.5 を[実稼動モード](https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/production-ready.html)（nosamplecontent 実行モード）で起動した場合、参照パッケージはインストールされません。参照パッケージには、サンプルのテーマとテンプレートが含まれています。自動フォーム変換サービス（AFCS）では、PDF フォームをアダプティブフォームに変換するために、少なくとも 1 つのテーマと 1 つのテンプレートが必要です。変換サービスを使用する前に、専用のカスタムテーマとカスタムテンプレートを作成し、それらのテーマとテンプレートを使用するように[変換サービスを設定](#configure-the-cloud-service)してください。
 
 また、[AEM Forms リファレンスアセット](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html)パッケージをダウンロードして、オーサーインスタンスにインストールすることもできます。参照テーマとテンプレートが作成されます。
 
@@ -94,21 +94,21 @@ AEM 6.4 または AEM 6.5 を[実稼動モード](https://helpx.adobe.com/jp/exp
 
 Adobe Cloud 上で稼働するサービスの設定を行い、そのサービスにローカルインスタンスを接続する前に、サービスの接続時に必要となるユーザーと権限について説明します。サービスを接続する場合、管理者と開発者という 2 種類のユーザーが必要になります。
 
-* **管理者**：管理者は、組織内で使用するアドビソフトウェアとアドビサービスの管理を担当します。管理者は、組織内の開発者に、Adobeクラウド上で動作するAutomated forms conversionサービス（AFCS）に接続するアクセス権を付与します。 管理者を組織に対してプロビジョニングすると、「**[!UICONTROL アドビのソフトウェアとサービスを組織内で管理するための管理者権限が付与されました]**」という内容のメールが管理者に送信されます。管理者は、このタイトルのメールを受信していることを確認し、[組織内の開発者に権限を付与](#adduseranddevs)する必要があります。
+* **管理者**：管理者は、組織内で使用するアドビソフトウェアとアドビサービスの管理を担当します。管理者は、組織内の開発者に、Adobe Cloud 上で実行されている自動フォーム変換サービス（AFCS）に接続するためのアクセス権を付与します。管理者を組織に対してプロビジョニングすると、「**[!UICONTROL アドビのソフトウェアとサービスを組織内で管理するための管理者権限が付与されました]**」というタイトルのメールが管理者に送信されます。管理者は、このタイトルのメールを受信していることを確認し、[組織内の開発者に権限を付与](#adduseranddevs)する必要があります。
 
 ![権限の付与について管理者に送信されるメール](assets/admin-console-adobe-io-access-grantedx75.png)
 
-* **開発者**：開発者は、ローカルのAEM Forms オーサーインスタンスをAdobeクラウド上で動作するAutomated forms conversionサービス（AFCS）に接続します。 管理者がAutomated forms conversionサービス（AFCS）に接続する権限をデベロッパーに付与すると、「You now have be manage developer API integrations for your organization」というタイトルのメールがデベロッパーに送信されます。このメールには、Adobeの API 統合を管理する権限が付与されています。 開発者は、このタイトルのメールを受信していることを確認し、[ローカルの AEM インスタンスを Adobe Cloud 上の自動フォーム変換サービスに接続](#connectafcadobeio)する必要があります。
+* **開発者**：開発者は、ローカルの AEM Forms オーサーインスタンスを Adobe Cloud 上で稼働する自動フォーム変換サービス（AFCS）に接続します。管理者が開発者に対して自動フォーム変換サービス（AFCS）に接続する権限を付与すると、「組織の Adobe API 統合を管理するための開発者アクセス権が付与されました」というタイトルのメールが開発者に送信されます。開発者は、このタイトルのメールを受信していることを確認し、[ローカルの AEM インスタンスを Adobe Cloud 上の自動フォーム変換サービスに接続](#connectafcadobeio)する必要があります。
 
 ![権限の付与について開発者に送信されるメール](assets/email-developer-accessx94.png)
 
 ### （AEM 6.4 および AEM 6.5 の管理者のみ）組織の開発者にアクセス権を付与する  {#adduseranddevs}
 
-組織と管理者に対する権限の設定が完了したら（この処理はアドビ側で行います）、管理者は、Admin Console にログインしてプロファイルを作成し、そのプロファイルに開発者を追加する必要があります（詳しい手順については、これ以降の説明を参照してください）。開発者は、AEM FormsのローカルインスタンスをAdobeクラウド上のAutomated forms conversionサービス（AFCS）に接続できます。
+組織に対するアクセスを有効化と、管理者に対する必要な権限の付与がアドビによって行われたら、管理者は、Admin Console にログインして（詳しい手順については、以下の説明を参照してください）、プロファイルを作成し、そのプロファイルに開発者を追加することができます。開発者は、AEM Forms のローカルインスタンスを Adobe Cloud 上の自動フォーム変換サービス（AFCS）に接続できます。
 
-開発者とは、変換サービスの実行を担当する組織内のメンバーのことです。Adobe開発サービス（AFCS）プロファイルに追加されたAutomated forms conversion者のみが、Automated forms conversionサービス（AFCS）を使用する権限を持ちます。 プロファイルを作成して開発者をそのプロファイルに登録するには、以下の手順を実行します。組織の開発者に必要なアクセスを付与するには、少なくとも 1 つのプロファイルが必要です。
+開発者とは、変換サービスの実行を担当する組織内のメンバーのことです。Adobe 自動フォーム変換サービス（AFCS）プロファイルに追加された開発者のみが、自動フォーム変換サービス（AFCS）を使用する資格があります。プロファイルを作成して開発者をそのプロファイルに登録するには、以下の手順を実行します。組織の開発者に必要なアクセスを付与するには、少なくとも 1 つのプロファイルが必要です。
 
-1. [Admin Console](https://adminconsole.adobe.com/) にログインします。使用方法 **Adobe ID** automated forms conversionサービス（AFCS）を使用してログインするためにプロビジョニングされた管理者の それ以外の ID や Federated ID は使用しないでください。
+1. [Admin Console](https://adminconsole.adobe.com/) にログインします。自動フォーム変換サービス（AFCS）を使用するためにプロビジョニングされた管理者の **Adobe ID** を使用してログインします。それ以外の ID や Federated ID は使用しないでください。
 1. 「**[!UICONTROL 自動フォーム変換]**」オプションをクリックします。
 1. 「**[!UICONTROL 製品]**」タブで「**[!UICONTROL 新しいプロファイル]**」をクリックします。
 1. プロファイルの&#x200B;**[!UICONTROL 名前]**、**[!UICONTROL 表示名]**、**[!UICONTROL 説明]**&#x200B;を入力します。「**[!UICONTROL 完了]**」をクリックします。プロファイルが作成されます。
@@ -125,9 +125,9 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 
 管理者が Adobe I/O プロファイルに開発者を追加すると、その管理者にメール通知が送信されます。メール通知を受け取った開発者は、[ローカルの AEM Forms インスタンスを Adobe Cloud 上の自動フォーム変換サービスに接続する](#connectafcadobeio)必要があります。
 
-### （開発者向け）ローカルのAEM Forms インスタンスをAdobeクラウド上のAutomated forms conversionサービス（AFCS）に接続する {#connectafcadobeio}
+### （開発者のみ）Adobe Cloud 上の自動フォーム変換サービス（AFCS）にローカルの AEM Forms インスタンスを接続します {#connectafcadobeio}
 
-管理者から開発者アクセスが提供されたら、ローカルのAEM Forms インスタンスを、Adobeクラウドで動作しているAutomated forms conversionサービス（AFCS）に接続できます。 AEM Forms インスタンスを変換サービスに接続するには、以下の手順を上から順に実行します。
+管理者が開発者アクセス権を付与した後、Adobe Cloud 上で稼働する自動フォーム変換サービス（AFCS）にローカルの AEM Forms インスタンスを接続できます。AEM Forms インスタンスを変換サービスに接続するには、以下の手順を上から順に実行します。
 
 * [メール通知を設定する](configure-service.md#configureemailnotification)
 * [ユーザーを forms-users グループに追加する](#adduserstousergroup)
@@ -137,7 +137,7 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 
 #### メール通知を設定する {#configureemailnotification}
 
-Automated forms conversionサービス（AFCS）は、Day CQ メールサービスを使用してメール通知を送信します。 このメール通知には、変換処理の成否に関する情報が記載されています。メール通知を受信しない場合は、以下の手順をスキップしてください。Day CQ メールサービスを設定するには、以下の手順を実行します。
+自動フォーム変換サービス（AFCS）では、Day CQ メールサービスを使用してメール通知を送信します。このメール通知には、変換処理の成否に関する情報が記載されています。メール通知を受信しない場合は、以下の手順をスキップしてください。Day CQ メールサービスを設定するには、以下の手順を実行します。
 
 * AEM 6.4 Forms または AEM 6.5 Forms の場合：
 
@@ -177,7 +177,7 @@ Automated forms conversionサービス（AFCS）は、Day CQ メールサービ�
 1. 以下の情報を入力します。
 
    * 「タイトル」フィールドにタイトルを入力します。
-   * 認証サーバー： [https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)\
+   * 「認証サーバー」フィールドに「[https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)」を入力します。
 
    その他のフィールドは現時点では空白のままにします（後で指定します）。ページは開いたままにしてください。
 
@@ -195,7 +195,7 @@ Automated forms conversionサービス（AFCS）は、Day CQ メールサービ�
 
 #### （AEM 6.4 および AEM 6.5 のみ）Adobe デベロッパーコンソールでサービス API を設定  {#createintegration}
 
-automated forms conversionサービス（AFCS）を使用するには、プロジェクトを作成して、Adobe Developer コンソールのプロジェクトに自動Forms設定サービス API を追加します。 この統合環境により、API キー、クライアント秘密鍵、ペイロード（JWT）が生成されます。
+自動フォーム変換サービス（AFCS）を使用するには、Adobe Developer Console でプロジェクトを作成し、Automated Forms Configuration Service API をプロジェクトに追加します。この統合環境により、API キー、クライアント秘密鍵、ペイロード（JWT）が生成されます。
 
 1. [https://console.adobe.io/](https://console.adobe.io/) にログインします。Adobe ID と、管理者がプロビジョニングした開発者アカウントを使用して、Adobe I/O コンソールにログインします。
 1. 右上隅で組織を選択します。自分がどの組織に属しているかわからない場合は、管理者に問い合わせてください。
@@ -203,7 +203,7 @@ automated forms conversionサービス（AFCS）を使用するには、プロ�
 1. 「**[!UICONTROL 自動フォーム変換サービス]**」を選択し、「**[!UICONTROL 次へ]**」をタップします。API を設定する画面が表示されます。
 1. 「[!UICONTROL 公開鍵をアップロード]」オプションを選択し、「[公開証明書を取得する](#obtainpubliccertificates)」セクションでダウンロードした AEM-Adobe-IMS.crt ファイルをアップロードして、「**[!UICONTROL 次へ]**」をタップします。「新しいサービスアカウント (JWT) を作成」秘密鍵証明書オプションが表示されます。「**[!UICONTROL 次へ]**」をタップします。
 1. 製品プロファイルを選択し、「**[!UICONTROL 設定した API を保存]**」をタップします。[組織内の開発者に権限を付与](#adduseranddevs)する際に作成したプロファイルを選択します。選択するプロファイルがわからない場合は、管理者に問い合わせてください。
-1. タップ **[!UICONTROL サービスアカウント（JWT）]** API キー、クライアントの秘密鍵、およびローカル AEM インスタンスをAutomated forms conversionサービス（AFCS）に接続するために必要なその他の情報を表示します。 これらの情報を使用して、ローカルマシン上に IMS の設定データが作成されます。
+1. 「**[!UICONTROL サービスアカウント（JWT）]**」をタップすると、ローカル AEM インスタンスを自動フォーム変換サービス（AFCS）に接続するために必要な API キー、クライアント秘密鍵、その他の情報が表示されます。これらの情報を使用して、ローカルマシン上に IMS の設定データが作成されます。
 
 1. ローカルインスタンスで IMS の設定ページを開きます（このページは、「[公開証明書を取得する](#obtainpubliccertificates)」セクションの最後で開いたままにしておいたページです）。
 
@@ -242,7 +242,7 @@ AEM インスタンスを変換サービスに接続するには、クラウド�
    | タイトル | 一意の設定タイトル。このタイトルが、変換処理を開始する UI に表示されます。 |
    | 名前 | 一意の設定名。この名前で、CRX-Repository ディレクトリに設定が保存されます。設定名と設定タイトルは、同じ値にすることができます。 |
    | サムネイルの場所 | 設定のサムネイルの場所。 |
-   | サービス URL | AdobeクラウドのAutomated forms conversionサービス（AFCS）の URL。 「`https://aemformsconversion.adobe.io/`」を入力してください。 |
+   | サービス URL | Adobe Cloud 上の自動フォーム変換サービス（AFCS）の URL「`https://aemformsconversion.adobe.io/`」を入力してください。 |
    | テンプレート | 変換後のフォームに適用されるデフォルトのテンプレート。変換処理を開始する前であれば、いつでも別のテンプレートを指定することができます。テンプレートには、アダプティブフォーム用の基本的な構成情報と初期コンテンツが含まれています。すぐに使用できる一連のテンプレートから、任意のテンプレートを選択することができます。また、カスタムテンプレートを作成することもできます。 |
    | テーマ | 変換後のフォームに適用されるデフォルトのテーマ。変換処理を開始する前であれば、いつでも別のテーマを指定することができます。  アイコンをクリックすると、すぐに使用できるテーマを選択することができます。また、カスタムテーマを作成することもできます。 |
    | 既存のフラグメント | 既存のフラグメントの場所（存在する場合）。 |

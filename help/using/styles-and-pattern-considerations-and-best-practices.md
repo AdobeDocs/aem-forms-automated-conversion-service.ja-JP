@@ -1,6 +1,6 @@
 ---
 title: ベストプラクティスと考慮事項
-description: automated forms conversionサービス（AFCS）のベストプラクティスと考慮事項
+description: 自動フォーム変換サービス（AFCS）のベストプラクティスと考慮事項
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -9,15 +9,15 @@ role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
 source-git-commit: 4b227a2cd0253b8ab471007b41787de60c2a1851
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1229'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
 # ベストプラクティスおよび既知の複雑なパターン {#Best-practices-and-considerations2}
 
-このドキュメントでは、を操作する際にフォーム管理者、作成者および開発者が役立つガイドラインと推奨事項を説明します [!DNL Automated Forms Conversion service] （AFCS）。 ソースフォームの準備から、自動変換に追加手順を要する複雑なパターンの修正に至るまで、ベストプラクティスを包括的に説明します。これらのベストプラクティスは、全体のパフォーマンスと出力に貢献します。 [!DNL Automated Forms Conversion service] （AFCS）。
+このドキュメントでは、フォームの管理者、作成者および開発者が [!DNL Automated Forms Conversion service]（AFCS）を使用する際に役立つガイドラインと推奨事項を説明します。ソースフォームの準備から、自動変換に追加手順を要する複雑なパターンの修正に至るまで、ベストプラクティスを包括的に説明します。これらのベストプラクティスのすべてを実行すると、[!DNL Automated Forms Conversion service]（AFCS）の全体的なパフォーマンスと出力が向上します。
 
 ## ベストプラクティス
 
