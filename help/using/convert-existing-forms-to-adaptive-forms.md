@@ -8,7 +8,7 @@ topic-tags: forms
 feature: Adaptive Forms, Foundation Components
 exl-id: 415e05b5-5a90-490c-bf7c-d3365ce95e24
 source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1725'
 ht-degree: 100%
 
