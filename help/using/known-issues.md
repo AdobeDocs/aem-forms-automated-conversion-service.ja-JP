@@ -8,10 +8,10 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 35f59e02-e38e-473a-94c8-123e0a85ac8e
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+source-git-commit: a2472d5a1a66ffada7be485415f50f32643e03fc
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 100%
+source-wordcount: '827'
+ht-degree: 96%
 
 ---
 
@@ -81,3 +81,5 @@ AEM Forms 自動フォーム変換サービス（AFCS）の使用を開始する
 * 変換元の PDF フォームに含まれるカラーを使用してエンコードされた情報は、アダプティブフォームに引き継がれません。
 * 変換元の PDF フォームのカラーは、アダプティブフォームのテーマに引き継がれません。
 * カラーの PDF フォームはグレースケールフォームとして扱われ、それに応じてフィールドが検出されます。
+* データ連結やデータモデルスキーマなどのプロパティは、コアコンポーネントベースのアダプティブフォームでは使用できません。
+* 変換されたフォームは、コアコンポーネントベースのフォームでは使用できないので、確認して修正します。
