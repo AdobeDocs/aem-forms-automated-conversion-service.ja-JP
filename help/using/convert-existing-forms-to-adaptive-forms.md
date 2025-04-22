@@ -5,15 +5,15 @@ feature: Adaptive Forms, Foundation Components
 role: Admin, Developer
 level: Beginner, Intermediate
 source-git-commit: 02e808d6d777078d148f073835e24fd20712eade
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1894'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
 # アダプティブフォームへの PDF フォームの変換 {#convert-print-forms-to-adaptive-forms}
 
-Adobe Senseiを活用したAEM Forms自動フォーム変換サービス（AFCS）は、PDF formsを、デバイスに対応したレスポンシブなアダプティブフォーム <!--foundation and [core components](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)--> に自動的に変換します。 自動フォーム変換サービス（AFCS）を使用すると、非インタラクティブ PDF フォーム、AcroForms、XFA ベースの PDF フォームなど、各種フォームを簡単にアダプティブフォームに変換することができます。この変換サービスの機能、変換ワークフロー、オンボーディング情報については、[自動フォーム変換](introduction.md)サービスのトピックを参照してください。
+Adobe Sensei を活用した AEM Forms 自動フォーム変換サービス（AFCS）では、PDF フォームを、デバイスに対応したレスポンシブなアダプティブフォームに自動的に変換します<!--foundation and [core components](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)-->。自動フォーム変換サービス（AFCS）を使用すると、非インタラクティブ PDF フォーム、AcroForms、XFA ベースの PDF フォームなど、各種フォームを簡単にアダプティブフォームに変換することができます。この変換サービスの機能、変換ワークフロー、オンボーディング情報については、[自動フォーム変換](introduction.md)サービスのトピックを参照してください。
 
 ## 前提条件 {#pre-requisites}
 
@@ -62,19 +62,19 @@ AEM インスタンスを AEM Forms 変換サービスに接続すると、PDF �
 
    ![変換設定ダイアログ](assets/conversion-settings-dialog.png)
 
-   **PDF のアダプティブフォームのコアコンポーネントへの変換**
+   **PDF のアダプティブフォームコアコンポーネントへの変換**
 
    <span class="preview">この機能は早期導入プログラムに基づいています。早期導入プログラムに参加し、機能へのアクセスをリクエストするには、公式メール ID から aem-forms-ea@adobe.com にメールを送信してください。</span>
 
-   PDF formsを基盤ベースのフォームに変換するには、上記の変換設定が必要です。 PDF フォームをコアコンポーネントベースのアダプティブフォームに変換するには：
+   PDF フォームを基盤ベースのフォームに変換するには、上記の変換設定が必要です。PDF フォームをコアコンポーネントベースのアダプティブフォームに変換するには：
 
-   1. お使いのAEM Forms インスタンスで [ コアコンポーネント ](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/introduction) が有効になっていることを確認します。 有効になっていない場合は、[AEM 6.5 または ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components)2}Cloud Service環境でコアコンポーネントを有効にする ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components) ことができます。[
-   1. 次の画像に示すように、[ コアコンポーネントベースのアダプティブフォームテンプレートとテーマ ](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components) を選択します。
-      ![ アダプティブフォームテンプレートを選択 ](assets/select-af-template-1.png) します。
-   1. **[!UICONTROL コンバージョンを開始]** をタップして、PDFをコアコンポーネントベースのフォームに変換します。
+   1. AEM Forms インスタンスで[コアコンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/introduction)が有効になっていることを確認します。有効になっていない場合は、[AEM 6.5](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) または [Cloud Service 環境でコアコンポーネントを有効](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components)にすることができます。
+   1. 以下の画像に示すように、[コアコンポーネントベースのアダプティブフォームテンプレートとテーマ](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components)を選択します。
+      ![アダプティブフォームテンプレートを選択します](assets/select-af-template-1.png)。
+   1. 「**[!UICONTROL コンバージョンを開始]**」をタップして、PDF をコアコンポーネントベースのフォームに変換します。
    >[!NOTE]
-   > * データ連結やデータモデルスキーマなどのプロパティは、コアコンポーネントベースのアダプティブフォームでは使用できませんが、基盤コンポーネントでも使用できます。
-   > * [ 変換されたフォームを確認して修正 ](#review-and-correct-the-converted-forms) は、コアコンポーネントベースのフォームでは使用できません。
+   > * データバインディングやデータモデルスキーマなどのプロパティは、コアコンポーネントベースのアダプティブフォームでは使用できませんが、基盤コンポーネントでは使用できます。
+   > * [変換後のフォームを確認して修正](#review-and-correct-the-converted-forms)は、コアコンポーネントベースのフォームでは使用できません。
 
 
 1. 変換設定ダイアログの「**[!UICONTROL 基本]**」タブで、以下の操作を行います。
