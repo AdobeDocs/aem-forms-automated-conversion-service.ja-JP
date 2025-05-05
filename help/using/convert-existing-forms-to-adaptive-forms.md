@@ -13,7 +13,7 @@ ht-degree: 100%
 
 # アダプティブフォームへの PDF フォームの変換 {#convert-print-forms-to-adaptive-forms}
 
-Adobe Sensei を活用した AEM Forms 自動フォーム変換サービス（AFCS）では、PDF フォームを、デバイスに対応したレスポンシブなアダプティブフォームに自動的に変換します<!--foundation and [core components](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)-->。自動フォーム変換サービス（AFCS）を使用すると、非インタラクティブ PDF フォーム、AcroForms、XFA ベースの PDF フォームなど、各種フォームを簡単にアダプティブフォームに変換することができます。この変換サービスの機能、変換ワークフロー、オンボーディング情報については、[自動フォーム変換](introduction.md)サービスのトピックを参照してください。
+Adobe Sensei を活用した AEM Forms 自動フォーム変換サービス（AFCS）では、PDF フォームを、デバイスに対応したレスポンシブなアダプティブフォームに自動的に変換します<!--foundation and [core components](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/introduction)-->。自動フォーム変換サービス（AFCS）を使用すると、非インタラクティブ PDF フォーム、AcroForms、XFA ベースの PDF フォームなど、各種フォームを簡単にアダプティブフォームに変換することができます。この変換サービスの機能、変換ワークフロー、オンボーディング情報については、[自動フォーム変換](introduction.md)サービスのトピックを参照してください。
 
 ## 前提条件 {#pre-requisites}
 
