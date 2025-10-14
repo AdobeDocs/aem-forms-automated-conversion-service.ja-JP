@@ -6,7 +6,7 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 audience: end-user
 user-guide-title: Adobe Experience Manager Forms 自動変換サービス
-user-guide-description: PDF Forms をレスポンシブなモバイル対応の HTML Forms に変換します。
+user-guide-description: PDF Forms をレスポンシブなモバイル対応の HTML フォームに変換します。
 breadcrumb-title: Forms 自動コンバージョンガイド
 feature: Adaptive Forms
 role: User
