@@ -7,16 +7,16 @@ role: Admin, Developer
 topic-tags: forms
 feature: Adaptive Forms
 exl-id: 415e05b5-5a90-490c-bf7c-d3365ce95e24
-source-git-commit: 6ec2a2afbbf0e70c1101e365094881c7a8959a0a
+source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
 source-wordcount: '1906'
-ht-degree: 85%
+ht-degree: 84%
 
 ---
 
 # アダプティブフォームへの PDF フォームの変換 {#convert-print-forms-to-adaptive-forms}
 
-Adobe Sensei を活用した AEM Forms 自動フォーム変換サービス（AFCS）では、PDF フォームを、デバイスに対応したレスポンシブなアダプティブフォームに自動的に変換します<!--foundation and [core components](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/introduction)-->。自動フォーム変換サービス（AFCS）を使用すると、非インタラクティブ PDF フォーム、AcroForms、XFA ベースの PDF フォームなど、各種フォームを簡単にアダプティブフォームに変換することができます。この変換サービスの機能、変換ワークフロー、オンボーディング情報については、[自動フォーム変換](introduction.md)サービスのトピックを参照してください。
+Adobe Sensei を活用した AEM Forms 自動フォーム変換サービス（AFCS）では、PDF フォームを、デバイスに対応したレスポンシブなアダプティブフォームに自動的に変換します<!--foundation and [core components](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)-->。自動フォーム変換サービス（AFCS）を使用すると、非インタラクティブ PDF フォーム、AcroForms、XFA ベースの PDF フォームなど、各種フォームを簡単にアダプティブフォームに変換することができます。機能、コンバージョンワークフローおよびオンボーディング情報について詳しくは、[ 自動フォーム変換 ](introduction.md) サービスを参照してください。
 
 ## 前提条件 {#pre-requisites}
 
@@ -24,7 +24,7 @@ Adobe Sensei を活用した AEM Forms 自動フォーム変換サービス（AF
 
 * **変換後のフォームのテンプレートとテーマ：**
    * **AEM Forms as a Cloud Service:** デフォルトのテンプレートおよびテーマを使用できます。これらをコンバージョンに使用したり、カスタムのテンプレートおよびテーマを準備したりできます。
-   * **AEM 6.5 およびAEM 6.5 LTS:** 変換されたフォームに適用される [templates](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/template-editor.html) および [themes](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/themes.html) を準備します。 コアコンポーネントベースのテンプレートとテーマを使用する場合は [&#x200B; アダプティブフォームコアコンポーネントを有効にする &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja) 必要があります（[&#x200B; サービスの設定 &#x200B;](configure-service.md#referencepackage) を参照）。 テンプレートを使用すると、一貫したブランディングを適用できます。AFCS では、ソース PDF からヘッダーとフッターを抽出することはありません。これらのデータは、アダプティブフォームテンプレートで指定します。 テーマを使用すると、フォーム間で一貫したスタイルが適用されます。 テンプレート用のフォルダーを作成したら、すべてのユーザーに対して「**[!UICONTROL 設定を参照]**」オプションを選択します。
+   * **AEM 6.5 およびAEM 6.5 LTS:** 変換されたフォームに適用される [templates](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/template-editor.html) および [themes](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/themes.html) を準備します。 コアコンポーネントベースのテンプレートとテーマを使用する場合は [ アダプティブフォームコアコンポーネントを有効にする ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja) 必要があります（[ サービスの設定 ](configure-service.md#referencepackage) を参照）。 テンプレートを使用すると、一貫したブランディングを適用できます。AFCS では、ソース PDF からヘッダーとフッターを抽出することはありません。これらのデータは、アダプティブフォームテンプレートで指定します。 テーマを使用すると、フォーム間で一貫したスタイルが適用されます。 テンプレート用のフォルダーを作成したら、すべてのユーザーに対して「**[!UICONTROL 設定を参照]**」オプションを選択します。
 
 * **（オプション）** [**変換元の PDF フォームを Adobe Signフォームに変換する**](frequently-asked-questions.md)
 
@@ -91,7 +91,7 @@ AEM インスタンスを AEM Forms 変換サービスに接続すると、PDF �
 
    上記の変換設定は、PDF formsを基盤コンポーネントベースのアダプティブフォームに変換する場合に適用されます。 PDF フォームをコアコンポーネントベースのアダプティブフォームに変換するには：
 
-   1. お使いのAEM Forms インスタンスでコアコンポーネントを有効にしていることを確認します。 AEM 6.5 およびAEM 6.5 LTS については、[&#x200B; アダプティブフォームのコアコンポーネントを有効にする &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja) を参照してください（まだ有効になっていない場合）。 AEM Forms as a Cloud Serviceの場合、追加の手順は必要ありません。
+   1. お使いのAEM Forms インスタンスでコアコンポーネントを有効にしていることを確認します。 AEM 6.5 およびAEM 6.5 LTS については、[ アダプティブフォームのコアコンポーネントを有効にする ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja) を参照してください（まだ有効になっていない場合）。 AEM Forms as a Cloud Serviceの場合、追加の手順は必要ありません。
    1. 変換設定ダイアログの「**[!UICONTROL 基本]**」タブで、コアコンポーネントベースのアダプティブフォームテンプレートとテーマを選択します。
 
       ![変換設定ダイアログ](assets/adaptive-forms-core-components-afcs.png)
@@ -104,7 +104,7 @@ AEM インスタンスを AEM Forms 変換サービスに接続すると、PDF �
    >[!NOTE]
    >
    > * データ連結やデータモデルスキーマなどのプロパティは、コアコンポーネントベースのアダプティブフォームでは使用できませんが、基盤コンポーネントベースのフォームでは使用できます。
-   > * [&#x200B; 変換後のフォームを確認して修正 &#x200B;](review-correct-ui-edited.md) は、コアコンポーネントベースのアダプティブフォームでは使用できません。
+   > * [ 変換後のフォームを確認して修正 ](review-correct-ui-edited.md) は、コアコンポーネントベースのアダプティブフォームでは使用できません。
 
 1. 変換設定ダイアログの「**[!UICONTROL その他]**」タブで、以下の操作を行います。
    * 変換後のフォームで、フォームフラグメントの識別、抽出、ダウンロードを行う場合は、「**[!UICONTROL アダプティブフォームのフラグメントを抽出]**」オプションを選択します。 「**[!UICONTROL アダプティブフォームのフラグメントを抽出]**」オプションを選択すると、抽出されたフォームフラグメントとそれに対応するフォームフラグメントスキーマの保存先を指定するためのオプションが有効になります。
@@ -173,3 +173,4 @@ AEM インスタンスを AEM Forms 変換サービスに接続すると、PDF �
 ## 変換後のフォームを確認して修正 {#review-and-correct-the-converted-forms}
 
 実際にフォームを作成する場合は、複雑なデータをキャプチャしなければならないことがあります。 自動変換処理が完了したら、変換後のフォームの内容を確認し、必要な更新を行います。AEM Forms には、こうした変更を行うための[「レビューと修正」エディター](review-correct-ui-edited.md)が用意されています このエディターを使用すると、自動的に識別されたフォームフィールドを修正したり、フィールドタイプを変更したりすることができます。 例えば、レイアウトが 2 列になっているフォームを特定したり、ラジオボタンとして自動的に識別されたフィールドを複数選択フィールドに変更したりすることができます。
+

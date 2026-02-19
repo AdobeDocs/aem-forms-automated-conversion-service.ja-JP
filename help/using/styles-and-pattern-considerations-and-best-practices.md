@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
+source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
 source-wordcount: '1291'
-ht-degree: 95%
+ht-degree: 93%
 
 ---
 
 # ベストプラクティスおよび既知の複雑なパターン {#Best-practices-and-considerations2}
 
-このドキュメントでは、フォームの管理者、作成者および開発者が [!DNL Automated Forms Conversion service]（AFCS）を使用する際に役立つガイドラインと推奨事項を説明します。ソースフォームの準備から、自動変換に追加手順を要する複雑なパターンの修正に至るまで、ベストプラクティスを包括的に説明します。これらのベストプラクティスのすべてを実行すると、[!DNL Automated Forms Conversion service]（AFCS）の全体的なパフォーマンスと出力が向上します。
+このドキュメントでは、フォーム管理者、作成者および開発者が [!DNL Automated Forms Conversion service] （AFCS）を使用する際に役立つガイドラインと推奨事項を説明します。 ソースフォームの準備から、自動変換に追加手順を要する複雑なパターンの修正に至るまで、ベストプラクティスを包括的に説明します。これらのベストプラクティスのすべてを実行すると、[!DNL Automated Forms Conversion service]（AFCS）の全体的なパフォーマンスと出力が向上します。
 
 ## ベストプラクティス
 
@@ -47,7 +47,7 @@ XDP フォームを変換に使用する場合は、ソース XDP フォーム�
 ### 変換を開始する前に
 
 * **AEM Forms as a Cloud Service:** デフォルトのテンプレートおよびテーマを使用できます。これらを使用するか、カスタムのテンプレートおよびテーマを作成できます。
-* **AEM 6.5 およびAEM 6.5 LTS:** アダプティブフォームのテンプレートとテーマを作成します（または、[&#x200B; サービスの設定 &#x200B;](configure-service.md#referencepackage) の説明に従って参照アセットをインストールします）。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[&#x200B; アダプティブフォームコアコンポーネント &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja) を有効にする必要があります。
+* **AEM 6.5 およびAEM 6.5 LTS:** アダプティブフォームのテンプレートとテーマを作成します（または、[ サービスの設定 ](configure-service.md#referencepackage) の説明に従って参照アセットをインストールします）。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[ アダプティブフォームコアコンポーネント ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja) を有効にする必要があります。
 * アダプティブフォームテンプレートを作成します。テンプレートは、組織または部門のフォームに統一された構造を指定するのに役立ちます。
 * アダプティブフォームテンプレートでヘッダーとフッターを指定します。このサービスは、変換元のドキュメントのヘッダーとフッターを無視して、アダプティブフォームテンプレートで指定されたヘッダーとフッターを使用します。
 * アダプティブフォームテーマを作成します。テーマは、組織または部門のフォームに統一されたルックアンドフィールを提供するのに役立ちます。
@@ -82,7 +82,7 @@ AEM [!DNL Forms Automated Conversion service]は人工知能と機械学習ア�
 
 | パターン | 解決方法 |
 |--- |--- |
-| **パターン** <br>四角形と円以外の形状を持つ選択グループのオプションが、対応するアダプティブフォームのコンポーネントに変換されない。<br><br>**解決方法** <br>選択グループオプションの形状を四角形または円に変更するか、「レビューと修正」エディターを使用して、選択グループオプションの形状を特定してください。 | ![選択フィールド &#x200B;](assets/best-practice-choice-group-options.png) |
+| **パターン** <br>四角形と円以外の形状を持つ選択グループのオプションが、対応するアダプティブフォームのコンポーネントに変換されない。<br><br>**解決方法** <br>選択グループオプションの形状を四角形または円に変更するか、「レビューと修正」エディターを使用して、選択グループオプションの形状を特定してください。 | ![選択フィールド ](assets/best-practice-choice-group-options.png) |
 
 ### フォームフィールド {#form-fields}
 
@@ -121,3 +121,4 @@ Comment Type: draft
 <li>Choice groups with only box or circle shaped selectors are supported. </li>
 </ul>
 -->
+

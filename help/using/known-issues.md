@@ -8,16 +8,16 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 35f59e02-e38e-473a-94c8-123e0a85ac8e
-source-git-commit: 4393ab4c56174f1dd9ad2979ce18b1d18ee09f6b
+source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 97%
+source-wordcount: '831'
+ht-degree: 95%
 
 ---
 
 # 既知の問題と制限事項 {#known-issues-limitations}
 
-AEM Forms 自動フォーム変換サービス（AFCS）の使用を開始する前に、次の既知の問題と制限事項を確認します。
+AEM Formsの自動フォーム変換サービス（AFCS）の使用を開始する前に、以下の既知の問題と制限事項を確認してください。
 
 ## 既知の問題 {#known-issues}
 
@@ -83,3 +83,4 @@ AEM Forms 自動フォーム変換サービス（AFCS）の使用を開始する
 * カラーの PDF フォームはグレースケールフォームとして扱われ、それに応じてフィールドが検出されます。
 * データバインディングやデータモデルスキーマなどのプロパティは、コアコンポーネントベースのアダプティブフォームでは使用できません。
 * 「変換後のフォームを確認して修正」は、コアコンポーネントベースのフォームでは使用できません。
+
