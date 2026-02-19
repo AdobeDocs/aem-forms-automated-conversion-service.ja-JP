@@ -4,10 +4,10 @@ description: デフォルトのメタモデルを拡張して、組織に固有�
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
 workflow-type: tm+mt
-source-wordcount: '1221'
-ht-degree: 100%
+source-wordcount: '1223'
+ht-degree: 99%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 100%
 
 ## 前提条件 {#pre-requisites}
 
-* バージョン 6.4 および 6.5 の AEM オーサーインスタンスのセットアップ
+* AEM 6.5 またはAEM 6.5 LTS オーサーインスタンスの設定
 * AEM インスタンスの[最新のサービスパック](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html)をインストールする
 * 最新バージョンの AEM Forms アドオンパッケージ
 * [自動フォーム変換サービス（AFCS）](configure-service.md)の設定

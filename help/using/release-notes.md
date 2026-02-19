@@ -8,10 +8,10 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 100%
+source-wordcount: '507'
+ht-degree: 88%
 
 ---
 
@@ -88,4 +88,4 @@ ht-degree: 100%
 
 リリース AFC-2020.03.1 で提供される最新の機能と改善を使用するには、コネクタパッケージ 1.1.38 以降が必要です。
 
-自動フォーム変換サービス環境が既に稼働している場合、変換サービスの最新機能を使用するには、最新のサービスパック、最新の AEM Forms アドオンパッケージ、最新のコネクターパッケージをこの順序でインストールします。詳しい手順については、「[自動フォーム変換サービスの設定](configure-service.md)」の記事を参照してください。
+自動フォーム変換サービス環境（AEM 6.5 またはAEM 6.5 LTS）を既に起動および実行している場合、変換サービスの最新機能を使用するには、最新のサービスパック、最新のAEM Forms アドオンパッケージ、最新のコネクタパッケージを上記の順序でインストールします。 AEM Forms as a Cloud Serviceの場合、更新は自動的に配信されます。 詳しい手順については、「[自動フォーム変換サービスの設定](configure-service.md)」の記事を参照してください。

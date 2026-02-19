@@ -8,10 +8,10 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 35f59e02-e38e-473a-94c8-123e0a85ac8e
-source-git-commit: a2472d5a1a66ffada7be485415f50f32643e03fc
-workflow-type: ht
-source-wordcount: '827'
-ht-degree: 100%
+source-git-commit: 4393ab4c56174f1dd9ad2979ce18b1d18ee09f6b
+workflow-type: tm+mt
+source-wordcount: '830'
+ht-degree: 97%
 
 ---
 
@@ -77,7 +77,7 @@ AEM Forms 自動フォーム変換サービス（AFCS）の使用を開始する
 * 暗号化されたドキュメントやパスワードで保護されたドキュメントはサポートされていません。変換処理を実行する前に、暗号やパスワードを削除してください。
 * 複雑なテーブル（境界線のないテーブル、ネストされたテーブル、プレースホルダー値が設定されているテーブルなど）はサポートされていません。こうした複雑なテーブルの追加や変更を行う場合は、変換処理の完了後にアダプティブフォームエディターを使用してください。変換サービスでは、単純なテーブル（フィールド値が設定されておらず、ヘッダーが適切に配置され、境界線が明確なテーブル）を使用してください。
 * サービスを実行すると、英語、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語の各言語フォームのみをアダプティブフォームに変換することができます。変換後のアダプティブフォームを別の言語に翻訳する場合は、[AEM 翻訳ワークフロー](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)を使用してください。
-* AEM 6.4 Forms では、入力フォームの複数列レイアウトを自動的に検出することはできません。
+* AEM 6.5 Formsでは、一部の設定において、入力フォームの複数列レイアウトの自動検出をサポートしていません。
 * 変換元の PDF フォームに含まれるカラーを使用してエンコードされた情報は、アダプティブフォームに引き継がれません。
 * 変換元の PDF フォームのカラーは、アダプティブフォームのテーマに引き継がれません。
 * カラーの PDF フォームはグレースケールフォームとして扱われ、それに応じてフィールドが検出されます。
