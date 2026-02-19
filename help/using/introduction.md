@@ -49,7 +49,7 @@ ht-degree: 90%
 
 ### &#x200B;1. 環境を設定する {#set-up-the-environment}
 
-自動フォーム変換サービス（AFCS）は、Adobe Cloud 上で稼働します。[ 組織のAdobe I/O アカウントを設定し、ローカルのAEM インスタンスを ](configure-service.md)Adobe Cloud 上で動作するコンバージョンサービスに接続します。 AEM 6.5 およびAEM 6.5 LTS の場合、コアコンポーネントベースのテンプレートとテーマを使用しているときは、アダプティブフォームのコアコンポーネントを有効にする必要があります。[ サービスの設定 ](configure-service.md#referencepackage) を参照してください。
+自動フォーム変換サービス（AFCS）は、Adobe Cloud 上で稼働します。[&#x200B; 組織のAdobe I/O アカウントを設定し、ローカルのAEM インスタンスを &#x200B;](configure-service.md)Adobe Cloud 上で動作するコンバージョンサービスに接続します。 AEM 6.5 およびAEM 6.5 LTS の場合、コアコンポーネントベースのテンプレートとテーマを使用しているときは、アダプティブフォームのコアコンポーネントを有効にする必要があります。[&#x200B; サービスの設定 &#x200B;](configure-service.md#referencepackage) を参照してください。
 
 ### &#x200B;2. PDF フォームをアダプティブフォームに変換する {#use-the-conversion-service}
 
