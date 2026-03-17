@@ -47,7 +47,7 @@ XDP フォームを変換に使用する場合は、ソース XDP フォーム�
 ### 変換を開始する前に
 
 * **AEM Forms as a Cloud Service:** デフォルトのテンプレートおよびテーマを使用できます。これらを使用するか、カスタムのテンプレートおよびテーマを作成できます。
-* **AEM 6.5 およびAEM 6.5 LTS:** アダプティブフォームのテンプレートとテーマを作成します（または、[ サービスの設定 ](configure-service.md#referencepackage) の説明に従って参照アセットをインストールします）。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[ アダプティブフォームコアコンポーネント ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja) を有効にする必要があります。
+* **AEM 6.5 およびAEM 6.5 LTS:** アダプティブフォームのテンプレートとテーマを作成します（または、[&#x200B; サービスの設定 &#x200B;](configure-service.md#referencepackage) の説明に従って参照アセットをインストールします）。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[&#x200B; アダプティブフォームコアコンポーネント &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja) を有効にする必要があります。
 * アダプティブフォームテンプレートを作成します。 テンプレートは、組織または部門のフォームに統一された構造を指定するのに役立ちます。
 * アダプティブフォームテンプレートでヘッダーとフッターを指定します。 このサービスは、変換元のドキュメントのヘッダーとフッターを無視して、アダプティブフォームテンプレートで指定されたヘッダーとフッターを使用します。
 * アダプティブフォームテーマを作成します。 テーマは、組織または部門のフォームに統一されたルックアンドフィールを提供するのに役立ちます。
@@ -82,7 +82,7 @@ AEM [!DNL Forms Automated Conversion service]は人工知能と機械学習ア�
 
 | パターン | 解決方法 |
 |--- |--- |
-| **パターン** 四角形 <br> 円以外の形状を持つ選択グループのオプションが、対応するアダプティブフォームのコンポーネントに変換されない。<br><br>**解決方法** <br> 選択グループオプションの形状を四角形または円に変更するか、「レビューと修正」エディターを使用して、選択グループオプションの形状を特定してください。 | ![選択フィールド ](assets/best-practice-choice-group-options.png) |
+| **パターン** 四角形 <br> 円以外の形状を持つ選択グループのオプションが、対応するアダプティブフォームのコンポーネントに変換されない。<br><br>**解決方法** <br> 選択グループオプションの形状を四角形または円に変更するか、「レビューと修正」エディターを使用して、選択グループオプションの形状を特定してください。 | ![選択フィールド &#x200B;](assets/best-practice-choice-group-options.png) |
 
 ### フォームフィールド {#form-fields}
 
