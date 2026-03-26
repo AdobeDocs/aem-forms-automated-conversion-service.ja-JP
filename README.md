@@ -7,4 +7,4 @@ ht-degree: 0%
 ---
 # アーカイブ
 
-このリポジトリは<https://github.com/Adobe-Enterprise-Docs/aem-forms-automated-conversion-service.en>に移行されました
+このリポジトリは<https://github.com/Adobe-Enterprise-Docs/aem-forms-automated-conversion-service.ja-JP>に移行されました
