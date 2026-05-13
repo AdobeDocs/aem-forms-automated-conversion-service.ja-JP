@@ -10,11 +10,20 @@ level: Beginner, Intermediate
 contentOwner: khsingh
 exl-id: 5deef8f5-5098-47c1-b696-b2db59e92931
 TQID: https://experienceleague.adobe.com/TmEZJSIKPj6f2X5E7X8JY9AL5EGHSPuLhAzQlPdvGGM
-product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-topic_v2: id: df401a2a-327d-468c-a5e4-b7b7ccd071a0id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
 source-wordcount: 2692
@@ -370,7 +379,7 @@ JSON スキーマをフォームモデルとして使用してこのユースケ
 1. 「**[!UICONTROL フォームモデル]**」タブの「**[!UICONTROL 選択]**」ドロップダウンリストで「**[!UICONTROL スキーマ]**」を選択し、「**[!UICONTROL スキーマを選択]**」をタップして、ローカルファイルシステムに保存されている **loanapplication** という XSD スキーマをアップロードします。 次に、XSD スキーマのルート要素を選択し、「**[!UICONTROL 保存して終了]**」をタップしてフォームを保存します。
 1. **サンプルのローン申し込みフォーム**&#x200B;を選択して「**[!UICONTROL 編集]**」をタップします。
 1. 「申込者名」テキストボックスをタップして設定アイコン（![設定アイコン](assets/configure_icon.svg)）を選択します。
-「バインド参照」フィールドで**申込者**／**名前**&#x200B;を選択し、![完了アイコン](assets/save_icon.svg) をタップしてプロパティを保存します。 同様に、XSD スキーマエンティティを使用して、「**住所**」、「**電話番号**」、「**メール**」、「**職業**」、「**年収（ドル）**」、「**扶養家族の数**」フィールドのデータバインディングを作成します。
+「バインド参照」フィールドで&#x200B;**申込者**／**名前**&#x200B;を選択し、![完了アイコン](assets/save_icon.svg) をタップしてプロパティを保存します。 同様に、XSD スキーマエンティティを使用して、「**住所**」、「**電話番号**」、「**メール**」、「**職業**」、「**年収（ドル）**」、「**扶養家族の数**」フィールドのデータバインディングを作成します。
 
 1. 変換後の&#x200B;**サンプルのローン申し込みフォーム**&#x200B;を **output** フォルダーで選択し、**[!UICONTROL プレビュー]**／**[!UICONTROL データを使用してプレビュー]**&#x200B;を選択します。</br>
 
