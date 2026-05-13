@@ -93,7 +93,7 @@ ht-degree: 81%
 
 ### （AEM 6.5およびAEM 6.5 LTSの場合のみ） AEMの最新のサービスパックをダウンロードしてインストールします {#servicepack}
 
-最新のAEM サービスパックをダウンロードしてインストールします。 手順について詳しくは、[AEM 6.5 サービスパックリリースノート](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html)を参照してください。
+最新のAEM サービスパックをダウンロードしてインストールします。 手順について詳しくは、[AEM 6.5 サービスパックリリースノート](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes/sp-release-notes.html)を参照してください。
 
 ### （AEM 6.5およびAEM 6.5 LTSのみ）AEM Forms アドオンパッケージをダウンロードしてインストールします  {#downloadaemformsaddon}
 
@@ -114,7 +114,7 @@ The connector package provides early access to the [Auto-detect logical sections
 
 **AEM Forms as a Cloud Service:**&#x200B;すぐに使えるテンプレートを使用するか、カスタム テンプレートを作成して[&#x200B; サービス設定](#configure-the-cloud-service)を指定できます。
 
-**（AEM 6.5およびAEM 6.5 LTSの場合のみ）**&#x200B;自動フォーム変換サービス（AFCS）では、PDF フォームをアダプティブフォームに変換するには、少なくとも1つのテーマと1つのテンプレートが必要です。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[&#x200B; アダプティブフォームのコアコンポーネントを有効にする](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)必要があります。手順は、こちらに記載されています。 AEM 6.5またはAEM 6.5 LTSを[実稼動モード &#x200B;](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/production-ready.html) （nosamplecontent実行モード）で起動した場合、参照パッケージはインストールされません。 独自のカスタムテーマとテンプレートを作成するか、オーサーインスタンスに[AEM Forms参照Assets](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html) パッケージをダウンロードしてインストールし、参照テーマとテンプレートを取得します。 次に、[&#x200B; サービス設定](#configure-the-cloud-service)をポイントして、サービスを使用する前にテンプレートとテーマを使用します。
+**（AEM 6.5およびAEM 6.5 LTSの場合のみ）**&#x200B;自動フォーム変換サービス（AFCS）では、PDF フォームをアダプティブフォームに変換するには、少なくとも1つのテーマと1つのテンプレートが必要です。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[&#x200B; アダプティブフォームのコアコンポーネントを有効にする](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)必要があります。手順は、こちらに記載されています。 AEM 6.5またはAEM 6.5 LTSを[実稼動モード &#x200B;](https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/production-ready.html) （nosamplecontent実行モード）で起動した場合、参照パッケージはインストールされません。 独自のカスタムテーマとテンプレートを作成するか、オーサーインスタンスに[AEM Forms参照Assets](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html) パッケージをダウンロードしてインストールし、参照テーマとテンプレートを取得します。 次に、[&#x200B; サービス設定](#configure-the-cloud-service)をポイントして、サービスを使用する前にテンプレートとテーマを使用します。
 
 ## アクセスと権限の設定
 
@@ -166,7 +166,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
    3. Open the **[!UICONTROL Day CQ Link Externalizer]** configuration. In the **[!UICONTROL Domains]** field, specify the actual host name or IP address and port number for local, author, and publish instances. Click **[!UICONTROL Save]**.
 
-* For AEM Forms as a Cloud Service, [log a support ticket to enable the email service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email).
+* For AEM Forms as a Cloud Service, [log a support ticket to enable the email service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=ja#sending-email).
 -->
 
 ### ユーザーを forms-users グループに追加する {#adduserstousergroup}
