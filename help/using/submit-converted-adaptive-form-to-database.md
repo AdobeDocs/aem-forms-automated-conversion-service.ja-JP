@@ -8,18 +8,37 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 5447b66f-9fac-476f-ab8a-9290bb1f9c0d
-source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
+TQID: https://experienceleague.adobe.com/NjVGOlVHFuhj4IP-PL8NwhX0g78-x250m7QedQxLkEg
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: a1df6763-63b5-45b4-8c8a-155a692a2b3e
+  - id: ae478996-b206-4712-9b0c-dc78a2644453
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '1673'
-ht-degree: 96%
+source-wordcount: 1707
+ht-degree: 95%
 
 ---
 
 # AEM ワークフローを使用してアダプティブフォームをデータベースに統合 {#submit-forms-to-database-using-forms-portal}
 
-自動フォーム変換サービス（AFCS）を使用すると、非インタラクティブ PDF フォーム、Acro フォーム、または XFA ベースのPDF フォームをアダプティブフォームに変換できます。 変換サービスを実行する際に、データバインディングを持つアダプティブフォームを生成するのか、データバインディングのないアダプティブフォームを生成するのかを指定することができます。
+Automated Forms Conversion Service （AFCS）を使用すると、非インタラクティブなPDF フォーム、Acro フォーム、またはXFA ベースのPDF フォームをアダプティブフォームに変換できます。 変換サービスを実行する際に、データバインディングを持つアダプティブフォームを生成するのか、データバインディングのないアダプティブフォームを生成するのかを指定することができます。
 
-データバインディングがないアダプティブフォームを生成する場合は、変換処理の完了後に、フォームデータモデル、XML スキーマ、または JSON スキーマに、変換後のアダプティブフォームを統合することができます。 フォームデータモデルの場合は、アダプティブフォームフィールドをフォームデータモデルに手動でバインドする必要があります。 ただし、データバインディングを持つアダプティブフォームを生成すると、アダプティブフォームが自動的に JSON スキーマに関連付けられ、アダプティブフォームと JSON スキーマのフィールド間でデータバインディングが作成されます。 その後、任意のデータベースにアダプティブフォームを統合し、フォーム内のフィールドに値を設定して、データベースにフォームを送信することができます。 同様に、データベースとの統合後に、データベースから値を取得してアダプティブフォームフィールドにその値が事前に入力されるように、変換後のアダプティブフォームフィールドを設定することができます。
+データバインディングがないアダプティブフォームを生成する場合は、変換処理の完了後に、フォームデータモデル、XML スキーマ、または JSON スキーマに、変換後のアダプティブフォームを統合することができます。 フォームデータモデルの場合、アダプティブフォームフィールドをフォームデータモデルに手動でバインドする必要があります。 ただし、データバインディングを持つアダプティブフォームを生成すると、アダプティブフォームが自動的に JSON スキーマに関連付けられ、アダプティブフォームと JSON スキーマのフィールド間でデータバインディングが作成されます。 その後、任意のデータベースにアダプティブフォームを統合し、フォーム内のフィールドに値を設定して、データベースにフォームを送信することができます。 同様に、データベースとの統合後に、データベースから値を取得してアダプティブフォームフィールドにその値が事前に入力されるように、変換後のアダプティブフォームフィールドを設定することができます。
 
 以下の図は、変換後のアダプティブフォームをデータベースに統合する手順をステージ別に示しています。
 
@@ -29,11 +48,11 @@ ht-degree: 96%
 
 ## 前提条件 {#pre-requisites}
 
-* AEM 6.5 またはAEM 6.5 LTS オーサーインスタンスの設定
+* AEM 6.5またはAEM 6.5 LTS オーサーインスタンスの設定
 * AEM インスタンスの[最新のサービスパック](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html)をインストールする
 * 最新バージョンの AEM Forms アドオンパッケージ
 * [自動フォーム変換サービス](configure-service.md)の設定
-* データベースを設定します。 サンプルの実装環境では MySQL 5.6.24 データベースを使用しますが、変換後のアダプティブフォームは任意のデータベースに統合することができます。
+* データベースを設定します。 サンプル実装で使用されるデータベースは、MySQL 5.6.24です。 ただし、変換されたアダプティブフォームは、任意のデータベースと統合できます。
 
 ## サンプルのアダプティブフォーム {#sample-adaptive-form}
 
@@ -43,7 +62,7 @@ AEM ワークフローを使用してこのユースケースを実行し、変�
 
 [ファイルを入手](assets/sample_contact_us_form.pdf)
 
-PDF ファイルは、自動フォーム変換サービス（AFCS）への入力として機能します。自動フォーム変換サービスを実行すると、このファイルがアダプティブフォームに変換されます。 以下の画像は、PDF 形式のサンプルの「Contact Us」フォームを示しています。
+PDF ファイルは、自動フォーム変換サービス（AFCS）への入力として機能します。 自動フォーム変換サービスを実行すると、このファイルがアダプティブフォームに変換されます。 以下の画像は、PDF 形式のサンプルの「Contact Us」フォームを示しています。
 
 ![サンプルの連絡先フォーム](assets/sample_contact_us_form.png)
 
@@ -52,15 +71,15 @@ PDF ファイルは、自動フォーム変換サービス（AFCS）への入力
 すべてのオーサーインスタンスとパブリッシュインスタンスで、次の手順を実行し、mysql-connector-java-5.1.39-bin.jar ファイルをインストールします。
 
 1. `http://server:port/system/console/depfinder` にアクセスして com.mysql.jdbc パッケージを検索します。
-1. 「次による書き出し」列で、パッケージがバンドルで書き出されているかどうかを確認します。パッケージがバンドルで書き出されていない場合は、先に進みます。
+1. 「次による書き出し」列で、パッケージがバンドルで書き出されているかどうかを確認します。 パッケージがバンドルで書き出されていない場合は、先に進みます。
 1. `http://server:port/system/console/bundles` に移動して「**[!UICONTROL Install/Update]**」をクリックします。
-1. 「**[!UICONTROL ファイルを選択]**」をクリックし、mysql-connector-java-5.1.39-bin.jar を探して選択します。また、「**[!UICONTROL Start Bundle]**」チェックボックスと「**[!UICONTROL Refresh Packages]**」チェックボックスを選択します。
-1. 「**[!UICONTROL Install]**」または「**[!UICONTROL Update]**」をクリックします。完了したら、サーバーを再起動します。
+1. 「**[!UICONTROL ファイルを選択]**」をクリックし、mysql-connector-java-5.1.39-bin.jar を探して選択します。 また、「**[!UICONTROL Start Bundle]**」チェックボックスと「**[!UICONTROL Refresh Packages]**」チェックボックスを選択します。
+1. 「**[!UICONTROL Install]**」または「**[!UICONTROL Update]**」をクリックします。 完了したら、サーバーを再起動します。
 1. （Windows のみ）オペレーティングシステムのシステムファイアウォールをオフにします。
 
 ## フォームモデルのデータを準備 {#prepare-data-for-form-model}
 
-AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。変換サービスを使用してアダプティブフォームを生成したら、使用するフォームデータモデル、XSD スキーマ、JSON スキーマに応じてフォームモデルを定義します。データベース、Microsoft Dynamics、またはその他のサードパーティ製サービスを使用して、フォームデータモデルを作成することができます。
+AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。 変換サービスを使用してアダプティブフォームを生成したら、使用するフォームデータモデル、XSD スキーマ、JSON スキーマに応じてフォームモデルを定義します。 データベース、Microsoft Dynamics、またはその他のサードパーティ製サービスを使用して、フォームデータモデルを作成することができます。
 
 このチュートリアルでは、MySQL データベースをデータソースとして使用してフォームデータモデルを作成します。 アダプティブフォーム内の有効なフィールドに基づいて、データベース内にスキーマを作成し、このスキーマに **contactus** というテーブルを追加します。
 
@@ -83,7 +102,7 @@ CREATE TABLE `contactus` (
 AEM インスタンスと MYSQL データベース間の接続を作成するには、以下の手順を実行します。
 
 1. AEM Web コンソールの設定ページ（`http://server:port/system/console/configMgr`）に移動します。
-1. Web コンソールの設定ページで、「**[!UICONTROL Apache Sling Connection Pooled DataSource]**」をクリックして編集モードで開きます。次の表の説明に従って、プロパティの値を指定します。
+1. Web コンソールの設定ページで、「**[!UICONTROL Apache Sling Connection Pooled DataSource]**」をクリックして編集モードで開きます。 次の表の説明に従って、プロパティの値を指定します。
 
    <table> 
     <tbody> 
@@ -137,11 +156,11 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
     </tr>
      <tr> 
     <td><p>Test on Borrow</p></td> 
-    <td><p>チェック</p></td>
+    <td><p>チェック済み</p></td>
     </tr>
      <tr> 
     <td><p>Test while Idle</p></td> 
-    <td><p>チェック</p></td>
+    <td><p>チェック済み</p></td>
     </tr>
      <tr> 
     <td><p>検証クエリ</p></td> 
@@ -174,7 +193,7 @@ MYSQL をデータソースとして設定したら、以下の手順を実行�
 
 1. 「**[!UICONTROL サービス]**」タブで **[!UICONTROL get]** サービスを選択して「**[!UICONTROL プロパティの編集]**」をタップします。 「**[!UICONTROL 出力モデルオブジェクト]**」を選択し、「**[!UICONTROL 配列を返す]**」の切り替えを無効にして「**[!UICONTROL 完了]**」をタップします。
 
-1. **[!UICONTROL Insert]** サービスを選択して「**[!UICONTROL プロパティの編集]**」をタップします。「**[!UICONTROL 入力モデルオブジェクト]**」を選択して「**[!UICONTROL 完了]**」をタップします。
+1. **[!UICONTROL Insert]** サービスを選択して「**[!UICONTROL プロパティの編集]**」をタップします。 「**[!UICONTROL 入力モデルオブジェクト]**」を選択して「**[!UICONTROL 完了]**」をタップします。
 
 1. 「**[!UICONTROL 保存]**」をタップして、フォームデータモデルを保存します。
 
@@ -184,7 +203,7 @@ MYSQL をデータソースとして設定したら、以下の手順を実行�
 
 ## JSON バインディングを持つアダプティブフォームを生成 {#generate-adaptive-forms-with-json-binding}
 
-[自動フォーム変換サービス（AFCS）](convert-existing-forms-to-adaptive-forms.md)を使用して、[お問い合わせフォーム](#sample-adaptive-form)をデータバインディング付きのアダプティブフォームに変換します。アダプティブフォームを生成する際に、「**[!UICONTROL データバインディングがないアダプティブフォームを生成]**」チェックボックスが無効になっていることを確認してください。
+[自動フォーム変換サービス（AFCS）](convert-existing-forms-to-adaptive-forms.md)を使用して、[お問い合わせフォーム](#sample-adaptive-form)をデータバインディング付きのアダプティブフォームに変換します。 アダプティブフォームを生成する際に、「**[!UICONTROL データバインディングがないアダプティブフォームを生成]**」チェックボックスが無効になっていることを確認してください。
 
 ![JSON バインディングを持つアダプティブフォーム](assets/generate_af_with_data_bindings.png)
 
@@ -223,11 +242,11 @@ MYSQL をデータソースとして設定したら、以下の手順を実行�
 
 アダプティブフォームデータをデータベースに送信するためのワークフローモデルを作成するには、以下の手順を実行します。
 
-1. ワークフローモデルコンソールを開きます。デフォルトの URL は `https://server:port/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models` です。
+1. ワークフローモデルコンソールを開きます。 デフォルトの URL は `https://server:port/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models` です。
 
-1. 「**[!UICONTROL 作成]**」を選択してから、「**[!UICONTROL モデルを作成]**」を選択します。**[!UICONTROL ワークフローモデルを追加]**&#x200B;ダイアログが表示されます。
+1. 「**[!UICONTROL 作成]**」を選択してから、「**[!UICONTROL モデルを作成]**」を選択します。 **[!UICONTROL ワークフローモデルを追加]**&#x200B;ダイアログが表示されます。
 
-1. 「**[!UICONTROL タイトル]**」と「**[!UICONTROL 名前]**」（オプション）を入力します。例えば、「**workflow_json_submit**」などを入力します。 「**[!UICONTROL 完了]**」をタップしてモデルを作成します。
+1. 「**[!UICONTROL タイトル]**」と「**[!UICONTROL 名前]**」（オプション）を入力します。 例えば、「**workflow_json_submit**」などを入力します。 「**[!UICONTROL 完了]**」をタップしてモデルを作成します。
 
 1. ワークフローモデルを選択して「**[!UICONTROL 編集を]**」タップします。選択したモデルが編集モードで開きます。 「+」をタップし、「**[!UICONTROL フォームデータモデルサービスを起動]**」ステップをワークフローモデルに追加します。
 
@@ -275,5 +294,5 @@ MYSQL をデータソースとして設定したら、以下の手順を実行�
 
 以下のリンクから、サンプルの変換済みアダプティブフォームをダウンロードしてください。
 
-[ファイルを入手](assets/DownloadedFormsPackage_1498226829041200.zip)
+[ファイルの取得](assets/DownloadedFormsPackage_1498226829041200.zip)
 
