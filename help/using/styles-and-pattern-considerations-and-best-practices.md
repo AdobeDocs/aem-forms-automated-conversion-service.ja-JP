@@ -8,16 +8,22 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: ba5457fc64a6525c3dc02a00484030760c373c98
+TQID: https://experienceleague.adobe.com/EixW6MGzAyHz-JcPYmnKQBLWqnEFOwUepUFOcG8DBUo
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: eb30f47f-d87a-400f-8f78-63ce7979ff56id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 72%
+source-wordcount: 1356
+ht-degree: 94%
 
 ---
 
 # ベストプラクティスおよび既知の複雑なパターン {#Best-practices-and-considerations2}
 
-このドキュメントでは、フォーム管理者、作成者および開発者が [!DNL Automated Forms Conversion service] （AFCS）を使用する際に役立つガイドラインと推奨事項を説明します。 ソースフォームの準備から、自動変換に追加手順を要する複雑なパターンの修正に至るまで、ベストプラクティスを包括的に説明します。 これらのベストプラクティスのすべてを実行すると、[!DNL Automated Forms Conversion service]（AFCS）の全体的なパフォーマンスと出力が向上します。
+このドキュメントでは、フォーム管理者、作成者、および開発者が[!DNL Automated Forms Conversion service] （AFCS）を操作する際に役立つガイドラインと推奨事項について説明します。 ソースフォームの準備から、自動変換に追加手順を要する複雑なパターンの修正に至るまで、ベストプラクティスを包括的に説明します。 これらのベストプラクティスのすべてを実行すると、[!DNL Automated Forms Conversion service]（AFCS）の全体的なパフォーマンスと出力が向上します。
 
 ## ベストプラクティス
 
@@ -46,8 +52,8 @@ XDP フォームを変換に使用する場合は、ソース XDP フォーム�
 
 ### 変換を開始する前に
 
-* **AEM Forms as a Cloud Service:** デフォルトのテンプレートおよびテーマを使用できます。これらを使用するか、カスタムのテンプレートおよびテーマを作成できます。
-* **AEM 6.5 およびAEM 6.5 LTS:** アダプティブフォームのテンプレートとテーマを作成します（または、[&#x200B; サービスの設定 &#x200B;](configure-service.md#referencepackage) の説明に従って参照アセットをインストールします）。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[&#x200B; アダプティブフォームコアコンポーネント &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja) を有効にする必要があります。
+* **AEM Forms as a Cloud Service:** デフォルトのテンプレートとテーマを使用できます。これらのテンプレートを使用するか、カスタムテンプレートとテーマを作成できます。
+* **AEM 6.5およびAEM 6.5 LTS:** アダプティブフォームのテンプレートとテーマを作成します（または、[ サービスの構成](configure-service.md#referencepackage)の説明に従って参照アセットをインストールします）。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[ アダプティブフォームのコアコンポーネント ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)を有効にする必要があります。
 * アダプティブフォームテンプレートを作成します。 テンプレートは、組織または部門のフォームに統一された構造を指定するのに役立ちます。
 * アダプティブフォームテンプレートでヘッダーとフッターを指定します。 このサービスは、変換元のドキュメントのヘッダーとフッターを無視して、アダプティブフォームテンプレートで指定されたヘッダーとフッターを使用します。
 * アダプティブフォームテーマを作成します。 テーマは、組織または部門のフォームに統一されたルックアンドフィールを提供するのに役立ちます。
@@ -69,12 +75,12 @@ AEM [!DNL Forms Automated Conversion service]は人工知能と機械学習ア�
 
 | パターン | 例 |
 |--- |--- |
-| **パターン**<br> 入力済みPDF formsがアダプティブフォームに変換されない。<br><br>**解決策** 空 <br> アダプティブフォームを使用してください。 | ![入力済みフォーム](assets/best-practice-filled-forms.png) |
-| **パターン**<br> 複雑なフォーム内のテキストやフィールドが認識されない。<br><br>**解決方法** <br> 複雑なフォームのテキストとフィールドの幅を広げてから、変換処理を実行してください。 |  |
-| **パターン**<br> スキャンされたフォームを使用できない。<br><br>**解決策**<br> スキャンしたフォームを使用しないでください。 | ![スキャンされたフォーム](assets/scanned-forms.png) |
-| **パターン**<br> 画像とその画像内のテキストが抽出されない。<br><br>**解像度** <br> 変換後のフォームに画像とテキストを手動で追加してください。 | ![画像とテキストのフォーム](assets/best-practice-image-with-text.png) |
-| **パターン**<br> 点線や不明瞭な境界線（または不明瞭な枠線）が含まれているテーブルが変換されない。<br><br>**解決方法** 境界線 <br> 枠線が明確に設定されているテーブルを使用してください。 サポート対象です。 | ![不明瞭なテーブルのフォーム](assets/best-practice-table-dotted-non-clear.png) |
-| **パターン** <br>初期状態のアダプティブフォームで垂直方向のテキストがサポートされない。 そのため、垂直方向のテキストは対応するアダプティブFormsのテキストに変換されません。<br><br>**解決方法** <br> 必要な場合はアダプティブフォームエディターを使用し、垂直方向のテキストを追加してください。 | ![不明瞭なテーブルのフォーム](assets/vertical-text.png) |
+| **パターン** <br>入力済みの PDF フォームがアダプティブフォームに変換されない。 <br><br>**解決方法** <br>空のアダプティブフォームを使用してください。 | ![入力済みフォーム](assets/best-practice-filled-forms.png) |
+| **パターン** <br>複雑なフォーム内のテキストやフィールドが認識されない。 <br><br>**解決方法** <br>複雑なフォームのテキストとフィールドの幅を広げてから、変換処理を実行してください。 |  |
+| **パターン** <br>スキャンされたフォームを使用できない。 <br><br>**解決方法** <br>スキャンされたフォームは使用しないでください。 | ![スキャンされたフォーム](assets/scanned-forms.png) |
+| **パターン** <br>画像とその画像内のテキストが抽出されない。 <br><br>**解決方法** <br>変換後のフォームに画像とテキストを手動で追加してください。 | ![画像とテキストのフォーム](assets/best-practice-image-with-text.png) |
+| **パターン** <br>点線や不明瞭な境界線（または不明瞭な枠線）が含まれているテーブルが変換されない。 <br><br>**解決方法** <br>境界線や枠線が明確に設定されているテーブルを使用してください。 サポート対象です。 | ![不明瞭なテーブルのフォーム](assets/best-practice-table-dotted-non-clear.png) |
+| **パターン** <br>初期状態のアダプティブフォームで垂直方向のテキストがサポートされない。 そのため、垂直方向のテキストは対応するアダプティブフォームテキストに変換されません。 <br><br>**解決方法** <br>必要な場合はアダプティブフォームエディターを使用し、垂直方向のテキストを追加してください。 | ![不明瞭なテーブルのフォーム](assets/vertical-text.png) |
 
 
 
@@ -82,16 +88,16 @@ AEM [!DNL Forms Automated Conversion service]は人工知能と機械学習ア�
 
 | パターン | 解決方法 |
 |--- |--- |
-| **パターン** 四角形 <br> 円以外の形状を持つ選択グループのオプションが、対応するアダプティブフォームのコンポーネントに変換されない。<br><br>**解決方法** <br> 選択グループオプションの形状を四角形または円に変更するか、「レビューと修正」エディターを使用して、選択グループオプションの形状を特定してください。 | ![選択フィールド &#x200B;](assets/best-practice-choice-group-options.png) |
+| **パターン** <br>四角形と円以外の形状を持つ選択グループのオプションが、対応するアダプティブフォームのコンポーネントに変換されない。 <br><br>**解決方法** <br>選択グループオプションの形状を四角形または円に変更するか、「レビューと修正」エディターを使用して、選択グループオプションの形状を特定してください。 | ![選択フィールド ](assets/best-practice-choice-group-options.png) |
 
 ### フォームフィールド {#form-fields}
 
 | パターン | 解決方法 |
 |--- |--- |
-| **パターン** <br> 境界線が不明瞭なフィールドが認識されない。<br><br>**解決策** <br> 「レビューと修正」エディターを使用して、こうしたフィールドを特定してください。 | ![不明瞭な境界線を含むフィールド](assets/best-practice-fields-without-clear-borders.png) |
-| **パターン** <br> フォームの下部または右側にキャプションを含む選択グループのフォームフィールドが識別されないことがある。<br><br>**解決策** <br> 「レビューと修正」エディターを使用して、こうしたフィールドを特定してください。 | ![選択フィールド](assets/best-practice-caption-bottom-right.png) |
-| **パターン** <br> 互いに非常に近い位置に配置されているフォームフィールドや、境界線が不明瞭なフォームフィールドに、正しくないタイプがマージされたり割り当てられたりする。<br><br>**解決策** <br> 「レビューと修正」エディターを使用して、こうしたフィールドを特定してください。 | ![選択フィールド](assets/best-practice-placed-very-near.png) |
-| **パターン**<br> 離れた位置にキャプションが付いているフィールドや、キャプションと入力フィールドの間に点線が存在するフィールドが認識されない。<br><br>**解決策** <br> 境界線が明確に設定されているフォームフィールドを使用するか、「レビューと修正」エディターを使用して、問題のあるリストを修正してください。 | ![離れたフィールドまたはキャプションのフィールド間の点線](assets/best-practice-far-away-captions-or-a-dotted-line.png) |
+| **パターン** <br>境界線が不明瞭なフィールドが認識されない。 <br><br>**解決方法** <br>「レビューと修正」エディターを使用して、こうしたフィールドを特定してください。 | ![不明瞭な境界線を含むフィールド](assets/best-practice-fields-without-clear-borders.png) |
+| **パターン** <br>フォームの下部または右側にキャプションを含む選択グループのフォームフィールドが識別されないことがある。 <br><br>**解決方法** <br>「レビューと修正」エディターを使用して、こうしたフィールドを特定してください。 | ![選択フィールド](assets/best-practice-caption-bottom-right.png) |
+| **パターン** <br>互いに非常に近い位置に配置されているフォームフィールドや、境界線が不明瞭なフォームフィールドに、正しくないタイプがマージされたり割り当てられたりする。 <br><br>**解決方法** <br>「レビューと修正」エディターを使用して、こうしたフィールドを特定してください。 | ![選択フィールド](assets/best-practice-placed-very-near.png) |
+| **パターン** <br>離れた位置にキャプションが付いているフィールドや、キャプションと入力フィールドの間に点線が存在するフィールドが認識されない。 <br><br>**解決方法** <br>境界線が明確に設定されているフォームフィールドを使用するか、「レビューと修正」エディターを使用して、問題のあるリストを修正してください。 | ![離れたフィールドまたはキャプションのフィールド間の点線](assets/best-practice-far-away-captions-or-a-dotted-line.png) |
 
 ### リスト {#lists}
 
