@@ -10,21 +10,11 @@ level: Beginner, Intermediate
 contentOwner: khsingh
 exl-id: e8406ed9-37f5-4f26-be97-ad042f9ca57c
 TQID: https://experienceleague.adobe.com/CYDvLiZX-BqErF-cKQX1SieVDMxkoD1kfP4rLIT9ku0
-product_v2:
-  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: d49d6117-dd89-469c-a774-cc96b7eee433
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: ce44533e-8ec8-4e11-a9e9-78b0fe561832
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: ce44533e-8ec8-4e11-a9e9-78b0fe561832id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
 source-wordcount: 691
@@ -42,9 +32,9 @@ ht-degree: 94%
 
 | エラー | 例 |
 |--- |--- |
-| **エラーメッセージ** <br> アクセストークンヘッダーを使用できません。 <br><br> **原因** <br> 管理者が複数の IMS 設定を作成しているか、IMS 設定を使用して Adobe Cloud 上 の AFCS サービスにアクセスできません。 <br><br>**解決策** <br>複数の設定がある場合は、すべての設定を削除し、[新しい設定を作成](configure-service.md#obtainpubliccertificates)。<br> 単一の設定がある場合は、**ヘルスチェック**&#x200B;を使用して[接続性をチェック &#x200B;](configure-service.md#createintegrationoption)します。 | ![アクセストークンヘッダーを使用できません](assets/invalid-ims-configurations.png) |
+| **エラーメッセージ** <br> アクセストークンヘッダーを使用できません。 <br><br> **原因** <br> 管理者が複数の IMS 設定を作成しているか、IMS 設定を使用して Adobe Cloud 上 の AFCS サービスにアクセスできません。 <br><br>**解決策** <br>複数の設定がある場合は、すべての設定を削除し、[新しい設定を作成](configure-service.md#obtainpubliccertificates)。<br> 単一の設定がある場合は、**ヘルスチェック**&#x200B;を使用して[接続性をチェック ](configure-service.md#createintegrationoption)します。 | ![アクセストークンヘッダーを使用できません](assets/invalid-ims-configurations.png) |
 | **エラーメッセージ** <br> サービスに接続できません。  <br><br>**原因** <br> 自動フォーム変換サービス（AFCS）クラウドサービスにサービス URL が正しく記載されていないか、サービス URL が記載されていません。 <br><br>**解決方法** <br> 自動フォーム変換サービス（AFCS）クラウドサービスの[サービス URL](configure-service.md#configure-the-cloud-service) を修正します。 | ![サービスに接続できません。](assets/wrong-service-url-configured.png) |
-| **エラーメッセージ** <br> フォームの変換が失敗しました。  <br><br>**原因** <br> ユーザー側にネットワーク接続の問題が発生しているか、定期メンテナンスのためサービスが停止されているか、Adobe Cloud が停止しています。 <br><br>**解決方法** <br> ユーザー側でネットワーク接続の問題を解決し、https://status.adobe.com/ja-jp/ でサービスが（計画的または計画外に）停止されていないか確認してください。 | ![サービスに接続できません。](assets/conversion-failure.png) |
+| **エラーメッセージ** <br> フォームの変換が失敗しました。  <br><br>**原因** <br> ユーザー側にネットワーク接続の問題が発生しているか、定期メンテナンスのためサービスが停止されているか、Adobe Cloud が停止しています。 <br><br>**解決方法** <br> ユーザー側でネットワーク接続の問題を解決し、https://status.adobe.com/ でサービスが（計画的または計画外に）停止されていないか確認してください。 | ![サービスに接続できません。](assets/conversion-failure.png) |
 | **エラーメッセージ** <br> ページ数が 15 ページを超えています。  <br><br>**原因** <br> ソースフォームのページ数が 15 ページを超えています。  <br><br>**解決方法** <br> Adobe Acrobat を使用して、15 ページを超えているフォームを分割してください。 各フォームのページ数は 15 ページ未満にしてください。 | ![サービスに接続できません。](assets/number-of-pages.png) |
 | **エラーメッセージ** <br> ファイル数が 15 個を超えています。  <br><br>**原因** <br>  フォルダーに 15 個を超えるフォームが含まれています。 <br><br>**解決方法** <br> フォルダー内のフォーム数を 15 個以内にしてください。 1 つのフォルダーに保存する合計ページ数は 50 ページ未満にしてください。 フォルダーのサイズは 10 MB 未満にしてください。 サブフォルダー内にフォームを保存しないでください。 ソースフォームは 8 ～ 15 個のフォームに編成してください。 | ![サービスに接続できません。](assets/number-of-pages.png) |
 | **エラーメッセージ** <br> ソースファイル形式がサポートされていません。  <br><br>**原因** <br> ソースフォームが含まれているフォルダーには、サポートされていないファイルがいくつか存在します。 <br><br>**解決方法** <br> このサービスでは .xdp ファイルと .pdf ファイルのみがサポートされます。 その他の拡張子を持つファイルをフォルダーから削除した後、変換を実行してください。 | ![サービスに接続できません。](assets/unsupported-file-formats.png) |
@@ -72,7 +62,7 @@ ht-degree: 94%
 <td><img alt="Unable to connect to the service." src="assets/wrong-endpoint-configured.png" /></td>
 </tr>
 <tr>
-<td><strong>Error Message</strong> <br> The service failed to convert the form.  <br><br><strong>Reason</strong> <br> Network connectivity issues at your end, the service is down due to scheduled maintenance, or outage on Adobe Cloud. <br><br><strong>Resolution</strong> <br> Resolve network connectivity issues at your end and check the status of the service on <a href="https://status.adobe.com/ja-jp/">https://status.adobe.com/ja-jp/</a> for a planned or unplanned outage.</td>
+<td><strong>Error Message</strong> <br> The service failed to convert the form.  <br><br><strong>Reason</strong> <br> Network connectivity issues at your end, the service is down due to scheduled maintenance, or outage on Adobe Cloud. <br><br><strong>Resolution</strong> <br> Resolve network connectivity issues at your end and check the status of the service on <a href="https://status.adobe.com/">https://status.adobe.com/</a> for a planned or unplanned outage.</td>
 <td><img alt="The service failed to convert the form." src="assets/service-failure.png" /></td>
 </tr>
 <tr>
