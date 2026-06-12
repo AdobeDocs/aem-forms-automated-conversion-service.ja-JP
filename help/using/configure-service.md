@@ -9,29 +9,15 @@ role: Admin, Developer, User
 level: Beginner, Intermediate
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
 TQID: https://experienceleague.adobe.com/xxFiHKgzZsDqk1rjtsBOEa-gaEi5S7iRY-Ela1T6eL8
-product_v2:
-  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
-  - id: a1df6763-63b5-45b4-8c8a-155a692a2b3e
-  - id: ae478996-b206-4712-9b0c-dc78a2644453
-  - id: d49d6117-dd89-469c-a774-cc96b7eee433
-  - id: f013e6ab-27b8-4645-b5a7-31ffa474d04f
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552eid: a1df6763-63b5-45b4-8c8a-155a692a2b3eid: ae478996-b206-4712-9b0c-dc78a2644453id: d49d6117-dd89-469c-a774-cc96b7eee433id: f013e6ab-27b8-4645-b5a7-31ffa474d04f
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: cb6b167400093c85e8929eb147e2a0be256772a6
 workflow-type: tm+mt
-source-wordcount: 2764
-ht-degree: 81%
+source-wordcount: 2549
+ht-degree: 76%
 
 ---
 
@@ -72,9 +58,9 @@ ht-degree: 81%
 
 
 1. [AEM 6.5またはAEM 6.5 LTSをダウンロードしてインストールするか、AEM Forms as a Cloud Serviceをオンボードします](#aemquickstart)
-1. （AEM 6.5およびAEM 6.5 LTSの場合のみ） [最新のAEM サービスパックをダウンロードしてインストール &#x200B;](#servicepack)
-1. （AEM 6.5およびAEM 6.5 LTSの場合のみ） [最新のAEM Forms アドオンパッケージをダウンロードしてインストール &#x200B;](#downloadaemformsaddon)
-1. （オプション） [最新のコネクタパッケージをダウンロードしてインストール &#x200B;](#installConnectorPackage)
+1. （AEM 6.5およびAEM 6.5 LTSの場合のみ） [最新のAEM サービスパックをダウンロードしてインストール ](#servicepack)
+1. （AEM 6.5およびAEM 6.5 LTSの場合のみ） [最新のAEM Forms アドオンパッケージをダウンロードしてインストール ](#downloadaemformsaddon)
+1. （オプション） [最新のコネクタパッケージをダウンロードしてインストール ](#installConnectorPackage)
 1. [カスタムテーマとテンプレートの作成（AEM 6.5 / 6.5 LTS）またはデフォルトの使用（Cloud Service）](#referencepackage)
 
 ### AEM 6.5またはAEM 6.5 LTSをダウンロードしてインストールするか、AEM Forms as a Cloud Serviceをオンボードします {#aemquickstart}
@@ -84,20 +70,20 @@ ht-degree: 81%
 
 * AEM 6.5またはAEM 6.5 LTSが稼働していない場合は、以下の場所からダウンロードしてください。 AEM をダウンロードしたら、[デプロイとメンテナンス](https://helpx.adobe.com/jp/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)の説明に従い、AEM オーサーインスタンスの設定を行ってください。
 
-   * 既存のAEMをご利用の場合は、[Adobe ライセンス web サイト &#x200B;](http://licensing.adobe.com)からAEM 6.5またはAEM 6.5 LTSをダウンロードしてください。
+   * 既存のAEMをご利用の場合は、[Adobe ライセンス web サイト ](http://licensing.adobe.com)からAEM 6.5またはAEM 6.5 LTSをダウンロードしてください。
 
-   * Adobe パートナーの場合は、[Adobe パートナートレーニング プログラム &#x200B;](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)を使用して、AEM 6.5またはAEM 6.5 LTSをリクエストしてください。
+   * Adobe パートナーの場合は、[Adobe パートナートレーニング プログラム ](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)を使用して、AEM 6.5またはAEM 6.5 LTSをリクエストしてください。
 
 * AEM Forms as a Cloud Service を使用している場合は、[AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-forms-cloud-service.html?lang=ja#setup-environment) へのオンボードを参照し、[ローカル開発環境を設定](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?lang=ja#setup-environment)してください。
 
 
 ### （AEM 6.5およびAEM 6.5 LTSの場合のみ） AEMの最新のサービスパックをダウンロードしてインストールします {#servicepack}
 
-最新のAEM サービスパックをダウンロードしてインストールします。 手順について詳しくは、[AEM 6.5 サービスパックリリースノート](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes/sp-release-notes.html)を参照してください。
+最新のAEM サービスパックをダウンロードしてインストールします。 手順について詳しくは、[AEM 6.5 サービスパックリリースノート](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html)を参照してください。
 
 ### （AEM 6.5およびAEM 6.5 LTSのみ）AEM Forms アドオンパッケージをダウンロードしてインストールします  {#downloadaemformsaddon}
 
-AEM インスタンスには、基本的なフォーム機能が付属しています。 変換サービスを使用するには、AEM Forms のすべての機能が必要になります。 AEM Forms のすべての機能を使用するには、AEM Forms アドオンパッケージをダウンロードしてインストールする必要があります。 変換サービスを設定して使用するには、このパッケージが必要になります。 詳細な手順については、[&#x200B; データキャプチャ機能のインストールと設定を参照してください。](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi)
+AEM インスタンスには、基本的なフォーム機能が付属しています。 変換サービスを使用するには、AEM Forms のすべての機能が必要になります。 AEM Forms のすべての機能を使用するには、AEM Forms アドオンパッケージをダウンロードしてインストールする必要があります。 変換サービスを設定して使用するには、このパッケージが必要になります。 詳細な手順については、[ データキャプチャ機能のインストールと設定を参照してください。](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi)
 
 >[!NOTE]
 > アドオンパッケージをインストールしたら、設定手順を実行する必要があります。
@@ -112,9 +98,9 @@ The connector package provides early access to the [Auto-detect logical sections
 
 ### カスタムのテーマとテンプレートを作成 {#referencepackage}
 
-**AEM Forms as a Cloud Service:**&#x200B;すぐに使えるテンプレートを使用するか、カスタム テンプレートを作成して[&#x200B; サービス設定](#configure-the-cloud-service)を指定できます。
+**AEM Forms as a Cloud Service:**&#x200B;すぐに使えるテンプレートを使用するか、カスタム テンプレートを作成して[ サービス設定](#configure-the-cloud-service)を指定できます。
 
-**（AEM 6.5およびAEM 6.5 LTSの場合のみ）**&#x200B;自動フォーム変換サービス（AFCS）では、PDF フォームをアダプティブフォームに変換するには、少なくとも1つのテーマと1つのテンプレートが必要です。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[&#x200B; アダプティブフォームのコアコンポーネントを有効にする](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)必要があります。手順は、こちらに記載されています。 AEM 6.5またはAEM 6.5 LTSを[実稼動モード &#x200B;](https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/production-ready.html) （nosamplecontent実行モード）で起動した場合、参照パッケージはインストールされません。 独自のカスタムテーマとテンプレートを作成するか、オーサーインスタンスに[AEM Forms参照Assets](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html) パッケージをダウンロードしてインストールし、参照テーマとテンプレートを取得します。 次に、[&#x200B; サービス設定](#configure-the-cloud-service)をポイントして、サービスを使用する前にテンプレートとテーマを使用します。
+**（AEM 6.5およびAEM 6.5 LTSの場合のみ）**&#x200B;自動フォーム変換サービス（AFCS）では、PDF フォームをアダプティブフォームに変換するには、少なくとも1つのテーマと1つのテンプレートが必要です。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[ アダプティブフォームのコアコンポーネントを有効にする](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)必要があります。手順は、こちらに記載されています。 AEM 6.5またはAEM 6.5 LTSを[実稼動モード ](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/production-ready.html) （nosamplecontent実行モード）で起動した場合、参照パッケージはインストールされません。 独自のカスタムテーマとテンプレートを作成するか、オーサーインスタンスに[AEM Forms参照Assets](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html) パッケージをダウンロードしてインストールし、参照テーマとテンプレートを取得します。 次に、[ サービス設定](#configure-the-cloud-service)をポイントして、サービスを使用する前にテンプレートとテーマを使用します。
 
 ## アクセスと権限の設定
 
@@ -132,8 +118,8 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 
 組織に対するアクセスを有効化と、管理者に対する必要な権限の付与がアドビによって行われたら、管理者は、Admin Console にログインして（詳しい手順については、以下の説明を参照してください）、プロファイルを作成し、そのプロファイルに開発者を追加できます。 開発者は、AEM Forms のインスタンスを Adobe Cloud 上の自動フォーム変換サービス（AFCS）に接続できます。
 
-開発者とは、変換サービスの実行を担当する組織内のメンバーのことです。 アドビ自動フォーム変換サービス（AFCS）プロファイルに追加された開発者のみが、自動フォーム変換サービス（AFCS）を使用する資格があります。
-プロファイルを作成して開発者をそのプロファイルに登録するには、以下の手順を実行します。 組織の開発者に必要なアクセスを付与するには、少なくとも 1 つのプロファイルが必要です。
+開発者は、コンバージョンサービスを実行するように指定された組織のメンバーです。Adobe自動フォーム変換サービス（AFCS）プロファイルに追加された開発者のみが、自動フォーム変換サービス（AFCS）を使用する権限を持ちます。
+次の手順を実行してプロファイルを作成し、プロファイルに開発者を追加します。組織の開発者に必要なアクセス権を付与するには、少なくとも1つのプロファイルが必要です。
 
 1. [Admin Console](https://adminconsole.adobe.com/) にログインします。 プロビジョニングされた管理者の **Adobe ID** で自動フォーム変換サービス（AFCS）を使用してログインします。
 1. 「**[!UICONTROL 自動フォーム変換]**」オプションをクリックします。
@@ -166,7 +152,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
    3. Open the **[!UICONTROL Day CQ Link Externalizer]** configuration. In the **[!UICONTROL Domains]** field, specify the actual host name or IP address and port number for local, author, and publish instances. Click **[!UICONTROL Save]**.
 
-* For AEM Forms as a Cloud Service, [log a support ticket to enable the email service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=ja#sending-email).
+* For AEM Forms as a Cloud Service, [log a support ticket to enable the email service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email).
 -->
 
 ### ユーザーを forms-users グループに追加する {#adduserstousergroup}
@@ -189,8 +175,8 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
 ## Adobe Cloud 上の自動フォーム変換サービス（AFCS）への AEM Forms インスタンスの接続
 
-管理者が開発者アクセス権を付与した後、Adobe Cloud 上で稼働する自動フォーム変換サービス（AFCS）に AEM Forms インスタンスを接続できます。
-AEM Forms インスタンスを自動フォーム変換サービスに接続するには、次の手順を実行します。
+管理者が開発者アクセス権を付与すると、Adobe Cloudで実行中のAutomated Forms conversion service （AFCS）にAEM Forms インスタンスを接続できます。
+AEM Forms インスタンスをAutomated Forms Conversion サービスに接続するには、次の手順を実行します。
 
 [&#x200B;1. Adobe Developer Consoleでのサービス APIの設定](#configure-the-service-apis-on-adobe-developer-console)
 
@@ -200,8 +186,8 @@ AEM Forms インスタンスを自動フォーム変換サービスに接続す�
 
 ### &#x200B;1. Adobe Developer Consoleでのサービス APIの設定
 
-自動フォーム変換サービス（AFCS）を使用するには、Adobe Developer Console でプロジェクトを作成し、**Automated Forms Configuration Service** API をプロジェクトに追加します。 統合により、API キー、クライアント秘密鍵、テクニカルアカウント ID、スコープ、組織 ID が生成されます。
-Adobe Developer Console で Automated Forms Conversion Service API を設定するには、次の手順を実行します。
+Automated Forms Conversion Service （AFCS）を使用するには、プロジェクトを作成し、Adobe Developer Console上のプロジェクトに&#x200B;**Automated Forms Configuration Service** APIを追加します。統合により、API キー、クライアントシークレット、テクニカルアカウント ID、スコープ、組織IDが生成されます。
+Adobe Developer Consoleで自動フォーム変換サービス APIを設定するには、次の手順を実行します。
 
 1. https://developer.adobe.com/console にログインします 。 Adobe ID と、管理者がプロビジョニングした開発者アカウントを使用して、Adobe I/O コンソールにログインします。
 1. 右上隅で組織を選択します。 自分がどの組織に属しているかわからない場合は、管理者に問い合わせてください。
@@ -209,10 +195,10 @@ Adobe Developer Console で Automated Forms Conversion Service API を設定す�
 
    ![新規 API プロジェクトを作成](/help/using/assets/create-new-api-project.png)
 
-1. 「**[!UICONTROL API を追加]**」をクリックします。 お使いのアカウントで有効になっているすべての API を示す画面が表示されます。
-   ![API を追加](/help/using/assets/add-api.png)
+1. 「**[!UICONTROL APIを追加]**」をクリックします。アカウントで有効なすべてのAPIのリストが表示される画面が表示されます。
+   ![API の追加](/help/using/assets/add-api.png)
 
-1. 「**[!UICONTROL 自動フォーム変換サービス]**」を選択し、「**[!UICONTROL 次へ]**」をクリックします。 API を設定する画面が表示されます。
+1. **[!UICONTROL 自動フォーム変換サービス]**&#x200B;を選択し、**[!UICONTROL 次へ]**をクリックします。APIを設定する画面が表示されます。
    ![AFCS API を選択](/help/using/assets/select-afcs-api.png)
 
 1. **OAuth サーバー間**&#x200B;認証方式を選択します。
@@ -265,7 +251,7 @@ Adobe Developer Console で Automated Forms Conversion Service API を設定す�
    >
    > IMS 設定は 1 つだけ作成してください。 複数の IMS 設定を作成しないでください。
 
-1. 「**Adobe IMS 設定**」を選択し、「**[!UICONTROL ヘルスをチェック]**」をクリックします。 ダイアログボックスが表示されます。
+1. **Adobe IMS設定**&#x200B;を選択し、**[!UICONTROL 正常性を確認]**をクリックします。ダイアログボックスが表示されます。
    ![ヘルスをチェック](/help/using/assets/check-health.png)
 
    **チェック**&#x200B;ダイアログボックスが表示されます。
@@ -276,18 +262,18 @@ Adobe Developer Console で Automated Forms Conversion Service API を設定す�
 
    接続が成功すると、*トークンが正常に取得された*&#x200B;ことを示すメッセージが表示されます。
 
-   ![接続が成功すると、トークンが正常に取得されたことを示すメッセージが表示されます。 &#x200B;](/help/using/assets/healthy-dialog.png)
+   ![接続が成功すると、トークンが正常に取得されたことを示すメッセージが表示されます。 ](/help/using/assets/healthy-dialog.png)
 
 1. 「**閉じる**」をクリックします。
 
 ### &#x200B;3. 自動フォームコンバージョン設定を作成
 
-自動フォーム変換設定を作成して、AEM インスタンスを変換サービスに接続します。 この設定を作成すると、変換用のテンプレート、テーマ、フォームフラグメントも指定できるようになります。 フォームの各セットとは独立した複数のクラウドサービス設定を作成できます。
-例えば、販売部門用のフォームや顧客サポート用のフォームとは独立した設定を作成することができます。 クラウドサービス設定を作成するには、以下の手順を実行します。
+フォーム自動変換設定を作成して、AEM インスタンスをコンバージョンサービスに接続します。また、コンバージョン用のテンプレート、テーマ、フォームフラグメントを指定することもできます。複数のクラウドサービス設定を、フォームのセットごとに個別に作成できます。
+たとえば、営業部門のフォーム用に別個の設定を設定し、カスタマーサポートフォーム用に別個の設定を設定することができます。クラウドサービス設定を作成するには、次の手順を実行します。
 
 1. AEM Forms インスタンスで、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL ツール]**／**[!UICONTROL Cloud Services]**／**[!UICONTROL 自動フォーム変換設定]**&#x200B;をクリックします。
-1. **[!UICONTROL グローバル]**&#x200B;フォルダーを選択し、「**[!UICONTROL 作成]**」をクリックします。
-**自動フォーム変換設定を作成**&#x200B;するページが表示されます。 設定が&#x200B;**グローバル**&#x200B;フォルダーに作成されます。 別のフォルダー内に設定を作成することも、フォルダーを作成して設定を保存することもできます。
+1. **[!UICONTROL グローバル]** フォルダーを選択し、**[!UICONTROL 作成]**をクリックします。
+**自動フォーム変換設定の作成**&#x200B;のページが表示されます。設定は&#x200B;**Global** フォルダーに作成されます。存在する別のフォルダーに設定を作成したり、設定用のフォルダーを作成したりすることもできます。
    ![グローバルフォルダーを選択](/help/using/assets/create-afcs-cloud-conf.png)
 1. **[!UICONTROL 自動フォーム変換設定を作成]**&#x200B;ページで、次のフィールドに値を指定し、「**[!UICONTROL 次へ]**」をクリックします。
 
