@@ -25,7 +25,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: 1932
+source-wordcount: 1844
 ht-degree: 94%
 
 ---
@@ -76,7 +76,7 @@ ht-degree: 94%
 1. **変換サービスで、スキーマがバインドされた XDP フォームを使用することはできますか？ スキーマがバインドされた XDP フォームを使用する場合、そのスキーマを XDP に埋め込む必要はありますか？**
    <p>変換サービスでは、スキーマにバインドされた XDP フォームの使用がサポートされています。このスキーマは、変換元の XDP フォームに埋め込む必要があります。 スキーマにバインドされた XDP フォームを変換すると、変換サービスによって JSON スキーマが生成されます。 JSON スキーマの構造は、変換元の XDP フォームの XSD スキーマに似ています。</p> <br>
 
-1. **フォームの変換が失敗しました。 原因と解決方法を教えてください。**
+1. **サービスはフォームの変換に失敗しました。問題の原因と解決方法は何ですか？**
 コンバージョンが失敗する最も一般的な理由は次のとおりです。</p>
    * 保護された PDF フォームを変換しようとした。 パスワードで保護された PDF フォームや暗号化された PDF フォームを変換することはできません。
    * インターネット接続が中断された。 変換サービスを実行する場合は、インターネットに接続されていることを確認してください。
@@ -106,8 +106,8 @@ ht-degree: 94%
 
    メタモデルを使用して、アダプティブフォームの任意のコンポーネントにフォームオブジェクトをマップし、そのコンポーネントの検証処理、ルール、データパターン、ヘルプテキスト、アクセシビリティのプロパティを事前に設定することができます。 設定したすべてのプロパティが、フォームの変換時に適用されます。 メタモデルを使用して、共通するプロパティをフィールドに適用することができます。 これにより、フォーム全体で繰り返し行う修正作業の量を減らすことができます。<br/><br/>
 
-1. **個人情報などの機密データが含まれているフォームを変換する場合は、どのようなオプションを使用できますか？**
-このサービスは、空白または未入力のフォームのみをサポートします。 そのため、既に値が設定されているフォームや、個人情報が含まれているフォームはアップロードしないでください。 また、ソースフォーム内の事前入力データ、個人を特定できる情報（PII）、機密情報および専有情報も削除してください。<br/>
+1. **個人情報（PII）情報などの機密データを含むフォームの選択肢は何ですか？**
+このサービスは、空白または未入力のフォームのみをサポートします。個人を特定できる情報（PII）が入力されたフォームやフォームはアップロードしないでください。 また、ソースフォームから、事前入力されたデータ、PII （個人を特定できる情報）、機密情報、専有情報を削除できます。<br/>
 
 1. **ヘッダーとフッターはどこに配置すればよいですか？**
    <p>ヘッダーとフッターは、アダプティブフォームのテンプレート上に配置してください。 変換元の PDF フォームにヘッダーとフッターが含まれている場合、変換サービスよってそれらのヘッダーとフッターが検出され、アダプティブフォームテンプレートで定義されているヘッダーとフッターに置き換えられます。 アダプティブフォーム内に余分なヘッダーやフッターが含まれている場合は、「<a href="review-correct-ui-edited.md">レビューと修正</a>」エディターを使用して、それらのヘッダーやフッターを削除したり編集したりすることができます。</p> <br />
@@ -115,9 +115,9 @@ ht-degree: 94%
 1. **変換サービスを使用すると、手動で処理を行う（プランの作成、テーマやテンプレートなどのアセットの作成、アダプティブフォームの作成と公開をすべて手動で行う）場合と比べて、どれくらいの時間が短縮されますか？**
    <p>短縮される時間は、入力フォームのサイズと複雑度、変換に関するリクエストの数によって異なります。 ただし、変換サービスを実行すると、PDF フォームを手動でアダプティブフォームに変換する場合と比べて、大幅に時間が短縮されることは間違いありません。 </p> <br />
 
-1. **RSA ライブラリに関して エラーメッセージは、次のメッセージと似ています：** <br/>
-   `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&lt;init&gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
-前述のエラーは、ブートデリゲーションがRSA/BouncyCastle ライブラリ用に設定されていない場合に発生します。 このエラーを解決するには、以下の手順を実行します。
+1. **RSA ライブラリに関連するエラーが発生した場合はどうすればよいですか？エラーメッセージは、次のメッセージと似ています。** <br/>
+   `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&amp;lt;init&amp;gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
+前述のエラーは、ブートデリゲーションがRSA/BouncyCastle ライブラリ用に設定されていない場合に発生します。問題を解決するには、次の手順を実行します。
    <p> </p>
 
    1. AEM インスタンスを停止して `[AEM installation directory]\crx-quickstart\conf\` フォルダーに移動し、 sling.properties ファイルを編集用として開きます。 `[AEM installation directory]\crx-quickstart\bin\start.bat` を使用して AEM インスタンスを起動する場合は、`[AEM_root]\crx-quickstart\` フォルダー内の sling.properties ファイルを編集用として開きます。
