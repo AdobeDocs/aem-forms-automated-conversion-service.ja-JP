@@ -9,11 +9,21 @@ role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
 TQID: https://experienceleague.adobe.com/EixW6MGzAyHz-JcPYmnKQBLWqnEFOwUepUFOcG8DBUo
-product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-topic_v2: id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: eb30f47f-d87a-400f-8f78-63ce7979ff56id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
 source-wordcount: 1356
@@ -53,7 +63,7 @@ XDP フォームを変換に使用する場合は、ソース XDP フォーム�
 ### 変換を開始する前に
 
 * **AEM Forms as a Cloud Service:** デフォルトのテンプレートとテーマを使用できます。これらのテンプレートを使用するか、カスタムテンプレートとテーマを作成できます。
-* **AEM 6.5およびAEM 6.5 LTS:** アダプティブフォームのテンプレートとテーマを作成します（または、[ サービスの構成](configure-service.md#referencepackage)の説明に従って参照アセットをインストールします）。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[ アダプティブフォームのコアコンポーネント ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)を有効にする必要があります。
+* **AEM 6.5およびAEM 6.5 LTS:** アダプティブフォームのテンプレートとテーマを作成します（または、[&#x200B; サービスの構成](configure-service.md#referencepackage)の説明に従って参照アセットをインストールします）。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[&#x200B; アダプティブフォームのコアコンポーネント &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)を有効にする必要があります。
 * アダプティブフォームテンプレートを作成します。 テンプレートは、組織または部門のフォームに統一された構造を指定するのに役立ちます。
 * アダプティブフォームテンプレートでヘッダーとフッターを指定します。 このサービスは、変換元のドキュメントのヘッダーとフッターを無視して、アダプティブフォームテンプレートで指定されたヘッダーとフッターを使用します。
 * アダプティブフォームテーマを作成します。 テーマは、組織または部門のフォームに統一されたルックアンドフィールを提供するのに役立ちます。
@@ -88,7 +98,7 @@ AEM [!DNL Forms Automated Conversion service]は人工知能と機械学習ア�
 
 | パターン | 解決方法 |
 |--- |--- |
-| **パターン** <br>四角形と円以外の形状を持つ選択グループのオプションが、対応するアダプティブフォームのコンポーネントに変換されない。 <br><br>**解決方法** <br>選択グループオプションの形状を四角形または円に変更するか、「レビューと修正」エディターを使用して、選択グループオプションの形状を特定してください。 | ![選択フィールド ](assets/best-practice-choice-group-options.png) |
+| **パターン** <br>四角形と円以外の形状を持つ選択グループのオプションが、対応するアダプティブフォームのコンポーネントに変換されない。 <br><br>**解決方法** <br>選択グループオプションの形状を四角形または円に変更するか、「レビューと修正」エディターを使用して、選択グループオプションの形状を特定してください。 | ![選択フィールド &#x200B;](assets/best-practice-choice-group-options.png) |
 
 ### フォームフィールド {#form-fields}
 
