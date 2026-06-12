@@ -8,25 +8,19 @@ topic-tags: forms
 feature: Adaptive Forms
 exl-id: 415e05b5-5a90-490c-bf7c-d3365ce95e24
 TQID: https://experienceleague.adobe.com/t3Ng0VnihUMkisnaGzTBaw2QIR93l-fSHApCaOvz0r0
-product_v2:
-  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: 2021
-ht-degree: 84%
+source-wordcount: 1900
+ht-degree: 81%
 
 ---
 
 # アダプティブフォームへの PDF フォームの変換 {#convert-print-forms-to-adaptive-forms}
 
-Adobe Sensei を活用した AEM Forms 自動フォーム変換サービス（AFCS）では、PDF フォームを、デバイスに対応したレスポンシブなアダプティブフォームに自動的に変換します<!--foundation and [core components](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/introduction)-->。 自動フォーム変換サービス（AFCS）を使用すると、非インタラクティブ PDF フォーム、AcroForms、XFA ベースの PDF フォームなど、各種フォームを簡単にアダプティブフォームに変換することができます。 機能、コンバージョンワークフロー、オンボーディング情報について詳しくは、[自動フォーム変換](introduction.md) サービスを参照してください。
+Adobe Sensei を活用した AEM Forms 自動フォーム変換サービス（AFCS）では、PDF フォームを、デバイスに対応したレスポンシブなアダプティブフォームに自動的に変換します<!--foundation and [core components](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)-->。 自動フォーム変換サービス（AFCS）を使用すると、非インタラクティブ PDF フォーム、AcroForms、XFA ベースの PDF フォームなど、各種フォームを簡単にアダプティブフォームに変換することができます。 機能、コンバージョンワークフロー、オンボーディング情報について詳しくは、[自動フォーム変換](introduction.md) サービスを参照してください。
 
 ## 前提条件 {#pre-requisites}
 
@@ -34,7 +28,7 @@ Adobe Sensei を活用した AEM Forms 自動フォーム変換サービス（AF
 
 * **変換されたフォームのテンプレートとテーマ：**
    * **AEM Forms as a Cloud Service:** デフォルトのテンプレートとテーマを使用できます。これらのテンプレートをコンバージョンに使用したり、カスタムのテンプレートを準備したりできます。
-   * **AEM 6.5およびAEM 6.5 LTS:**&#x200B;変換されたフォームに適用する[&#x200B; テンプレート &#x200B;](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/template-editor.html)および[&#x200B; テーマ &#x200B;](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/themes.html)を準備します。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[&#x200B; アダプティブフォームのコアコンポーネントを有効にする](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)必要があります（[&#x200B; サービスの設定](configure-service.md#referencepackage)を参照）。 テンプレートを使用すると、一貫性のあるブランディングを適用できます。AFCSでは、ソース PDFからヘッダーとフッターを抽出せず、アダプティブフォームテンプレートで指定します。 テーマを使用すると、フォーム間で一貫したスタイルが適用されます。 テンプレート用のフォルダーを作成する場合は、全員に「**[!UICONTROL 設定を参照]**」オプションを選択します。
+   * **AEM 6.5およびAEM 6.5 LTS:**&#x200B;変換されたフォームに適用する[ テンプレート ](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/template-editor.html)および[ テーマ ](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/themes.html)を準備します。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[ アダプティブフォームのコアコンポーネントを有効にする](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)必要があります（[ サービスの設定](configure-service.md#referencepackage)を参照）。 テンプレートを使用すると、一貫性のあるブランディングを適用できます。AFCSでは、ソース PDFからヘッダーとフッターを抽出せず、アダプティブフォームテンプレートで指定します。 テーマを使用すると、フォーム間で一貫したスタイルが適用されます。 テンプレート用のフォルダーを作成する場合は、全員に「**[!UICONTROL 設定を参照]**」オプションを選択します。
 
 * **（オプション）** [**変換元の PDF フォームを Adobe Signフォームに変換する**](frequently-asked-questions.md)
 
@@ -79,9 +73,9 @@ AEM インスタンスを AEM Forms 変換サービスに接続すると、PDF �
 
    * **[!UICONTROL クラウド設定を選択します]**。 選択した設定に対して、デフォルトのテンプレートとテーマが指定されます。 必要に応じて、別のテンプレートやテーマを指定することができます。
    * 変換後のアダプティブフォームの保存場所と対応するスキーマを指定します。 デフォルトのパスをそのまま使用することも、別のパスを指定することもできます。
-   * データモデルをバインドせずにアダプティブフォームを生成する場合は、「**データモデルをバインドせずにアダプティブフォームを生成**」オプションを選択します。
-このオプションを選択せずに変換サービスを実行すると、アダプティブフォームが自動的に JSON スキーマに関連付けられ、アダプティブフォームと JSON スキーマのフィールド間でデータバインディングが作成されます。 「**[!UICONTROL 生成されたデータモデルスキーマの保存先]**」フィールドには、生成された JSON スキマーのデフォルトの保存場所が表示されます。 この場所は変更することができます。
-既に説明したように、「データモデルをバインドせずにアダプティブフォームを生成」オプションを選択すると、データモデルがバインドされていない状態でアダプティブフォームが生成されます。 変換処理が正常に完了したら、フォームデータモデル、XML スキーマ、または JSON スキーマにアダプティブフォームを関連付けることができます。 詳しくは、「[アダプティブフォームの作成](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/creating-adaptive-form.html)」を参照してください。
+   * 「**データモデルバインディングなしでアダプティブフォームを生成**」オプションを使用して、データモデルバインディングの有無にかかわらずアダプティブフォームを生成するかどうかを選択します。
+このオプションを選択しない場合、変換サービスはアダプティブフォームをJSON スキーマに自動的に関連付け、アダプティブフォームとJSON スキーマで使用可能なフィールド間のデータバインディングを作成します。**[!UICONTROL 生成されたデータモデルスキーマを]**に保存フィールドには、生成されたJSON スキーマを保存するためのデフォルトの場所が表示されます。また、生成されたスキーマを保存する場所をカスタマイズすることもできます。
+このオプションを選択すると、変換サービスはデータモデルのバインディングを含まないアダプティブフォームを生成します。変換が成功すると、アダプティブフォームをフォームデータモデル、XML スキーマ、またはJSON スキーマに関連付けることができます。詳しくは、[ アダプティブフォームの作成](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/creating-adaptive-form.html)を参照してください。
 
    <!--
 
@@ -101,7 +95,7 @@ AEM インスタンスを AEM Forms 変換サービスに接続すると、PDF �
 
    上記の変換設定は、PDF formsを基盤コンポーネントベースのアダプティブフォームに変換する場合に適用されます。 PDF フォームをコアコンポーネントベースのアダプティブフォームに変換するには：
 
-   1. AEM Forms インスタンスでコアコンポーネントが有効になっていることを確認します。 AEM 6.5およびAEM 6.5 LTSについては、[&#x200B; アダプティブフォームのコアコンポーネントを有効にする](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)を参照してください（まだ有効になっていない場合）。 AEM Forms as a Cloud Serviceの場合は、追加の手順は必要ありません。
+   1. AEM Forms インスタンスでコアコンポーネントが有効になっていることを確認します。 AEM 6.5およびAEM 6.5 LTSについては、[ アダプティブフォームのコアコンポーネントを有効にする](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)を参照してください（まだ有効になっていない場合）。 AEM Forms as a Cloud Serviceの場合は、追加の手順は必要ありません。
    1. コンバージョン設定ダイアログの「**[!UICONTROL 基本]**」タブで、コアコンポーネントベースのアダプティブフォームテンプレートとテーマを選択します。
 
       ![変換設定ダイアログ](assets/adaptive-forms-core-components-afcs.png)
@@ -138,7 +132,7 @@ AEM インスタンスを AEM Forms 変換サービスに接続すると、PDF �
 
   >[!NOTE]
   > 「セクションをフラグメントに自動変換」オプションを使用する際は、レスポンシブレイアウトテンプレートを使用しないでください。
-  > レビューと正しいエディターを使用して、小さなパネルを大きなパネルに結合します。 これにより、変換後のアダプティブフォーム内のフラグメントの数を減らすことができます。
+  > レビューと修正エディターを使用して、小さなパネルを大きなパネルに結合します。変換されたアダプティブフォームのフラグメント数を減らすことができます。
   > 「呼び出し数が多すぎる」例外が発生した場合、
   >
   > * フォームを再構築してシンプルな階層を作成
