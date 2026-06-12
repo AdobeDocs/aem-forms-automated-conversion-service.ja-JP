@@ -30,8 +30,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: cb6b167400093c85e8929eb147e2a0be256772a6
 workflow-type: tm+mt
-source-wordcount: 2764
-ht-degree: 81%
+source-wordcount: 2549
+ht-degree: 76%
 
 ---
 
@@ -132,8 +132,8 @@ Adobe Cloud 上で稼働するサービスの設定を行い、そのサービ�
 
 組織に対するアクセスを有効化と、管理者に対する必要な権限の付与がアドビによって行われたら、管理者は、Admin Console にログインして（詳しい手順については、以下の説明を参照してください）、プロファイルを作成し、そのプロファイルに開発者を追加できます。 開発者は、AEM Forms のインスタンスを Adobe Cloud 上の自動フォーム変換サービス（AFCS）に接続できます。
 
-開発者とは、変換サービスの実行を担当する組織内のメンバーのことです。 アドビ自動フォーム変換サービス（AFCS）プロファイルに追加された開発者のみが、自動フォーム変換サービス（AFCS）を使用する資格があります。
-プロファイルを作成して開発者をそのプロファイルに登録するには、以下の手順を実行します。 組織の開発者に必要なアクセスを付与するには、少なくとも 1 つのプロファイルが必要です。
+開発者は、コンバージョンサービスを実行するように指定された組織のメンバーです。Adobe自動フォーム変換サービス（AFCS）プロファイルに追加された開発者のみが、自動フォーム変換サービス（AFCS）を使用する権限を持ちます。
+次の手順を実行してプロファイルを作成し、プロファイルに開発者を追加します。組織の開発者に必要なアクセス権を付与するには、少なくとも1つのプロファイルが必要です。
 
 1. [Admin Console](https://adminconsole.adobe.com/) にログインします。 プロビジョニングされた管理者の **Adobe ID** で自動フォーム変換サービス（AFCS）を使用してログインします。
 1. 「**[!UICONTROL 自動フォーム変換]**」オプションをクリックします。
@@ -189,8 +189,8 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
 ## Adobe Cloud 上の自動フォーム変換サービス（AFCS）への AEM Forms インスタンスの接続
 
-管理者が開発者アクセス権を付与した後、Adobe Cloud 上で稼働する自動フォーム変換サービス（AFCS）に AEM Forms インスタンスを接続できます。
-AEM Forms インスタンスを自動フォーム変換サービスに接続するには、次の手順を実行します。
+管理者が開発者アクセス権を付与すると、Adobe Cloudで実行中のAutomated Forms conversion service （AFCS）にAEM Forms インスタンスを接続できます。
+AEM Forms インスタンスをAutomated Forms Conversion サービスに接続するには、次の手順を実行します。
 
 [&#x200B;1. Adobe Developer Consoleでのサービス APIの設定](#configure-the-service-apis-on-adobe-developer-console)
 
@@ -200,8 +200,8 @@ AEM Forms インスタンスを自動フォーム変換サービスに接続す�
 
 ### &#x200B;1. Adobe Developer Consoleでのサービス APIの設定
 
-自動フォーム変換サービス（AFCS）を使用するには、Adobe Developer Console でプロジェクトを作成し、**Automated Forms Configuration Service** API をプロジェクトに追加します。 統合により、API キー、クライアント秘密鍵、テクニカルアカウント ID、スコープ、組織 ID が生成されます。
-Adobe Developer Console で Automated Forms Conversion Service API を設定するには、次の手順を実行します。
+Automated Forms Conversion Service （AFCS）を使用するには、プロジェクトを作成し、Adobe Developer Console上のプロジェクトに&#x200B;**Automated Forms Configuration Service** APIを追加します。統合により、API キー、クライアントシークレット、テクニカルアカウント ID、スコープ、組織IDが生成されます。
+Adobe Developer Consoleで自動フォーム変換サービス APIを設定するには、次の手順を実行します。
 
 1. https://developer.adobe.com/console にログインします 。 Adobe ID と、管理者がプロビジョニングした開発者アカウントを使用して、Adobe I/O コンソールにログインします。
 1. 右上隅で組織を選択します。 自分がどの組織に属しているかわからない場合は、管理者に問い合わせてください。
@@ -209,10 +209,10 @@ Adobe Developer Console で Automated Forms Conversion Service API を設定す�
 
    ![新規 API プロジェクトを作成](/help/using/assets/create-new-api-project.png)
 
-1. 「**[!UICONTROL API を追加]**」をクリックします。 お使いのアカウントで有効になっているすべての API を示す画面が表示されます。
-   ![API を追加](/help/using/assets/add-api.png)
+1. 「**[!UICONTROL APIを追加]**」をクリックします。アカウントで有効なすべてのAPIのリストが表示される画面が表示されます。
+   ![API の追加](/help/using/assets/add-api.png)
 
-1. 「**[!UICONTROL 自動フォーム変換サービス]**」を選択し、「**[!UICONTROL 次へ]**」をクリックします。 API を設定する画面が表示されます。
+1. **[!UICONTROL 自動フォーム変換サービス]**&#x200B;を選択し、**[!UICONTROL 次へ]**&#x200B;をクリックします。APIを設定する画面が表示されます。
    ![AFCS API を選択](/help/using/assets/select-afcs-api.png)
 
 1. **OAuth サーバー間**&#x200B;認証方式を選択します。
@@ -265,7 +265,7 @@ Adobe Developer Console で Automated Forms Conversion Service API を設定す�
    >
    > IMS 設定は 1 つだけ作成してください。 複数の IMS 設定を作成しないでください。
 
-1. 「**Adobe IMS 設定**」を選択し、「**[!UICONTROL ヘルスをチェック]**」をクリックします。 ダイアログボックスが表示されます。
+1. **Adobe IMS設定**&#x200B;を選択し、**[!UICONTROL 正常性を確認]**&#x200B;をクリックします。ダイアログボックスが表示されます。
    ![ヘルスをチェック](/help/using/assets/check-health.png)
 
    **チェック**&#x200B;ダイアログボックスが表示されます。
@@ -282,12 +282,12 @@ Adobe Developer Console で Automated Forms Conversion Service API を設定す�
 
 ### &#x200B;3. 自動フォームコンバージョン設定を作成
 
-自動フォーム変換設定を作成して、AEM インスタンスを変換サービスに接続します。 この設定を作成すると、変換用のテンプレート、テーマ、フォームフラグメントも指定できるようになります。 フォームの各セットとは独立した複数のクラウドサービス設定を作成できます。
-例えば、販売部門用のフォームや顧客サポート用のフォームとは独立した設定を作成することができます。 クラウドサービス設定を作成するには、以下の手順を実行します。
+フォーム自動変換設定を作成して、AEM インスタンスをコンバージョンサービスに接続します。また、コンバージョン用のテンプレート、テーマ、フォームフラグメントを指定することもできます。複数のクラウドサービス設定を、フォームのセットごとに個別に作成できます。
+たとえば、営業部門のフォーム用に別個の設定を設定し、カスタマーサポートフォーム用に別個の設定を設定することができます。クラウドサービス設定を作成するには、次の手順を実行します。
 
 1. AEM Forms インスタンスで、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL ツール]**／**[!UICONTROL Cloud Services]**／**[!UICONTROL 自動フォーム変換設定]**&#x200B;をクリックします。
-1. **[!UICONTROL グローバル]**&#x200B;フォルダーを選択し、「**[!UICONTROL 作成]**」をクリックします。
-**自動フォーム変換設定を作成**&#x200B;するページが表示されます。 設定が&#x200B;**グローバル**&#x200B;フォルダーに作成されます。 別のフォルダー内に設定を作成することも、フォルダーを作成して設定を保存することもできます。
+1. **[!UICONTROL グローバル]** フォルダーを選択し、**[!UICONTROL 作成]**&#x200B;をクリックします。
+**自動フォーム変換設定の作成**&#x200B;のページが表示されます。設定は&#x200B;**Global** フォルダーに作成されます。存在する別のフォルダーに設定を作成したり、設定用のフォルダーを作成したりすることもできます。
    ![グローバルフォルダーを選択](/help/using/assets/create-afcs-cloud-conf.png)
 1. **[!UICONTROL 自動フォーム変換設定を作成]**&#x200B;ページで、次のフィールドに値を指定し、「**[!UICONTROL 次へ]**」をクリックします。
 
