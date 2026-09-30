@@ -55,7 +55,7 @@ ht-degree: 94%
 
 | エラー | 例 |
 |--- |--- |
-| **エラーメッセージ** <br> アクセストークンヘッダーを使用できません。 <br><br> **原因** <br> 管理者が複数の IMS 設定を作成しているか、IMS 設定を使用して Adobe Cloud 上 の AFCS サービスにアクセスできません。 <br><br>**解決策** <br>複数の設定がある場合は、すべての設定を削除し、[新しい設定を作成](configure-service.md#obtainpubliccertificates)。<br> 単一の設定がある場合は、**ヘルスチェック**&#x200B;を使用して[接続性をチェック ](configure-service.md#createintegrationoption)します。 | ![アクセストークンヘッダーを使用できません](assets/invalid-ims-configurations.png) |
+| **エラーメッセージ** <br> アクセストークンヘッダーを使用できません。 <br><br> **原因** <br> 管理者が複数の IMS 設定を作成しているか、IMS 設定を使用して Adobe Cloud 上 の AFCS サービスにアクセスできません。 <br><br>**解決策** <br>複数の設定がある場合は、すべての設定を削除し、[新しい設定を作成](configure-service.md#obtainpubliccertificates)。<br> 単一の設定がある場合は、**ヘルスチェック**&#x200B;を使用して[接続性をチェック &#x200B;](configure-service.md#createintegrationoption)します。 | ![アクセストークンヘッダーを使用できません](assets/invalid-ims-configurations.png) |
 | **エラーメッセージ** <br> サービスに接続できません。  <br><br>**原因** <br> 自動フォーム変換サービス（AFCS）クラウドサービスにサービス URL が正しく記載されていないか、サービス URL が記載されていません。 <br><br>**解決方法** <br> 自動フォーム変換サービス（AFCS）クラウドサービスの[サービス URL](configure-service.md#configure-the-cloud-service) を修正します。 | ![サービスに接続できません。](assets/wrong-service-url-configured.png) |
 | **エラーメッセージ** <br> フォームの変換が失敗しました。  <br><br>**原因** <br> ユーザー側にネットワーク接続の問題が発生しているか、定期メンテナンスのためサービスが停止されているか、Adobe Cloud が停止しています。 <br><br>**解決方法** <br> ユーザー側でネットワーク接続の問題を解決し、https://status.adobe.com/ でサービスが（計画的または計画外に）停止されていないか確認してください。 | ![サービスに接続できません。](assets/conversion-failure.png) |
 | **エラーメッセージ** <br> ページ数が 15 ページを超えています。  <br><br>**原因** <br> ソースフォームのページ数が 15 ページを超えています。  <br><br>**解決方法** <br> Adobe Acrobat を使用して、15 ページを超えているフォームを分割してください。 各フォームのページ数は 15 ページ未満にしてください。 | ![サービスに接続できません。](assets/number-of-pages.png) |

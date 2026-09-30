@@ -44,7 +44,7 @@ Adobe Sensei を活用した AEM Forms 自動フォーム変換サービス（AF
 
 * **変換されたフォームのテンプレートとテーマ：**
   * **AEM Forms as a Cloud Service:** デフォルトのテンプレートとテーマを使用できます。これらのテンプレートをコンバージョンに使用したり、カスタムのテンプレートを準備したりできます。
-  * **AEM 6.5およびAEM 6.5 LTS:**&#x200B;変換されたフォームに適用する[ テンプレート ](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/template-editor.html)および[ テーマ ](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/themes.html)を準備します。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[ アダプティブフォームのコアコンポーネントを有効にする](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)必要があります（[ サービスの設定](configure-service.md#referencepackage)を参照）。 テンプレートを使用すると、一貫性のあるブランディングを適用できます。AFCSでは、ソース PDFからヘッダーとフッターを抽出せず、アダプティブフォームテンプレートで指定します。 テーマを使用すると、フォーム間で一貫したスタイルが適用されます。 テンプレート用のフォルダーを作成する場合は、全員に「**[!UICONTROL 設定を参照]**」オプションを選択します。
+  * **AEM 6.5およびAEM 6.5 LTS:**&#x200B;変換されたフォームに適用する[&#x200B; テンプレート &#x200B;](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/template-editor.html)および[&#x200B; テーマ &#x200B;](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/themes.html)を準備します。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[&#x200B; アダプティブフォームのコアコンポーネントを有効にする](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)必要があります（[&#x200B; サービスの設定](configure-service.md#referencepackage)を参照）。 テンプレートを使用すると、一貫性のあるブランディングを適用できます。AFCSでは、ソース PDFからヘッダーとフッターを抽出せず、アダプティブフォームテンプレートで指定します。 テーマを使用すると、フォーム間で一貫したスタイルが適用されます。 テンプレート用のフォルダーを作成する場合は、全員に「**[!UICONTROL 設定を参照]**」オプションを選択します。
 
 * **（オプション）** [**変換元の PDF フォームを Adobe Signフォームに変換する**](frequently-asked-questions.md)
 
@@ -111,7 +111,7 @@ AEM インスタンスを AEM Forms 変換サービスに接続すると、PDF �
 
    上記の変換設定は、PDF formsを基盤コンポーネントベースのアダプティブフォームに変換する場合に適用されます。 PDF フォームをコアコンポーネントベースのアダプティブフォームに変換するには：
 
-   1. AEM Forms インスタンスでコアコンポーネントが有効になっていることを確認します。 AEM 6.5およびAEM 6.5 LTSについては、[ アダプティブフォームのコアコンポーネントを有効にする](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)を参照してください（まだ有効になっていない場合）。 AEM Forms as a Cloud Serviceの場合は、追加の手順は必要ありません。
+   1. AEM Forms インスタンスでコアコンポーネントが有効になっていることを確認します。 AEM 6.5およびAEM 6.5 LTSについては、[&#x200B; アダプティブフォームのコアコンポーネントを有効にする](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)を参照してください（まだ有効になっていない場合）。 AEM Forms as a Cloud Serviceの場合は、追加の手順は必要ありません。
    1. コンバージョン設定ダイアログの「**[!UICONTROL 基本]**」タブで、コアコンポーネントベースのアダプティブフォームテンプレートとテーマを選択します。
 
       ![変換設定ダイアログ](assets/adaptive-forms-core-components-afcs.png)
