@@ -8,31 +8,43 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-TQID: https://experienceleague.adobe.com/ehU-0CYTjc3aRDnkecBH7uiaO2QLvpDc9d7oxezCVaU
+TQID: 'https://experienceleague.adobe.com/ehU-0CYTjc3aRDnkecBH7uiaO2QLvpDc9d7oxezCVaU'
 product_v2:
   - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+    internal-label: Accessibility
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
+    internal-label: Administration
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
-source-wordcount: 2689
+source-wordcount: '2689'
 ht-degree: 81%
-
 ---
-
 # デフォルトのメタモデルの拡張 {#extend-the-default-meta-model}
 
-自動フォーム変換サービス（AFCS）では、ソースフォームからフォームオブジェクトを識別して抽出します。 自動フォーム変換サービスでセマンティックマッパーを使用すると、抽出したオブジェクトがアダプティブフォーム内でどのように表示されるのかを確認することができます。 例えば、ソースフォームには、表示形式の異なる様々な日付オブジェクトが含まれている場合があります。 こうした場合にセマンティックマッパーを使用すると、ソースフォーム内の日付オブジェクトのすべての表示形式を、アダプティブフォームの日付コンポーネントにマップすることができます。 また、変換処理の実行中にセマンティックマッパーを使用して、検証設定、ルール、データパターン、ヘルプテキスト、アクセシビリティのプロパティをアダプティブフォームコンポーネントに対して事前に設定して適用することもできます。
+自動フォーム変換サービス（AFCS）では、ソースフォームからフォームオブジェクトを識別して抽出します。 セマンティックマッパーは、抽出したオブジェクトをアダプティブフォーム内でどのように表現するかをサービスが判断するのに役立ちます。 例えば、ソースフォームには、表示形式の異なる様々な日付オブジェクトが含まれている場合があります。 こうした場合にセマンティックマッパーを使用すると、ソースフォーム内の日付オブジェクトのすべての表示形式を、アダプティブフォームの日付コンポーネントにマップすることができます。 また、変換処理の実行中にセマンティックマッパーを使用して、検証設定、ルール、データパターン、ヘルプテキスト、アクセシビリティのプロパティをアダプティブフォームコンポーネントに対して事前に設定して適用することもできます。
 
 ![](assets/meta-model.gif)
 
@@ -40,9 +52,9 @@ ht-degree: 81%
 
 ## デフォルトのメタモデル {#default-meta-model}
 
-自動フォーム変換サービス（AFCS）には、デフォルトのメタモデルがあります。 これは JSON スキーマで、自動フォーム変換サービス（AFCS）の他のコンポーネントと共に Adobe Cloud 上に存在します。 メタモデルのコピーは、ローカル AEM サーバーの http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json` で確認できます。 英語のスキーマにアクセスする、またはダウンロードするには、[ここをクリック](assets/en.globalschema.json)します。 [フランス語](assets/fr.globalschema.json)、[ドイツ語](assets/de.globalschema.json)、[スペイン語](assets/es.globalschema.json)、[イタリア語](assets/it.globalschema.json)、[ポルトガル語](assets/pt_br.globalschema.json)のメタモデルもダウンロードできます。
+自動フォーム変換サービス（AFCS）には、デフォルトのメタモデルがあります。 これは JSON スキーマで、自動フォーム変換サービス（AFCS）の他のコンポーネントと共に Adobe クラウド上に存在します。 メタモデルのコピーは、ローカル AEM サーバーの http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json` で確認できます。 英語のスキーマにアクセスする、またはダウンロードするには、[ここをクリック](assets/en.globalschema.json)します。 [フランス語](assets/fr.globalschema.json)、[ドイツ語](assets/de.globalschema.json)、[スペイン語](assets/es.globalschema.json)、[イタリア語](assets/it.globalschema.json)、[ポルトガル語](assets/pt_br.globalschema.json)のメタモデルもダウンロードできます。
 
-メタモデルのスキーマは、https://schema.org/docs/schemas.html のスキーマエンティティから継承されます。 このスキーマエンティティには、https://schema.org で定義された各種エンティティ（Person、PostalAddress、LocalBusiness など）が含まれています。 メタモデルのすべてのエンティティは、JSON スキーマオブジェクトに従属します。 以下のコードは、サンプルのメタモデル構造を示しています。
+メタモデルのスキーマは、https://schema.org/docs/schemas.html のスキーマエンティティから派生しています。 このスキーマエンティティには、https://schema.org で定義された各種エンティティ（Person、PostalAddress、LocalBusiness など）が含まれています。 メタモデルのすべてのエンティティは、JSON スキーマのオブジェクトタイプに準拠しています。 以下のコードは、サンプルのメタモデル構造を示しています。
 
 ```
    "Entity": {
@@ -66,7 +78,7 @@ ht-degree: 81%
 
 1. AEM Forms インスタンスにログインします。
 1. **[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;**／**&#x200B;**[!UICONTROL メタモデル]**&#x200B;フォルダーに移動します。
-1. **[!UICONTROL global.schema.json]** ファイルを選択して「**[!UICONTROL ダウンロード]**」をタップします。 ダウンロード用のダイアログボックスが表示されます。 「**[!UICONTROL アセットをバイナリファイルとしてダウンロード]**」オプションを選択します。 「**[!UICONTROL ダウンロード]**」をタップします。 アーカイブファイルがダウンロードされます。
+1. **[!UICONTROL global.schema.json]** ファイルを選択して「**[!UICONTROL ダウンロード]**」をタップします。 ダウンロード用のダイアログが表示されます。 「**[!UICONTROL アセットをバイナリファイルとしてダウンロード]**」オプションを選択します。 「**[!UICONTROL ダウンロード]**」をタップします。 アーカイブファイルがダウンロードされます。
 
    <!--
    Comment Type: draft
@@ -82,7 +94,7 @@ ht-degree: 81%
 
 ## メタモデルについて {#understanding-the-meta-model}
 
-メタモデルとは、各種エンティティが保管された JSON スキーマファイルのことです。 JSON スキーマファイル内のすべてのエンティティに、名前と ID が設定されています。 各エンティティに複数のプロパティを設定することができます。 エンティティとそのプロパティは、ドメインによって異なる場合があります。 キーワードとフィールド設定を使用してスキーマファイルを拡張することにより、スキーマのプロパティをアダプティブフォームのコンポーネントにマップすることができます。
+メタモデルとは、エンティティを含む JSON スキーマファイルのことです。 JSON スキーマファイル内のすべてのエンティティには、名前と ID が含まれます。 各エンティティに複数のプロパティを設定することができます。 エンティティとそのプロパティは、ドメインによって異なる場合があります。 キーワードとフィールド設定を使用してスキーマファイルを拡張することにより、スキーマのプロパティをアダプティブフォームのコンポーネントにマップすることができます。
 
 ```
 "Event": {
@@ -113,7 +125,7 @@ ht-degree: 81%
     }
 ```
 
-このサンプルコードでは、**Event** がエンティティ名を表し、**id** の値が **Eventid** に設定されています。 Event エンティティには、以下に示す複数のプロパティが含まれています。
+このサンプルコードでは、**Event** がエンティティ名を表し、**id** の値が **Eventid** に設定されています。 イベントエンティティには、以下に示す複数のプロパティが含まれています。
 
 * startDate
 * endDate
@@ -146,7 +158,7 @@ ht-degree: 81%
   <tr> 
    <td><p>title</p></td> 
    <td> 
-    <p>メタモデルの title プロパティ内で指定されたテキストは、生成後のアダプティブフォームフィールドで操作を実行するためのキーワードとして機能します。 例えば、アダプティブフォームフィールドのラベルを変更する場合などに、その変更操作のキーワードとして機能します。 詳しくは、「<a href="#custommetamodelexamples">カスタムメタモデルの例</a>」の「<strong>フォームフィールドのラベルを変更する</strong>」セクションを参照してください。</p> </td> 
+    <p>メタモデルの title プロパティ内で指定されたテキストは、生成後のアダプティブフォームフィールドで操作を実行するための検索キーワードとして機能します。 例えば、アダプティブフォームフィールドのラベルを変更する場合です。 詳しくは、「<a href="#custommetamodelexamples">カスタムメタモデルの例</a>」の「<strong>フォームフィールドのラベルを変更する</strong>」セクションを参照してください。</p> </td> 
   </tr>
   <td><p>description</p></td> 
    <td> 
@@ -154,7 +166,7 @@ ht-degree: 81%
   </tr>
   <td><p>type</p></td> 
    <td> 
-    <p>type プロパティにより、生成後のアダプティブフォームフィールドのデータタイプが定義されます。 type プロパティで指定できる値は以下のとおりです。</p>
+    <p>type プロパティにより、生成後のアダプティブフォームフィールドのデータタイプが定義されます。 title プロパティで指定できる値は以下のとおりです。</p>
     <ul> 
      <li>string：アダプティブフォームフィールドがテキストデータタイプとして生成されます。</li> 
      <li>number：アダプティブフォームフィールドが数値データタイプとして生成されます。</li>
@@ -168,7 +180,7 @@ ht-degree: 81%
   </tr>
   <td><p>format</p></td> 
    <td> 
-    <p>format プロパティでは、正規表現ではなく指定されたパターンに基づいて、生成後のアダプティブフォームフィールドの値が制限されます。 format プロパティで指定できる値は以下のとおりです。<ul><li>email：アダプティブフォームのメールコンポーネントが生成されます。</li><li>hostname：アダプティブフォームフィールドのテキストボックスコンポーネントが生成されます。</li></ul>メタモデルで format プロパティを使用する方法については、「<a href="#custommetamodelexamples">カスタムメタモデルの例</a>」の「<strong>フォームフィールドの形式を変更する</strong>」セクションを参照してください。</p> </td> 
+    <p>format プロパティでは、正規表現ではなく指定されたパターンに基づいて、生成後のアダプティブフォームフィールドの値が制限されます。 format プロパティで指定できる値は以下のとおりです。<ul><li>email：アダプティブフォームのメールコンポーネントが生成されます。</li><li>hostname：アダプティブフォームのテキストボックスコンポーネントが生成されます。</li></ul>メタモデルで format プロパティを使用する方法については、「<a href="#custommetamodelexamples">カスタムメタモデルの例</a>」の「<strong>フォームフィールドの形式を変更する</strong>」セクションを参照してください。</p> </td> 
   </tr>
   <td><p>enum と enumNames</p></td> 
    <td> 
@@ -177,7 +189,7 @@ ht-degree: 81%
  </tbody> 
 </table>
 
-### 生成後のアダプティブフォームフィールドにプロパティを適用するためのキーワードベース検索 {#keywordsearch}
+### 生成されたアダプティブフォームフィールドにプロパティを適用するためのキーワードベース検索 {#keywordsearch}
 
 自動フォーム変換サービス（AFCS）では、変換中にソースフォームでキーワード検索を実行します。 変換サービスは、検索条件に一致するフィールドをフィルタリングしてから、メタモデル内のそれらのフィールドに対して定義されているプロパティを、生成後のアダプティブフォームフィールドに適用します。
 
@@ -194,7 +206,7 @@ ht-degree: 81%
 
 この例では、変換サービスは&#x200B;**aem:affKeyword**&#x200B;内のテキストを検索キーワードとして使用します。 検索サービスは、フォーム内の「**Bank account number**」テキストフィールドを取得し、**type** プロパティを使用して、このテキストフィールドを&#x200B;**数値**&#x200B;タイプに変換します。
 
-### 生成後のアダプティブフォームフィールドに対する追加のプロパティ {#additionalproperties}
+### 生成されたアダプティブフォームフィールドに対する追加のプロパティ {#additionalproperties}
 
 メタモデルで&#x200B;**aem:afProperties** プロパティを使用すると、自動フォーム変換サービス（AFCS）を使用して生成されたアダプティブフォームフィールドに対して、次の追加プロパティを定義できます。
 
@@ -256,16 +268,16 @@ ht-degree: 81%
 * すべてのキーの名前が英語であることを確認します。 例えば、emailAddress と指定します。
 * すべての id キーのエンティティ参照と事前定義値が ASCII 文字のみで構成されていることを確認します。 例：&quot;id&quot;: &quot;ContactPoint&quot; / &quot;$ref&quot;: &quot;#ContactPoint&quot;。
 * 次のキーに対応するすべての値が、指定したメタモデル言語になっていることを確認します。
-   * aem:affKeyword
-   * title
-   * description
-   * enumNames
-   * shortDescription
-   * validatePictureClauseMessage
+  * aem:affKeyword
+  * title
+  * description
+  * enumNames
+  * shortDescription
+  * validatePictureClauseMessage
 
   例えば、meta-modelの言語がフランス語（「aem:Language」:「fr」）の場合、すべての説明とメッセージがフランス語であることを確認します。
 
-* すべての[JSON スキーマのプロパティ](#jsonschemaproperties)で、サポートされている値のみを使用するようにします。 例えば、type プロパティは、文字列、数値、整数およびブール値の選択された値にのみ適用されます。
+* すべての[JSON スキーマのプロパティ](#jsonschemaproperties)で、サポートされている値のみを使用するようにします。 例えば、type プロパティには、文字列、数値、整数、およびブール値の選択された値のみを指定できます。
 
 次の画像には、英語のメタモデルと、対応するフランス語のメタモデルの例が表示されています。
 
@@ -277,7 +289,7 @@ ht-degree: 81%
 
 自動フォーム変換サービス（AFCS）では、次の場所に保存されているデフォルトのメタモデルを使用して、変換中にソースフォームフィールドをアダプティブフォームフィールドにマッピングします。
 
-http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json
+http://<server>:<port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json
 
 ただし、カスタムメタモデルを特定のフォルダーに保存して変換サービスのプロパティを変更することにより、変換処理の実行時にカスタムメタモデルを使用することができます。
 
@@ -295,7 +307,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 ### カスタムメタモデルの例 {#custommetamodelexamples}
 
-ここでは、カスタムメタモデルを使用してアダプティブフォームフィールドを変更する場合の一般的な例について説明します。以下のようなケースが考えられます。
+カスタムメタモデルを使用してアダプティブフォームのフィールドプロパティを変更する一般的な例を次に示します。
 
 * フォームフィールドのラベルを変更する
 * フォームフィールドのタイプを変更する

@@ -8,32 +8,48 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 5447b66f-9fac-476f-ab8a-9290bb1f9c0d
-TQID: https://experienceleague.adobe.com/NjVGOlVHFuhj4IP-PL8NwhX0g78-x250m7QedQxLkEg
+TQID: 'https://experienceleague.adobe.com/NjVGOlVHFuhj4IP-PL8NwhX0g78-x250m7QedQxLkEg'
 product_v2:
   - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: a1df6763-63b5-45b4-8c8a-155a692a2b3e
+    internal-label: Integrations
   - id: ae478996-b206-4712-9b0c-dc78a2644453
+    internal-label: Integrations
   - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+    internal-label: Data integration
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
+    internal-label: Administration
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
-source-wordcount: 1707
+source-wordcount: '1707'
 ht-degree: 95%
-
 ---
-
 # AEM ワークフローを使用してアダプティブフォームをデータベースに統合 {#submit-forms-to-database-using-forms-portal}
 
 Automated Forms Conversion Service （AFCS）を使用すると、非インタラクティブなPDF フォーム、Acro フォーム、またはXFA ベースのPDF フォームをアダプティブフォームに変換できます。 変換サービスを実行する際に、データバインディングを持つアダプティブフォームを生成するのか、データバインディングのないアダプティブフォームを生成するのかを指定することができます。
@@ -62,7 +78,7 @@ AEM ワークフローを使用してこのユースケースを実行し、変�
 
 [ファイルを入手](assets/sample_contact_us_form.pdf)
 
-PDF ファイルは、自動フォーム変換サービス（AFCS）への入力として機能します。 自動フォーム変換サービスを実行すると、このファイルがアダプティブフォームに変換されます。 以下の画像は、PDF 形式のサンプルの「Contact Us」フォームを示しています。
+PDF ファイルは、自動フォーム変換サービス（AFCS）への入力として機能します。 このサービスは、このファイルをアダプティブフォームに変換します。 以下の画像は、PDF 形式のサンプルの「Contact Us」フォームを示しています。
 
 ![サンプルの連絡先フォーム](assets/sample_contact_us_form.png)
 
@@ -124,7 +140,7 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
     </tr>
     <tr> 
     <td><p>ユーザー名</p></td> 
-    <td><p>データベース表でのアクションを認証・実行するためのユーザー名</p></td>
+    <td><p>データベーステーブル上でアクションを認証および実行するためのユーザー名</p></td>
     </tr>
     <tr> 
     <td><p>パスワード</p></td> 
@@ -156,15 +172,15 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
     </tr>
      <tr> 
     <td><p>Test on Borrow</p></td> 
-    <td><p>チェック済み</p></td>
+    <td><p>チェック</p></td>
     </tr>
      <tr> 
     <td><p>Test while Idle</p></td> 
-    <td><p>チェック済み</p></td>
+    <td><p>チェック</p></td>
     </tr>
      <tr> 
     <td><p>検証クエリ</p></td> 
-    <td><p>値の例：SELECT 1（mySQL）、select 1 from dual（Oracle）、SELECT 1（MS SQL Server）（validationQuery）</p></td>
+    <td><p>値の例：SELECT 1（mysql）、select 1 from dual（oracle）、SELECT 1（MS Sql Server）（validationQuery）</p></td>
     </tr>
      <tr> 
     <td><p>検証クエリタイムアウト</p></td> 
@@ -236,7 +252,7 @@ MYSQL をデータソースとして設定したら、以下の手順を実行�
 }
 ```
 
-このデータを処理するためのワークフローモデルを作成し、このワークフローモデルを、前のセクションで作成したフォームデータモデルを使用して MYSQL データベースに送信する必要があります。
+このデータを処理し、前のセクションで作成したフォームデータモデルを使用して MYSQL データベースに送信できるワークフローモデルを作成する必要があります。
 
 ## JSON データを処理するためのワークフローモデルを作成 {#create-workflow-model}
 
@@ -276,7 +292,7 @@ MYSQL をデータソースとして設定したら、以下の手順を実行�
 
 1. 次に「**[!UICONTROL プレビュー]**」をタップし、アダプティブフォームフィールドに値を入力して「**[!UICONTROL 送信]**」をタップします。 送信された値が、**crx-repository** ではなく、MYSQL データベーステーブルに表示されます。
 
-## データベースの値が事前に入力されるようにアダプティブフォームを設定する
+## データベースの値が事前に入力されるようにアダプティブフォームを設定
 
 テーブル内で定義されたプライマリキー（この場合はメールアドレス）に基づいて、MYSQL データベースの値が事前に入力されるようにアダプティブフォームを設定するには、以下の手順を実行します。
 

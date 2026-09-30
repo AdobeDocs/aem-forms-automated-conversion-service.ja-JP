@@ -1,5 +1,5 @@
 ---
-title: 変換時に「レコードのドキュメント」が生成される
+title: コンバージョン時の DoR の生成
 description: 変換元のソースフォームのタイプに従ってレコードのドキュメント（DoR）を生成するための推奨ワークフロー
 solution: Experience Manager Forms
 feature: Adaptive Forms
@@ -10,30 +10,41 @@ level: Beginner, Intermediate
 page-status-flag: never-activated
 contentOwner: khsingh
 exl-id: c24313cd-2b9b-4209-9505-a8e14d8dc530
-TQID: https://experienceleague.adobe.com/ImCKo49r-l9Iq0uOVa16bzA1ga9e-n-Q6Eo4MvB9SB4
+TQID: 'https://experienceleague.adobe.com/ImCKo49r-l9Iq0uOVa16bzA1ga9e-n-Q6Eo4MvB9SB4'
 product_v2:
   - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
+    internal-label: Administration
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
-source-wordcount: 967
+source-wordcount: '957'
 ht-degree: 100%
-
 ---
-
 # アダプティブフォームのレコードのドキュメントを生成するための推奨ワークフロー {#recommended-workflows-dor-generation}
 
-レコードのドキュメント（DoR）には、アダプティブフォームへの変換時に入力した情報が記録されるため、後で確認することができます。
+DoR を使用すると、アダプティブフォームで入力して送信した情報を記録として保持し、後で参照することができます。
 DoR では、ベーステンプレートを使用してレイアウトが定義されます。 デフォルトのテンプレートを使用して DoR を生成することも、別のテンプレートをアダプティブフォームに関連付けることによって DoR を生成することもできます。
 
 ![生成後のレコードのドキュメント](assets/document_of_record.gif)
@@ -52,7 +63,7 @@ DoR の生成方法については、「[アダプティブフォームにおけ
 * ソースフォームをテンプレートとして使用する。この方法の場合、変換サービスにより、ソースフォームが DoR テンプレートとして変換後のアダプティブフォームに自動的に関連付けられます。
 * 別のテンプレートを変換後のアダプティブフォームに関連付ける。
 
-以下のテーブルで、DoR テンプレートが生成後の DoR のレイアウトにどのように影響するかについて説明します。
+以下のテーブルは、使用する DoR テンプレートが生成される DoR のレイアウトにどのように影響するかの例を示しています。
 
 <table> 
  <tbody>
@@ -89,7 +100,7 @@ DoR の生成方法については、「[アダプティブフォームにおけ
     </ul> </td> 
   </tr>
   <tr> 
-   <td><p>AcroForms または XFA ベースの PDF フォーム</p></td> 
+   <td><p>AcroForms または XFA ベースの PDF forms</p></td> 
    <td> 
     <ul> 
      <li><a href="#use-input-form-as-template-to-generate-document-of-record">アダプティブフォームに変換する前に DoR の生成機能を有効にして、ソースフォームをテンプレートとして使用して DoR を生成する</a></li> 
@@ -119,7 +130,7 @@ DoR の生成方法については、「[アダプティブフォームにおけ
 
 ### 変換後にアダプティブフォームのプロパティを編集し、DoR の生成機能を有効にする {#edit-adaptive-form-properties-generate-document-of-record}
 
-変換処理の前に DoR の生成機能を有効にしなかった場合でも、変換後に有効にすることができます。
+ソースフォームをアダプティブフォームに変換する前に DoR の生成機能を有効にしなかった場合でも、変換後に有効にすることができます。
 
 1. 非対話型 PDF フォームで[変換処理を実行](/help/using/convert-existing-forms-to-adaptive-forms.md)して、アダプティブフォームを生成します。
 
@@ -148,7 +159,7 @@ AcroForm または XFA ベースの PDF フォームを自動フォーム変換�
 1. 「**[!UICONTROL 保存して閉じる]**」をタップして設定を保存します。
 
 1. [変換処理を実行](/help/using/convert-existing-forms-to-adaptive-forms.md)します。 その際、必ず手順 1 で編集したクラウド設定を使用してください。
-変換サービスにより、AcroForms または XFA ベース PDF フォームが DoR テンプレートとして変換後のアダプティブフォームに自動的に関連付けられます。
+変換サービスにより、Acro Form または XFA ベース PDF フォームが DoR テンプレートとして変換後のアダプティブフォームに自動的に関連付けられます。
 アダプティブフォームのプロパティを開くと、「**[!UICONTROL フォームモデル]**」タブの「**[!UICONTROL レコードのドキュメントのテンプレート設定]**」セクションに DoR テンプレートが表示されます。
 
    ![アダプティブフォームのプロパティを編集してレコードのドキュメントを生成する](assets/generate_dor_af_properties_xdp_acro.png)
