@@ -4,13 +4,16 @@ description: デフォルトのメタモデルを拡張して、組織に固有�
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
 source-wordcount: '1250'
 ht-degree: 91%
-
 ---
-
 
 # フォームポータルを使用してアダプティブフォームをデータベースに統合する {#submit-forms-to-database-using-forms-portal}
 
@@ -214,7 +217,7 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
     </tr>
     <tr> 
     <td><p>ユーザー名</p></td> 
-    <td><p>データベース表でのアクションを認証・実行するためのユーザー名</p></td>
+    <td><p>データベーステーブル上でアクションを認証および実行するためのユーザー名</p></td>
     </tr>
     <tr> 
     <td><p>パスワード</p></td> 
@@ -254,7 +257,7 @@ AEM インスタンスと MYSQL データベース間の接続を作成するに
     </tr>
      <tr> 
     <td><p>検証クエリ</p></td> 
-    <td><p>値の例：SELECT 1（mySQL）、select 1 from dual（Oracle）、SELECT 1（MS SQL Server）（validationQuery）</p></td>
+    <td><p>値の例：SELECT 1（mysql）、select 1 from dual（oracle）、SELECT 1（MS Sql Server）（validationQuery）</p></td>
     </tr>
      <tr> 
     <td><p>検証クエリタイムアウト</p></td> 

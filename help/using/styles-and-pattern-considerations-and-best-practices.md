@@ -8,29 +8,42 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-TQID: https://experienceleague.adobe.com/EixW6MGzAyHz-JcPYmnKQBLWqnEFOwUepUFOcG8DBUo
+TQID: 'https://experienceleague.adobe.com/EixW6MGzAyHz-JcPYmnKQBLWqnEFOwUepUFOcG8DBUo'
 product_v2:
   - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+    internal-label: Artificial intelligence
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
+    internal-label: Administration
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
-source-wordcount: 1356
+source-wordcount: '1356'
 ht-degree: 94%
-
 ---
-
 # ベストプラクティスおよび既知の複雑なパターン {#Best-practices-and-considerations2}
 
 このドキュメントでは、フォーム管理者、作成者、および開発者が[!DNL Automated Forms Conversion service] （AFCS）を操作する際に役立つガイドラインと推奨事項について説明します。 ソースフォームの準備から、自動変換に追加手順を要する複雑なパターンの修正に至るまで、ベストプラクティスを包括的に説明します。 これらのベストプラクティスのすべてを実行すると、[!DNL Automated Forms Conversion service]（AFCS）の全体的なパフォーマンスと出力が向上します。
@@ -41,7 +54,7 @@ ht-degree: 94%
 
 ### ソースをアップロードする前に
 
-必要に応じて、すべての PDF フォームを一度にアップロードすることも、段階的にアップロードすることもできます。 フォームをアップロードする場合は、以下の点に注意してください。
+必要に応じて、すべての PDF forms を一度にアップロードすることも、段階的にアップロードすることもできます。 フォームをアップロードする場合は、以下の点に注意してください。
 
 * 1 つのフォルダーに保存するフォームの数は 15 個未満にしてください。また、1 つのフォルダーに保存する合計ページ数は 50 ページ未満にしてください。
 * フォルダーのサイズは 10 MB 未満にしてください。 サブフォルダー内にフォームを保存しないでください。
@@ -57,17 +70,17 @@ XDP フォームを変換に使用する場合は、ソース XDP フォーム�
 * XDP フォームを分析し、視覚的な問題を修正します。 ソースドキュメントで意図されたコントロールと構造が使用されていることを確認します。 例えば、ソースフォームでは、1 つを選ぶ場合に、ラジオボタンではなくチェックボックスが使用されている場合があります。 チェックボックスをラジオボタンに変更して、意図されたコンポーネントを含むアダプティブフォームを作成します。
 * 変換を開始する前に [XDP フォームにバインディングを追加](http://www.adobe.com/go/learn_aemforms_designer_65_jp)します。 ソース XDP フォームでバインディングが使用可能な場合、変換サービスは変換中に対応するアダプティブフォームフィールドにバインディングを自動的に適用します。 バインディングを手動で適用するのに必要な時間を節約できます。
 * XDP ファイルに [Adobe Sign タグを追加](https://helpx.adobe.com/jp/sign/using/text-tag.html)します。 このサービスは、Adobe Sign タグを、対応するアダプティブフォームフィールドに自動的に変換します。 アダプティブフォームは、限られた数の Adobe Sign フィールドをサポートしています。 サポートされているフィールドの一覧については、「[アダプティブフォームで Adobe Sign を使用する](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=ja)」を参照してください。
-* 可能であれば、XDP ドキュメントにある複雑なテーブルを簡単なテーブルに変換します。 フォームフィールドを持つセル、サイズが不均等なセル、行または列が連結されているセル、結合されているセル、または部分的な境界線や非表示の境界線が含まれているテーブルは、 複雑なテーブルと見なされます。
+* 可能であれば、XDP ドキュメントにある複雑なテーブルを簡単なテーブルに変換します。 フォームフィールドを持つセル、サイズが不均等なセル、行または列が連結されているセル、結合されているセル、または部分的な境界線や非表示の境界線が含まれているテーブルは、 上記の項目のいずれか 1 つを含むテーブルは、複雑なテーブルと見なされます。
 <!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->
 
 ### 変換を開始する前に
 
 * **AEM Forms as a Cloud Service:** デフォルトのテンプレートとテーマを使用できます。これらのテンプレートを使用するか、カスタムテンプレートとテーマを作成できます。
-* **AEM 6.5およびAEM 6.5 LTS:** アダプティブフォームのテンプレートとテーマを作成します（または、[&#x200B; サービスの構成](configure-service.md#referencepackage)の説明に従って参照アセットをインストールします）。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[&#x200B; アダプティブフォームのコアコンポーネント &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)を有効にする必要があります。
+* **AEM 6.5およびAEM 6.5 LTS:** アダプティブフォームのテンプレートとテーマを作成します（または、[ サービスの構成](configure-service.md#referencepackage)の説明に従って参照アセットをインストールします）。 コアコンポーネントベースのテンプレートとテーマを使用する場合は、[ アダプティブフォームのコアコンポーネント ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=ja)を有効にする必要があります。
 * アダプティブフォームテンプレートを作成します。 テンプレートは、組織または部門のフォームに統一された構造を指定するのに役立ちます。
 * アダプティブフォームテンプレートでヘッダーとフッターを指定します。 このサービスは、変換元のドキュメントのヘッダーとフッターを無視して、アダプティブフォームテンプレートで指定されたヘッダーとフッターを使用します。
 * アダプティブフォームテーマを作成します。 テーマは、組織または部門のフォームに統一されたルックアンドフィールを提供するのに役立ちます。
-* 保存してデータソースから取得するようにフォームデータモデルを設定します。 フォームデータモデルの読み取りサービスと書き込みサービスを作成して設定します。
+* データソースへの保存とデータソースからの取得を行うようにフォームデータモデルを設定します。 フォームデータモデルの読み取りサービスと書き込みサービスを作成して設定します。
 * アダプティブフォームフラグメントを作成し、アダプティブフォームフラグメントを使用するようにサービスを設定します。
 * ビジネスプロセスの自動化を必要とするフォームに対して、共通のワークフローモデルを準備します。
 * 必要に応じて、Adobe Analyticsを設定する
@@ -77,7 +90,7 @@ XDP フォームを変換に使用する場合は、ソース XDP フォーム�
 
 AEM [!DNL Forms Automated Conversion service]は人工知能と機械学習アルゴリズムを使用して、ソースフォームのレイアウトとフィールドを理解します。 すべての機械学習サービスは、ソースデータを使用して継続的に学習を行い、すべてのチャーンで改善された出力を生成します。 これらサービスは、人間と同様に、これまでの経験を基にして学習していきます。
 
-[!DNL Automated Forms Conversion service]は、大量のフォームに基づいて学習していきます。 このサービスにより、ソースフォーム内のフィールドを関単に特定して、アダプティブフォームを生成することができます。 ただし、PDF フォームのフィールドとスタイルには、人間にとっては簡単に区別できても、変換サービスでは認識するのが難しいものもあります。 変換サービスは、正しくないフィールドタイプやパネルを、特定のフィールドやスタイルに割り当てる場合があります。 以下に、こうしたフィールドやスタイルのパターンを示します。
+[!DNL Automated Forms Conversion service]は、大量のフォームに基づいて学習していきます。 このサービスにより、ソースフォーム内のフィールドを簡単に特定して、アダプティブフォームを生成することができます。 ただし、PDF フォームのフィールドとスタイルには、人間にとっては簡単に区別できても、変換サービスでは認識するのが難しいものもあります。 変換サービスは、適用可能なものとは異なるフィールドタイプやパネルを、特定のフィールドやスタイルに割り当てる場合があります。 以下に、こうしたフィールドやスタイルのパターンを示します。
 
 変換サービスは、ソースデータを使用して継続的に学習していくため、ある程度学習が進むと、正しいフィールドやパネルを特定して割り当て、これらのパターンに対応できるようになります。 変換サービスがある程度の学習レベルに到達するまでは、「[レビューと修正](review-correct-ui-edited.md)」エディターを使用して、これらのパターンに対応してください。 以下の説明を読む前に、[アダプティブフォームのコンポーネント](https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/introduction-forms-authoring.html)について理解してください。
 
@@ -98,7 +111,7 @@ AEM [!DNL Forms Automated Conversion service]は人工知能と機械学習ア�
 
 | パターン | 解決方法 |
 |--- |--- |
-| **パターン** <br>四角形と円以外の形状を持つ選択グループのオプションが、対応するアダプティブフォームのコンポーネントに変換されない。 <br><br>**解決方法** <br>選択グループオプションの形状を四角形または円に変更するか、「レビューと修正」エディターを使用して、選択グループオプションの形状を特定してください。 | ![選択フィールド &#x200B;](assets/best-practice-choice-group-options.png) |
+| **パターン** <br>四角形と円以外の形状を持つ選択グループのオプションが、対応するアダプティブフォームのコンポーネントに変換されない。 <br><br>**解決方法** <br>選択グループオプションの形状を四角形または円に変更するか、「レビューと修正」エディターを使用して、選択グループオプションの形状を特定してください。 | ![選択フィールド ](assets/best-practice-choice-group-options.png) |
 
 ### フォームフィールド {#form-fields}
 

@@ -9,28 +9,40 @@ role: Admin, Developer
 level: Beginner, Intermediate
 contentOwner: khsingh
 exl-id: 5deef8f5-5098-47c1-b696-b2db59e92931
-TQID: https://experienceleague.adobe.com/TmEZJSIKPj6f2X5E7X8JY9AL5EGHSPuLhAzQlPdvGGM
+TQID: 'https://experienceleague.adobe.com/TmEZJSIKPj6f2X5E7X8JY9AL5EGHSPuLhAzQlPdvGGM'
 product_v2:
   - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+    internal-label: Data integration
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
+    internal-label: Administration
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
-source-wordcount: 2692
+source-wordcount: '2694'
 ht-degree: 99%
-
 ---
-
 # アダプティブフォームで推奨される、データソースベースの事前入力ワークフローと送信ワークフロー {#recommended-data-source-btased-prefill-and-submit-workflows-for-adaptive-forms}
 
 自動フォーム変換サービス（AFCS）を使用して変換されたアダプティブフォームでは、次のデータソースのいずれかを使用できます。
@@ -52,7 +64,7 @@ ht-degree: 99%
   <tr> 
    <td><p>フォームデータモデル、OData、その他のサードパーティ製サービス</p></td> 
    <td> 
-    <p><strong>方法 1</strong>：データソースとして、フォームデータモデル、OData、またはその他のサードパーティ製サービスを選択します。 自動フォーム変換サービス（AFCS）を使用して、<a href="#generate-adaptive-forms-with-no-data-binding">データバインディングがないアダプティブフォームを生成</a>します。 次に、アダプティブフォームの各フィールドをデータモデルの各エンティティに手動でバインドし、「フォームデータモデルの事前入力サービス」オプションを使用して、フィールド値の事前入力を行います。 次に、「フォームデータモデルを使用して送信」オプションを使用して、アダプティブフォームを送信します。</p></td> 
+    <p><strong>方法 1</strong>：データソースとして、フォームデータモデル、OData、またはその他のサードパーティ製サービスを選択します。 自動フォーム変換サービス（AFCS）を使用して、<a href="#generate-adaptive-forms-with-no-data-binding">データバインディングがないアダプティブフォームを生成</a>します。 次に、アダプティブフォームの各フィールドをフォームデータモデルの各エンティティに手動でバインドし、「フォームデータモデルの事前入力サービス」オプションを使用して、フィールド値の事前入力を行います。 次に、「フォームデータモデルを使用して送信」オプションを使用して、アダプティブフォームを送信します。</p></td> 
   </tr>
   <tr> 
    <td></td> 
@@ -320,7 +332,7 @@ JSON スキーマをフォームモデルとして使用してこのユースケ
 
    1. フォームデータモデルが一覧表示されているセクションで「**[!UICONTROL Get]**」サービスを選択します。 「入力」セクションに「**phonenumber**」が表示されます。これは、**applicant** データモデル用に定義されたプライマリキーです。 このフィールドに基づいて、「出力」セクションのアダプティブフォームフィールド値が取得され、事前入力されます。
 
-   1. 「出力」セクションのフォームデータモデルエンティティを使用して、アダプティブフォームフィールドのデータバインディングを作成します。 例えば、アダプティブフォームの「**[!UICONTROL 申込者名]**」フィールドを「**name**」エンティティにバインドします。
+   1. Output セクションのフォームデータモデルエンティティを使用して、アダプティブフォームフィールドのデータバインディングを作成します。 例えば、アダプティブフォームの「**[!UICONTROL 申込者名]**」フィールドを「**name**」エンティティにバインドします。
 
    1. 「**[!UICONTROL 完了]**」をタップします。 ルールエディターページで、もう一度「**[!UICONTROL 完了]**」をタップします。
 
@@ -342,7 +354,7 @@ JSON スキーマをフォームモデルとして使用してこのユースケ
 
 このユースケースを実行する前に、以下を確認する必要があります。
 
-* [正しい JSON スキーマが JSON スキーマ構造に対応していること](#prepare-data-for-form-model)
+* [JSON スキーマ構造に準拠した有効な JSON スキーマ](#prepare-data-for-form-model)
 * [データバインディングがないアダプティブフォームが生成されていること](#generate-adaptive-forms-with-no-data-binding)
 
 以下の手順を実行します。
@@ -379,7 +391,7 @@ JSON スキーマをフォームモデルとして使用してこのユースケ
 1. 「**[!UICONTROL フォームモデル]**」タブの「**[!UICONTROL 選択]**」ドロップダウンリストで「**[!UICONTROL スキーマ]**」を選択し、「**[!UICONTROL スキーマを選択]**」をタップして、ローカルファイルシステムに保存されている **loanapplication** という XSD スキーマをアップロードします。 次に、XSD スキーマのルート要素を選択し、「**[!UICONTROL 保存して終了]**」をタップしてフォームを保存します。
 1. **サンプルのローン申し込みフォーム**&#x200B;を選択して「**[!UICONTROL 編集]**」をタップします。
 1. 「申込者名」テキストボックスをタップして設定アイコン（![設定アイコン](assets/configure_icon.svg)）を選択します。
-「バインド参照」フィールドで&#x200B;**申込者**／**名前**&#x200B;を選択し、![完了アイコン](assets/save_icon.svg) をタップしてプロパティを保存します。 同様に、XSD スキーマエンティティを使用して、「**住所**」、「**電話番号**」、「**メール**」、「**職業**」、「**年収（ドル）**」、「**扶養家族の数**」フィールドのデータバインディングを作成します。
+「バインド参照」フィールドで**申込者**／**名前**&#x200B;を選択し、![完了アイコン](assets/save_icon.svg) をタップしてプロパティを保存します。 同様に、XSD スキーマエンティティを使用して、「**住所**」、「**電話番号**」、「**メール**」、「**職業**」、「**年収（ドル）**」、「**扶養家族の数**」フィールドのデータバインディングを作成します。
 
 1. 変換後の&#x200B;**サンプルのローン申し込みフォーム**&#x200B;を **output** フォルダーで選択し、**[!UICONTROL プレビュー]**／**[!UICONTROL データを使用してプレビュー]**&#x200B;を選択します。</br>
 
@@ -416,9 +428,9 @@ JSON スキーマをフォームモデルとして使用してこのユースケ
 
    `http://host name:port/crx/de/index.jsp#/content/forms/fp/admin/submit/data/latest file available in the folder`
 
-## 送信後のアダプティブフォームの JSON データを XML 形式に変換する {#convert-submitted-adaptive-form-data-to-xml}
+## 送信後のアダプティブフォームの JSON データの XML 形式への変換 {#convert-submitted-adaptive-form-data-to-xml}
 
-アダプティブフォームのフィールドに値を入力してフォームを送信すると、そのデータが crx-repository 内で JSON 形式に変換されます。 JSON データを XML 形式に変換するには、[org.apache.sling.commons.json.xml](https://sling.apache.org/apidocs/sling5/org/apache/sling/commons/json/xml/XML.html#toString) という API を使用するか、以下のサンプルコードを使用します。
+アダプティブフォームのフィールドに値を入力してフォームを送信すると、そのデータは crx-repository 内で JSON 形式で利用できます。 JSON データを XML 形式に変換するには、[org.apache.sling.commons.json.xml](https://sling.apache.org/apidocs/sling5/org/apache/sling/commons/json/xml/XML.html#toString) という API を使用するか、以下のサンプルコードを使用します。
 
 ```
 import org.apache.sling.commons.json.JSONException;
